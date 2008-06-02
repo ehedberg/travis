@@ -38,4 +38,10 @@ class TasksControllerTest < ActionController::TestCase
       end
     end
   end
+
+  def test_show
+    get :show, :id=>tasks(:one).id
+    assert assigns(:task)
+    assert_equal assigns(:task), tasks(:one)
+  end
 end

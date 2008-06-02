@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: "List Stories"
+  description: "Our First Rails Story!  How EXCITING!!!"
+  swag: 1.5
+
+two:
+  title: 'Create/Edit Story'
+  description: Description
+  swag: 1.5

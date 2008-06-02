@@ -57,4 +57,16 @@ class TasksControllerTest < ActionController::TestCase
       assert_select "input[type=submit]"
     end
   end
+
+  def test_create
+    n = Task.count
+    post :create, :task=>{"title"=>"spam", "description"=>"spam description"}
+    assert_response :redirect
+    t = assigns(:task)
+    assert_redirected_to task_path(t)
+    assert_equal t.title, "spam"
+    assert_equal t.description, "spam description"
+    assert_equal n+1, Task.count
+    assert_not_nil Task.find_by_title("spam")
+  end
 end

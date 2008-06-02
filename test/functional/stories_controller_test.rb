@@ -17,4 +17,27 @@ class StoriesControllerTest < ActionController::TestCase
 
     assert_routing "/stories/1/edit", :controller=>"stories",:action=>"edit", :id=>"1"
   end
+
+  def test_index
+    get :index
+    assert assigns(:stories)
+    stories = assigns(:stories)
+
+    assert !stories.empty?
+
+    assert stories.kind_of?(Array)
+
+    assert_template "index"
+
+    assert_select "table[id=stories]" do
+      stories.each do |s|
+        assert_select "tr" do
+          assert_select "td" do
+            assert_select "a[href=?]", story_path(s.id)
+          end
+          assert_select "td"
+        end
+      end
+    end
+  end
 end

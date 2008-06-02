@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: "Task Title 1"
+  description: "Task Description 1"
+
+two:
+  title: "Task Title 2"
+  description: "Task Description 2"

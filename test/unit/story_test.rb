@@ -7,4 +7,9 @@ class StoryTest < ActiveSupport::TestCase
     assert_not_nil(story_list)
     assert(!story_list.empty?, "no stories found")
   end
+
+  def test_task_relation
+    s = Story.new
+    assert_not_nil(s.tasks)
+  end
 end

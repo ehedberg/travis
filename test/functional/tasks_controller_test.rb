@@ -43,5 +43,18 @@ class TasksControllerTest < ActionController::TestCase
     get :show, :id=>tasks(:one).id
     assert assigns(:task)
     assert_equal assigns(:task), tasks(:one)
+    assert_template "show"
+  end
+
+  def test_new
+    get :new
+    assert assigns(:task)
+    assert assigns(:task).new_record?
+    assert_template "new"
+    assert_select "form[action=?][method=post]", tasks_path do
+      assert_select "input[id=task_title][type=text]"
+      assert_select "textarea[id=task_description]"
+      assert_select "input[type=submit]"
+    end
   end
 end

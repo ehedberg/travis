@@ -1,8 +1,10 @@
 <html>
   <head>
-    <title>Hey there</title>
+    <title>Travis!</title>
+    <%=stylesheet_link_tag("style.css")%>
   </head>
   <body>
+<%=render :partial=>"layouts/menu"%>
     <%=yield %>
   </body>
 </html>

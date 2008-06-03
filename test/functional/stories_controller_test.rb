@@ -18,6 +18,20 @@ class StoriesControllerTest < ActionController::TestCase
     assert_routing "/stories/1/edit", :controller=>"stories",:action=>"edit", :id=>"1"
   end
 
+  def test_create
+    post :create, "story"=>{"title"=>"New Title", "description"=>"de", "swag"=>"2"}
+
+    assert assigns(:story)
+
+    story = assigns(:story)
+
+    assert_equal Story.find_by_description("de"), assigns(:story)
+
+    assert_response :redirect
+
+    assert_redirected_to stories_path
+  end
+
   def test_index
     get :index
     assert assigns(:stories)

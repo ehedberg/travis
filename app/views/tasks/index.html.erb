@@ -5,3 +5,4 @@
 <table id='tasks'>
   <%=render :partial=>"task",:collection=>@tasks%>
 </table>
+<%=link_to("Create Task", new_task_path)%>

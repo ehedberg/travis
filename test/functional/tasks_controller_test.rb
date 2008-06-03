@@ -35,9 +35,17 @@ class TasksControllerTest < ActionController::TestCase
           assert_select "td" do
             assert_select "a[href=?]", task_path(s.id)
           end
+          assert_select "td" do
+            assert_select "a[href=?]", task_path(s.id)
+          end
+          assert_select "td" do
+            assert_select "a[href=?]", edit_task_path(s.id)
+          end
         end
       end
     end
+
+    assert_select "a[href=?]", new_task_path 
   end
 
   def test_show
@@ -45,6 +53,9 @@ class TasksControllerTest < ActionController::TestCase
     assert assigns(:task)
     assert_equal assigns(:task), tasks(:one)
     assert_template "show"
+
+    assert_select "a[href=?]", tasks_path
+    assert_select "a[href=?]", edit_task_path(tasks(:one).id)
   end
 
   def test_new

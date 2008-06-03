@@ -23,9 +23,11 @@ class StoriesController < ApplicationController
   def update
     @story = Story.find(params[:id])
 
-    @story.update_attributes(params[:story])
-
-    redirect_to(stories_path)
+    if @story.update_attributes(params[:story])
+      redirect_to(stories_path)
+    else
+      render :template=>"stories/form"
+    end
   end
 
   def new

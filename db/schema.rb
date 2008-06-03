@@ -9,12 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080602201756) do
+ActiveRecord::Schema.define(:version => 20080603202436) do
 
   create_table "stories", :force => true do |t|
-    t.string   "title",       :limit => 200
+    t.string   "title",       :limit => 200, :null => false
     t.text     "description"
-    t.decimal  "swag",                       :precision => 4, :scale => 2
+    t.decimal  "swag"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

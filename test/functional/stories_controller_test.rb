@@ -107,6 +107,26 @@ class StoriesControllerTest < ActionController::TestCase
     assert_redirected_to stories_path
   end
 
+  def test_update_invalid_title
+
+    story = stories(:one)
+
+    put :update, :id=>story.id, :story=> {:title=>"", :description=>"New Description", :swag=>"9999.99" }
+
+    assert_response :success
+
+    assert_template "form"
+
+    new_story = Story.find(story.id)
+
+    s = assigns(:story)
+
+    assert_equal s.errors.on(:title), "is too short (minimum is 1 characters)"
+
+    assert_select "div[id=errorExplanation][class=errorExplanation]"
+
+  end
+
   def test_edit
     get :edit,:id=>stories(:one).id
 

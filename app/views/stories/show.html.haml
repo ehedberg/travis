@@ -8,3 +8,5 @@
   =link_to("Show All", stories_path)
   |
   =link_to("Edit", edit_story_path(@story))
+  |
+  =link_to("Delete", { :id => @story.id }, :confirm => "Are you sure?", :method => :delete)

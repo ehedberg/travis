@@ -89,6 +89,7 @@ class StoriesControllerTest < ActionController::TestCase
     assert_template "show"
     assert_select "a[href=?]", stories_path
     assert_select "a[href=?]", edit_story_path(stories(:one).id)
+    assert_select "a[href=?][onclick*=confirm]", story_path(stories(:one))
   end
 
   def test_update
@@ -114,6 +115,16 @@ class StoriesControllerTest < ActionController::TestCase
     story = assigns(:story)
 
     assert_equal stories(:one).id, story.id
+  end
+
+  def test_destroy
+    story = stories(:one)
+
+    delete :destroy, :id=>stories(:one).id
+
+    assert !Story.exists?(story.id)
+
+    assert_redirected_to stories_path
   end
 
   def test_edit_view

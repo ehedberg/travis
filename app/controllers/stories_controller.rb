@@ -33,4 +33,10 @@ class StoriesController < ApplicationController
 
     render :template=>"stories/form"
   end
+
+  def destroy
+    Story.delete(params[:id])
+
+    redirect_to(stories_path)
+  end
 end

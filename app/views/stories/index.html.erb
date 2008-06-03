@@ -1,8 +1,0 @@
-<script type="text/javascript">
-    var element = document.getElementById('menu_story');
-    element.className = 'current';
-</script>
-<table id='stories'>
-  <%=render :partial=>"story",:collection=>@stories%>
-</table>
-<%=link_to "Create Story" , new_story_path %>

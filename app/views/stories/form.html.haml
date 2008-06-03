@@ -1,0 +1,14 @@
+- form_for @story do |f|
+  %fieldset
+    =f.label "Title"
+    =f.text_field :title
+    %br.clear-left/
+    =f.label "Description"
+    =f.text_area :description
+    %br.clear-left/
+    =f.label "Swag"
+    =f.text_field :swag
+    %br.clear-left/
+    =submit_tag "Save", {:id=> "submit_button"}
+    =button_to_function "Cancel", "location.href='#{stories_path}'"
+

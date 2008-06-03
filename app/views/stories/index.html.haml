@@ -1,0 +1,6 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_story');
+  element.className = 'current';
+%table#stories
+  =render :partial=>"story",:collection=>@stories
+=link_to "Create Story" , new_story_path

@@ -1,0 +1,10 @@
+%h1
+  =h(@story.title)
+%p
+  =h @story.description
+%p
+  =h @story.swag
+%p
+  =link_to("Show All", stories_path)
+  |
+  =link_to("Edit", edit_story_path(@story))

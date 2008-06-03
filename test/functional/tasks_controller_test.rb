@@ -51,7 +51,7 @@ class TasksControllerTest < ActionController::TestCase
     get :new
     assert assigns(:task)
     assert assigns(:task).new_record?
-    assert_template "new"
+    assert_template "form"
     assert_select "form[action=?][method=post]", tasks_path do
       assert_select "input[id=task_title][type=text]"
       assert_select "textarea[id=task_description]"
@@ -70,4 +70,30 @@ class TasksControllerTest < ActionController::TestCase
     assert_equal n+1, Task.count
     assert_not_nil Task.find_by_title("spam")
   end
+
+  def test_edit
+    get :edit, :id=>tasks(:one).id
+    t = assigns(:task)
+    assert t
+    assert_equal t, tasks(:one)
+    assert_template "form"
+    assert_select "form[action=?][method=post]", task_path(t.id) do
+      assert_select "input[id=task_title][type=text]"
+      assert_select "textarea[id=task_description]"
+      assert_select "input[type=submit]"
+    end
+  end
+
+  def test_update
+    n = Task.count
+    put :update, :id=>tasks(:one).id, :task=>{"title"=>"updated title", "description"=>"updated description"}
+    assert_response :redirect
+    t = assigns(:task)
+    assert_redirected_to task_path(t)
+    assert_equal t.title, "updated title"
+    assert_equal t.description, "updated description"
+    assert_equal n, Task.count
+    assert_not_nil Task.find_by_title("updated title")
+  end
+
 end

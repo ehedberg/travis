@@ -9,6 +9,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    render :template=>"tasks/form"
   end
 
   def create
@@ -16,4 +17,16 @@ class TasksController < ApplicationController
     @task.save
     redirect_to task_path(@task)
   end
+
+  def edit
+    @task = Task.find(params[:id])
+    render :template=>"tasks/form"
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    @task.update_attributes(params[:task])
+    redirect_to task_path(@task)
+  end
+
 end

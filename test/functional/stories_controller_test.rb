@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 class StoriesControllerTest < ActionController::TestCase
   # Replace this with your real tests.
   def test_routes
-    assert_routing "/stories", :controller=>"stories",:action=>"index"
+    assert_routing "/", :controller=>"stories",:action=>"index"
 
     assert_routing "/stories/new", :controller=>"stories",:action=>"new"
 

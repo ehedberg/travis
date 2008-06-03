@@ -33,11 +33,52 @@ class StoriesControllerTest < ActionController::TestCase
       stories.each do |s|
         assert_select "tr" do
           assert_select "td" do
-            assert_select "a[href=?]", story_path(s.id)
+            assert_select "a[href=?]", edit_story_path(s.id)
           end
           assert_select "td"
         end
       end
+    end
+  end
+
+  def test_update
+
+    story = stories(:one)
+
+    put :update, :id=>story.id, :story=> {:title=>"New title", :description=>"New Description", :swag=>"9999.99" }
+
+    new_story = Story.find(story.id)
+
+    assert_equal "New title", new_story.title
+    assert_equal "New Description", new_story.description
+    assert_equal 9999.99, new_story.swag
+
+    assert_redirected_to stories_path
+  end
+
+  def test_edit
+    get :edit,:id=>stories(:one).id
+    
+    assert assigns(:story)
+
+    story = assigns(:story)
+
+    assert_equal stories(:one).id, story.id
+  end
+
+  def test_edit_view
+
+    get :edit,:id=>stories(:one).id
+    
+    assert assigns(:story)
+
+    story = assigns(:story)
+
+    assert_select "form[action=?][method=post]", story_path do
+      assert_select "input[name=_method][type=hidden][value=put]"
+      assert_select "textarea[id=story_description]", {:text=>story.description}
+      assert_select "input[type=text][value=?]", story.swag
+      assert_select "input[type=submit][value=Update]"
     end
   end
 end

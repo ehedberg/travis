@@ -1,0 +1,4 @@
+<%form_for (@story) do |f| %>
+<%=render :partial=>"story_detail_form", :locals=>{:f=>f} %>
+<%=submit_tag "Update", {:id=> "submit_button"} %>
+<% end %>

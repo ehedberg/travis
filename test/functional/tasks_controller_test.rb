@@ -22,13 +22,9 @@ class TasksControllerTest < ActionController::TestCase
     get :index
     assert assigns(:tasks)
     tasks = assigns(:tasks)
-
     assert !tasks.empty?
-
     assert tasks.kind_of?(Array)
-
     assert_template "index"
-
     assert_select "table[id=tasks]" do
       tasks.each do |s|
         assert_select "tr" do
@@ -44,7 +40,6 @@ class TasksControllerTest < ActionController::TestCase
         end
       end
     end
-
     assert_select "a[href=?]", new_task_path 
   end
 
@@ -112,6 +107,28 @@ class TasksControllerTest < ActionController::TestCase
       delete :destroy, :id=>tasks(:one).id
       assert_response :redirect
       assert_redirected_to tasks_path
+    end
+  end
+
+  def test_list_shows_stories
+    task = tasks(:one)
+    story = stories(:one)
+    task.stories << story
+    task.save
+    assert(!task.stories.empty?) 
+    assert_equal(story, task.stories.first())
+
+    get :index
+    assert_template "index"
+    task_list = assigns(:tasks)
+    assert_select "table[id=tasks]" do
+      task_list.each do |s|
+        assert_select "tr" do
+          assert_select "td" do
+            assert_select "a[href=?]", story_path(story.id)
+          end
+        end
+      end
     end
   end
 end

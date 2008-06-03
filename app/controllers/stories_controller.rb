@@ -5,6 +5,8 @@ class StoriesController < ApplicationController
 
   def edit
     @story=Story.find(params[:id])
+
+    render :template=>"stories/form"
   end
 
   def update
@@ -13,5 +15,11 @@ class StoriesController < ApplicationController
     @story.update_attributes(params[:story])
 
     redirect_to(stories_path)
+  end
+
+  def new
+    @story = Story.new
+
+    render :template=>"stories/form"
   end
 end

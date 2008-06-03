@@ -1,3 +1,4 @@
+<%form_for (@story) do |f| %>
 <fieldset>
 <%=f.label "Title" %>
 <%=f.text_field :title %>
@@ -9,3 +10,5 @@
 <%=f.text_field :swag%>
 <br class="clear-left" />
 </fieldset>
+<%=submit_tag "Save", {:id=> "submit_button"} %>
+<% end %>

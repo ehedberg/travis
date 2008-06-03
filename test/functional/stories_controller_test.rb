@@ -39,6 +39,26 @@ class StoriesControllerTest < ActionController::TestCase
         end
       end
     end
+
+    assert_select "a[href=?]", new_story_path
+  end
+
+  def test_new
+    get :new
+
+    assert_response :success
+
+    assert_template "form"
+
+    assert assigns(:story)
+
+    assert assigns(:story).new_record?
+
+    assert_select "form[action=?][method=post]", stories_path do
+      assert_select "textarea[id=story_description]"
+      assert_select "input[type=text]"
+      assert_select "input[type=submit]"
+    end
   end
 
   def test_update
@@ -78,7 +98,7 @@ class StoriesControllerTest < ActionController::TestCase
       assert_select "input[name=_method][type=hidden][value=put]"
       assert_select "textarea[id=story_description]", {:text=>story.description}
       assert_select "input[type=text][value=?]", story.swag
-      assert_select "input[type=submit][value=Update]"
+      assert_select "input[type=submit]"
     end
   end
 end

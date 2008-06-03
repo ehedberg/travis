@@ -107,4 +107,11 @@ class TasksControllerTest < ActionController::TestCase
     assert_not_nil Task.find_by_title("updated title")
   end
 
+  def test_delete
+    assert_difference 'Task.count', -1 do
+      delete :destroy, :id=>tasks(:one).id
+      assert_response :redirect
+      assert_redirected_to tasks_path
+    end
+  end
 end

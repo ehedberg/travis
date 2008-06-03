@@ -25,7 +25,16 @@ class TaskTest < ActiveSupport::TestCase
   def test_valid_atttributes
     t = Task.new 
     assert(!t.save)
-    assert_equal t.errors.on(:description), "can't be blank"
-    assert_equal t.errors.on(:title), "can't be blank"
+    assert_equal "can't be blank", t.errors.on(:description)
+    assert_equal "can't be blank", t.errors.on(:title)
   end
+
+  def test_title_too_long
+    t = Task.new :description=>"New Task Description"
+    long_str = (1..201).map{"a"}.to_s
+    t.title = long_str
+    assert(!t.save)
+    assert_equal "is too long (maximum is 200 characters)", t.errors.on(:title)
+  end
+
 end

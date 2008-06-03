@@ -1,4 +1,5 @@
-require 'test_helper'
+require File.dirname(__FILE__) + '/../test_helper'
+$:.reject! { |e| e.include? 'TextMate' }
 
 class TasksControllerTest < ActionController::TestCase
   def test_routes

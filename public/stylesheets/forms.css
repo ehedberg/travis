@@ -1,0 +1,30 @@
+label,input {
+	display: block;
+	width: 75%;
+	float: left;
+	margin-bottom: 5px;
+	clear: none;
+	margin-top: 5px;
+}
+
+fieldset {
+	border-style: none;
+	margin: 10px 0;
+}
+
+#submit_button {
+	width: 100px;
+	margin-left: 110px;
+}
+
+textarea{
+	width: 75%;
+}
+
+label {
+	text-align: right;
+	width: 100px;
+	margin-right: 10px;
+}
+
+br.clear-left{clear: left;}

@@ -1,0 +1,53 @@
+/*generated from http://topfunky.com/baseline-rhythm-calculator/*/
+body {
+	font-size: 13px;
+	line-height: 1.3846153846153846em;
+	margin: 0; padding: 0
+}
+h1 {
+	margin: 0;
+	font-size: 1.6153846153846154em;
+	line-height: 0.8571428571428571em;
+	margin-bottom: 0.8571428571428571em;
+}
+h2 {
+	margin: 0;
+	font-size: 1.4615384615384615em;
+	line-height: 0.9473684210526315em;
+	margin-bottom: 0.9473684210526315em;
+}
+h3 {
+	margin: 0;
+	font-size: 1.3076923076923077em;
+	line-height: 1.0588235294117647em;
+	margin-bottom: 1.0588235294117647em;
+}
+h4 {
+	margin: 0;
+	font-size: 1.1538461538461537em;
+	line-height: 1.2em;
+	margin-bottom: 1.2em;
+}
+p, ul, blockquote, pre, td, th, label {
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.3846153846153846em;
+	margin-bottom: 1.3846153846153846em;
+}
+p.small {
+	margin: 0;
+	font-size: 0.8461538461538461em;
+	line-height: 1.6363636363636365em;
+	margin-bottom: 1.6363636363636365em;
+}
+table {
+	border-collapse: collapse;
+	margin-bottom: 1.3846153846153846em;
+}
+
+/*set fonts*/
+#content{
+	margin:10px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+

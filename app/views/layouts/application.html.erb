@@ -1,10 +1,14 @@
 <html>
   <head>
     <title>Travis!</title>
-    <%=stylesheet_link_tag("style.css")%>
+    <%=stylesheet_link_tag('reset','horz_menu','type','layout','forms', :cache => true)%>
   </head>
   <body>
+    <div id="horiz-menu">
 <%=render :partial=>"layouts/menu"%>
-    <%=yield %>
+    </div>
+    <div id="content">
+<%=yield %>      
+    </div>
   </body>
 </html>

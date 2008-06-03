@@ -1,8 +1,11 @@
-<% form_for :task, @task, :url=>{:action=>"create"} do |f| %>
-  Title: <%= f.text_field :title %>
-  <br/>
-  Description: <%= f.text_area :description %>
-  <br/>
-  <%= submit_tag %>
-  <br/>
+<% form_for(@task) do |f| %>
+<fieldset>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <br class="clear-left" />
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <br class="clear-left" />
+    <%= submit_tag "Create", {:id => 'submit_button'} %>
+</fieldset>
 <% end %>

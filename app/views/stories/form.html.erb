@@ -11,4 +11,5 @@
 <br class="clear-left" />
 </fieldset>
 <%=submit_tag "Save", {:id=> "submit_button"} %>
+<%=button_to_function "Cancel", "location.href='#{stories_path}'" %>
 <% end %>

@@ -3,9 +3,12 @@ class StoriesController < ApplicationController
     @stories=Story.find(:all)
   end
 
+  def show
+    @story= Story.find(params[:id])
+  end
+
   def edit
     @story=Story.find(params[:id])
-
     render :template=>"stories/form"
   end
 

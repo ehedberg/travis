@@ -47,9 +47,15 @@ class StoriesControllerTest < ActionController::TestCase
       stories.each do |s|
         assert_select "tr" do
           assert_select "td" do
-            assert_select "a[href=?]", edit_story_path(s.id)
+            assert_select "a[href=?]", story_path(s.id)
           end
           assert_select "td"
+          assert_select "td" do
+            assert_select "a[href=?]", story_path(s.id)
+          end
+          assert_select "td" do
+            assert_select "a[href=?]", edit_story_path(s.id)
+          end
         end
       end
     end
@@ -72,7 +78,17 @@ class StoriesControllerTest < ActionController::TestCase
       assert_select "textarea[id=story_description]"
       assert_select "input[type=text]"
       assert_select "input[type=submit]"
+      assert_select "input[type=button][value=Cancel][onclick*=location]"
     end
+  end
+
+  def test_show
+    get :show, :id=>stories(:one).id
+    assert assigns(:story)
+    assert_equal assigns(:story), stories(:one)
+    assert_template "show"
+    assert_select "a[href=?]", stories_path
+    assert_select "a[href=?]", edit_story_path(stories(:one).id)
   end
 
   def test_update
@@ -92,7 +108,7 @@ class StoriesControllerTest < ActionController::TestCase
 
   def test_edit
     get :edit,:id=>stories(:one).id
-    
+
     assert assigns(:story)
 
     story = assigns(:story)
@@ -103,7 +119,7 @@ class StoriesControllerTest < ActionController::TestCase
   def test_edit_view
 
     get :edit,:id=>stories(:one).id
-    
+
     assert assigns(:story)
 
     story = assigns(:story)

@@ -1,0 +1,8 @@
+<h1><%=h @story.title%></h1>
+<p><%=h @story.description%></p>
+<p><%=h @story.swag%></p>
+<p> 
+  <%=link_to("Show All", stories_path)%>
+  |
+  <%=link_to("Edit", edit_story_path(@story))%>
+</p>

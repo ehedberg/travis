@@ -1,8 +1,0 @@
-<script type="text/javascript">
-    var element = document.getElementById('menu_task');
-    element.className = 'current';
-</script>
-<table id='tasks'>
-  <%=render :partial=>"task",:collection=>@tasks%>
-</table>
-<%=link_to("Create Task", new_task_path)%>

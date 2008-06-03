@@ -1,0 +1,10 @@
+%h1
+  =h @task.title
+%p
+  =h @task.description
+%p
+  =link_to("Show All", tasks_path)
+  |
+  =link_to("Edit", edit_task_path(@task))
+  |
+  =link_to("Delete", @task, :confirm=>"Are you sure?", :method=>"delete")

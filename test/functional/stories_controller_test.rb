@@ -113,7 +113,6 @@ class StoriesControllerTest < ActionController::TestCase
     end
   end
 
-
   def test_show
     get :show, :id=>stories(:one).id
     assert assigns(:story)

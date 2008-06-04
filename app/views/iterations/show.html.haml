@@ -1,0 +1,12 @@
+%h1
+  =h(@iteration.title)
+%p
+  =h @iteration.start_date
+%p
+  =h @iteration.end_date
+%p
+  =link_to("Show All", iterations_path)
+  |
+  =link_to("Edit", edit_iteration_path(@iteration))
+  |
+  =link_to("Delete", { :id => @iteration.id }, :confirm => "Are you sure?", :method => :delete)

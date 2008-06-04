@@ -52,4 +52,24 @@ class IterationsControllerTest < ActionController::TestCase
     assert_select "a[href=?]", new_iteration_path
   end
 
+  def test_show
+    get :show, :id=>iterations(:three).id
+    assert assigns(:iteration)
+    assert_equal assigns(:iteration), iterations(:three)
+    assert_template "show"
+    assert_select "a[href=?]", iterations_path
+    assert_select "a[href=?]", edit_iteration_path(iterations(:three).id)
+    assert_select "a[href=?][onclick*=confirm]", iteration_path(iterations(:three))
+  end
+
+  def test_destroy
+    iteration= iterations(:two)
+
+    delete :destroy, :id=>iterations(:two).id
+
+    assert !Iteration.exists?(iteration.id)
+
+    assert_redirected_to iterations_path
+  end
+
 end

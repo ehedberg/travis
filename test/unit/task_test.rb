@@ -55,10 +55,17 @@ class TaskTest < ActiveSupport::TestCase
     t.stop!
     assert_equal "new", t.aasm_state
     t.start!
-    t.done!
+    t.finish!
     assert_equal "complete", t.aasm_state
     t.reopen!
     assert_equal "in_progress", t.aasm_state
+  end
+
+  def test_fanout
+    t = Task.create :title=>"New Task Title", :description=>"New Task Description"
+    t.start!
+    assert_equal  [:finish, :stop],  t.aasm_events_for_current_state
+
   end
 
 end

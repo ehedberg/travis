@@ -15,7 +15,7 @@ class Task < ActiveRecord::Base
     transitions :to=>:new, :from=>[:in_progress]
   end
 
-  aasm_event :done do
+  aasm_event :finish do
     transitions :to=>:complete, :from=>[:in_progress]
   end
 

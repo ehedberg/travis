@@ -8,7 +8,7 @@ class TaskTest < ActiveSupport::TestCase
   end
 
   def test_attributes
-    expected_attribs = ["title", "description"]
+    expected_attribs = ["title", "description", "aasm_state"]
     expected_attribs.each do |e|
       assert(Task.new.respond_to?(e))
     end
@@ -44,6 +44,21 @@ class TaskTest < ActiveSupport::TestCase
     t.stories.create({:title=>"ATitle"})
     assert_equal("ATitle", t.stories.first().title)
     assert_equal("ZTitle", t.stories.last().title)
+  end
+
+  def test_state_model
+    t = Task.new :title=>"New Task Title", :description=>"New Task Description"
+    assert(t.save)
+    assert_equal "new", t.aasm_state
+    t.start!
+    assert_equal "in_progress", t.aasm_state
+    t.stop!
+    assert_equal "new", t.aasm_state
+    t.start!
+    t.done!
+    assert_equal "complete", t.aasm_state
+    t.reopen!
+    assert_equal "in_progress", t.aasm_state
   end
 
 end

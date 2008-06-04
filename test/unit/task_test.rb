@@ -8,9 +8,9 @@ class TaskTest < ActiveSupport::TestCase
   end
 
   def test_attributes
-    expected_attribs = ["title", "description", "aasm_state"]
+    expected_attribs = %w(title description aasm_state login)
     expected_attribs.each do |e|
-      assert(Task.new.respond_to?(e))
+      assert(Task.new.respond_to?(e), "undefined attr '#{e}'")
     end
   end
 

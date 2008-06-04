@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20080604155229) do
     t.integer  "iteration_id"
   end
 
-  create_table "stories_tasks", :force => true do |t|
+  create_table "stories_tasks", :id => false, :force => true do |t|
     t.decimal  "story_id",   :null => false
     t.decimal  "task_id",    :null => false
     t.datetime "created_at"

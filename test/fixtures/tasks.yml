@@ -1,9 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   title: "Task Title 1"
   description: "Task Description 1"
 
 two:
+  id: 2
   title: "Task Title 2"
   description: "Task Description 2"

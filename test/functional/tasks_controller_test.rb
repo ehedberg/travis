@@ -111,21 +111,14 @@ class TasksControllerTest < ActionController::TestCase
   end
 
   def test_list_shows_stories
-    task = tasks(:one)
-    story = stories(:one)
-    task.stories << story
-    task.save
-    assert(!task.stories.empty?) 
-    assert_equal(story, task.stories.first())
-
     get :index
     assert_template "index"
     task_list = assigns(:tasks)
     assert_select "table[id=tasks]" do
-      task_list.each do |s|
+      task_list.each do |t|
         assert_select "tr" do
           assert_select "td" do
-            assert_select "a[href=?]", story_path(story.id)
+            assert_select "a[href=?]", story_path(t.stories.first.id)
           end
         end
       end

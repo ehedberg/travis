@@ -124,4 +124,20 @@ class TasksControllerTest < ActionController::TestCase
       end
     end
   end
+
+  def test_show_shows_stories
+    get :show, :id=>tasks(:one).id
+    t = assigns(:task)
+    assert t
+    story_list = t.stories
+    assert_select "table[id=stories]" do
+      story_list.each do |s|
+        assert_select "tr" do
+          assert_select "td" do
+            assert_select "a[href=?]", story_path(s)
+          end
+        end
+      end
+    end
+  end
 end

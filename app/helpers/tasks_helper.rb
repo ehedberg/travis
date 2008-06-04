@@ -3,7 +3,7 @@ module TasksHelper
     if (task.stories.empty?)
       "Unassigned"
     elsif (task.stories.length == 1)
-      link_to("Show Story", story_path(task.stories.first.id))
+      link_to(task.stories.first.title, story_path(task.stories.first))
     else
       str = link_to_function("Stories", "$('task_stories_#{task.id}').toggle()")
       str << stories_listing(task)

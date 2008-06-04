@@ -15,9 +15,11 @@ class StoriesController < ApplicationController
   def create
     @story=Story.new(params[:story])
 
-    @story.save
-
-    redirect_to(stories_path)
+    if @story.save
+      redirect_to(stories_path)
+    else
+      render :template=>"stories/form"
+    end
   end
 
   def update

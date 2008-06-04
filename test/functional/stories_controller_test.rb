@@ -32,6 +32,24 @@ class StoriesControllerTest < ActionController::TestCase
     assert_redirected_to stories_path
   end
 
+  def test_create_invalid_title
+
+    post :create, "story"=>{"description"=>"de", "swag"=>"2"}
+
+    assert_response :success
+
+    assert_template "form"
+
+    assert assigns(:story)
+
+    story = assigns(:story)
+
+    assert_equal story.errors.on(:title), "is too short (minimum is 1 characters)"
+
+    assert_select "div[id=errorExplanation][class=errorExplanation]"
+
+  end
+
   def test_index
     get :index
     assert assigns(:stories)
@@ -81,6 +99,7 @@ class StoriesControllerTest < ActionController::TestCase
       assert_select "input[type=button][value=Cancel][onclick*=location]"
     end
   end
+
 
   def test_show
     get :show, :id=>stories(:one).id

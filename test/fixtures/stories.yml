@@ -23,3 +23,8 @@ four:
   description: 'This is the description for a future story'
   swag: 2
   iteration_id: 3
+unswagged:
+  id: 5
+  title: 'this has no swag'
+  description: 'desc'
+  iteration_id: 3

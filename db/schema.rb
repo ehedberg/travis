@@ -9,14 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080603202436) do
+ActiveRecord::Schema.define(:version => 20080604155229) do
+
+  create_table "iterations", :force => true do |t|
+    t.string   "title",      :limit => 200, :null => false
+    t.date     "start_date",                :null => false
+    t.date     "end_date",                  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "stories", :force => true do |t|
-    t.string   "title",       :limit => 200, :null => false
+    t.string   "title",        :limit => 200, :null => false
     t.text     "description"
     t.decimal  "swag"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "iteration_id"
   end
 
   create_table "stories_tasks", :force => true do |t|

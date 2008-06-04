@@ -1,7 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class StoryTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
   def test_find_all_stories
     story_list = Story.find(:all)
     assert_not_nil(story_list)
@@ -11,6 +10,12 @@ class StoryTest < ActiveSupport::TestCase
   def test_task_relation
     s = Story.new
     assert_not_nil(s.tasks)
+  end
+
+  def test_iteration_relation
+    s = Story.new
+
+    assert s.respond_to?("iteration")
   end
 
   def test_validation

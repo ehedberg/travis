@@ -3,15 +3,23 @@ one:
   title: "List Stories"
   description: "Our First Rails Story!  How EXCITING!!!"
   swag: 1.5
+  iteration_id: 1
 
 two:
   id: 2 
   title: 'Create/Edit Story'
-  description: Description
+  description: 'Description'
   swag: 1.5
 
 three:
   id: 3 
   title: 'Yet Another Story'
   description: 'Blah Blah Blah'
-  swag: 27
+  swag: 2.7
+
+four:
+  id: 4 
+  title: 'This one'
+  description: 'This is the description for a future story'
+  swag: 2
+  iteration_id: 3

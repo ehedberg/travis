@@ -1,0 +1,6 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_iterations');
+  element.className = 'current';
+%table#iterations
+  =render :partial=>"iteration",:collection=>@iterations
+=link_to "Create Iteration" , new_iteration_path

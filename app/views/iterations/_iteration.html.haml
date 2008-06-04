@@ -1,0 +1,11 @@
+%tr
+  %td
+    =link_to(h(iteration.title), iteration_path(iteration))
+  %td
+    =iteration.start_date
+  %td
+    =iteration.end_date
+  %td
+    =link_to("Show", iteration_path(iteration))
+  %td
+    =link_to("Edit", edit_iteration_path(iteration))

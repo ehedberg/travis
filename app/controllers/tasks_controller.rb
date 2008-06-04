@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_filter :requires_login
   def index
     @tasks=Task.find(:all)
   end

@@ -34,5 +34,6 @@ ActionController::Routing::Routes.draw do |map|
   #map.connect ':controller/:action/:id.:format'
   map.resources :stories
   map.resources :tasks
+  map.resource :session
   map.resources :iterations
 end

@@ -37,4 +37,13 @@ class TaskTest < ActiveSupport::TestCase
     assert_equal "is too long (maximum is 200 characters)", t.errors.on(:title)
   end
 
+  def test_story_relation_sorting
+    t = Task.new :title=>"New Task Title", :description=>"New Task Description"
+    assert(t.save)
+    t.stories.create({:title=>"ZTitle"})
+    t.stories.create({:title=>"ATitle"})
+    assert_equal("ATitle", t.stories.first().title)
+    assert_equal("ZTitle", t.stories.last().title)
+  end
+
 end

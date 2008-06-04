@@ -140,4 +140,16 @@ class TasksControllerTest < ActionController::TestCase
       end
     end
   end
+
+  def test_edit_shows_stories
+    get :edit, :id=>tasks(:one).id
+    t = assigns(:task)
+    assert t
+    story_list = Story.find(:all)
+    assert_select "form select[multiple=multiple][size=5]" do
+      story_list.each do |s|
+        assert_select "option[value=?]", s.id, :text=>s.title
+      end
+    end
+  end
 end

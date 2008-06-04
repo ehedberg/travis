@@ -3,9 +3,12 @@
   %fieldset
     = f.label :title 
     = f.text_field :title 
-    %br#clear-left/
+    %br/
     = f.label :description 
     = f.text_area :description 
-    %br#clear-left/
+    %br/
+    = f.label :stories
+    = f.collection_select :story_ids, Story.find(:all), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'task[story_ids][]'}
+    %br/
     = submit_tag "Save", {:id => 'submit_button'} 
     = link_to("Cancel", tasks_path) 

@@ -2,9 +2,11 @@ require File.dirname(__FILE__) + '/../test_helper'
 $:.reject! { |e| e.include? 'TextMate' }
 
 class TasksControllerTest < ActionController::TestCase
+
   def setup
     @request.session[:login]='fubar'
   end
+
   def test_requires_login
     @request.session[:login]=nil
     get :index
@@ -15,8 +17,10 @@ class TasksControllerTest < ActionController::TestCase
     assert_response :success
     assert_template 'index'
   end
+
   def test_routes
     do_default_routing_tests('tasks')
+    assert_recognizes({:controller=>"tasks",:action=>"take", :id=>"1"}, :path=>"/tasks/1/take", :method=>"post")
   end
 
   def test_index
@@ -52,6 +56,7 @@ class TasksControllerTest < ActionController::TestCase
 
     assert_select "a[href=?]", tasks_path
     assert_select "a[href=?]", edit_task_path(tasks(:one).id)
+    assert_select "input[type=submit][id=take_button]"
   end
 
   def test_new
@@ -87,7 +92,7 @@ class TasksControllerTest < ActionController::TestCase
     assert_select "form[action=?][method=post]", task_path(t.id) do
       assert_select "input[id=task_title][type=text]"
       assert_select "textarea[id=task_description]"
-      assert_select "input[type=submit]"
+      assert_select "input[type=submit][class=submit_button]"
     end
   end
 
@@ -109,6 +114,14 @@ class TasksControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to tasks_path
     end
+  end
+
+  def test_take
+    @request.session[:login] = 'foo'
+    put :take, :id=>tasks(:one).id
+    t = assigns(:task)
+    assert_equal 'foo', t.login
+    assert_equal :in_progress, t.aasm_current_state
   end
 
   def test_list_shows_stories
@@ -162,4 +175,5 @@ class TasksControllerTest < ActionController::TestCase
     t = assigns(:task).reload
     assert_equal t.story_ids, [s1.id, s2.id]
   end
+
 end

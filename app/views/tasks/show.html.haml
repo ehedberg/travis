@@ -5,10 +5,16 @@
   =h @task.title
 %p
   =h @task.description
+%p
+  Assigned To 
+  =h @task.login
 %table#stories
   =render :partial=>"stories/story", :collection=>@task.stories
 %p
   =link_to("Show All", tasks_path)
+  |
+  -form_tag(take_task_path(@task)) do
+    =submit_tag "Take", {:id=>'take_button'}
   |
   =link_to("Edit", edit_task_path(@task))
   |

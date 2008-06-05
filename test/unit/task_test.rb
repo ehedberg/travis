@@ -64,8 +64,16 @@ class TaskTest < ActiveSupport::TestCase
   def test_fanout
     t = Task.create :title=>"New Task Title", :description=>"New Task Description"
     t.start!
-    assert_equal  [:finish, :stop],  t.aasm_events_for_current_state
+    assert(t.aasm_events_for_current_state.include?(:finish))
+    assert(t.aasm_events_for_current_state.include?(:stop))
+    assert_equal(2, t.aasm_events_for_current_state.size)
+  end
 
+  def test_take
+    t = Task.create :title=>"New Task Title", :description=>"New Task Description"
+    assert_equal 'new', t.aasm_state
+    t.login = 'fubar'
+    assert_equal 'in_progress', t.reload.aasm_state
   end
 
 end

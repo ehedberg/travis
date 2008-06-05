@@ -54,9 +54,10 @@ class TasksControllerTest < ActionController::TestCase
     assert_equal assigns(:task), tasks(:one)
     assert_template "show"
 
-    assert_select "a[href=?]", tasks_path
-    assert_select "a[href=?]", edit_task_path(tasks(:one).id)
     assert_select "input[type=submit][id=take_button]"
+    assert_select "input[type=button][value='Show All'][onclick*=location]"
+    assert_select "input[type=button][value='Edit'][onclick*=location]"
+    assert_select "a[href=?]", task_path(tasks(:one))
   end
 
   def test_new

@@ -11,11 +11,8 @@
 %table#stories
   =render :partial=>"stories/story", :collection=>@task.stories
 %p
-  =link_to("Show All", tasks_path)
-  |
   -form_tag(take_task_path(@task)) do
     =submit_tag "Take", {:id=>'take_button'}
-  |
-  =link_to("Edit", edit_task_path(@task))
-  |
-  =link_to("Delete", @task, :confirm=>"Are you sure?", :method=>"delete")
+    =button_to_function "Show All", "location.href='#{tasks_path}'", {:class=>'submit_button'}
+    =button_to_function "Edit", "location.href='#{edit_task_path(@task)}'", {:class=>'submit_button'}
+    =link_to("Delete", @task, :confirm=>"Are you sure?", :method=>"delete")

@@ -42,6 +42,7 @@ Rails::Initializer.run do |config|
   }
   config.gem 'haml'
   config.gem 'rubyist-aasm', :lib=>'aasm'
+  config.gem 'ziya'
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information

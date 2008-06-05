@@ -16,13 +16,7 @@ class TasksControllerTest < ActionController::TestCase
     assert_template 'index'
   end
   def test_routes
-    assert_routing "/tasks", :controller=>"tasks",:action=>"index"
-    assert_routing "/tasks/new", :controller=>"tasks",:action=>"new"
-    assert_routing "/tasks/1", :controller=>"tasks",:action=>"show", :id=>"1"
-    assert_routing({:path=>"/tasks", :method=>'post'}, {:controller=>"tasks",:action=>"create"})
-    assert_routing({:path=>"/tasks/1",:method=>'delete'}, {:controller=>"tasks",:action=>"destroy", :id=>'1'})
-    assert_routing({:path=>"/tasks/1",:method=>'put'}, {:controller=>"tasks",:action=>"update", :id=>'1'})
-    assert_routing "/tasks/1/edit", :controller=>"tasks",:action=>"edit", :id=>"1"
+    do_default_routing_tests('tasks')
   end
 
   def test_index

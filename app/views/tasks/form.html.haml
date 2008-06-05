@@ -1,14 +1,15 @@
-- form_for @task do |f|
-  &nbsp;
+- form_for @task, :html=>{:id=>'columnarForm'} do |f|
   %fieldset
-    = f.label :title 
-    = f.text_field :title 
-    %br/
-    = f.label :description 
-    = f.text_area :description 
-    %br/
-    = f.label :stories
-    = f.collection_select :story_ids, Story.find(:all), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'task[story_ids][]'}
-    %br/
-    = submit_tag "Save", {:id => 'submit_button'} 
-    = link_to("Cancel", tasks_path) 
+    %legend
+      Task Form
+    %label
+      Title
+      = f.text_field :title 
+    %label
+      Description
+      = f.text_area :description 
+    %label
+      Stories
+      = f.collection_select :story_ids, Story.find(:all), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'task[story_ids][]'}
+    = submit_tag "Save", {:class => 'submit_button'} 
+    = button_to_function("Cancel", "location.href=%s"%tasks_path, {:class=>'submit_button'}) 

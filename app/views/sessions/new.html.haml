@@ -1,7 +1,10 @@
 %h1
   Login
 - form_tag session_path do
-  =label_tag "Login"
-  =text_field_tag "login"
-  =submit_tag "Login"
+  %fieldset
+    %legend
+      Login
+    =label_tag "Login"
+    =text_field_tag "login"
+    =submit_tag "Login"
 

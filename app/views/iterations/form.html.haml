@@ -1,0 +1,16 @@
+=error_messages_for "iteration"
+- form_for @iteration do |f|
+  &nbsp;
+  %fieldset
+    =f.label "Title"
+    =f.text_field :title
+    %br.clear-left/
+    =f.label "Start Date"
+    =f.text_field :start_date
+    %br.clear-left/
+    =f.label "End Date"
+    =f.text_field :end_date
+    %br.clear-left/
+    =submit_tag "Save", {:id=> "submit_button"}
+    =button_to_function "Cancel", "location.href='#{iterations_path}'"
+

@@ -7,5 +7,5 @@ class Story < ActiveRecord::Base
 
   validates_length_of :description, :maximum=>200, :allow_nil=>true
 
-  validates_length_of :title, :minimum=>1
+  validates_length_of :title, :within=>1..20
 end

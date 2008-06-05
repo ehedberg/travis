@@ -72,4 +72,71 @@ class IterationsControllerTest < ActionController::TestCase
     assert_redirected_to iterations_path
   end
 
+  def test_create
+    post :create, "iteration"=>{"title"=>"New Iteration", "start_date"=>"2008-06-07", "end_date"=>"2008-06-21"}
+
+    assert assigns(:iteration)
+
+    iteration = assigns(:iteration)
+
+    assert_equal Iteration.find_by_title("New Iteration"), assigns(:iteration)
+
+    assert_response :redirect
+
+    assert_redirected_to iterations_path
+  end
+
+  def test_create_invalid_title_not_found
+
+    post :create, "iteration"=>{"start_date"=>"2008-06-07", "end_date"=>"2008-06-21"}
+
+    assert_response :success
+
+    assert_template "form"
+
+    assert assigns(:iteration)
+
+    story = assigns(:iteration)
+
+    assert_equal story.errors.on(:title), "is too short (minimum is 1 characters)"
+
+    assert_select "div[id=errorExplanation][class=errorExplanation]"
+  end
+
+#  def test_create_invalid_start_date
+
+#    post :create, "iteration"=>{"title"=>"New Iteration", "start_date"=>"/6/7", "end_date"=>"2008-06-21"}
+
+#   assert_response :success
+
+#    assert_template "form"
+
+#    assert assigns(:iteration)
+
+#    story = assigns(:iteration)
+
+#    assert_equal story.errors.on(:start_date), "is too short (minimum is 1 characters)"
+
+#    assert_select "div[id=errorExplanation][class=errorExplanation]"
+#  end
+
+  def test_new
+    get :new
+
+    assert_response :success
+
+    assert_template "form"
+
+    assert assigns(:iteration)
+
+    assert assigns(:iteration).new_record?
+
+    assert_select "form[action=?][method=post]", iterations_path do
+      assert_select "input[type=text]"
+      assert_select "input[type=text]"
+      assert_select "input[type=text]"
+      assert_select "input[type=submit]"
+      assert_select "input[type=button][value=Cancel][onclick*=location]"
+    end
+  end
 end

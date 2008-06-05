@@ -13,4 +13,23 @@ class IterationsController < ApplicationController
 
     redirect_to(iterations_path)
   end
+
+  def new
+    @iteration = Iteration.new
+
+    render :template=>"iterations/form"
+  end
+
+  def create
+    @iteration=Iteration.new(params[:iteration])
+
+    p @iteration.start_date
+
+    if @iteration.save
+      redirect_to(iterations_path)
+    else
+      render :template=>"iterations/form"
+    end
+  end
+
 end

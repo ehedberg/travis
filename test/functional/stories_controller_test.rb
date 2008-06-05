@@ -49,8 +49,8 @@ class StoriesControllerTest < ActionController::TestCase
     assert_equal story.errors.on(:title), "is too short (minimum is 1 characters)"
 
     assert_select "div[id=errorExplanation][class=errorExplanation]"
-
   end
+
   def test_requires_login
     @request.session[:login]=nil
     get :index

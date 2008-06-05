@@ -15,6 +15,9 @@
     %label
       Swag
       =f.text_field :swag
+    %label
+      Iteration
+      =f.select :iteration_id, Iteration.find(:all).collect{|i| [i.title, i.id]}, {:include_blank=>true}
 
     =submit_tag "Save", {:class=> "submit_button"}
     =button_to_function "Cancel", "location.href='#{stories_path}'", {:class=>'submit_button'}

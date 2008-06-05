@@ -179,6 +179,16 @@ class StoriesControllerTest < ActionController::TestCase
       assert_select "input[name=_method][type=hidden][value=put]"
       assert_select "textarea[id=story_description]", {:text=>story.description}
       assert_select "input[type=text][value=?]", story.swag
+      iteration_list = Iteration.find(:all)
+      assert_select "select" do
+        iteration_list.each do |i|
+          if i.id == 1
+            assert_select "option[selected][value=?]", i.id, :text=>i.title
+          else
+            assert_select "option[value=?]", i.id, :text=>i.title
+          end
+        end
+      end
       assert_select "input[type=submit]"
     end
   end

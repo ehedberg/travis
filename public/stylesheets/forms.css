@@ -60,6 +60,8 @@
 
 #columnarForm select
 {
+	display: block;
+	width: 15em;
 }
 
 #columnarForm div.buttons {

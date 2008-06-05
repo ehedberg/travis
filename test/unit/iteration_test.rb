@@ -20,17 +20,16 @@ class IterationTest < ActiveSupport::TestCase
 
     assert_valid(:end_date, '2008-06-21')
 
-    #assert_invalid(:start_date, 'Start date is required', nil)
+    assert_invalid(:title, "is too short (minimum is 1 characters)", "")
 
-    #assert_invalid(:start_date, 'not a date', '2008/6/7', 'i am invalid')
+    assert_invalid(:title, "is too long (maximum is 20 characters)", ('a'*18) + "rgh")
 
+    assert_invalid(:start_date, "can't be blank", nil)
 
+    #assert_invalid(:start_date, 'not a date', 'i am invalid', '2008/6/7')
+
+    assert_invalid(:end_date, "can't be blank", nil)
+ 
     #assert_invalid(:end_date, 'not a date', 'i am invalid', '2008/6/7')
-
-    #assert_invalid(:end_date, 'End date is required', nil)
-
-    #assert_invalid(:title, "is too short (minimum is 1 characters)", "")
-
-    #assert_invalid(:title, "is too long (maximum is 20 characters)", ('a'*18) + "rgh")
   end
 end

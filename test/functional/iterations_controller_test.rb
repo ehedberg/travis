@@ -5,12 +5,7 @@ class IterationsControllerTest < ActionController::TestCase
     @request.session[:login]='fubar'
   end
   def test_routes
-    assert_routing "/iterations/new", :controller=>"iterations",:action=>"new"
-    assert_routing "/iterations/1", :controller=>"iterations",:action=>"show", :id=>"1"
-    assert_recognizes({:controller=>"iterations",:action=>"create"}, :path=>"/iterations", :method=>"post")
-    assert_recognizes({:controller=>"iterations",:action=>"destroy", :id=>"1"}, :path=>"/iterations/1", :method=>"delete")
-    assert_recognizes({:controller=>"iterations",:action=>"update", :id=>"1"}, :path=>"/iterations/1", :method=>"put")
-    assert_routing "/iterations/1/edit", :controller=>"iterations",:action=>"edit", :id=>"1"
+    do_default_routing_tests('iterations')
   end
   def test_requires_login
     @request.session[:login]=nil
@@ -168,6 +163,12 @@ class IterationsControllerTest < ActionController::TestCase
     end
 
     assert_select "div[id=sum]", :text=>/#{swag_sum.to_s}/
+  end
+
+  def test_load_chart_route
+    assert_routing "/iterations/1/chart", :controller=>"iterations",:action=>"chart", :id=>"1"
+    get :chart, :id=>iterations(:one).id
+    assert_response :success
   end
 
 end

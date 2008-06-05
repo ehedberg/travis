@@ -35,5 +35,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :stories
   map.resources :tasks
   map.resource :session
-  map.resources :iterations
+  map.resources :iterations, :member=>{:chart=> :get}
 end

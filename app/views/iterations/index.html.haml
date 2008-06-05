@@ -3,4 +3,8 @@
   element.className = 'current';
 %table#iterations
   =render :partial=>"iteration",:collection=>@iterations
+
+
+.chart
+  = ziya_chart chart_iteration_path(Iteration.find(:first).id), :size=>"300x200"  if Iteration.count > 0
 =link_to "Create Iteration" , new_iteration_path

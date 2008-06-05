@@ -11,3 +11,5 @@
       =render :partial=>"layouts/menu"
     #content
       =yield
+#footer
+  = link_to "Logout", session_path, :method=>'delete'

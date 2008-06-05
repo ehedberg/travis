@@ -31,7 +31,10 @@ class SessionsControllerTest < ActionController::TestCase
       assert_select "input[type=text][name=login]"
       assert_select "input[type=submit]"
     end
-
-
+  end
+  def test_logout_button_footer
+    @request.session[:login]='foo'
+    get :new
+    assert_select "a[href=?]", session_path, "Logout"
   end
 end

@@ -35,6 +35,6 @@ class StoryTest < ActiveSupport::TestCase
 
     assert_invalid(:title, "is too short (minimum is 1 characters)", "")
 
-    assert_invalid(:title, "is too long (maximum is 20 characters)", ('a'*18) + "rgh")
+    assert_invalid(:title, "is too long (maximum is 200 characters)", ('a'*198) + "rgh")
   end
 end

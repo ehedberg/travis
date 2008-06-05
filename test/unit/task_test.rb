@@ -69,4 +69,10 @@ class TaskTest < ActiveSupport::TestCase
     assert_equal(2, t.aasm_events_for_current_state.size)
   end
 
+  def test_state_is_protected
+    t = Task.create :title=>"New Task Title", :description=>"New Task Description", :aasm_state=>"invalid"
+    assert(t.save)
+    assert_equal "new", t.aasm_state
+  end
+
 end

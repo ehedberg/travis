@@ -1,6 +1,8 @@
 class Task < ActiveRecord::Base
   include AASM
 
+  attr_protected :aasm_state
+
   aasm_initial_state :new
 
   aasm_state :new

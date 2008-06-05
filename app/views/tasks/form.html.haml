@@ -12,6 +12,9 @@
       Description
       = f.text_area :description 
     %label
+      Action
+      =f.select :aasm_state, @task.aasm_events_for_current_state, {:include_blank=>true}
+    %label
       Stories
       = f.collection_select :story_ids, Story.find(:all), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'task[story_ids][]'}
     = submit_tag "Save", {:class => 'submit_button'} 

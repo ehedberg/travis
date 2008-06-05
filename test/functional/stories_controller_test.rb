@@ -61,7 +61,6 @@ class StoriesControllerTest < ActionController::TestCase
     assert stories.kind_of?(Array)
 
     assert_template "index"
-    assert_select "div[id=sum]", :text=>/7.7/
 
     assert_select "table[id=stories]" do
       stories.each do |s|

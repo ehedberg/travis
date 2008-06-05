@@ -4,6 +4,3 @@
 %table#stories
   =render :partial=>"story",:collection=>@stories
 =link_to "Create Story" , new_story_path
-#sum
-  Total Swag:  
-  = @stories.inject(0){|x,y| x+(y.swag||0)}

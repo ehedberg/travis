@@ -155,8 +155,10 @@ class IterationsControllerTest < ActionController::TestCase
     iteration = assigns(:iteration)
     assert iteration
     story_list = iteration.stories
+    swag_sum = 0
     assert_select "table[id=stories]" do
       story_list.each do |s|
+        swag_sum += s.swag
         assert_select "tr" do
           assert_select "td" do
             assert_select "a[href=?]", story_path(s)
@@ -164,6 +166,8 @@ class IterationsControllerTest < ActionController::TestCase
         end
       end
     end
+
+    assert_select "div[id=sum]", :text=>/#{swag_sum.to_s}/
   end
 
 end

@@ -139,4 +139,15 @@ class IterationsControllerTest < ActionController::TestCase
       assert_select "input[type=button][value=Cancel][onclick*=location]"
     end
   end
+
+  def test_edit
+    get :edit,:id=>iterations(:one).id
+
+    assert assigns(:iteration)
+
+    iteration = assigns(:iteration)
+
+    assert_equal iterations(:one).id, iteration.id
+  end
+
 end

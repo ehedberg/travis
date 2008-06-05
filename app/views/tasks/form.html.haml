@@ -1,3 +1,6 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_task');
+  element.className = 'current';
 - form_for @task, :html=>{:id=>'columnarForm'} do |f|
   %fieldset
     %legend
@@ -12,4 +15,4 @@
       Stories
       = f.collection_select :story_ids, Story.find(:all), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'task[story_ids][]'}
     = submit_tag "Save", {:class => 'submit_button'} 
-    = button_to_function("Cancel", "location.href=%s"%tasks_path, {:class=>'submit_button'}) 
+    = button_to_function("Cancel", "location.href='#{tasks_path}'", {:class=>'submit_button'}) 

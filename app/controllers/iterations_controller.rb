@@ -14,6 +14,11 @@ class IterationsController < ApplicationController
     redirect_to(iterations_path)
   end
 
+  def edit
+    @iteration=Iteration.find(params[:id])
+    render :template=>"iterations/form"
+  end
+
   def new
     @iteration = Iteration.new
 

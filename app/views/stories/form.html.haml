@@ -1,3 +1,6 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_story');
+  element.className = 'current';
 =error_messages_for "story"
 - form_for @story, :html=>{:id=>'columnarForm'} do |f|
   %fieldset

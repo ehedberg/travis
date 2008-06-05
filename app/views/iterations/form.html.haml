@@ -1,16 +1,20 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_iteration');
+  element.className = 'current';
 =error_messages_for "iteration"
-- form_for @iteration do |f|
-  &nbsp;
+- form_for @iteration, :html=>{:id=>'columnarForm'} do |f|
   %fieldset
-    =f.label "Title"
-    =f.text_field :title
-    %br.clear-left/
-    =f.label "Start Date"
-    =f.text_field :start_date
-    %br.clear-left/
-    =f.label "End Date"
-    =f.text_field :end_date
-    %br.clear-left/
-    =submit_tag "Save", {:id=> "submit_button"}
-    =button_to_function "Cancel", "location.href='#{iterations_path}'"
+    %legend
+      Story Form
+    %label.first
+      Title
+      =f.text_field :title
+    %label 
+      Start Date 
+      =f.text_field :start_date
+    %label
+      End Date
+      =f.text_field :end_date
 
+    =submit_tag "Save", {:class=> "submit_button"}
+    =button_to_function "Cancel", "location.href='#{iterations_path}'", {:class=>'submit_button'}

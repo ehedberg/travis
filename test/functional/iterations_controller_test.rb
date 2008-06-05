@@ -150,4 +150,20 @@ class IterationsControllerTest < ActionController::TestCase
     assert_equal iterations(:one).id, iteration.id
   end
 
+  def test_show_shows_stories
+    get :show, :id=>iterations(:one).id
+    iteration = assigns(:iteration)
+    assert iteration
+    story_list = iteration.stories
+    assert_select "table[id=stories]" do
+      story_list.each do |s|
+        assert_select "tr" do
+          assert_select "td" do
+            assert_select "a[href=?]", story_path(s)
+          end
+        end
+      end
+    end
+  end
+
 end

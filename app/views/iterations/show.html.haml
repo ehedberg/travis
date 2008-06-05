@@ -7,6 +7,8 @@
   =h @iteration.start_date
 %p
   =h @iteration.end_date
+%table#stories
+  =render :partial=>"stories/story", :collection=>@iteration.stories
 %p
   =link_to("Show All", iterations_path)
   |

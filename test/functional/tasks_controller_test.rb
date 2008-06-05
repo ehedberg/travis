@@ -20,7 +20,6 @@ class TasksControllerTest < ActionController::TestCase
 
   def test_routes
     do_default_routing_tests('tasks')
-    assert_recognizes({:controller=>"tasks",:action=>"take", :id=>"1"}, :path=>"/tasks/1/take", :method=>"post")
   end
 
   def test_index
@@ -54,9 +53,8 @@ class TasksControllerTest < ActionController::TestCase
     assert_equal assigns(:task), tasks(:one)
     assert_template "show"
 
-    assert_select "input[type=submit][id=take_button]"
-    assert_select "input[type=button][value='Show All'][onclick*=location]"
-    assert_select "input[type=button][value='Edit'][onclick*=location]"
+    assert_select "a[href=?]", tasks_path
+    assert_select "a[href=?]", edit_task_path(tasks(:one))
     assert_select "a[href=?]", task_path(tasks(:one))
   end
 
@@ -115,14 +113,6 @@ class TasksControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to tasks_path
     end
-  end
-
-  def test_take
-    @request.session[:login] = 'foo'
-    put :take, :id=>tasks(:one).id
-    t = assigns(:task)
-    assert_equal 'foo', t.login
-    assert_equal :in_progress, t.aasm_current_state
   end
 
   def test_list_shows_stories

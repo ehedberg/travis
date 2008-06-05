@@ -27,8 +27,4 @@ class Task < ActiveRecord::Base
   validates_presence_of :description, :title
   validates_length_of :title, :maximum=>200, :allow_nil=>true
 
-  def login=(login)
-    self[:login] = login
-    self.start!
-  end
 end

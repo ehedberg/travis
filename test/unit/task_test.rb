@@ -69,11 +69,4 @@ class TaskTest < ActiveSupport::TestCase
     assert_equal(2, t.aasm_events_for_current_state.size)
   end
 
-  def test_take
-    t = Task.create :title=>"New Task Title", :description=>"New Task Description"
-    assert_equal 'new', t.aasm_state
-    t.login = 'fubar'
-    assert_equal 'in_progress', t.reload.aasm_state
-  end
-
 end

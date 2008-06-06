@@ -5,8 +5,9 @@ class Task < ActiveRecord::Base
 
   state :new,
     :enter=> Proc.new { |t| t.login = nil }
-  state :in_progress,
-    :enter=> Proc.new { |t| t.login = Session.current_login }
+
+  state :in_progress, :enter=> Proc.new { |t| t.login = Session.current_login; t.stories.each{ |s| s.start!} }
+
   state :complete
 
   event :start do

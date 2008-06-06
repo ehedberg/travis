@@ -13,12 +13,12 @@ class StoryTest < ActiveSupport::TestCase
   end
   def test_has_completed_at
     s= Story.new
-    assert s.respond_to? :completed_at
+    assert(s.respond_to? :completed_at)
   end
 
   def test_has_state
     s= Story.new
-    assert s.respond_to? :state
+    assert(s.respond_to? :state)
   end
   def test_iteration_relation
     s = Story.new
@@ -45,4 +45,37 @@ class StoryTest < ActiveSupport::TestCase
 
     assert_invalid(:title, "is too long (maximum is 200 characters)", ('a'*198) + "rgh")
   end
+
+  def test_state_model
+    t = Task.new :title=>"New Task Title", :description=>"New Task Description"
+
+    assert(t.save)
+
+    assert_equal "new", t.state
+
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+
+    s.tasks<<t
+
+    assert(s.save)
+
+    assert_equal("new", s.state)
+
+    t.start!
+
+    assert_equal "in_progress", t.stories.first.state
+
+    s.reload
+
+    assert_equal "in_progress", t.state
+
+    assert_equal "in_progress", s.state
+  end
+
+  def test_state_is_protected
+    s = Story.create(:title=>"Title", :description=>"The description", :swag=>23, :state=>"invalid")
+
+    assert_equal "new", s.state
+  end
+
 end

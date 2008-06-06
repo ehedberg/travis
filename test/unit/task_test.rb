@@ -8,7 +8,7 @@ class TaskTest < ActiveSupport::TestCase
   end
 
   def test_attributes
-    expected_attribs = %w(title description aasm_state login)
+    expected_attribs = %w(title description state login)
     expected_attribs.each do |e|
       assert(Task.new.respond_to?(e), "undefined attr '#{e}'")
     end
@@ -47,32 +47,38 @@ class TaskTest < ActiveSupport::TestCase
   end
 
   def test_state_model
+    Session.current_login="xxx"
     t = Task.new :title=>"New Task Title", :description=>"New Task Description"
     assert(t.save)
-    assert_equal "new", t.aasm_state
+    assert_equal "new", t.state
+    assert_nil t.login
     t.start!
-    assert_equal "in_progress", t.aasm_state
+    assert_equal "in_progress", t.state
+    assert_equal "xxx", t.login
     t.stop!
-    assert_equal "new", t.aasm_state
+    assert_equal "new", t.state
+    assert_nil t.login
     t.start!
     t.finish!
-    assert_equal "complete", t.aasm_state
+    assert_equal "complete", t.state
+    assert_equal "xxx", t.login
     t.reopen!
-    assert_equal "in_progress", t.aasm_state
+    assert_equal "in_progress", t.state
+    assert_equal "xxx", t.login
   end
 
   def test_fanout
     t = Task.create :title=>"New Task Title", :description=>"New Task Description"
     t.start!
-    assert(t.aasm_events_for_current_state.include?(:finish))
-    assert(t.aasm_events_for_current_state.include?(:stop))
-    assert_equal(2, t.aasm_events_for_current_state.size)
+    assert(t.available_events.include?(:finish))
+    assert(t.available_events.include?(:stop))
+    assert_equal(2, t.available_events.size)
   end
 
   def test_state_is_protected
-    t = Task.create :title=>"New Task Title", :description=>"New Task Description", :aasm_state=>"invalid"
+    t = Task.create :title=>"New Task Title", :description=>"New Task Description", :state=>"invalid"
     assert(t.save)
-    assert_equal "new", t.aasm_state
+    assert_equal "new", t.state
   end
 
 end

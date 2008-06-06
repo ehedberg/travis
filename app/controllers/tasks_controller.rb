@@ -27,9 +27,14 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     @task.update_attributes(params[:task])
-    if !params[:task][:aasm_state].empty?
-      @task.send params[:task][:aasm_state]
-      @task.login = session[:login]
+    if !params[:task][:state].empty?
+      action = params[:task][:state]
+      @task.send action+"!"
+      #if action == "start"
+      #  @task.login = session[:login]
+      #elsif action == "stop"
+      #  @task.login = ""
+      #end
       @task.save
     end
     redirect_to task_path(@task)

@@ -7,6 +7,10 @@ class TasksControllerTest < ActionController::TestCase
     @request.session[:login]='fubar'
   end
 
+  def teardown
+    @request.session[:login]=nil
+  end
+
   def test_requires_login
     @request.session[:login]=nil
     get :index
@@ -72,7 +76,7 @@ class TasksControllerTest < ActionController::TestCase
 
   def test_create
     n = Task.count
-    post :create, :task=>{"title"=>"spam", "description"=>"spam description", "aasm_state"=>""}
+    post :create, :task=>{"title"=>"spam", "description"=>"spam description", "state"=>""}
     assert_response :redirect
     t = assigns(:task)
     assert_redirected_to task_path(t)
@@ -93,7 +97,7 @@ class TasksControllerTest < ActionController::TestCase
       assert_select "input[id=task_title][type=text]"
       assert_select "textarea[id=task_description]"
       assert_select "select" do
-        t.aasm_events_for_current_state.each do |st|
+        t.available_events.each do |st|
           assert_select "option[value=?]", st
         end
       end
@@ -108,7 +112,7 @@ class TasksControllerTest < ActionController::TestCase
 
   def test_update
     n = Task.count
-    put :update, :id=>tasks(:one).id, :task=>{"title"=>"updated title", "description"=>"updated description", "aasm_state"=>""}
+    put :update, :id=>tasks(:one).id, :task=>{"title"=>"updated title", "description"=>"updated description", "state"=>""}
     assert_response :redirect
     t = assigns(:task)
     assert_redirected_to task_path(t)
@@ -158,26 +162,35 @@ class TasksControllerTest < ActionController::TestCase
   end
 
   def test_update_saves_stories
-    t = Task.create :description=>"update test desc", :title=>"update test title", :aasm_state=>""
+    t = Task.create :description=>"update test desc", :title=>"update test title", :state=>""
     s1 = Story.create :title=>"S1 title", :description=>"S1 desc"
     s2 = Story.create({:title=>"S2 title", :description=>"S2 desc"})
-    put :update, :id=>t.id, :task=>{"story_ids"=>[s1.id, s2.id], "aasm_state"=>""}
+    put :update, :id=>t.id, :task=>{"story_ids"=>[s1.id, s2.id], "state"=>""}
     t = assigns(:task).reload
     assert_equal t.story_ids, [s1.id, s2.id]
   end
 
   def test_actions
-    assert_equal "new", tasks(:one).aasm_state
+    t = Task.new :title=>"My Title", :description=>"My Description"
+    assert(t.save)
+    assert_equal "new", t.state
+    assert_equal nil, t.login
 
-    put :update, :id=>tasks(:one).id, :task=>{"aasm_state"=>"start"}
+    put :update, :id=>t.id, :task=>{"state"=>"start"}
     t = assigns(:task)
-    assert_equal "in_progress", t.aasm_state
+    assert_equal "in_progress", t.state
     assert_equal session[:login], t.login
 
-    put :update, :id=>tasks(:one).id, :task=>{"aasm_state"=>"stop"}
+    put :update, :id=>t.id, :task=>{"state"=>"stop"}
     t = assigns(:task)
-    assert_equal "new", t.aasm_state
-    assert_equal "", t.login
+    assert_equal "new", t.state
+    assert_equal nil, t.login
+
+    put :update, :id=>t.id, :task=>{"state"=>"start"}
+    put :update, :id=>t.id, :task=>{"state"=>"finish"}
+    t = assigns(:task)
+    assert_equal "complete", t.state
+    assert_equal session[:login], t.login
   end
 
 end

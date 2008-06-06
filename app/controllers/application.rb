@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   private
   def requires_login
     if session[:login]
+      Session.current_login||=session[:login]
       return true
     else
       redirect_to new_session_path unless session[:login]

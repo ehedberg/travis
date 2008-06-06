@@ -3,8 +3,6 @@ class StoryTasks < ActiveRecord::Migration
     create_table :stories_tasks, :id=>false do |t|
       t.column :story_id, :number, :null=>false
       t.column :task_id, :number, :null=>false
-
-      t.timestamps
     end
   end
 

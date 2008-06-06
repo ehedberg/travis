@@ -42,24 +42,25 @@ class IterationsController < ApplicationController
     total_points = iter.total_points
     chart = Ziya::Charts::Line.new 
     days = []
-    completed=[]
     points = []
+    created=[]
     (iter.end_date - iter.start_date).numerator.times do |n| 
       d= (iter.start_date+n)
       days << d
       points << (Story.connection.select_value("select sum(swag) from stories where state='passed' and completed_at='%s'"%d)|| 0).to_f
-    end
-    z= []
-    points.each do |p|
-      z << (p+(z.last||0)) 
+      created << (Story.connection.select_value("select sum(swag) from stories where  created_at='%s'"%d)|| 0).to_f
 
     end
-    logger.debug "found points : #{points.inspect}"
-    iter.start_date - iter.end_date
+    z= []
+    points.each { |p| z << (p+(z.last||0)) }
+    y= []
+
+    created.each { |p| y << (p+(y.last||0)) }
+
     strdays= days.map{|x| x.to_s(:db)}
     chart.add( :axis_category_text,  strdays)
     chart.add( :series, "Points complete", z)
-    chart.add( :series, "Scope", [total_points]*14 ) 
+    chart.add( :series, "Scope", y)
     respond_to do |fmt| 
       fmt.xml { render :xml => chart.to_xml } 
     end 

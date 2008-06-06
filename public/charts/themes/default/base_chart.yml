@@ -47,7 +47,7 @@
     alpha:     20
   
   <%=component :chart_transition %>
-    type:     drop
+    type:     none
     order:    category  
     duration: 2
   
@@ -55,7 +55,7 @@
     position: right
     color:    0000ff
     size:     9
-    alpha:    1
+    alpha:    100
   
   <%=component :legend_label %>
     color:    000000
@@ -63,7 +63,7 @@
     
   <%=component :legend_transition %>
     color: 00ff00  
-    type:  scale  
+    type:  none  
     duration: 2.0
       
   <%=component :series_color %>

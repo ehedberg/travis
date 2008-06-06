@@ -28,6 +28,9 @@ class Iteration < ActiveRecord::Base
   def open_points
     ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state!='passed'").to_f
   end
+  def total_days
+    (end_date - start_date).numerator
+  end
 
   
 end

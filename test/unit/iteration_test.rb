@@ -41,4 +41,8 @@ class IterationTest < ActiveSupport::TestCase
   def test_completed_points
     assert_equal 2.3, iterations(:current).completed_points
   end
+
+  def test_iter_days
+    assert_equal 12, iterations(:current).total_days
+  end
 end

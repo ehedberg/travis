@@ -28,8 +28,6 @@ class IterationsController < ApplicationController
   def create
     @iteration=Iteration.new(params[:iteration])
 
-    p @iteration.start_date
-
     if @iteration.save
       redirect_to(iterations_path)
     else

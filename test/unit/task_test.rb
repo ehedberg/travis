@@ -14,6 +14,13 @@ class TaskTest < ActiveSupport::TestCase
     end
   end
 
+  def test_canwrite_to_assoc
+    s = Task.find(:first).stories.first
+    s.title='fooooo'
+    assert s.save
+
+  end
+
   def test_story_relation
     t = Task.new :title=>"New Task Title", :description=>"New Task Description"
     assert_not_nil(t.stories)

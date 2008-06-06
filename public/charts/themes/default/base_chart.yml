@@ -53,9 +53,9 @@
   
   <%=component :chart_value %>
     position: right
-    color:    F5F0BE
+    color:    0000ff
     size:     9
-    alpha:    100
+    alpha:    1
   
   <%=component :legend_label %>
     color:    000000

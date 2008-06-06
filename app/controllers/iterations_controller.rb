@@ -1,7 +1,9 @@
 class IterationsController < ApplicationController
+  helper Ziya::Helper
   before_filter :requires_login
   def index
-    @iterations = Iteration.find(:all)
+
+    @iterations = Iteration.paginate(:page=>params[:page], :order=>'created_at asc')
   end
 
   def show

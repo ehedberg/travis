@@ -1,6 +1,7 @@
 %script{:type=>'text/javascript'}
   var element = document.getElementById('menu_task');
   element.className = 'current';
+=will_paginate @tasks
+=link_to("Create Task", new_task_path)
 %table#tasks
   =render :partial=>"task",:collection=>@tasks
-=link_to("Create Task", new_task_path)

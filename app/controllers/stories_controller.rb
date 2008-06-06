@@ -1,7 +1,7 @@
 class StoriesController < ApplicationController
   before_filter :requires_login
   def index
-    @stories=Story.find(:all)
+    @stories=Story.paginate(:page=>params[:page], :order=>'created_at asc')
   end
 
   def show

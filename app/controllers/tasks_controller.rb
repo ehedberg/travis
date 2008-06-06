@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_filter :requires_login
   def index
-    @tasks=Task.find(:all)
+    @tasks=Task.paginate :page=>params[:page], :order=>'created_at asc'
   end
 
   def show

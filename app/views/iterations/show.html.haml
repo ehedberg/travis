@@ -3,16 +3,20 @@
   element.className = 'current';
 %h1
   =h(@iteration.title)
+#chartright
+  = ziya_chart chart_iteration_path(@iteration), :size=>"800x400"  if Iteration.count > 0
 %p
+  Start Date:
   =h @iteration.start_date
+%p#sum
+  Total swag: 
+  =@iteration.total_points
 %p
+  End Date:
   =h @iteration.end_date
 %table#stories
   =render :partial=>"stories/story", :collection=>@iteration.stories
 #sum
-  Total Swag:
-  = @iteration.stories.inject(0){|x,y| x+(y.swag||0)}
-%p
   =link_to("Show All", iterations_path)
   |
   =link_to("Edit", edit_iteration_path(@iteration))

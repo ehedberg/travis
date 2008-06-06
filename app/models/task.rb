@@ -29,13 +29,4 @@ class Task < ActiveRecord::Base
   validates_presence_of :description, :title
   validates_length_of :title, :maximum=>200, :allow_nil=>true
 
-  def set_login
-    puts "in set_login"
-    self.login = Session.current_login
-  end
-  def unset_login
-    puts "in unset_login"
-    self.login = nil
-  end
-
 end

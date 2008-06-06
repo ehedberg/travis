@@ -30,11 +30,6 @@ class TasksController < ApplicationController
     if !params[:task][:state].empty?
       action = params[:task][:state]
       @task.send action+"!"
-      #if action == "start"
-      #  @task.login = session[:login]
-      #elsif action == "stop"
-      #  @task.login = ""
-      #end
       @task.save
     end
     redirect_to task_path(@task)

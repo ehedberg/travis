@@ -14,6 +14,20 @@ class Iteration < ActiveRecord::Base
     rescue
       errors.add(:end_date, "is an invalid date format")
     end
+
+    errors.add(:start_date, "must be before the end date") if (start_date && end_date)&&(start_date > end_date)
   end
+
+  def total_points
+    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id}").to_f
+  end
+
+  def completed_points
+    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state='passed'").to_f
+  end
+  def open_points
+    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state!='passed'").to_f
+  end
+
   
 end

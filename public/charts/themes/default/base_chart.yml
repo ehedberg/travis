@@ -4,6 +4,8 @@
     color:  000000
     bold:   true
     alpha:  100
+    vertical: true
+    skip: 1
   
   <%=component :axis_value %>
     color:       000000
@@ -45,9 +47,9 @@
     alpha:     20
   
   <%=component :chart_transition %>
-    type:     none
+    type:     drop
     order:    category  
-    duration: 0.2
+    duration: 2
   
   <%=component :chart_value %>
     position: right
@@ -57,11 +59,12 @@
   
   <%=component :legend_label %>
     color:    000000
-    size:     10
+    size:     20
     
   <%=component :legend_transition %>
     color: 00ff00  
-    type:  none  
+    type:  scale  
+    duration: 2.0
       
   <%=component :series_color %>
-    colors: 666666,768bb3
+    colors: ff0000,00ff00

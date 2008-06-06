@@ -11,7 +11,15 @@ class StoryTest < ActiveSupport::TestCase
     s = Story.new
     assert_not_nil(s.tasks)
   end
+  def test_has_completed_at
+    s= Story.new
+    assert s.respond_to? :completed_at
+  end
 
+  def test_has_state
+    s= Story.new
+    assert s.respond_to? :state
+  end
   def test_iteration_relation
     s = Story.new
 

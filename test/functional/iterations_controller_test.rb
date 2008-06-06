@@ -51,19 +51,19 @@ class IterationsControllerTest < ActionController::TestCase
   end
 
   def test_show
-    get :show, :id=>iterations(:three).id
+    get :show, :id=>iterations(:next).id
     assert assigns(:iteration)
-    assert_equal assigns(:iteration), iterations(:three)
+    assert_equal assigns(:iteration), iterations(:next)
     assert_template "show"
     assert_select "a[href=?]", iterations_path
-    assert_select "a[href=?]", edit_iteration_path(iterations(:three).id)
-    assert_select "a[href=?][onclick*=confirm]", iteration_path(iterations(:three))
+    assert_select "a[href=?]", edit_iteration_path(iterations(:next).id)
+    assert_select "a[href=?][onclick*=confirm]", iteration_path(iterations(:next))
   end
 
   def test_destroy
-    iteration= iterations(:two)
+    iteration= iterations(:current)
 
-    delete :destroy, :id=>iterations(:two).id
+    delete :destroy, :id=>iterations(:current).id
 
     assert !Iteration.exists?(iteration.id)
 
@@ -126,17 +126,17 @@ class IterationsControllerTest < ActionController::TestCase
   end
 
   def test_edit
-    get :edit,:id=>iterations(:one).id
+    get :edit,:id=>iterations(:last).id
 
     assert assigns(:iteration)
 
     iteration = assigns(:iteration)
 
-    assert_equal iterations(:one).id, iteration.id
+    assert_equal iterations(:last).id, iteration.id
   end
 
   def test_show_shows_stories
-    get :show, :id=>iterations(:one).id
+    get :show, :id=>iterations(:last).id
     iteration = assigns(:iteration)
     assert iteration
     story_list = iteration.stories
@@ -157,7 +157,7 @@ class IterationsControllerTest < ActionController::TestCase
 
   def test_load_chart_route
     assert_routing "/iterations/1/chart", :controller=>"iterations",:action=>"chart", :id=>"1"
-    get :chart, :id=>iterations(:one).id
+    get :chart, :id=>iterations(:last).id
     assert_response :success
   end
 

@@ -1,5 +1,4 @@
 class IterationsController < ApplicationController
-  helper Ziya::Helper
   before_filter :requires_login
   def index
     @iterations = Iteration.find(:all)
@@ -39,10 +38,28 @@ class IterationsController < ApplicationController
   end
 
   def chart
-    chart = Ziya::Charts::Bar.new 
-    chart.add( :axis_category_text, %w[2006 2007 2008] ) 
-    chart.add( :series, "Dogs", [10,20,30] ) 
-    chart.add( :series, "Cats", [5,15,25] ) 
+    iter = Iteration.find(params[:id], :include=>[:stories=>:tasks])
+    total_points = iter.total_points
+    chart = Ziya::Charts::Line.new 
+    days = []
+    completed=[]
+    points = []
+    (iter.end_date - iter.start_date).numerator.times do |n| 
+      d= (iter.start_date+n)
+      days << d
+      points << (Story.connection.select_value("select sum(swag) from stories where state='passed' and completed_at='%s'"%d)|| 0).to_f
+    end
+    z= []
+    points.each do |p|
+      z << (p+(z.last||0)) 
+
+    end
+    logger.debug "found points : #{points.inspect}"
+    iter.start_date - iter.end_date
+    strdays= days.map{|x| x.to_s(:db)}
+    chart.add( :axis_category_text,  strdays)
+    chart.add( :series, "Points complete", z)
+    chart.add( :series, "Scope", [total_points]*14 ) 
     respond_to do |fmt| 
       fmt.xml { render :xml => chart.to_xml } 
     end 

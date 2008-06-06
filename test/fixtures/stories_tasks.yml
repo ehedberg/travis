@@ -9,3 +9,10 @@ two:
 three:
   story_id: 2
   task_id: 2
+completed:
+  story_id: 6
+  task_id: 3
+completed2:
+  story_id: 6
+  task_id: 4
+  

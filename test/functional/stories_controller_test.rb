@@ -9,7 +9,6 @@ class StoriesControllerTest < ActionController::TestCase
     @request.session[:login]=nil
   end
   def test_routes
-    assert_routing "/", :controller=>"stories",:action=>"index"
     do_default_routing_tests('stories')
   end
 

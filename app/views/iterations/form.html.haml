@@ -11,10 +11,12 @@
       =f.text_field :title
     %label 
       Start Date 
-      =f.text_field :start_date
+      %div.date_field
+        =f.calendar_date_select :start_date
     %label
       End Date
-      =f.text_field :end_date
-
+      %div.date_field
+        =f.calendar_date_select :end_date
+    %p
     =submit_tag "Save", {:class=> "submit_button"}
     =button_to_function "Cancel", "location.href='#{iterations_path}'", {:class=>'submit_button'}

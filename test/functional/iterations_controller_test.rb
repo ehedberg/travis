@@ -101,23 +101,6 @@ class IterationsControllerTest < ActionController::TestCase
     assert_select "div[id=errorExplanation][class=errorExplanation]"
   end
 
-#  def test_create_invalid_start_date
-
-#    post :create, "iteration"=>{"title"=>"New Iteration", "start_date"=>"/6/7", "end_date"=>"2008-06-21"}
-
-#   assert_response :success
-
-#    assert_template "form"
-
-#    assert assigns(:iteration)
-
-#    story = assigns(:iteration)
-
-#    assert_equal story.errors.on(:start_date), "is too short (minimum is 1 characters)"
-
-#    assert_select "div[id=errorExplanation][class=errorExplanation]"
-#  end
-
   def test_new
     get :new
 
@@ -131,8 +114,12 @@ class IterationsControllerTest < ActionController::TestCase
 
     assert_select "form[action=?][method=post]", iterations_path do
       assert_select "input[type=text]"
+      assert_select "div[class=date_field]"
       assert_select "input[type=text]"
+      assert_select "img[alt=Calendar]"
+      assert_select "div[class=date_field]"
       assert_select "input[type=text]"
+      assert_select "img[alt=Calendar]"
       assert_select "input[type=submit]"
       assert_select "input[type=button][value=Cancel][onclick*=location]"
     end

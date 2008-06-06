@@ -53,6 +53,12 @@
 	font-weight: bold;
 }
 
+#columnarForm div.date_field input
+{
+	display: inline;
+	width: 15em;
+}
+
 #columnarForm label.first
 {
 	padding-top: 1em;

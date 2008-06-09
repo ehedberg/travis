@@ -59,7 +59,7 @@ class IterationsController < ApplicationController
       planned << (total_points/iter.total_days+(planned.last||0))
       d= (iter.start_date+n)
       days << d
-      points << (Story.connection.select_value("select sum(swag) from stories where state='passed' and completed_at='%s'"%d)|| 0).to_f
+      points << (Story.connection.select_value("select sum(swag) from stories where state='passed' and completed_at='%s'"%d)|| 0).to_f if d < Date.today
       created << (Story.connection.select_value("select sum(swag) from stories where  created_at='%s'"%d)|| 0).to_f
     end
     

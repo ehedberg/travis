@@ -161,4 +161,19 @@ class IterationsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  def test_update
+
+    iteration = iterations(:next)
+
+    put :update, :id=>iteration.id, :iteration=>{"start_date"=>"2008-05-19", "end_date"=>"2008-06-03", "title"=>"Iteration 1"}
+
+    new_iteration = Iteration.find(iteration.id)
+
+    assert_equal "2008-05-19", new_iteration.start_date.strftime("%Y-%m-%d")
+    assert_equal "2008-06-03", new_iteration.end_date.strftime("%Y-%m-%d")
+    assert_equal "Iteration 1", new_iteration.title
+
+    assert_redirected_to iterations_path
+  end
+
 end

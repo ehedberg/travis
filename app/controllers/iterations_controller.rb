@@ -27,6 +27,16 @@ class IterationsController < ApplicationController
     render :template=>"iterations/form"
   end
 
+  def update
+    @iteration= Iteration.find(params[:id])
+
+    if @iteration.update_attributes(params[:iteration])
+      redirect_to(iterations_path)
+    else
+      render :template=>"iterations/form"
+    end
+  end
+
   def create
     @iteration=Iteration.new(params[:iteration])
 

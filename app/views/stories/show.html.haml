@@ -9,6 +9,8 @@
   =h @story.swag
 %p
   =h @story.state
+%table#tasks
+  =render :partial=>"tasks/task", :collection=>@story.tasks
 %p
   =link_to("Show All", stories_path)
   |

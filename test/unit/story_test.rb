@@ -70,6 +70,34 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal "in_progress", t.state
 
     assert_equal "in_progress", s.state
+    
+    t2 = Task.new :title=>"Another Title", :description=>"Another Task Description"
+
+    s.tasks<<t2
+     
+    t.finish!
+    
+    s.reload
+        
+    assert_equal "complete", t.state
+
+    assert_equal "in_progress", s.state 
+    
+    t2.start!
+    
+    s.reload
+
+    assert_equal "in_progress", t2.state
+
+    assert_equal "in_progress", s.state
+
+    t2.finish!
+    
+    s.reload
+
+    assert_equal "complete", t2.state
+                  
+    assert_equal "ready_for_qa", s.state 
   end
 
   def test_state_is_protected

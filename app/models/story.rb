@@ -15,8 +15,13 @@ class Story < ActiveRecord::Base
 
   state :in_progress
 
+  state :ready_for_qa
+  
   event :start do
     transitions :to=>:in_progress, :from=>:new
-    # , :guard=> Proc.new{ |s| !s.tasks.select{ |t| t.state == "in_progress" }.empty? }
+  end
+
+  event :assign_to_qa do
+    transitions :to=>:ready_for_qa, :from=>:in_progress, :guard=> Proc.new{ |s| s.tasks.select{ |t| t.state != "complete" }.empty? }
   end
 end

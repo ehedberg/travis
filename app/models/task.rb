@@ -8,7 +8,7 @@ class Task < ActiveRecord::Base
 
   state :in_progress, :enter=> Proc.new { |t| t.login = Session.current_login; t.stories.each{ |s| s.start!} }
 
-  state :complete
+  state :complete, :enter=> Proc.new { |t| t.stories.each{ |s| s.assign_to_qa!} }
 
   event :start do
     transitions :to=>:in_progress, :from=>[:new]

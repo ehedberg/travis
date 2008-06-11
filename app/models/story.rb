@@ -15,17 +15,31 @@ class Story < ActiveRecord::Base
 
   state :in_progress
 
-  state :ready_for_qa
+  state :in_qc
   
   event :start do
     transitions :to=>:in_progress, :from=>:new
   end
 
   event :task_changed do
-    transitions :to=>:new, :from=>:in_progress, :guard=>proc{|s| s.tasks.find_all{|t| t.current_state != :new}.empty?}
+    transitions :to=>:new, :from=>:in_progress, :guard=>Proc.new{|s|s.all_new_tasks?}
+    transitions :to=>:in_progress, :from=>:in_qc, :guard=>Proc.new{|s|s.has_incomplete?}
+    transitions :to=>:in_progress, :from=>:new, :guard=>Proc.new{|s|s.has_in_progress?}
+    transitions :to=>:in_qc, :from=>:in_progress, :guard=>Proc.new{|s|s.all_complete?}
   end
 
-  event :assign_to_qa do
-    transitions :to=>:ready_for_qa, :from=>:in_progress, :guard=> Proc.new{ |s| s.tasks.select{ |t| t.state != "complete" }.empty? }
+  def all_new_tasks?
+    tasks.find_all{|x|x.reload.current_state != :new}.empty?
   end
+
+  def has_incomplete?
+    !tasks.find_all{|x| x.reload.current_state != :complete}.empty?
+  end
+  def has_in_progress?
+    !tasks.find_all{|x| x.reload.current_state == :in_progress}.empty?
+  end
+  def all_complete?
+    !has_incomplete?
+  end
+    
 end

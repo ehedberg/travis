@@ -12,13 +12,21 @@ class Story < ActiveRecord::Base
   validates_length_of :title, :within=>1..200
 
   state :new
-
+  state :passed
   state :in_progress
-
   state :in_qc
+  state :failed
   
   event :start do
     transitions :to=>:in_progress, :from=>:new
+  end
+
+  event :fail do
+    transitions :to=>:failed, :from=>:in_qc
+  end
+
+  event :pass do
+    transitions :to=>:passed, :from=>:in_qc, :guard=>Proc.new{|s| s.all_complete?}
   end
 
   event :task_changed do
@@ -26,6 +34,7 @@ class Story < ActiveRecord::Base
     transitions :to=>:in_progress, :from=>:in_qc, :guard=>Proc.new{|s|s.has_incomplete?}
     transitions :to=>:in_progress, :from=>:new, :guard=>Proc.new{|s|s.has_in_progress?}
     transitions :to=>:in_qc, :from=>:in_progress, :guard=>Proc.new{|s|s.all_complete?}
+    transitions :to=>:in_progress, :from=>:failed, :guard=>Proc.new{|s|s.has_in_progress?}
   end
 
   def all_new_tasks?

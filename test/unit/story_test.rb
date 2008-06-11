@@ -184,4 +184,54 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :new, s.current_state
   end
 
+  def test_happy_path
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s.save!
+    t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
+    assert_equal :new, s.current_state
+    t.start!
+    s.reload
+    assert_equal :in_progress, s.current_state
+    t.finish!
+    s.reload
+    assert_equal :in_qc, s.current_state
+    s.pass!
+    s.reload
+    assert_equal :passed, s.current_state
+  end
+  def test_qc_to_failed
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s.save!
+    t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
+    assert_equal :new, s.current_state
+    t.start!
+    s.reload
+    assert_equal :in_progress, s.current_state
+    t.finish!
+    s.reload
+    assert_equal :in_qc, s.current_state
+    s.fail!
+    s.reload
+    assert_equal :failed, s.current_state
+  end
+
+  def test_failed_to_in_progress
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s.save!
+    t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
+    assert_equal :new, s.current_state
+    t.start!
+    s.reload
+    assert_equal :in_progress, s.current_state
+    t.finish!
+    s.reload
+    assert_equal :in_qc, s.current_state
+    s.fail!
+    s.reload
+    assert_equal :failed, s.current_state
+    assert_equal :complete, t.current_state
+    t.reopen!
+    s.reload
+    assert_equal :in_progress, s.current_state
+  end
 end

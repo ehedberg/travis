@@ -13,12 +13,12 @@ class StoryTest < ActiveSupport::TestCase
   end
   def test_has_completed_at
     s= Story.new
-    assert(s.respond_to? :completed_at)
+    assert(s.respond_to?(:completed_at))
   end
 
   def test_has_state
     s= Story.new
-    assert(s.respond_to? :state)
+    assert(s.respond_to?(:state))
   end
   def test_iteration_relation
     s = Story.new
@@ -44,6 +44,51 @@ class StoryTest < ActiveSupport::TestCase
     assert_invalid(:title, "is too short (minimum is 1 characters)", "")
 
     assert_invalid(:title, "is too long (maximum is 200 characters)", ('a'*198) + "rgh")
+  end
+
+  def test_add_task
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    assert s.save
+    assert_equal :new, s.current_state
+    t = s.tasks.create(:title=>'foo', :description=>'bar')
+    assert !t.new_record?
+    t.start!
+    s.reload
+    assert_equal :in_progress, t.current_state
+    assert_equal :in_progress,  s.current_state
+  end
+
+  def test_tasks_all_stopped_moves_from_in_prog_to_new
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    assert s.save
+    assert_equal :new, s.current_state
+    t = s.tasks.create(:title=>'foo', :description=>'bar')
+    t2 = s.tasks.create(:title=>'fubar', :description=>'bar')
+    assert !t.new_record?
+    t2.start!
+    t2.stop!
+    t.start!
+    t.stop!
+    s.reload
+    assert_equal :new, t.current_state
+    assert_equal :new, t.current_state
+    assert_equal :new,  s.current_state
+  end
+  def test_some_Tasks_stopped_doesnt_transit_to_new
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    assert s.save
+    assert_equal :new, s.current_state
+    t = s.tasks.create(:title=>'foo', :description=>'bar')
+    t2 = s.tasks.create(:title=>'fubar', :description=>'bar')
+    assert !t.new_record?
+    t2.start!
+    t2.finish!
+    t.start!
+    t.stop!
+    s.reload
+    assert_equal :new, t.current_state
+    assert_equal :complete, t2.current_state
+    assert_equal :in_progress,  s.current_state
   end
 
   def test_state_model

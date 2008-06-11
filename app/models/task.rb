@@ -4,7 +4,7 @@ class Task < ActiveRecord::Base
   attr_protected :state
 
   state :new,
-    :enter=> Proc.new { |t| t.login = nil }
+    :enter=> Proc.new { |t| t.login = nil; t.stories.each(&:task_changed!) }
 
   state :in_progress, :enter=> Proc.new { |t| t.login = Session.current_login; t.stories.each{ |s| s.start!} }
 

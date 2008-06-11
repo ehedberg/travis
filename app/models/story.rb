@@ -1,7 +1,7 @@
 class Story < ActiveRecord::Base
   acts_as_state_machine :initial=>:new
 
-  has_and_belongs_to_many :tasks
+  has_and_belongs_to_many :tasks 
 
   belongs_to :iteration
 
@@ -19,6 +19,10 @@ class Story < ActiveRecord::Base
   
   event :start do
     transitions :to=>:in_progress, :from=>:new
+  end
+
+  event :task_changed do
+    transitions :to=>:new, :from=>:in_progress, :guard=>proc{|s| s.tasks.find_all{|t| t.current_state != :new}.empty?}
   end
 
   event :assign_to_qa do

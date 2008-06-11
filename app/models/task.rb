@@ -18,11 +18,11 @@ class Task < ActiveRecord::Base
   end
 
   event :finish do
-    transitions :to=>:complete, :from=>[:in_progress]
+    transitions :to=>:complete, :from=>:in_progress
   end
 
   event :reopen do
-    transitions :to=>:in_progress, :from=>[:complete]
+    transitions :to=>:in_progress, :from=>:complete
   end
 
   has_and_belongs_to_many :stories, :order=>"title asc"

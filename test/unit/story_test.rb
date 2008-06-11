@@ -183,6 +183,29 @@ class StoryTest < ActiveSupport::TestCase
 
     assert_equal :new, s.current_state
   end
+  def test_passed_then_task_reopen_to_inprog
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s.save!
+    t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
+    assert_equal :new, s.current_state
+    t.start!
+    s.reload
+    t.reload
+    assert_equal :in_progress, s.current_state
+    t.finish!
+    s.reload
+    t.reload
+    assert_equal :in_qc, s.current_state
+    s.pass!
+    s.reload
+    t.reload
+    assert_equal :passed, s.current_state
+    t.reopen!
+    t.reload
+    assert_equal :in_progress, t.current_state
+    s.reload
+    assert_equal :in_progress, s.current_state
+  end
 
   def test_happy_path
     s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
@@ -225,13 +248,21 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :in_progress, s.current_state
     t.finish!
     s.reload
+    t.reload
     assert_equal :in_qc, s.current_state
     s.fail!
     s.reload
+    t.reload
     assert_equal :failed, s.current_state
     assert_equal :complete, t.current_state
     t.reopen!
+    t.reload
+    assert_equal :in_progress, t.current_state
     s.reload
+    t.reload
     assert_equal :in_progress, s.current_state
   end
+
+
+
 end

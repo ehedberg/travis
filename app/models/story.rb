@@ -35,6 +35,7 @@ class Story < ActiveRecord::Base
     transitions :to=>:in_progress, :from=>:new, :guard=>Proc.new{|s|s.has_in_progress?}
     transitions :to=>:in_qc, :from=>:in_progress, :guard=>Proc.new{|s|s.all_complete?}
     transitions :to=>:in_progress, :from=>:failed, :guard=>Proc.new{|s|s.has_in_progress?}
+    transitions :to=>:in_progress, :from=>:passed, :guard=>Proc.new{|s|s.has_in_progress?}
   end
 
   def all_new_tasks?

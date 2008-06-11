@@ -144,6 +144,7 @@ module RailsStudio                   #:nodoc:
           class_eval <<-EOV
           def #{event.to_s}!
             next_states = next_states_for_event(:#{event.to_s})
+          #p "available states insid \#{self.class}: \#{next_states.inspect}"
             previous_state = current_state
             next_states.each do |ns|
               if ns.guard(self)

@@ -1,6 +1,21 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class TaskTest < ActiveSupport::TestCase
+
+  def test_optimistic_locks
+    t = Task.new({:title=>'fubar', :description=>'baz'})
+    assert t.save
+    t2 = Task.find(t.id)
+
+    t.title='bar'
+    assert t.save
+    t2.title='meh'
+    begin
+      t2.save
+      fail "shouldn't work"
+    rescue ActiveRecord::StaleObjectError=>x
+    end
+  end
   def test_find_all_tasks
     task_list = Task.find(:all)
     assert_not_nil(task_list)

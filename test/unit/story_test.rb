@@ -1,6 +1,20 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class StoryTest < ActiveSupport::TestCase
+  def test_optimistic_locks
+    t = Story.new({:title=>'fubar', :description=>'baz'})
+    assert t.save
+    t2 = Story.find(t.id)
+
+    t.title='bar'
+    assert t.save
+    t2.title='meh'
+    begin
+      t2.save
+      fail "shouldn't work"
+    rescue ActiveRecord::StaleObjectError=>x
+    end
+  end
   def test_find_all_stories
     story_list = Story.find(:all)
     assert_not_nil(story_list)
@@ -170,6 +184,8 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :in_progress, t2.current_state
     assert_equal :complete, t.current_state
 
+    t2.reload
+    s.reload
     t2.finish!
     s.reload
     assert_equal :in_qc, s.current_state

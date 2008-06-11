@@ -1,6 +1,28 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class StoryTest < ActiveSupport::TestCase
+
+  def test_cant_add_task_to_passed_story
+    s = Story.create({:title=>'fubar', :description=>'baz'})
+    assert_equal :new, s.current_state
+    t=s.tasks.create(:title=>'baz', :description=>'bleh')
+    assert :new, s.current_state
+    t.start!
+    s.reload
+    assert_equal :in_progress, s.current_state
+    s.reload
+    t.finish!
+    s.reload
+    assert_equal :in_qc, s.current_state
+    s.pass!
+    s.reload
+    assert_equal :passed, s.current_state
+    begin
+      t2=s.tasks.create(:title=>'dang', :description=>'bleh2')
+      fail "shouldn't work"
+    rescue ActiveRecord::ActiveRecordError=>x
+    end
+  end
   def test_optimistic_locks
     t = Story.new({:title=>'fubar', :description=>'baz'})
     assert t.save

@@ -1,7 +1,7 @@
 class Story < ActiveRecord::Base
   acts_as_state_machine :initial=>:new
 
-  has_and_belongs_to_many :tasks 
+  has_and_belongs_to_many :tasks , :before_add=>Proc.new{|p, d|  raise ActiveRecord::ActiveRecordError.new("Can't add a task to a passed story") if (p.current_state == :passed)}
 
   belongs_to :iteration
 

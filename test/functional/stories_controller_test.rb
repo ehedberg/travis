@@ -12,6 +12,18 @@ class StoriesControllerTest < ActionController::TestCase
   def test_routes
     do_default_routing_tests('stories')
   end
+  def test_create_bad
+    assert Story.create(:title=>'New Title', :description=>'bleahd', :swag=>3)
+    post :create, "story"=>{"title"=>"New Title", "description"=>"de", "swag"=>"2"}
+    assert_response :success
+    assert_template 'form'
+    assert assigns(:story)
+    assert_equal 'has already been taken', assigns(:story).errors.on(:title)
+    assert_select "#errorExplanation" do 
+      assert_select "h2"
+      assert_select "ul>li", 1
+    end
+  end
 
   def test_create
     post :create, "story"=>{"title"=>"New Title", "description"=>"de", "swag"=>"2"}

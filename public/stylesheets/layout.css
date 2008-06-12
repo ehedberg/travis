@@ -17,21 +17,33 @@ th.centered {
 table {
   width: 100%;
   text-align: left;
+  border-top: 1px solid #ddd ;
+  border-left: 1px solid  #ddd;
 }
 td.rctl {
   text-align: right;
+  border-right: 1px solid #ddd ;
+  border-bottom: 1px solid  #ddd;
 }
 td.centered {
   text-align: center;
 }
+th {
+  background: #ddd;
+}
+td,th {
+  border-right: 1px solid #ddd ;
+  border-bottom: 1px solid  #ddd;
+  padding-left: 5px;
+}
 tr.even_task td {
-  background: lightgray;
+  background: #eee;
 }
 tr.even_story {
-  background: lightgray;
+  background: #eee;
 }
 tr.even_iteration {
-  background: lightgray;
+  background: #eee;
 }
 a.expando {
   font-weight: bold;
@@ -44,4 +56,9 @@ a:hover.expando {
 a:visited.expando {
   color:green;
 }
-
+caption {
+  caption-side: top;
+  font-weight: bold;
+  font-size: 2em;
+  margin: 10px;
+}

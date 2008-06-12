@@ -55,11 +55,16 @@ class IterationsController < ApplicationController
     points = []
     created=[]
     planned = []
+      logger.debug "TOTAL DAYS: #{iter.total_days}"
     iter.total_days.times do |n| 
       planned << (total_points/iter.total_days+(planned.last||0))
       d= (iter.start_date+n)
       days << d
-      points << (Story.connection.select_value("select sum(swag) from stories where state='passed' and completed_at='%s'"%d)|| 0).to_f if d < Date.today
+      if d < Date.today
+      points << (Story.connection.select_value("select sum(swag) from stories where state='passed' and completed_at='%s'"%d)|| 0).to_f 
+      else
+        points << 0.0
+      end
       created << (Story.connection.select_value("select sum(swag) from stories where  created_at='%s'"%d)|| 0).to_f
     end
     
@@ -68,10 +73,14 @@ class IterationsController < ApplicationController
     y= []
 
     created.each { |p| y << (p+(y.last||0)) }
-
+    while z.last == 0 do
+      z.pop
+    end
     strdays= days.map{|x| x.to_s(:db)}
+    logger.debug "POINTS #{points}"
+    logger.debug "CREATED #{z}"
     chart.add( :axis_category_text,  strdays)
-    chart.add( :series, "Points complete", z)
+    chart.add( :series, "Points complete", z) unless z.empty?
     chart.add( :series, "Scope", y)
     chart.add( :series, "Planned", planned)
     respond_to do |fmt| 

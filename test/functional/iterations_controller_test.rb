@@ -15,6 +15,30 @@ class IterationsControllerTest < ActionController::TestCase
     get :chart, :id=>iterations(:last).id
     assert_response :success
   end
+  def test_show_works_with_no_stories
+    Story.destroy_all
+    Task.destroy_all
+    iterations(:last).stories(&:destroy)
+    assert_equal 0, iterations(:last).stories.size 
+    @request.session[:login]=nil
+    get :chart, :id=>iterations(:last).id
+    assert_response :success
+  end
+  def test_show_works_with_future_start
+    Story.destroy_all
+    Task.destroy_all
+    iterations(:last).start_date=100.week.from_now.to_date.to_s(:db)
+    iterations(:last).end_date=102.week.from_now.to_date.to_s(:db)
+    assert iterations(:last).save!
+    iterations(:last).stories(&:destroy)
+    iterations(:last).stories.create(:title=>'new story', :description=>'new story', :completed_at =>Date.today)
+    iter=  Iteration.find(iterations(:last).id)
+    assert_equal 1, iter.stories.size
+    assert_equal :new, iter.stories.first.current_state
+    @request.session[:login]=nil
+    get :chart, :id=>iterations(:last).id
+    assert_response :success
+  end
   def test_requires_login
     @request.session[:login]=nil
     get :index

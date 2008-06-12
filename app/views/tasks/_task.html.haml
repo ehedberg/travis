@@ -1,6 +1,6 @@
 %tr[task, cycle('even', 'odd')]
   %td=link_to(h(task.title), task_path(task))
-  %td=task.state
+  %td.centered=task.state
   %td=story_link(task)
   %td.rctl
     =link_to("Show", task_path(task))

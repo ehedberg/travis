@@ -5,6 +5,7 @@
 =link_to("Create Task", new_task_path)
 %table#tasks
   %th Title
-  %th State
+  %th.centered State
   %th Stories
+  %th &nbsp;
   =render :partial=>"task",:collection=>@tasks

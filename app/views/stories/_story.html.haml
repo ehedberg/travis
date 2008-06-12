@@ -1,9 +1,9 @@
 %tr[story, cycle('odd', 'even')]
   %td
     =link_to(h(story.title), story_path(story))
-  %td
+  %td.centered
     =story.swag
-  %td
+  %td.centered
     =story.state
   %td.rctl
     =link_to("Show", story_path(story))

@@ -11,6 +11,21 @@ class TasksControllerTest < ActionController::TestCase
     @request.session[:login]=nil
   end
 
+  def test_shows_state_form
+    get :show, :id=>tasks(:one).id
+    assert_response :success
+    assert_template 'show'
+    assert assigns(:task)
+    assert_select "form[action=?]", task_path(assigns(:task)) do
+      assert_select "input[type=submit]"
+      assert_select "select" do
+        assert_select "option", assigns(:task).available_events.size
+      end
+    end
+
+  end
+
+
   def test_requires_login
     @request.session[:login]=nil
     get :index

@@ -4,10 +4,10 @@
 =will_paginate(@stories)
 =link_to "Create Story" , new_story_path
 %table#stories
-  %th
-    Title
-  %th
+  %th Title
+  %th.centered 
     Swag
-  %th
+  %th.centered 
     State
+  %th &nbsp;
   =render :partial=>"story",:collection=>@stories

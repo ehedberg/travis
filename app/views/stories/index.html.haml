@@ -2,6 +2,12 @@
   var element = document.getElementById('menu_story');
   element.className = 'current';
 =will_paginate(@stories)
-%table#stories
-  =render :partial=>"story",:collection=>@stories
 =link_to "Create Story" , new_story_path
+%table#stories
+  %th
+    Title
+  %th
+    Swag
+  %th
+    State
+  =render :partial=>"story",:collection=>@stories

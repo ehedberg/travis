@@ -5,13 +5,43 @@
 	margin:10px;
 }
 
-td{
-	padding-right: 10px;
-	padding-bottom: 5px;
-}
 
 #footer {
   font-size: .7em;
   display: block;
   clear: both;
 }
+th.centered {
+  text-align: center;
+}
+table {
+  width: 100%;
+  text-align: left;
+}
+td.rctl {
+  text-align: right;
+}
+td.centered {
+  text-align: center;
+}
+tr.even_task td {
+  background: lightgray;
+}
+tr.even_story {
+  background: lightgray;
+}
+tr.even_iteration {
+  background: lightgray;
+}
+a.expando {
+  font-weight: bold;
+  text-decoration: none;
+  color:green;
+}
+a:hover.expando {
+  background:yellow;
+}
+a:visited.expando {
+  color:green;
+}
+

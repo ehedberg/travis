@@ -5,7 +5,7 @@ module TasksHelper
     elsif (task.stories.length == 1)
       link_to(task.stories.first.title, story_path(task.stories.first))
     else
-      str = link_to_function("Stories", "$('task_stories_#{task.id}').toggle()")
+      str = link_to_function(truncate(task.stories.collect(&:title).join(', ')), "$('task_stories_#{task.id}').toggle()", :class=>'expando')
       str << stories_listing(task)
       str
     end

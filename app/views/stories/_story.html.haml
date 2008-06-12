@@ -1,11 +1,10 @@
-%tr
+%tr[story, cycle('odd', 'even')]
   %td
     =link_to(h(story.title), story_path(story))
   %td
     =story.swag
   %td
     =story.state
-  %td
+  %td.rctl
     =link_to("Show", story_path(story))
-  %td
     =link_to("Edit", edit_story_path(story))

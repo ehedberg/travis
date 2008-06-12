@@ -3,8 +3,14 @@ require File.dirname(__FILE__) + '/../test_helper'
 class IterationTest < ActiveSupport::TestCase
   def test_story_relation
     s = Iteration.new
-
     assert s.respond_to?("stories")
+  end
+  def test_find_current
+    assert_equal iterations(:current), Iteration.current
+  end
+
+  def test_velocity
+    assert_equal 9.3, iterations(:current).velocity
   end
 
   def test_find_all_iterations

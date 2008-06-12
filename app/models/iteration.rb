@@ -31,6 +31,13 @@ class Iteration < ActiveRecord::Base
   def total_days
     (end_date - start_date).numerator
   end
+  def self.current
+    t=Date.today
+    Iteration.find(:first, :conditions=>['start_date <= ? and end_date >= ?', t,t])
+  end
+  def velocity
+    stories.inject(0){|x,y| x+y.swag}.to_f
+  end
 
   
 end

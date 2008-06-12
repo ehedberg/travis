@@ -24,4 +24,11 @@ class DashboardControllerTest < ActionController::TestCase
     assert_response:success
     assert_template 'empty'
   end
+
+  def test_prediction
+    get :index
+    assert_response :success
+    assert assigns(:prediction)
+    assert_select "h3#prediction"
+  end
 end

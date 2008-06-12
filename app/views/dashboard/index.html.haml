@@ -1,14 +1,18 @@
 %script{:type=>'text/javascript'}
   var element = document.getElementById('menu_travis');
   element.className = 'current';
+
 %h1
   Current Iteration:
   =@iteration.title
 %h2
+  Current Velocity:
+  =@iteration.velocity
+%h2
   Total Stories:
   =@iteration.stories.count
 %h3
-  Open points:
+  Open Iteration points:
   =@iteration.open_points
 %h3
   Completed points:
@@ -16,6 +20,10 @@
 %h3
   Total points:
   =@iteration.total_points
+%h3#prediction
+  Predicted End Date
+  %blink
+    =@prediction.to_s(:long)
     
 
     

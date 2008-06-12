@@ -17,9 +17,6 @@ class Story < ActiveRecord::Base
   state :in_qc
   state :failed
   
-  event :start do
-    transitions :to=>:in_progress, :from=>:new
-  end
 
   event :fail do
     transitions :to=>:failed, :from=>:in_qc

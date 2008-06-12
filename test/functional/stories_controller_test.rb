@@ -8,38 +8,28 @@ class StoriesControllerTest < ActionController::TestCase
   def teardown
     @request.session[:login]=nil
   end
+
   def test_routes
     do_default_routing_tests('stories')
   end
 
   def test_create
     post :create, "story"=>{"title"=>"New Title", "description"=>"de", "swag"=>"2"}
-
     assert assigns(:story)
-
     story = assigns(:story)
-
     assert_equal Story.find_by_description("de"), assigns(:story)
-
     assert_response :redirect
-
     assert_redirected_to stories_path
   end
 
   def test_create_invalid_title
 
     post :create, "story"=>{"description"=>"de", "swag"=>"2"}
-
     assert_response :success
-
     assert_template "form"
-
     assert assigns(:story)
-
     story = assigns(:story)
-
     assert_equal story.errors.on(:title), "is too short (minimum is 1 characters)"
-
     assert_select "div[id=errorExplanation][class=errorExplanation]"
   end
 
@@ -112,25 +102,16 @@ class StoriesControllerTest < ActionController::TestCase
     assert_select "a[href=?]", stories_path
     assert_select "a[href=?]", edit_story_path(stories(:one).id)
     assert_select "a[href=?][onclick*=confirm]", story_path(stories(:one))
-    assert_select "form[action=?]", story_path(assigns(:story)) do
-      assert_select "select" do 
-        assert_select "option", assigns(:story).available_events.size-1
-      end
-    end
+    assert_select "form", :count=>0
   end
 
   def test_update
-
     story = stories(:one)
-
     put :update, :id=>story.id, :story=> {:title=>"New title", :description=>"New Description", :swag=>"9999.99" }
-
     new_story = Story.find(story.id)
-
     assert_equal "New title", new_story.title
     assert_equal "New Description", new_story.description
     assert_equal 9999.99, new_story.swag
-
     assert_redirected_to stories_path
   end
 

@@ -275,29 +275,46 @@ class StoryTest < ActiveSupport::TestCase
     s.reload
     assert_equal :failed, s.current_state
   end
+  def test_new_to_in_prog
+    s = Story.create(:title=>"Title", :description=>"The description", :swag=>23)
+    t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
+    t.start!
+    s.reload
+    assert_equal :in_progress, s.current_state
+
+  end
 
   def test_failed_to_in_progress
     s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
     s.save!
     t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
+    t2=s.tasks.create(:title=>"Another Title2", :description=>"Another Task Description")
     assert_equal :new, s.current_state
     t.start!
+    t2.start!
+    t2.reload
+    t.reload
     s.reload
     assert_equal :in_progress, s.current_state
     t.finish!
+    t2.finish!
     s.reload
     t.reload
+    t2.reload
     assert_equal :in_qc, s.current_state
     s.fail!
     s.reload
     t.reload
+    t2.reload
     assert_equal :failed, s.current_state
     assert_equal :complete, t.current_state
+    assert_equal :complete, t2.current_state
     t.reopen!
-    t.reload
-    assert_equal :in_progress, t.current_state
     s.reload
     t.reload
+    t2.reload
+    assert_equal :complete, t2.current_state
+    assert_equal :in_progress, t.current_state
     assert_equal :in_progress, s.current_state
   end
 

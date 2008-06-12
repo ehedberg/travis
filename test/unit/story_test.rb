@@ -64,22 +64,22 @@ class StoryTest < ActiveSupport::TestCase
 
   def test_validation
     @model = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
-
     assert_valid(:swag, nil, 1, 1.1)
-
     assert_invalid(:swag, "is not a number", "hey there")
-
     assert_invalid(:swag, "must be greater than or equal to 0", -1)
-
     assert_invalid(:swag, "must be less than 10000", 10000)
-
     assert_valid(:description, nil)
-
     assert_invalid(:description, "is too long (maximum is 200 characters)", ('a'*198) + "rgh")
-
     assert_invalid(:title, "is too short (minimum is 1 characters)", "")
-
     assert_invalid(:title, "is too long (maximum is 200 characters)", ('a'*198) + "rgh")
+  end
+
+  def test_unique_title
+    @model = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    @model.save!
+    @model2 = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    assert !@model2.save
+    assert_equal "has already been taken", @model2.errors.on(:title)
   end
 
   def test_add_task

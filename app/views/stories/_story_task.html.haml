@@ -1,0 +1,11 @@
+-task=story_task
+%tr[task, cycle('even', 'odd')]
+  %td=link_to(h(task.title), task_path(task))
+  %td.centered=task.state
+  %td.centered=task.login
+  %td
+    =story_link(task, [@story]) 
+  %td.rctl
+    =link_to("Show", task_path(task))
+    =link_to("Edit", edit_task_path(task))
+

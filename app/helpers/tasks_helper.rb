@@ -1,19 +1,20 @@
 module TasksHelper
-  def story_link(task)
+  def story_link(task, exclude=[])
     if (task.stories.empty?)
       "Unassigned"
-    elsif (task.stories.length == 1)
+    elsif ((task.stories-exclude ).size == 1)
       link_to(task.stories.first.title, story_path(task.stories.first))
-    else
-      str = link_to_function(truncate(task.stories.map(&:title).join(', ')), "$('task_stories_#{task.id}').toggle()", :class=>'expando')
-      str << stories_listing(task)
+    else 
+      stories = task.stories - exclude
+      str = link_to_function(truncate(stories.map(&:title).join(', ')), "$('task_stories_#{task.id}').toggle()", :class=>'expando')
+      str << stories_listing(task, (task.stories-exclude))
       str
     end
   end
 
-  def stories_listing(task)
+  def stories_listing(task,stories)
     list = "<div id='task_stories_#{task.id}' style='display:none;'><ul>"
-    task.stories.each do |story|
+    stories.each do |story|
       list << "<li>"
       list <<  link_to(h(story.title), story_path(story))
       list << "</li>"

@@ -112,6 +112,11 @@ class StoriesControllerTest < ActionController::TestCase
     assert_select "a[href=?]", stories_path
     assert_select "a[href=?]", edit_story_path(stories(:one).id)
     assert_select "a[href=?][onclick*=confirm]", story_path(stories(:one))
+    assert_select "form[action=?]", story_path(assigns(:story)) do
+      assert_select "select" do 
+        assert_select "option", assigns(:story).available_events.size-1
+      end
+    end
   end
 
   def test_update

@@ -3,14 +3,28 @@
   element.className = 'current';
 %h1
   =h(@story.title)
-%p
-  =h @story.description
-%p
+%h2
   =h @story.swag
-%p
+%h2
+  State:
   =h @story.state
+%p
+  =h @story.description 
+
+-if  ((@story.available_events-[:task_changed]).size > 0)
+  #stateform
+    -form_for @story  do |f|
+      =f.label :state
+      =f.select :state, @story.available_events-[:task_changed]
+      =submit_tag "save"
 %table#tasks
-  =render :partial=>"tasks/task", :collection=>@story.tasks
+  %caption Tasks
+  %th Title
+  %th State
+  %th Assigned To
+  %th Other Related Stories
+  %th &nbsp;
+  =render :partial=>"story_task", :collection=>@story.tasks
 %p
   =link_to("Show All", stories_path)
   |

@@ -5,10 +5,12 @@
 =link_to "Create Story" , new_story_path
 
 %table#stories
-  %th Title
+  %th 
+    Title
   %th.centered 
     Swag
   %th.centered 
     State
-  %th &nbsp;
+  %th 
+    &nbsp;
   =render :partial=>"story",:collection=>@stories

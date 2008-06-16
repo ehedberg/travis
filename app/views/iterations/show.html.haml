@@ -21,7 +21,13 @@
   =render :partial=>'iterations/ajax_story',:locals=>{:story=>@iteration.stories.build(:title=>'New Story')}
 
 %table#stories
+  %caption Stories
+  %th Title
+  %th Swag
+  %th State
+  %th &nbsp;
   =render :partial=>"stories/story", :collection=>@iteration.stories
+
 #sum
   =link_to("Show All", iterations_path)
   |

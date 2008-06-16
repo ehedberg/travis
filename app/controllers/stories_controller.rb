@@ -15,7 +15,6 @@ class StoriesController < ApplicationController
 
   def create
     @story=Story.new(params[:story])
-
     respond_to do |format|
       format.html {
         if @story.save
@@ -28,8 +27,7 @@ class StoriesController < ApplicationController
         if @story.save
           render :update do |page|
             page << "Control.Modal.close();"
-            page.replace_html  'stories', :partial=>'stories/story', :collection=>@story.iteration.stories
-            page.visual_effect :highlight, 'stories'
+            page.insert_html :bottom,  'stories', :partial=>'stories/story', :object=>@story
           end
         else
           render :update do |page|

@@ -1,6 +1,9 @@
 %script{:type=>'text/javascript'}
   var element = document.getElementById('menu_iteration');
   element.className = 'current';
+%h1 Iterations
+
+=link_to "Generate Iterations" , new_generate_new_iteration_path
 =link_to "Create Iteration" , new_iteration_path
 =will_paginate(@iterations)
 %table#iterations

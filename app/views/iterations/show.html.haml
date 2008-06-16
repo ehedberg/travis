@@ -14,6 +14,12 @@
 %p
   End Date:
   =h @iteration.end_date
+
+=link_to "Add New Story", "#storyform", :id=>'addStoryLink'
+
+#storyform
+  =render :partial=>'iterations/ajax_story',:locals=>{:story=>@iteration.stories.build(:title=>'New Story')}
+
 %table#stories
   =render :partial=>"stories/story", :collection=>@iteration.stories
 #sum
@@ -22,3 +28,6 @@
   =link_to("Edit", edit_iteration_path(@iteration))
   |
   =link_to("Delete", { :id => @iteration.id }, :confirm => "Are you sure?", :method => :delete)
+
+%script
+  new Control.Modal('addStoryLink', { opacity:0.6, fade:true, width:600, height:450});

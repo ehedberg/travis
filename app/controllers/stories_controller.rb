@@ -16,10 +16,27 @@ class StoriesController < ApplicationController
   def create
     @story=Story.new(params[:story])
 
-    if @story.save
-      redirect_to(stories_path)
-    else
-      render :template=>"stories/form"
+    respond_to do |format|
+      format.html {
+        if @story.save
+          redirect_to(stories_path)
+        else
+          render :template=>"stories/form"
+        end
+      }
+      format.js {
+        if @story.save
+          render :update do |page|
+            page << "Control.Modal.close();"
+            page.replace_html  'stories', :partial=>'stories/story', :collection=>@story.iteration.stories
+            page.visual_effect :highlight, 'stories'
+          end
+        else
+          render :update do |page|
+            page.replace 'replaceable', :partial=>'iterations/ajax_story', :locals=>{:story=>@story}
+          end
+        end
+      }
     end
   end
 

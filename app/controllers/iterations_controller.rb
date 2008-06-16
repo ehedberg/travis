@@ -87,4 +87,24 @@ class IterationsController < ApplicationController
       fmt.xml { render :xml => chart.to_xml } 
     end 
   end
+
+
+  def new_generate
+  end
+
+  def generate
+    sdate = Date.parse(params[:start_date])
+    edate = Date.parse(params[:end_date])
+    span = (edate-sdate).numerator
+    iter_size= params[:days].to_i
+    numiter= ((span / params[:days].to_i).ceil).numerator
+
+    Iteration.transaction do 
+      numiter.times do |n|
+        sd = sdate+(iter_size*n)
+         Iteration.create!(:title=>"Iteration #{n+1}", :start_date=>sd.to_s(:db), :end_date=>(sd+(iter_size-1)).to_s(:db))
+      end
+    end
+    redirect_to iterations_path
+  end
 end

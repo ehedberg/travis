@@ -36,7 +36,7 @@ class Iteration < ActiveRecord::Base
     Iteration.find(:first, :conditions=>['start_date <= ? and end_date >= ?', t,t])
   end
   def velocity
-    stories.inject(0){|x,y| x+y.swag}.to_f
+    stories.inject(0){|x,y| x+(y.swag||0)}.to_f
   end
 
   

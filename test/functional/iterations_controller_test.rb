@@ -54,9 +54,7 @@ class IterationsControllerTest < ActionController::TestCase
     get :index
     assert assigns(:iterations)
     iterations = assigns(:iterations)
-
     assert !iterations.empty?
-
     assert iterations.kind_of?(Array)
 
     assert_select "table[id=iterations]" do
@@ -132,15 +130,10 @@ class IterationsControllerTest < ActionController::TestCase
 
   def test_new
     get :new
-
     assert_response :success
-
     assert_template "form"
-
     assert assigns(:iteration)
-
     assert assigns(:iteration).new_record?
-
     assert_select "form[action=?][method=post]", iterations_path do
       assert_select "input[type=text]"
       assert_select "div[class=date_field]"
@@ -172,7 +165,7 @@ class IterationsControllerTest < ActionController::TestCase
     swag_sum = 0
     assert_select "table[id=stories]" do
       story_list.each do |s|
-        swag_sum += s.swag
+        swag_sum += s.swag.to_f
         assert_select "tr" do
           assert_select "td" do
             assert_select "a[href=?]", story_path(s)
@@ -188,6 +181,28 @@ class IterationsControllerTest < ActionController::TestCase
     assert_routing "/iterations/1/chart", :controller=>"iterations",:action=>"chart", :id=>"1"
     get :chart, :id=>iterations(:last).id
     assert_response :success
+  end
+
+  def test_iteration_generate_form
+    assert_routing({:path=>'/iterations/new/new_generate', :method=>"get"}, {:controller=>'iterations', :action=>'new_generate'})
+    get :new_generate
+    assert_response :success
+    assert_template 'new_generate'
+    assert_select "form[action=?]", generate_iterations_path do
+      assert_select "input[type=text][id=start_date]"
+      assert_select "input[type=text][id=end_date]"
+      assert_select "input[type=text][id=days]"
+      assert_select "input[type=submit]"
+    end
+  end
+  def test_iteration_generator
+    Iteration.destroy_all
+    assert_routing({:path=>'/iterations/generate', :method=>"post"}, {:controller=>'iterations', :action=>'generate'})
+    post :generate, :start_date=>Date.today.to_s(:db), :end_date=>(14*3).days.from_now.to_date.to_s(:db), :days=>14
+    assert_response :redirect
+    assert_redirected_to iterations_path
+    assert_equal 3, Iteration.count
+    assert_equal ((14*3)-1).days.from_now.to_date, Iteration.find(:last, :order=>'start_date asc').end_date
   end
 
   def test_update

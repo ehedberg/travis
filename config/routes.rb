@@ -35,6 +35,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :stories
   map.resources :tasks
   map.resource :session
-  map.resources :iterations, :member=>{:chart=> :get}
+  map.resources :iterations, :member=>{:chart=> :get}, :collection=>{:generate=>:post}, :new=>{:new_generate=>:get}
   map.dashboard '/', :controller => 'dashboard', :action => 'index'
 end

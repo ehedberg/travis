@@ -1,0 +1,22 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_iteration');
+  element.className = 'current';
+=error_messages_for "iteration"
+- form_tag generate_iterations_path, :html=>{ :id=>'columnarForm'} do 
+  %fieldset
+    %legend
+      Generate Iterations
+    %label.first
+      Start Date 
+      %div.date_field
+        =calendar_date_select_tag :start_date
+    %label
+      End Date
+      %div.date_field
+        =calendar_date_select_tag :end_date
+    %label
+      Iteration Size (in days)
+      %div.date_field
+        =text_field_tag :days, "14", :size=>2
+    =submit_tag "Save", {:class=> "submit_button"}
+    =button_to_function "Cancel", "location.href='#{iterations_path}'", {:class=>'submit_button'}

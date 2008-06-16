@@ -1,0 +1,15 @@
+#replaceable
+  - @task  = task
+  -story_id = story_id || @story.id
+  - form_remote_for task,  :html=>{:id=>'columnarForm'} do |f|
+    =hidden_field_tag :story_id, story_id
+    .opform
+      %fieldset
+        =f.label :title, '', :class=>'first'
+        =f.text_field :title
+        =f.error_message_on(:title)
+
+        =f.label :description
+        =f.text_area :description
+        =f.error_message_on(:description)
+        =submit_tag "Save"

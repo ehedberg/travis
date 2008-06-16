@@ -34,6 +34,8 @@ class StoriesControllerTest < ActionController::TestCase
     assert_redirected_to stories_path
   end
 
+  
+
   def test_create_invalid_title
 
     post :create, "story"=>{"description"=>"de", "swag"=>"2"}
@@ -114,7 +116,12 @@ class StoriesControllerTest < ActionController::TestCase
     assert_select "a[href=?]", stories_path
     assert_select "a[href=?]", edit_story_path(stories(:one).id)
     assert_select "a[href=?][onclick*=confirm]", story_path(stories(:one))
-    assert_select "form", :count=>0
+    assert_select "form[action=?]", tasks_path do
+      assert_select "input[type=text][id=task_title]"
+      assert_select "textarea[id=task_description]"
+      assert_select "input[type=submit]"
+    end
+    assert_select "a[href=#taskform][id=tasklink]"
   end
 
   def test_update

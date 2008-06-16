@@ -17,6 +17,10 @@
       =f.label :state
       =f.select :state, @story.available_events-[:task_changed]
       =submit_tag "save"
+=link_to "Add New Task", "#taskform", :id=>'tasklink'
+#taskform
+  =render :partial=>'stories/ajax_task',:locals=>{:task=>@story.tasks.build(:title=>'New Task')}
+
 %table#tasks
   %caption Tasks
   %th Title
@@ -24,10 +28,13 @@
   %th Assigned To
   %th Other Related Stories
   %th &nbsp;
-  =render :partial=>"story_task", :collection=>@story.tasks
-%p
+  #taskrows
+    =render :partial=>"story_task", :collection=>@story.tasks
+
   =link_to("Show All", stories_path)
   |
   =link_to("Edit", edit_story_path(@story))
   |
   =link_to("Delete", { :id => @story.id }, :confirm => "Are you sure?", :method => :delete)
+%script
+  new Control.Modal('tasklink', { opacity:0.6, fade:true, width:600, height:450});

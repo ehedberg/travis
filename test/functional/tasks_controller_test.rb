@@ -10,6 +10,33 @@ class TasksControllerTest < ActionController::TestCase
   def teardown
     @request.session[:login]=nil
   end
+  def test_create_ajax
+    xhr :post,  :create, "task"=>{"title"=>"New Title", "description"=>"de"}, :story_id=>stories(:one).id
+    assert assigns(:task)
+    task = assigns(:task)
+    assert_equal Task.find_by_description("de"), assigns(:task)
+    assert_select_rjs :insert, :bottom,  'tasks'
+  end
+
+  def test_bad_ajax_create
+    xhr :post,  :create, "task"=>{"title"=>"", "description"=>""}, :story_id=>stories(:one).id
+    assert assigns(:task)
+    task = assigns(:task)
+    assert_nil Task.find_by_description("de"), assigns(:task)
+    assert_select_rjs :replace, 'replaceable'
+  end
+
+  def test_bad_Create
+    post  :create, "task"=>{"title"=>"", "description"=>""}
+    assert_response :success
+    assert_template 'form'
+    assert assigns(:task)
+    assert assigns(:task).new_record?
+    assert !assigns(:task).valid?
+    task = assigns(:task)
+    assert_equal "can't be blank", assigns(:task).errors.on(:title)
+    assert_equal "can't be blank", assigns(:task).errors.on(:description)
+  end
 
   def test_shows_state_form
     get :show, :id=>tasks(:one).id

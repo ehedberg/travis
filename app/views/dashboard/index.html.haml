@@ -3,7 +3,7 @@
   element.className = 'current';
 
 %h1
-  Current Iteration:
+  =link_to 'Current Iteration:', iteration_path(Iteration.current)
   =@iteration.title
 %h2
   Current Velocity:

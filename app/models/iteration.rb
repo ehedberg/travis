@@ -3,6 +3,20 @@ class Iteration < ActiveRecord::Base
 
   validates_length_of :title, :within=>1..200
   
+  def calculate_end_date
+    iter = self
+    unpassed_points = Story.find(:all, :conditions=>"state != 'passed'", :select=>'swag').inject(0){|x,y| y.swag ? x+y.swag : 0 }.to_f
+    iter.stories.find(:all, :conditions=>"state='passed'").each{|x| unpassed_points+=x.swag if x.swag.to_f}
+    all_iters = Iteration.find(:all, :order=>'start_date asc')
+    prev_iter = all_iters[all_iters.index(iter)-1]
+
+    if iter.velocity !=0
+      return (iter.start_date + (unpassed_points/iter.velocity)*iter.total_days)
+    else
+      0
+    end
+
+  end
   def validate
     begin
       Date.parse(start_date_before_type_cast)

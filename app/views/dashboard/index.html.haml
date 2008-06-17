@@ -22,8 +22,10 @@
   =@iteration.total_points
 %h3#prediction
   Predicted End Date
-  %blink
-    =@prediction.to_s(:long)
+  -if @prediction != 0
+    =@prediction
+  -else
+    =@prediction
     
 
     

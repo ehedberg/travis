@@ -2,6 +2,7 @@
   var element = document.getElementById('menu_story');
   element.className = 'current';
 %h1
+  Story: 
   =h(@story.title)
 %h2
   =h @story.swag
@@ -19,7 +20,7 @@
       =submit_tag "save"
 =link_to "Add New Task", "#taskform", :id=>'tasklink'
 #taskform
-  =render :partial=>'stories/ajax_task',:locals=>{:task=>@story.tasks.build(:title=>'New Task')}
+  =render :partial=>'stories/ajax_task',:locals=>{:task=>Task.new(:title=>'New Task', :story_ids=>[@story.id])}
 
 %table#tasks
   %caption Tasks

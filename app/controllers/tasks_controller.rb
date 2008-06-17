@@ -13,6 +13,20 @@ class TasksController < ApplicationController
     render :template=>"tasks/form"
   end
 
+  def search
+  end
+
+  def do_search
+    @tasks = Task.find(:all, :conditions=>params[:expr])
+    render :update do |page|
+      unless @tasks.empty?
+        page.replace_html 'results', :partial=>'tasks/task', :collection=>@tasks
+      else
+        page.replace_html 'results', '<p>No results found</p>'
+      end
+    end
+  end
+
   def create
     if params[:story_id]
       @task = Story.find(params[:story_id]).tasks.build(params[:task])

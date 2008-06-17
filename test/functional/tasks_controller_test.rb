@@ -10,6 +10,7 @@ class TasksControllerTest < ActionController::TestCase
   def teardown
     @request.session[:login]=nil
   end
+
   def test_create_ajax
     xhr :post,  :create, "task"=>{"title"=>"New Title", "description"=>"de"}, :story_id=>stories(:one).id
     assert assigns(:task)
@@ -36,6 +37,29 @@ class TasksControllerTest < ActionController::TestCase
     task = assigns(:task)
     assert_equal "can't be blank", assigns(:task).errors.on(:title)
     assert_equal "can't be blank", assigns(:task).errors.on(:description)
+  end
+
+  def test_search_view
+    assert_routing({:path=>"/tasks/search", :method=>'get'}, :controller=>'tasks', :action=>'search')
+    get :search
+    assert_response :success
+    assert_template 'search'
+    assert_select "form[action=?]", do_search_tasks_path do
+      assert_select "input[type=text][name=expr]"
+      assert_select "input[type=submit]"
+    end
+  end
+
+  def test_do_search
+    assert_routing({:path=>"/tasks/do_search",:method=>'post'}, :controller=>'tasks', :action=>'do_search')
+    xhr :post, :do_search, :expr=>"state = 'new'"
+    assert_response :success
+    assert_template 'tasks/_task'
+    assert assigns(:tasks)
+    ts = assigns(:tasks)
+    assert_equal 1, ts.size
+    assert_equal ts.first, tasks(:one)
+    assert_select_rjs  'results'
   end
 
   def test_shows_state_form

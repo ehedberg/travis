@@ -186,7 +186,7 @@ module WillPaginate
       links.push    page_link_or_span(@collection.next_page,     %w(disabled next_page), @options[:next_label])
       
       html = links.join(@options[:separator])
-      @options[:container] ? @template.content_tag(:div, html, html_attributes) : html
+      @options[:container] ? @template.send(:content_tag, :div, html, html_attributes) : html
     end
 
     # Returns the subset of +options+ this instance was initialized with that
@@ -257,7 +257,7 @@ module WillPaginate
       if page and page != current_page
         @template.link_to text, url_for(page), :rel => rel_value(page), :class => classnames[1]
       else
-        @template.content_tag :span, text, :class => classnames.join(' ')
+        @template.send(:content_tag, :span, text, :class => classnames.join(' '))
       end
     end
 

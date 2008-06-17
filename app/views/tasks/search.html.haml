@@ -10,7 +10,7 @@
 %p
   Available parameters: 
   %pre
-    =Story.columns.map(&:name).join(', ')
+    =Task.columns.map(&:name).join(', ')
 
 -form_remote_tag :url=>do_search_tasks_path, :id=>'columnarForm', :method=>'post'  do
   %label 

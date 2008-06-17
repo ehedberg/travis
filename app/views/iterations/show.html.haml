@@ -4,7 +4,7 @@
 %h1
   =h(@iteration.title)
 #chartright
-  = ziya_chart chart_iteration_path(@iteration), :size=>"800x400"  if Iteration.count > 0
+  = ziya_chart chart_iteration_path(@iteration), :size=>"400x200", :swf_path=>root_path+'charts' if Iteration.count > 0
 %p
   Start Date:
   =h @iteration.start_date

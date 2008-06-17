@@ -39,7 +39,7 @@ class StoriesControllerTest < ActionController::TestCase
     get :search
     assert_response :success
     assert_template 'search'
-    assert_select "form[action=?]", do_search_stories do
+    assert_select "form[action=?]", do_search_stories_path do
       assert_select "input[type=text][name=expr]"
       assert_select "input[type=submit]"
     end
@@ -52,8 +52,10 @@ class StoriesControllerTest < ActionController::TestCase
     assert_template 'stories/_story'
     assert assigns(:stories)
     ts = assigns(:stories)
-    assert_equal 1, ts.size
-    assert_equal ts.first, stories(:open)
+    ts.each do |t|
+      assert_equal  :new, t.current_state
+    end
+    assert_equal 6, ts.size
     assert_select_rjs  'results'
   end
   

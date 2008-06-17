@@ -69,7 +69,6 @@ class StoryTest < ActiveSupport::TestCase
     assert_invalid(:swag, "must be greater than or equal to 0", -1)
     assert_invalid(:swag, "must be less than 10000", 10000)
     assert_valid(:description, nil)
-    assert_invalid(:description, "is too long (maximum is 200 characters)", ('a'*198) + "rgh")
     assert_invalid(:title, "is too short (minimum is 1 characters)", "")
     assert_invalid(:title, "is too long (maximum is 200 characters)", ('a'*198) + "rgh")
   end

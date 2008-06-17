@@ -85,7 +85,9 @@ module Ziya
     private                               
 
        # Const accessors...
-       def chart_path() root_path+"/charts"; end       
+       def chart_path() 
+       root_path != '/' ? root_path+"/charts" : root_path 
+       end       
        def class_id()   "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" end
        def codebase()   "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"; end
     

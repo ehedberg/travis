@@ -17,7 +17,7 @@ class DashboardController < ApplicationController
   def calculate_end_date(iter)
     raise "can't calculate on nil iteration?!" unless iter
     unpassed_points = Story.find(:all, :conditions=>"state != 'passed'", :select=>'swag').inject(0){|x,y| y.swag ? x+y.swag : 0 }.to_f
-    iter.stories.find(:all, :conditions=>"state=='passed'").each{|x| unpassed_points+=x.swag if x.swag.to_f}
+    iter.stories.find(:all, :conditions=>"state='passed'").each{|x| unpassed_points+=x.swag if x.swag.to_f}
     all_iters = Iteration.find(:all, :order=>'start_date asc')
     prev_iter = all_iters[all_iters.index(iter)-1]
 

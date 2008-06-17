@@ -12,6 +12,18 @@ class StoriesController < ApplicationController
     @story=Story.find(params[:id])
     render :template=>"stories/form"
   end
+  def search
+  end
+  def do_search
+    @stories = Story.find(:all, :conditions=>params[:expr])
+    render :update do |page|
+      unless @stories.empty?
+        page.replace_html 'results', :partial=>'stories/story', :collection=>@stories
+      else
+        page.replace_html 'results', '<p>No results found</p>'
+      end
+    end
+  end
 
   def create
     @story=Story.new(params[:story])

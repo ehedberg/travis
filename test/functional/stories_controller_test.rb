@@ -34,6 +34,28 @@ class StoriesControllerTest < ActionController::TestCase
     assert_redirected_to stories_path
   end
 
+  def test_search_view
+    assert_routing({:path=>"/stories/search", :method=>'get'}, :controller=>'stories', :action=>'search')
+    get :search
+    assert_response :success
+    assert_template 'search'
+    assert_select "form[action=?]", do_search_stories do
+      assert_select "input[type=text][name=expr]"
+      assert_select "input[type=submit]"
+    end
+  end
+
+  def test_do_search
+    assert_routing({:path=>"/stories/do_search",:method=>'post'}, :controller=>'stories', :action=>'do_search')
+    xhr :post, :do_search, :expr=>"state = 'new'"
+    assert_response :success
+    assert_template 'stories/_story'
+    assert assigns(:stories)
+    ts = assigns(:stories)
+    assert_equal 1, ts.size
+    assert_equal ts.first, stories(:open)
+    assert_select_rjs  'results'
+  end
   
 
   def test_create_invalid_title

@@ -145,7 +145,7 @@ class TasksControllerTest < ActionController::TestCase
     post :create, :task=>{"title"=>"spam", "description"=>"spam description", "state"=>""}
     assert_response :redirect
     t = assigns(:task)
-    assert_redirected_to task_path(t)
+    assert_redirected_to tasks_path
     assert_equal t.title, "spam"
     assert_equal t.description, "spam description"
     assert_equal n+1, Task.count

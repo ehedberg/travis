@@ -36,7 +36,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       format.html { 
         if @task.save
-          redirect_to task_path(@task)
+          redirect_to tasks_path
         else
           render :template=>'tasks/form'
         end

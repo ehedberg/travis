@@ -1,8 +1,10 @@
 %tr[story, cycle('odd', 'even')]
   %td
     =link_to(h(story.title), story_path(story))
-  %td.centered
-    =story.swag
+  %td
+    %span{:id=>"swag_#{story.id}"}
+      =story.swag
+    =in_place_editor "swag_#{story.id}", {:url=>update_swag_story_path(story),  :size=>2, :rows=>1}
   %td.centered
     =story.state
   %td.centered

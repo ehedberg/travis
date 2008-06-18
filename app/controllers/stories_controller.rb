@@ -17,6 +17,13 @@ class StoriesController < ApplicationController
     @saved_searches = SavedSearch.for_stories
   end
 
+  def update_swag
+    s = Story.find(params[:id])
+    s.swag=params[:value].chop
+    s.save!
+    render :text=>s.reload.swag
+  end
+
   def do_search
     @stories = Story.find(:all, :conditions=>params[:expr])
     @saved_search = SavedSearch.new(:query=>params[:expr], :query_type=>'Story')

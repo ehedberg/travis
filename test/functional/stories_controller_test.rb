@@ -127,6 +127,12 @@ class StoriesControllerTest < ActionController::TestCase
     assert_select "a[href=?]", new_story_path
   end
 
+  def test_update_swag
+    xhr :post, :update_swag, "id"=>"1", "value"=>"2.0\n            ", "controller"=>"stories", "editorId"=>"swag_1"
+    assert_response :success
+    assert_equal "2.0", @response.body
+
+  end
   def test_new
     get :new
     assert_response :success

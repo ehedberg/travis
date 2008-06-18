@@ -129,18 +129,15 @@ class StoriesControllerTest < ActionController::TestCase
 
   def test_new
     get :new
-
     assert_response :success
-
     assert_template "form"
-
     assert assigns(:story)
-
     assert assigns(:story).new_record?
 
     assert_select "form[action=?][method=post]", stories_path do
       assert_select "textarea[id=story_description]"
       assert_select "input[type=text]"
+      assert_select "input[type=text][id=story_area]"
       assert_select "input[type=submit]"
       assert_select "input[type=button][value=Cancel][onclick*=location]"
     end

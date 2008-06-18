@@ -2,6 +2,10 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class StoryTest < ActiveSupport::TestCase
 
+  def test_has_area_field
+    assert_nil  Story.new.area
+  end
+
   def test_cant_add_task_to_passed_story
     s = Story.create({:title=>'fubar', :description=>'baz'})
     assert_equal :new, s.current_state

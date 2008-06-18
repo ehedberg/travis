@@ -13,8 +13,11 @@
       Description
       =f.text_area :description
     %label
+      Area
+      =f.text_field :area
+    %label
       Swag
-      =f.text_field :swag
+      =f.text_field :swag, :size=>2
     %label
       Iteration
       =f.select :iteration_id, Iteration.find(:all).collect{|i| [i.title, i.id]}, {:include_blank=>true}

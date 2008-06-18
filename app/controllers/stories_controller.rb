@@ -12,8 +12,10 @@ class StoriesController < ApplicationController
     @story=Story.find(params[:id])
     render :template=>"stories/form"
   end
+
   def search
   end
+
   def do_search
     @stories = Story.find(:all, :conditions=>params[:expr])
     render :update do |page|

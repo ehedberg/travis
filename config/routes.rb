@@ -33,6 +33,7 @@ ActionController::Routing::Routes.draw do |map|
   #map.connect ':controller/:action/:id'
   #map.connect ':controller/:action/:id.:format'
   map.resources :stories, :collection=>{:search=>:get, :do_search=>:post}
+  map.resources :saved_searches
   map.resources :tasks, :collection=>{:search=>:get, :do_search=>:post}
   map.resource :session
   map.resources :iterations, :member=>{:chart=> :get}, :collection=>{:generate=>:post}, :new=>{:new_generate=>:get}

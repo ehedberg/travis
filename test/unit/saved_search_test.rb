@@ -16,4 +16,5 @@ class SavedSearchTest < ActiveSupport::TestCase
     assert_invalid(:name, "is too long (maximum is 50 characters)", ('a'*51))
     
   end
+
 end

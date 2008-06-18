@@ -15,6 +15,12 @@ class SessionsControllerTest < ActionController::TestCase
     assert_equal 'blah', session[:login]
     assert_equal 'blah', Session.current_login
   end
+  def xtest_flashback
+    @response.flash[:back]='/iterations'
+    post :create, :login=>'blah'
+    assert_response :redirect
+    assert_redirected_to iterations_path
+  end
 
   def test_destroy
     @request.session[:login]='blah'

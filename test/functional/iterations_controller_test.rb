@@ -10,6 +10,14 @@ class IterationsControllerTest < ActionController::TestCase
   def test_routes
     do_default_routing_tests('iterations')
   end
+  def test_redirect_or_back
+    @request.session[:login]=nil
+    get :index
+    assert_response :redirect
+    assert_redirected_to new_session_path
+    assert_not_nil flash[:back]
+    assert_equal iterations_path, flash[:back]
+  end
   def test_requires_login_except_show_chart
     @request.session[:login]=nil
     get :chart, :id=>iterations(:last).id

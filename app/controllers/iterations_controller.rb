@@ -55,7 +55,6 @@ class IterationsController < ApplicationController
     points = []
     created=[]
     planned = []
-      logger.debug "TOTAL DAYS: #{iter.total_days}"
     iter.total_days.times do |n| 
       planned << (total_points/iter.total_days+(planned.last||0))
       d= (iter.start_date+n)
@@ -77,8 +76,6 @@ class IterationsController < ApplicationController
       z.pop
     end
     strdays= days.map{|x| x.to_s(:db)}
-    logger.debug "POINTS #{points}"
-    logger.debug "CREATED #{z}"
     chart.add( :axis_category_text,  strdays)
     chart.add( :series, "Points complete", z) unless z.empty?
     chart.add( :series, "Scope", y)

@@ -39,9 +39,18 @@ class StoriesControllerTest < ActionController::TestCase
     get :search
     assert_response :success
     assert_template 'search'
+    assert assigns(:saved_searches)
+    assigns(:saved_searches).each do |x|
+      assert_equal x.query_type, 'Story'
+    end
     assert_select "form[action=?]", do_search_stories_path do
       assert_select "input[type=text][name=expr]"
       assert_select "input[type=submit]"
+    end
+    assert_select "div#savedSearches" do 
+      assert_select  "ul" do
+        assert_select "li", SavedSearch.find_story_searches.size
+      end
     end
   end
 

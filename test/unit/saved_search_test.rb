@@ -17,4 +17,15 @@ class SavedSearchTest < ActiveSupport::TestCase
     
   end
 
+  def test_find_story_searches
+    SavedSearch.find_story_searches.each do |x|
+      assert_equal x.query_type, 'Story'
+    end
+  end
+  def test_find_task_searches
+    SavedSearch.find_task_searches.each do |x|
+      assert_equal x.query_type, 'Task'
+    end
+  end
+
 end

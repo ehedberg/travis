@@ -12,6 +12,10 @@
   Available parameters: 
   %pre
     =Story.columns.map(&:name).join(', ')
+#savedSearches
+  %ul
+    = render :partial=>'shared/saved_search', :collection=>@saved_searches
+  
 
 
 -form_remote_tag :url=>do_search_stories_path, :id=>'columnarForm', :method=>'post'  do

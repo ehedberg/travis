@@ -14,6 +14,7 @@ class StoriesController < ApplicationController
   end
 
   def search
+    @saved_searches = SavedSearch.find_story_searches
   end
 
   def do_search

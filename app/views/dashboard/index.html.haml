@@ -21,16 +21,10 @@
   Total points:
   =@iteration.total_points
 %h3#prediction
-  Predicted End Date
-  -if @prediction != 0
-    =@prediction
-  -else
-    =@prediction
+  Predicted End Date:
+  =@prediction
     
 
-%p
-  fubar
-  =root_path
 #chart
   = ziya_chart chart_iteration_path(@iteration), :size=>"800x400", :swf_path=>root_path+'charts'
 =link_to "< Prev", iteration_path(@prev_iteration)

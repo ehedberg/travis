@@ -5,7 +5,11 @@
   Story: 
   =h(@story.title)
 %h2
-  =h @story.swag
+  Swag: 
+  -if @story.swag
+    =h @story.swag
+  -else
+    Unswagged.
 %h2
   State:
   =h @story.state

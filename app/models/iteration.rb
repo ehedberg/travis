@@ -13,7 +13,7 @@ class Iteration < ActiveRecord::Base
     if iter.velocity !=0
       return (iter.start_date + (unpassed_points/iter.velocity)*iter.total_days)
     else
-      0
+      "~(never - 1)"
     end
 
   end

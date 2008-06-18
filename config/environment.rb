@@ -42,6 +42,7 @@ Rails::Initializer.run do |config|
     :secret      => '0a627ed2386cb923be95cdd4611a9dad2ba86b7c7bdd4692a83d92ea7062817f2dec0d86e47162539c589ac5d9e397e7aa849ad71e1edbb2a18dcee3e5a1cc1c'
   }
   config.gem 'haml'
+  config.gem 'BlueCloth'
   config.gem 'ziya'
   config.gem 'will_paginate'
 

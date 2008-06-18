@@ -278,7 +278,7 @@ class TasksControllerTest < ActionController::TestCase
     assert_response :success
     nt = Task.find_by_title('thisone task')
     assert_not_nil nt
-    assert Story.find(stories(:one).id).tasks.include?(nt)
+    assert_equal stories(:one), nt.stories.first
   end
 
   def test_relates_properly_for_bad_task_data

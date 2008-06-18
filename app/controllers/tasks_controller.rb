@@ -31,17 +31,11 @@ class TasksController < ApplicationController
   end
 
   def create
-    if params[:story_id]
-      @story = Story.find(params[:story_id])
-
-      @task = @story.tasks.build(params[:task])
-      @story.save
-    else
-      @task = Task.new(params[:task])
-    end
+    @task = Task.new(params[:task])
     respond_to do |format|
       format.html { 
         if @task.save
+          Story.find(params[:story_id]).tasks << @task if params[:story_id]
           redirect_to tasks_path
         else
           render :template=>'tasks/form'
@@ -50,6 +44,7 @@ class TasksController < ApplicationController
 
       format.js {
         if @task.save
+          Story.find(params[:story_id]).tasks << @task if params[:story_id]
           render :update do |page|
             page << "Control.Modal.close();"
             page.insert_html :bottom, 'tasks', :partial=>'stories/story_task', :object=>@task

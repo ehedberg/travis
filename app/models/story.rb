@@ -1,7 +1,7 @@
 class Story < ActiveRecord::Base
   acts_as_state_machine :initial=>:new
 
-  has_and_belongs_to_many :tasks , :before_add=>Proc.new{|p, d|  raise ActiveRecord::ActiveRecordError.new("Can't add a task to a passed story") if (p.current_state == :passed)}
+  has_and_belongs_to_many :tasks , :before_add=>Proc.new{|s, t|  raise ActiveRecord::ActiveRecordError.new("Can't add a task to a passed story") if (s.current_state == :passed)}, :after_add=>Proc.new{|s, t| s.task_changed! }
 
   belongs_to :iteration
 
@@ -36,14 +36,14 @@ class Story < ActiveRecord::Base
   end
 
   def all_new_tasks?
-    tasks.find_all{|x|x.reload.current_state != :new}.empty?
+    tasks.reload.find_all{|x|x.reload.current_state != :new}.empty?
   end
 
   def has_incomplete?
-    !tasks.find_all{|x| x.reload.current_state != :complete}.empty?
+    !tasks.reload.find_all{|x| x.reload.current_state != :complete}.empty?
   end
   def has_in_progress?
-    !tasks.find_all{|x| x.reload.current_state == :in_progress}.empty?
+    !tasks.reload.find_all{|x| x.reload.current_state == :in_progress}.empty?
   end
   def all_complete?
     !has_incomplete?

@@ -2,6 +2,26 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class StoryTest < ActiveSupport::TestCase
 
+  def test_state_changed_on_task_add_in_prog
+    s = Story.new(:title=>'fubar', :description=>'basz')
+    assert s.save
+    t = s.tasks.create(:title=>'a task', :description=>'the task')
+    assert t.valid?
+    assert !t.new_record?
+    assert_equal s, t.stories.first
+    t.start!
+    t.reload
+    s.reload
+    assert_equal :in_progress, t.current_state
+    assert_equal :in_progress, s.current_state
+    s2 = Story.new(:title=>'s2', :description=>'blah')
+    assert s2.save
+    assert_equal :new, s2.current_state
+    s2.tasks << t
+    s2.reload
+    assert_equal :in_progress, s2.current_state
+  end
+
   def test_has_area_field
     assert_nil  Story.new.area
   end

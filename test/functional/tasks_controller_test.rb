@@ -51,7 +51,9 @@ class TasksControllerTest < ActionController::TestCase
     end
     assert_select "div#savedSearches" do 
       assert_select  "ul" do
-        assert_select "li", SavedSearch.find_story_searches.size
+        assert_select "li", SavedSearch.find_story_searches.size  do
+          assert_select "a[href=#]"
+        end
       end
     end
   end

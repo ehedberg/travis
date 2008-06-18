@@ -1,2 +1,6 @@
 %li
-  =link_to h(saved_search.name), '#'
+
+  =link_to_function h(saved_search.name), nil, :update do |page|
+    - page['expr'].value = saved_search.query
+    - page.visual_effect :highlight, 'expr', :duration=>1.0
+    

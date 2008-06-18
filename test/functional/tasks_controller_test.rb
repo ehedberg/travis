@@ -273,4 +273,19 @@ class TasksControllerTest < ActionController::TestCase
     assert_equal session[:login], t.login
   end
 
+  def test_relates_properly
+    xhr :post, :create,  "task"=>{"title"=>"thisone task", "description"=>"this should be on story 4"}, "story_id"=>stories(:one).id
+    assert_response :success
+    nt = Task.find_by_title('thisone task')
+    assert_not_nil nt
+    assert Story.find(stories(:one).id).tasks.include?(nt)
+  end
+
+  def test_relates_properly_for_bad_task_data
+    c = Story.find(stories(:one).id).tasks.size
+    xhr :post, :create,  "task"=>{"title"=>"", "description"=>""}, "story_id"=>stories(:one).id
+    assert_response :success
+    assert assigns(:task).new_record?
+    assert_equal c, Story.find(stories(:one).id).tasks.size
+  end
 end

@@ -32,7 +32,10 @@ class TasksController < ApplicationController
 
   def create
     if params[:story_id]
-      @task = Story.find(params[:story_id]).tasks.build(params[:task])
+      @story = Story.find(params[:story_id])
+
+      @task = @story.tasks.build(params[:task])
+      @story.save
     else
       @task = Task.new(params[:task])
     end
@@ -82,5 +85,7 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to tasks_path
   end
+
+
 
 end

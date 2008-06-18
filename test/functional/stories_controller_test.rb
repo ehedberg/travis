@@ -45,6 +45,7 @@ class StoriesControllerTest < ActionController::TestCase
     end
   end
 
+
   def test_do_search
     assert_routing({:path=>"/stories/do_search",:method=>'post'}, :controller=>'stories', :action=>'do_search')
     xhr :post, :do_search, :expr=>"state = 'new'"

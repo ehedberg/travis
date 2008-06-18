@@ -19,7 +19,7 @@ class StoriesController < ApplicationController
 
   def update_swag
     s = Story.find(params[:id])
-    s.swag=params[:value].chop
+    s.swag=params[:value].to_f
     s.save!
     render :text=>s.reload.swag
   end

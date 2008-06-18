@@ -43,15 +43,9 @@ class StoriesControllerTest < ActionController::TestCase
     assigns(:saved_searches).each do |x|
       assert_equal x.query_type, 'Story'
     end
-    assert_select "form[action=?]", do_search_stories_path do
-      assert_select "input[type=text][name=expr]"
-      assert_select "input[type=submit]"
-    end
-    assert_select "div#savedSearches" do 
-      assert_select  "ul" do
-        assert_select "li", SavedSearch.find_task_searches.size  do
+    assert_select "ul#savedSearches" do 
+        assert_select "li", SavedSearch.for_stories.size  do
           assert_select "a[href=#]"
-        end
       end
     end
   end
@@ -69,8 +63,16 @@ class StoriesControllerTest < ActionController::TestCase
     end
     assert_equal 6, ts.size
     assert_select_rjs  'results'
+    assert_select_rjs :replace_html, "saveform" do
+      assert_select "form[action=?]", saved_searches_path do
+        assert_select 'input[type=hidden][id=saved_search_query]'
+        assert_select 'input[type=hidden][id=saved_search_query_type]'
+        assert_select 'input[type=text][id=saved_search_name]'
+        assert_select "input[type=submit]"
+      end
+    end
   end
-  
+
 
   def test_create_invalid_title
 

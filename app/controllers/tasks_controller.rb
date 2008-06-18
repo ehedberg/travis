@@ -14,14 +14,16 @@ class TasksController < ApplicationController
   end
 
   def search
-    @saved_searches= SavedSearch.find_task_searches
+    @saved_searches= SavedSearch.for_tasks
   end
 
   def do_search
     @tasks = Task.find(:all, :conditions=>params[:expr])
+    @saved_search = SavedSearch.new(:query=>params[:expr], :query_type=>'Task')
     render :update do |page|
       unless @tasks.empty?
         page.replace_html 'results', :partial=>'tasks/task', :collection=>@tasks
+        page.replace_html 'saveform', :partial=>'shared/save_search_form'
       else
         page.replace_html 'results', '<p>No results found</p>'
       end

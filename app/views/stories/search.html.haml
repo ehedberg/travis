@@ -12,9 +12,8 @@
   Available parameters: 
   %pre
     =Story.columns.map(&:name).join(', ')
-#savedSearches
-  %ul
-    = render :partial=>'shared/saved_search', :collection=>@saved_searches
+%ul#savedSearches
+  = render :partial=>'shared/saved_search', :collection=>@saved_searches
   
 
 
@@ -25,3 +24,5 @@
   =submit_tag 'Search'
 
 %table#results
+
+#saveform

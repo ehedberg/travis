@@ -14,14 +14,16 @@ class StoriesController < ApplicationController
   end
 
   def search
-    @saved_searches = SavedSearch.find_story_searches
+    @saved_searches = SavedSearch.for_stories
   end
 
   def do_search
     @stories = Story.find(:all, :conditions=>params[:expr])
+    @saved_search = SavedSearch.new(:query=>params[:expr], :query_type=>'Story')
     render :update do |page|
       unless @stories.empty?
         page.replace_html 'results', :partial=>'stories/story', :collection=>@stories
+        page.replace_html 'saveform', :partial=>'shared/save_search_form'
       else
         page.replace_html 'results', '<p>No results found</p>'
       end

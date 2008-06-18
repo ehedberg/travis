@@ -49,11 +49,9 @@ class TasksControllerTest < ActionController::TestCase
       assert_select "input[type=text][name=expr]"
       assert_select "input[type=submit]"
     end
-    assert_select "div#savedSearches" do 
-      assert_select  "ul" do
-        assert_select "li", SavedSearch.find_story_searches.size  do
-          assert_select "a[href=#]"
-        end
+    assert_select "ul#savedSearches" do 
+      assert_select "li", SavedSearch.for_tasks.size  do
+        assert_select "a[href=#]"
       end
     end
   end
@@ -68,6 +66,14 @@ class TasksControllerTest < ActionController::TestCase
     assert_equal 1, ts.size
     assert_equal ts.first, tasks(:one)
     assert_select_rjs  'results'
+    assert_select_rjs :replace_html, "saveform" do
+      assert_select "form[action=?]", saved_searches_path do
+        assert_select 'input[type=hidden][id=saved_search_query]'
+        assert_select 'input[type=hidden][id=saved_search_query_type][value=Task]'
+        assert_select 'input[type=text][id=saved_search_name]'
+        assert_select "input[type=submit]"
+      end
+    end
   end
 
   def test_shows_state_form

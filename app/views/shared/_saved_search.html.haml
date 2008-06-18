@@ -1,6 +1,7 @@
-%li
-
+%li[saved_search]
   =link_to_function h(saved_search.name), nil, :update do |page|
     - page['expr'].value = saved_search.query
     - page.visual_effect :highlight, 'expr', :duration=>1.0
+
+  =link_to_remote "[Delete]",:url=>saved_search_path(saved_search), :method=>'delete'
     

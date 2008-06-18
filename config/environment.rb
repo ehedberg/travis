@@ -11,6 +11,7 @@ RAILS_GEM_VERSION = '2.1.0' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+  config.action_controller.session_store = :active_record_store
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -37,7 +38,7 @@ Rails::Initializer.run do |config|
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
-    :session_key => '_trunk_session',
+    :session_key => '_travis_0wnZ_j3w3r_s0ulz',
     :secret      => '0a627ed2386cb923be95cdd4611a9dad2ba86b7c7bdd4692a83d92ea7062817f2dec0d86e47162539c589ac5d9e397e7aa849ad71e1edbb2a18dcee3e5a1cc1c'
   }
   config.gem 'haml'

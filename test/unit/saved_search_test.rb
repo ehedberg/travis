@@ -18,12 +18,24 @@ class SavedSearchTest < ActiveSupport::TestCase
   end
 
   def test_find_story_searches
-    SavedSearch.find_story_searches.each do |x|
+    SavedSearch.for_stories.each do |x|
       assert_equal x.query_type, 'Story'
     end
   end
+  def test_validates_unique_name_and_query
+    a = SavedSearch.new(:query=>'foo', :name=>'bars', :query_type=>'Task')
+    assert a.save
+    b = SavedSearch.new(:query=>'foo', :name=>'bars', :query_type=>'Task')
+    assert !b.save
+    assert_equal "has already been taken", b.errors.on(:name)
+    assert_equal "has already been taken", b.errors.on(:query)
+    b = SavedSearch.new(:query=>'foo', :name=>'bars', :query_type=>'Story')
+    assert b.save
+
+
+  end
   def test_find_task_searches
-    SavedSearch.find_task_searches.each do |x|
+    SavedSearch.for_tasks.each do |x|
       assert_equal x.query_type, 'Task'
     end
   end

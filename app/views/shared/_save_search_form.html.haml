@@ -1,0 +1,7 @@
+=error_messages_for 'saved_search'
+-form_remote_for @saved_search do |f|
+  = f.hidden_field :query
+  = f.hidden_field :query_type
+  = f.text_field :name 
+  = submit_tag "Save"
+

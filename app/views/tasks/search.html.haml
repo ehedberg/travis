@@ -11,6 +11,9 @@
   Available parameters: 
   %pre
     =Task.columns.map(&:name).join(', ')
+#savedSearches
+  %ul
+    = render :partial=>'shared/saved_search', :collection=>@saved_searches
 
 -form_remote_tag :url=>do_search_tasks_path, :id=>'columnarForm', :method=>'post'  do
   %label 

@@ -14,6 +14,7 @@ class TasksController < ApplicationController
   end
 
   def search
+    @saved_searches= SavedSearch.find_task_searches
   end
 
   def do_search

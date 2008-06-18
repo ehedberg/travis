@@ -42,11 +42,17 @@ class TasksControllerTest < ActionController::TestCase
   def test_search_view
     assert_routing({:path=>"/tasks/search", :method=>'get'}, :controller=>'tasks', :action=>'search')
     get :search
+    assert assigns(:saved_searches)
     assert_response :success
     assert_template 'search'
     assert_select "form[action=?]", do_search_tasks_path do
       assert_select "input[type=text][name=expr]"
       assert_select "input[type=submit]"
+    end
+    assert_select "div#savedSearches" do 
+      assert_select  "ul" do
+        assert_select "li", SavedSearch.find_story_searches.size
+      end
     end
   end
 

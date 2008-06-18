@@ -4,14 +4,14 @@
 %h1
   =h @task.title
 %p
-  =h @task.description
+  =markdown(h @task.description)
 %p
   %h2 State
   =h @task.state
 
 %p
   Assigned To 
-  =markdown(h @task.login)
+  =h @task.login
 
 #stateform
   -form_for @task  do |f|

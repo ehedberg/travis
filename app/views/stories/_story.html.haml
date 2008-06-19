@@ -1,5 +1,7 @@
 %tr[story, cycle('odd', 'even')]
   %td
+    =link_to(h(story.mnemonic), story_path(story))
+  %td
     =link_to(h(story.title), story_path(story))
   %td
     %span{:id=>"swag_#{story.id}"}

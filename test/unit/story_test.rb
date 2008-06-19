@@ -1,6 +1,19 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class StoryTest < ActiveSupport::TestCase
+  def test_mnemonic
+    s = Story.create(:title=>'ab -c ?.%   d')
+    assert_not_nil s.mnemonic
+    assert_equal 'ABCD-'+s.id.to_s, s.mnemonic
+    assert s.save
+    assert_equal s.mnemonic, Story.find(s.id).mnemonic
+    s2 = Story.create(:title=>'ab -cd?.%   d')
+    assert s2.save, s2.errors.each_full{}
+    s2.mnemonic=s.mnemonic
+    assert !s2.save
+    assert_not_nil s2.errors.on(:mnemonic)
+    s2 = Story.create(:title=>'nomn')
+  end
   def test_state_changed_on_task_remove
     s = Story.create(:title=>'fubar', :description=>'basz')
     t1 = Task.new(:title=>'fubar', :description=>'t1')

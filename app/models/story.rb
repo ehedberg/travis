@@ -1,10 +1,12 @@
 class Story < ActiveRecord::Base
   acts_as_state_machine :initial=>:new
 
+  validates_uniqueness_of :mnemonic
   has_and_belongs_to_many :tasks , 
     :before_add=>Proc.new{|s, t|  raise ActiveRecord::ActiveRecordError.new("Can't add a task to a passed story") if (s.current_state == :passed)}, 
     :after_add=>Proc.new{|s, t| s.task_changed! }, 
     :after_remove=>Proc.new{|s,t| s.task_changed!}
+  after_create :set_mnemonic
 
 
   belongs_to :iteration
@@ -51,6 +53,11 @@ class Story < ActiveRecord::Base
   end
   def all_complete?
     !has_incomplete?
+  end
+  private 
+  def set_mnemonic
+    sname = self.title.squeeze.gsub(/[^a-zA-Z]/,'')[0,4]
+    self.update_attribute(:mnemonic,("%s-%d"%[sname,self.id]).upcase)
   end
     
 end

@@ -4,18 +4,21 @@ one:
   description: "Our First Rails Story!  How EXCITING!!!"
   swag: 1.5
   iteration_id: 1
+  mnemonic: List-1
 
 two:
   id: 2 
   title: 'Create/Edit Story'
   description: 'Description'
   swag: 1.5
+  mnemonic: Crea-2
 
 three:
   id: 3 
   title: 'Yet Another Story'
   description: 'Blah Blah Blah'
   swag: 2.7
+  mnemonic: YETA-3
 
 four:
   id: 4 
@@ -23,11 +26,13 @@ four:
   description: 'This is the description for a future story'
   swag: 2
   iteration_id: 3
+  mnemonic: THIS-4
 unswagged:
   id: 5
   title: 'this has no swag'
   description: 'desc'
   iteration_id: 3
+  mnemonic: THIS-5
 passed:
   id: 6
   title: 'this has passed'
@@ -35,6 +40,7 @@ passed:
   state: passed
   iteration_id: 2
   swag: 2.3
+  mnemonic: THIS-6
 open:
   id: 7
   title: 'this is not passed'
@@ -42,3 +48,4 @@ open:
   state: new
   swag: 7.0
   iteration_id: 2
+  mnemonic: THIS-7

@@ -4,6 +4,7 @@
 %h1
   Story: 
   =h(@story.title)
+  ="(%s)"%h(@story.mnemonic)
 %h2
   Swag: 
   -if @story.swag

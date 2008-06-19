@@ -1,6 +1,21 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class StoryTest < ActiveSupport::TestCase
+  def test_state_changed_on_task_remove
+    s = Story.create(:title=>'fubar', :description=>'basz')
+    t1 = Task.new(:title=>'fubar', :description=>'t1')
+    t2 = Task.new(:title=>'fubar', :description=>'t2')
+    s.tasks << t1
+    s.tasks << t2
+    t1.start!
+    t1.finish!
+    s.reload
+    assert_equal :in_progress, s.current_state
+    assert_equal :complete, t1.current_state
+    assert_equal :new, t2.current_state
+    s.tasks.delete(t2)
+    assert_equal :in_qc, s.current_state
+  end
 
   def test_state_changed_on_task_add_in_prog
     s = Story.new(:title=>'fubar', :description=>'basz')

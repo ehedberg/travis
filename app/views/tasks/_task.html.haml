@@ -2,6 +2,7 @@
   %td=link_to(h(task.title), task_path(task))
   %td.centered=task.state
   %td=story_link(task)
+  %td=h(task.login)
   %td.rctl
     =link_to("Show", task_path(task))
     =link_to("Edit", edit_task_path(task))

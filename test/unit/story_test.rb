@@ -37,8 +37,8 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :in_progress, s2.current_state
   end
 
-  def test_has_area_field
-    assert_nil  Story.new.area
+  def test_has_nodule_field
+    assert_nil  Story.new.nodule
   end
 
   def test_cant_add_task_to_passed_story

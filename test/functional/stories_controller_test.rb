@@ -143,7 +143,7 @@ class StoriesControllerTest < ActionController::TestCase
     assert_select "form[action=?][method=post]", stories_path do
       assert_select "textarea[id=story_description]"
       assert_select "input[type=text]"
-      assert_select "input[type=text][id=story_area]"
+      assert_select "input[type=text][id=story_nodule]"
       assert_select "input[type=submit]"
       assert_select "input[type=button][value=Cancel][onclick*=location]"
     end

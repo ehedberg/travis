@@ -53,22 +53,26 @@ class IterationsController < ApplicationController
     chart = Ziya::Charts::Line.new 
     days = []
     points = []
-    created=[]
+    scope=[]
+    s2 = {}
     planned = []
     iter.total_days.times do |n| 
-      planned << (total_points/iter.total_days+(planned.last||0))
+      planned << (total_points/iter.total_days+(planned.last||0)).to_f
       d= (iter.start_date+n)
       days << d
-      points << (Story.connection.select_value("select sum(swag) from stories where state='pass' and completed_at='%s'"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
-      created << (Story.connection.select_value("select sum(swag) from stories where  created_at<'%s' and created_at > '%s'"%[d, iter.start_date])|| 0).to_f
+      points << (Story.connection.select_value("select sum(swag) from stories where state='pass' and date(completed_at)=date('%s')"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
+      scope << (Story.connection.select_value("select sum(swag) from stories where  date(created_at)=date('%s') and iteration_id=%d"%[d.to_s(:db), iter.id])|| 0).to_f
+      s2[d]=scope.last
     end
     z  = []
-    points = points.each{|x| z<< x+(z.last||0)}
+    points.each{|x| z<< (x+(z.last||0.0))}
+    y= []
+    scope.each{|x| y << (x+(y.last||0.0))}
 
     strdays= days.map{|x| x.to_s(:db)}
     chart.add( :axis_category_text,  strdays)
-    chart.add( :series, "Points complete", points)
-    chart.add( :series, "Scope", created)
+    chart.add( :series, "Points complete", z)
+    chart.add( :series, "Scope", y)
     chart.add( :series, "Planned", planned)
     respond_to do |fmt| 
       fmt.xml { render :xml => chart.to_xml } 

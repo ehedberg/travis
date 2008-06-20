@@ -54,7 +54,6 @@ class IterationsController < ApplicationController
     days = []
     points = []
     scope=[]
-    s2 = {}
     planned = []
     iter.total_days.times do |n| 
       planned << (total_points/iter.total_days+(planned.last||0)).to_f
@@ -62,11 +61,14 @@ class IterationsController < ApplicationController
       days << d
       points << (Story.connection.select_value("select sum(swag) from stories where state='pass' and date(completed_at)=date('%s')"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
       scope << (Story.connection.select_value("select sum(swag) from stories where  date(created_at)=date('%s') and iteration_id=%d"%[d.to_s(:db), iter.id])|| 0).to_f
-      s2[d]=scope.last
     end
     z  = []
     points.each{|x| z<< (x+(z.last||0.0))}
     y= []
+    #find stories on this iterawtion created before the start of the iteration.
+    bstories = iter.stories.find(:all, :conditions=>['created_at < ? or created_at > ?', iter.start_date, iter.end_date]).map{|x|x.swag}.compact
+    y<< bstories.inject(0){|x,k|x+k}.to_i
+    logger.debug("y started with: "+y.inspect)
     scope.each{|x| y << (x+(y.last||0.0))}
 
     strdays= days.map{|x| x.to_s(:db)}

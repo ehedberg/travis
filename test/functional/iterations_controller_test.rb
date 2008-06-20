@@ -182,7 +182,7 @@ class IterationsControllerTest < ActionController::TestCase
       end
     end
 
-    assert_select "p[id=sum]", :text=>/#{swag_sum.to_s}/
+    assert_select "[id=sum]", :text=>/#{swag_sum.to_s}/
   end
 
   def test_load_chart_route

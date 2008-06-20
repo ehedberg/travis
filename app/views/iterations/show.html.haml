@@ -4,14 +4,14 @@
 %h1
   =h(@iteration.title)
 #chartright
-  = ziya_chart chart_iteration_path(@iteration), :size=>"400x200", :swf_path=>root_path+'charts' if Iteration.count > 0
-%p
+  = ziya_chart chart_iteration_path(@iteration), :size=>"700x300", :swf_path=>root_path+'charts' if Iteration.count > 0
+%h2
   Start Date:
   =h @iteration.start_date
-%p#sum
+%h2#sum
   Total swag: 
   =@iteration.total_points
-%p
+%h2
   End Date:
   =h @iteration.end_date
 

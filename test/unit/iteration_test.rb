@@ -10,11 +10,11 @@ class IterationTest < ActiveSupport::TestCase
   end
 
   def test_velocity
-    assert_equal 9.3, iterations(:current).velocity
+    assert_equal 2.3.to_s, iterations(:current).velocity.to_s
   end
   def test_velocity_w_nil_swag
     assert iterations(:current).stories.create(:title=>'nilswag')
-    assert_equal 9.3, iterations(:current).reload.velocity
+    assert_equal 2.3.to_s, iterations(:current).reload.velocity.to_s
   end
 
   def test_find_all_iterations

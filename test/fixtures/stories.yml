@@ -42,7 +42,7 @@ passed:
   id: 6
   title: 'this has passed'
   description: 'desc'
-  state: passed
+  state: pass
   iteration_id: 2
   swag: 2.3
   mnemonic: THIS-6

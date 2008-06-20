@@ -2,30 +2,31 @@
   var element = document.getElementById('menu_travis');
   element.className = 'current';
 
-%h1
-  =link_to 'Current Iteration:', iteration_path(Iteration.current)
-  =@iteration.title
-%h2
-  Current Velocity:
-  =@iteration.velocity
-%h2
-  Total Stories:
-  =@iteration.stories.count
-%h3
-  Open Iteration points:
-  =@iteration.open_points
-%h3
-  Completed points:
-  =@iteration.completed_points
-%h3
-  Total points:
-  =@iteration.total_points
-%h3#prediction
-  Predicted End Date:
-  =@prediction
+#iterInfo
+  %h1
+    =link_to 'Current Iteration:', iteration_path(Iteration.current)
+    =@iteration.title
+  %h2
+    Current Velocity:
+    =@iteration.velocity
+  %h2
+    Total Stories:
+    =@iteration.stories.count
+  %h3
+    Open Iteration points:
+    =@iteration.open_points
+  %h3
+    Completed points:
+    =@iteration.completed_points
+  %h3
+    Total points:
+    =@iteration.total_points
+  %h3#prediction
+    Predicted End Date:
+    =@prediction
+  =link_to "< Prev", iteration_path(@prev_iteration)
+  =link_to "Next >", iteration_path(@next_iteration)
     
 
 #chart
   = ziya_chart chart_iteration_path(@iteration), :size=>"800x400", :swf_path=>root_path+'charts'
-=link_to "< Prev", iteration_path(@prev_iteration)
-=link_to "Next >", iteration_path(@next_iteration)

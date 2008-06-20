@@ -1,5 +1,11 @@
 #rightchart {
-  flat: right;
+  float: right;
+}
+#chart {
+  float: right;
+}
+#iterInfo {
+float: left;
 }
 
 #storyerror {

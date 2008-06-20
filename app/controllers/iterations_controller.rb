@@ -59,26 +59,18 @@ class IterationsController < ApplicationController
       planned << (total_points/iter.total_days+(planned.last||0))
       d= (iter.start_date+n)
       days << d
-      if d < Date.today
-      points << (Story.connection.select_value("select sum(swag) from stories where state='passed' and completed_at='%s'"%d)|| 0).to_f 
-      else
-        points << 0.0
+      if d <= Date.today
+      points << (Story.connection.select_value("select sum(swag) from stories where state='pass' and completed_at='%s'"%d.to_s(:db))|| 0).to_f  unless d > Date.today
       end
-      created << (Story.connection.select_value("select sum(swag) from stories where  created_at='%s'"%d)|| 0).to_f
+      created << (Story.connection.select_value("select sum(swag) from stories where  created_at<'%s' and created_at > '%s'"%[d, iter.start_date])|| 0).to_f
     end
+    z  = []
+    points = points.each{|x| z<< x+(z.last||0)}
     
-    z= []
-    points.each { |p| z << (p+(z.last||0))}
-    y= []
-
-    created.each { |p| y << (p+(y.last||0)) }
-    while z.last == 0 do
-      z.pop
-    end
     strdays= days.map{|x| x.to_s(:db)}
     chart.add( :axis_category_text,  strdays)
-    chart.add( :series, "Points complete", z) unless z.empty?
-    chart.add( :series, "Scope", y)
+    chart.add( :series, "Points complete", points)
+    chart.add( :series, "Scope", created)
     chart.add( :series, "Planned", planned)
     respond_to do |fmt| 
       fmt.xml { render :xml => chart.to_xml } 

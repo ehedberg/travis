@@ -5,8 +5,8 @@ class Iteration < ActiveRecord::Base
   
   def calculate_end_date
     iter = self
-    unpassed_points = Story.find(:all, :conditions=>"state != 'passed'", :select=>'swag').inject(0){|x,y| y.swag ? x+y.swag : 0 }.to_f
-    iter.stories.find(:all, :conditions=>"state='passed'").each{|x| unpassed_points+=x.swag if x.swag.to_f}
+    unpassed_points = Story.find(:all, :conditions=>"state != 'pass'", :select=>'swag').inject(0){|x,y| y.swag ? x+y.swag : 0 }.to_f
+    iter.stories.find(:all, :conditions=>"state='pass'").each{|x| unpassed_points+=x.swag if x.swag.to_f}
     all_iters = Iteration.find(:all, :order=>'start_date asc')
     prev_iter = all_iters[all_iters.index(iter)-1]
 
@@ -37,10 +37,10 @@ class Iteration < ActiveRecord::Base
   end
 
   def completed_points
-    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state='passed'").to_f
+    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state='pass'").to_f
   end
   def open_points
-    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state!='passed'").to_f
+    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state!='pass'").to_f
   end
   def total_days
     (end_date - start_date).numerator

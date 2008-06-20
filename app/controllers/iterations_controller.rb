@@ -71,7 +71,7 @@ class IterationsController < ApplicationController
 
     strdays= days.map{|x| x.to_s(:db)}
     chart.add( :axis_category_text,  strdays)
-    chart.add( :series, "Points complete", z)
+    chart.add( :series, "Points complete", z) unless z.empty?
     chart.add( :series, "Scope", y)
     chart.add( :series, "Planned", planned)
     respond_to do |fmt| 

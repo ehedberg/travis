@@ -5,6 +5,7 @@ one:
   swag: 1.5
   iteration_id: 1
   mnemonic: List-1
+  nodule: foo
 
 two:
   id: 2 
@@ -12,6 +13,7 @@ two:
   description: 'Description'
   swag: 1.5
   mnemonic: Crea-2
+  nodule: foo
 
 three:
   id: 3 
@@ -19,6 +21,7 @@ three:
   description: 'Blah Blah Blah'
   swag: 2.7
   mnemonic: YETA-3
+  nodule: foo
 
 four:
   id: 4 
@@ -27,12 +30,14 @@ four:
   swag: 2
   iteration_id: 3
   mnemonic: THIS-4
+  nodule: foo
 unswagged:
   id: 5
   title: 'this has no swag'
   description: 'desc'
   iteration_id: 3
   mnemonic: THIS-5
+  nodule: foo
 passed:
   id: 6
   title: 'this has passed'
@@ -41,6 +46,7 @@ passed:
   iteration_id: 2
   swag: 2.3
   mnemonic: THIS-6
+  nodule: foo
 open:
   id: 7
   title: 'this is not passed'
@@ -49,3 +55,4 @@ open:
   swag: 7.0
   iteration_id: 2
   mnemonic: THIS-7
+  nodule: foo

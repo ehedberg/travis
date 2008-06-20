@@ -243,8 +243,8 @@ class TasksControllerTest < ActionController::TestCase
 
   def test_update_saves_stories
     t = Task.create :description=>"update test desc", :title=>"update test title", :state=>""
-    s1 = Story.create :title=>"S1 title", :description=>"S1 desc"
-    s2 = Story.create({:title=>"S2 title", :description=>"S2 desc"})
+    s1 = Story.create :title=>"S1 title", :description=>"S1 desc",:nodule=>"blahrg"
+    s2 = Story.create(:title=>"S2 title", :description=>"S2 desc", :nodule=>'blahrg')
     put :update, :id=>t.id, :task=>{"story_ids"=>[s1.id, s2.id], "state"=>""}
     t = assigns(:task).reload
     assert_equal t.story_ids, [s1.id, s2.id]

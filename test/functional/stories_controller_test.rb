@@ -13,20 +13,21 @@ class StoriesControllerTest < ActionController::TestCase
     do_default_routing_tests('stories')
   end
   def test_create_bad
-    assert Story.create(:title=>'New Title', :description=>'bleahd', :swag=>3)
+    assert Story.create(:title=>'New Title', :description=>'bleahd', :swag=>3, :nodule=>'blahr')
     post :create, "story"=>{"title"=>"New Title", "description"=>"de", "swag"=>"2"}
     assert_response :success
     assert_template 'form'
     assert assigns(:story)
     assert_equal 'has already been taken', assigns(:story).errors.on(:title)
+    assert_equal "can't be blank", assigns(:story).errors.on(:nodule)
     assert_select "#errorExplanation" do 
       assert_select "h2"
-      assert_select "ul>li", 1
+      assert_select "ul>li", 2
     end
   end
 
   def test_create
-    post :create, "story"=>{"title"=>"New Title", "description"=>"de", "swag"=>"2"}
+    post :create, "story"=>{"title"=>"New Title", "description"=>"de", "swag"=>"2", :nodule=>'rhubarb'}
     assert assigns(:story)
     story = assigns(:story)
     assert_equal Story.find_by_description("de"), assigns(:story)
@@ -75,13 +76,12 @@ class StoriesControllerTest < ActionController::TestCase
 
 
   def test_create_invalid_title
-
-    post :create, "story"=>{"description"=>"de", "swag"=>"2"}
+    post :create, "story"=>{"description"=>"de", "swag"=>"2", :nodule=>'rhubarb'}
     assert_response :success
     assert_template "form"
     assert assigns(:story)
     story = assigns(:story)
-    assert_equal story.errors.on(:title), "is too short (minimum is 1 characters)"
+    assert_equal story.errors.on(:title), "is too short (minimum is 4 characters)"
     assert_select "div[id=errorExplanation][class=errorExplanation]"
   end
 
@@ -189,7 +189,7 @@ class StoriesControllerTest < ActionController::TestCase
 
     s = assigns(:story)
 
-    assert_equal s.errors.on(:title), "is too short (minimum is 1 characters)"
+    assert_equal s.errors.on(:title), "is too short (minimum is 4 characters)"
 
     assert_select "div[id=errorExplanation][class=errorExplanation]"
 

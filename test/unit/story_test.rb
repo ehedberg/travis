@@ -113,6 +113,20 @@ class StoryTest < ActiveSupport::TestCase
 
     assert s.respond_to?("iteration")
   end
+  def test_sets_completed_at_on_pass
+    s = Story.create(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'required')
+    t = s.tasks.create(:title=>'fubario', :description=>'bazio')
+    assert s.valid? and t.valid?
+    assert_nil s.completed_at
+    t.start!
+    t.finish!
+    s.reload
+    s.pass!
+    s.reload
+    assert_equal :passed, s.current_state
+    assert_equal :complete, t.current_state
+    assert_equal Date.today, s.completed_at
+  end
 
   def test_validation
     @model = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'required')

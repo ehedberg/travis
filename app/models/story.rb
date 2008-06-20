@@ -15,12 +15,11 @@ class Story < ActiveRecord::Base
 
   validates_uniqueness_of :title
 
-  validates_length_of :title, :within=>1..200
   validates_presence_of :nodule
   validates_length_of :title, :within=>4..200
 
   state :new
-  state :passed
+  state :passed, :enter=>Proc.new{|s| s.update_attribute(:completed_at,   Date.today)}
   state :in_progress
   state :in_qc
   state :failed

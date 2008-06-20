@@ -39,7 +39,7 @@ class IterationsControllerTest < ActionController::TestCase
     iterations(:last).end_date=102.week.from_now.to_date.to_s(:db)
     assert iterations(:last).save!
     iterations(:last).stories(&:destroy)
-    iterations(:last).stories.create(:title=>'new story', :description=>'new story', :completed_at =>Date.today)
+    iterations(:last).stories.create(:title=>'new story', :description=>'new story', :completed_at =>Date.today, :nodule=>'fubari')
     iter=  Iteration.find(iterations(:last).id)
     assert_equal 1, iter.stories.size
     assert_equal :new, iter.stories.first.current_state

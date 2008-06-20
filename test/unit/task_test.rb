@@ -32,7 +32,7 @@ class TaskTest < ActiveSupport::TestCase
   def test_canwrite_to_assoc
     s = Task.find(:first).stories.first
     s.title='fooooo'
-    assert s.save
+    assert s.save!
 
   end
 
@@ -40,7 +40,7 @@ class TaskTest < ActiveSupport::TestCase
     t = Task.new :title=>"New Task Title", :description=>"New Task Description"
     assert_not_nil(t.stories)
     assert(t.save)
-    t.stories.create({:title=>"Story Title"})
+    t.stories.create(:title=>"Story Title", :nodule=>'fubario')
     assert_equal(Story.find_by_title("Story Title"), t.stories.first())
   end
 
@@ -62,8 +62,8 @@ class TaskTest < ActiveSupport::TestCase
   def test_story_relation_sorting
     t = Task.new :title=>"New Task Title", :description=>"New Task Description"
     assert(t.save)
-    t.stories.create({:title=>"ZTitle"})
-    t.stories.create({:title=>"ATitle"})
+    t.stories.create(:title=>"ZTitle",:nodule=>'fubario')
+    t.stories.create(:title=>"ATitle", :nodule=>'fubario')
     assert_equal("ATitle", t.stories.first().title)
     assert_equal("ZTitle", t.stories.last().title)
   end

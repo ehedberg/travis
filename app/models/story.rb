@@ -16,6 +16,8 @@ class Story < ActiveRecord::Base
   validates_uniqueness_of :title
 
   validates_length_of :title, :within=>1..200
+  validates_presence_of :nodule
+  validates_length_of :title, :within=>4..200
 
   state :new
   state :passed
@@ -56,7 +58,7 @@ class Story < ActiveRecord::Base
   end
   private 
   def set_mnemonic
-    sname = self.title.squeeze.gsub(/[^a-zA-Z]/,'')[0,4]
+    sname = self.nodule.squeeze.gsub(/[^a-zA-Z]/,'')[0,4]
     self.update_attribute(:mnemonic,("%s-%d"%[sname,self.id]).upcase)
   end
     

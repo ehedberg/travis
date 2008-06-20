@@ -22,9 +22,11 @@
 
 %table#stories
   %caption Stories
+  %th Id
   %th Title
   %th Swag
   %th State
+  %th Nodule
   %th &nbsp;
   =render :partial=>"stories/story", :collection=>@iteration.stories
 

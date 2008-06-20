@@ -2,20 +2,20 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class StoryTest < ActiveSupport::TestCase
   def test_mnemonic
-    s = Story.create(:title=>'ab -c ?.%   d')
+    s = Story.create(:nodule=>'ab -c ?.%   d', :title=>'balh')
     assert_not_nil s.mnemonic
     assert_equal 'ABCD-'+s.id.to_s, s.mnemonic
     assert s.save
     assert_equal s.mnemonic, Story.find(s.id).mnemonic
-    s2 = Story.create(:title=>'ab -cd?.%   d')
-    assert s2.save, s2.errors.each_full{}
+    s2 = Story.create(:nodule=>'ab -cd?.%   d', :title=>'balh2')
+    assert s2.save!
     s2.mnemonic=s.mnemonic
     assert !s2.save
     assert_not_nil s2.errors.on(:mnemonic)
     s2 = Story.create(:title=>'nomn')
   end
   def test_state_changed_on_task_remove
-    s = Story.create(:title=>'fubar', :description=>'basz')
+    s = Story.create(:title=>'fubar', :description=>'basz', :nodule=>'nodule')
     t1 = Task.new(:title=>'fubar', :description=>'t1')
     t2 = Task.new(:title=>'fubar', :description=>'t2')
     s.tasks << t1
@@ -31,7 +31,7 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   def test_state_changed_on_task_add_in_prog
-    s = Story.new(:title=>'fubar', :description=>'basz')
+    s = Story.new(:title=>'fubar', :description=>'basz', :nodule=>'nodule')
     assert s.save
     t = s.tasks.create(:title=>'a task', :description=>'the task')
     assert t.valid?
@@ -42,8 +42,8 @@ class StoryTest < ActiveSupport::TestCase
     s.reload
     assert_equal :in_progress, t.current_state
     assert_equal :in_progress, s.current_state
-    s2 = Story.new(:title=>'s2', :description=>'blah')
-    assert s2.save
+    s2 = Story.new(:title=>'s23e', :description=>'blah', :nodule=>'nodule')
+    assert s2.save!
     assert_equal :new, s2.current_state
     s2.tasks << t
     s2.reload
@@ -55,7 +55,7 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   def test_cant_add_task_to_passed_story
-    s = Story.create({:title=>'fubar', :description=>'baz'})
+    s = Story.create(:title=>'fubar', :description=>'baz', :nodule=>'nodule')
     assert_equal :new, s.current_state
     t=s.tasks.create(:title=>'baz', :description=>'bleh')
     assert :new, s.current_state
@@ -76,13 +76,13 @@ class StoryTest < ActiveSupport::TestCase
     end
   end
   def test_optimistic_locks
-    t = Story.new({:title=>'fubar', :description=>'baz'})
+    t = Story.new({:title=>'fubar', :description=>'baz', :nodule=>'nodule'})
     assert t.save
     t2 = Story.find(t.id)
 
-    t.title='bar'
-    assert t.save
-    t2.title='meh'
+    t.title='barz'
+    assert t.save!
+    t2.title='mehz'
     begin
       t2.save
       fail "shouldn't work"
@@ -115,8 +115,10 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   def test_validation
-    @model = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    @model = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'required')
     assert_valid(:swag, nil, 1, 1.1)
+    assert_valid(:title, 'a'*31, 'a'*200)
+    assert_invalid(:nodule, "can't be blank", "", nil)
     assert_invalid(:swag, "is not a number", "hey there")
     assert_invalid(:swag, "must be greater than or equal to 0", -1)
     assert_invalid(:swag, "must be less than 10000", 10000)
@@ -126,15 +128,15 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   def test_unique_title
-    @model = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    @model = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     @model.save!
-    @model2 = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    @model2 = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     assert !@model2.save
     assert_equal "has already been taken", @model2.errors.on(:title)
   end
 
   def test_add_task
-    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     assert s.save
     assert_equal :new, s.current_state
     t = s.tasks.create(:title=>'foo', :description=>'bar')
@@ -146,7 +148,7 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   def test_tasks_all_stopped_moves_from_in_prog_to_new
-    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     assert s.save
     assert_equal :new, s.current_state
     t = s.tasks.create(:title=>'foo', :description=>'bar')
@@ -169,7 +171,7 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :new,  s.current_state
   end
   def test_some_Tasks_stopped_doesnt_transit_to_new
-    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     assert s.save
     assert_equal :new, s.current_state
     t = s.tasks.create(:title=>'foo', :description=>'bar')
@@ -185,7 +187,7 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :in_progress,  s.current_state
   end
   def test_task_changed_in_qc_moves_to_inprogress_if_some_not_complete
-    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     assert s.save
 
     assert_equal :new, s.reload.current_state
@@ -206,7 +208,7 @@ class StoryTest < ActiveSupport::TestCase
 
   end
   def test_some_task_changed_in_prog_toqc
-    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     assert s.save
     assert_equal :new, s.current_state
     t = s.tasks.create(:title=>'foo', :description=>'bar')
@@ -230,7 +232,7 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   def test_state_model
-    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     assert s.save
     t=s.tasks.create( :title=>"New Task Title", :description=>"New Task Description")
     assert_equal :new,  t.current_state
@@ -268,12 +270,12 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   def test_state_is_protected
-    s = Story.create(:title=>"Title", :description=>"The description", :swag=>23, :state=>"invalid")
+    s = Story.create(:title=>"Title", :description=>"The description", :swag=>23, :state=>"invalid", :nodule=>'nodule')
 
     assert_equal :new, s.current_state
   end
   def test_passed_then_task_reopen_to_inprog
-    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     s.save!
     t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
     assert_equal :new, s.current_state
@@ -297,7 +299,7 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   def test_happy_path
-    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     s.save!
     t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
     assert_equal :new, s.current_state
@@ -312,7 +314,7 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :passed, s.current_state
   end
   def test_qc_to_failed
-    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     s.save!
     t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
     assert_equal :new, s.current_state
@@ -327,7 +329,7 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :failed, s.current_state
   end
   def test_new_to_in_prog
-    s = Story.create(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.create(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
     t.start!
     s.reload
@@ -336,7 +338,7 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   def test_failed_to_in_progress
-    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23)
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     s.save!
     t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description")
     t2=s.tasks.create(:title=>"Another Title2", :description=>"Another Task Description")

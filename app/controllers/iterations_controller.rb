@@ -59,14 +59,12 @@ class IterationsController < ApplicationController
       planned << (total_points/iter.total_days+(planned.last||0))
       d= (iter.start_date+n)
       days << d
-      if d <= Date.today
-      points << (Story.connection.select_value("select sum(swag) from stories where state='pass' and completed_at='%s'"%d.to_s(:db))|| 0).to_f  unless d > Date.today
-      end
+      points << (Story.connection.select_value("select sum(swag) from stories where state='pass' and completed_at='%s'"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
       created << (Story.connection.select_value("select sum(swag) from stories where  created_at<'%s' and created_at > '%s'"%[d, iter.start_date])|| 0).to_f
     end
     z  = []
     points = points.each{|x| z<< x+(z.last||0)}
-    
+
     strdays= days.map{|x| x.to_s(:db)}
     chart.add( :axis_category_text,  strdays)
     chart.add( :series, "Points complete", points)
@@ -91,7 +89,7 @@ class IterationsController < ApplicationController
     Iteration.transaction do 
       numiter.times do |n|
         sd = sdate+(iter_size*n)
-         Iteration.create!(:title=>"Iteration #{n+1}", :start_date=>sd.to_s(:db), :end_date=>(sd+(iter_size-1)).to_s(:db))
+        Iteration.create!(:title=>"Iteration #{n+1}", :start_date=>sd.to_s(:db), :end_date=>(sd+(iter_size-1)).to_s(:db))
       end
     end
     redirect_to iterations_path

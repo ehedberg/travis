@@ -42,7 +42,7 @@ class StoriesController < ApplicationController
     respond_to do |format|
       format.html {
         if @story.save
-          redirect_to(stories_path)
+          redirect_to(story_path(@story))
         else
           render :template=>"stories/form"
         end

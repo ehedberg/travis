@@ -32,7 +32,7 @@ class StoriesControllerTest < ActionController::TestCase
     story = assigns(:story)
     assert_equal Story.find_by_description("de"), assigns(:story)
     assert_response :redirect
-    assert_redirected_to stories_path
+    assert_redirected_to story_path(assigns(:story))
   end
 
   def test_search_view

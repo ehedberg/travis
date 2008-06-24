@@ -8,16 +8,5 @@
 =link_to "Search Stories" , search_stories_path
 
 %table#stories
-  %th 
-    Id
-  %th 
-    Title
-  %th.centered 
-    Swag
-  %th.centered 
-    State
-  %th.centered 
-    Module
-  %th 
-    &nbsp;
+  =render :partial=>'story_header'
   =render :partial=>"story",:collection=>@stories

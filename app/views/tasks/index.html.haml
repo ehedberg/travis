@@ -6,8 +6,5 @@
 =link_to("Create Task", new_task_path)
 =link_to "Search Tasks", search_tasks_path
 %table#tasks
-  %th Title
-  %th.centered State
-  %th Stories
-  %th &nbsp;
+  =render :partial=>'task_headers'
   =render :partial=>"task",:collection=>@tasks

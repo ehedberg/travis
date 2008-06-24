@@ -22,7 +22,8 @@ class TasksController < ApplicationController
     @saved_search = SavedSearch.new(:query=>params[:expr], :query_type=>'Task')
     render :update do |page|
       unless @tasks.empty?
-        page.replace_html 'results', :partial=>'tasks/task', :collection=>@tasks
+        page.replace_html 'results', :partial=>'task_headers'
+        page.insert_html :bottom, 'results', :partial=>'tasks/task', :collection=>@tasks
         page.replace_html 'saveform', :partial=>'shared/save_search_form'
       else
         page.replace_html 'results', '<p>No results found</p>'

@@ -56,7 +56,6 @@ class StoriesControllerTest < ActionController::TestCase
     assert_routing({:path=>"/stories/do_search",:method=>'post'}, :controller=>'stories', :action=>'do_search')
     xhr :post, :do_search, :expr=>"state = 'new'"
     assert_response :success
-    assert_template 'stories/_story'
     assert assigns(:stories)
     ts = assigns(:stories)
     ts.each do |t|

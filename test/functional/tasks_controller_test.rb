@@ -60,7 +60,6 @@ class TasksControllerTest < ActionController::TestCase
     assert_routing({:path=>"/tasks/do_search",:method=>'post'}, :controller=>'tasks', :action=>'do_search')
     xhr :post, :do_search, :expr=>"state = 'new'"
     assert_response :success
-    assert_template 'tasks/_task'
     assert assigns(:tasks)
     ts = assigns(:tasks)
     assert_equal 1, ts.size

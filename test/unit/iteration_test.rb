@@ -55,4 +55,14 @@ class IterationTest < ActiveSupport::TestCase
   def test_iter_days
     assert_equal 12, iterations(:current).total_days
   end
+  
+  def test_previous_iter
+    foo = iterations(:current)
+    assert_equal iterations(:last), foo.previous
+  end  
+  
+  def test_previous_iter_has_no_previous
+      foo = iterations(:last)
+      assert_nil foo.previous
+    end
 end

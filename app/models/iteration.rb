@@ -10,8 +10,8 @@ class Iteration < ActiveRecord::Base
     all_iters = Iteration.find(:all, :order=>'start_date asc')
     prev_iter = all_iters[all_iters.index(iter)-1]
 
-    if iter.velocity !=0
-      return (iter.start_date + (unpassed_points/iter.velocity)*iter.total_days)
+    if prev_iter.velocity !=0
+      return (iter.start_date + (unpassed_points/prev_iter.velocity)*iter.total_days)
     else
       "~(never - 1)"
     end
@@ -50,7 +50,14 @@ class Iteration < ActiveRecord::Base
     Iteration.find(:first, :conditions=>['start_date <= ? and end_date >= ?', t,t])
   end
   def velocity
-  stories.find(:all, :conditions=>"state='pass'").inject(0){|x,s| x+(s.swag||0)}.to_f
+    stories.find(:all, :conditions=>"state='pass'").inject(0){|x,s| x+(s.swag||0)}.to_f
+  end
+  
+  def previous
+    iterations = Iteration.find(:all, :order=>"start_date asc")
+    index = iterations.index(self)
+    return nil if index < 1
+    iterations[index-1]
   end
 
   

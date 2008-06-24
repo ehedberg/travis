@@ -16,6 +16,12 @@
   =h @story.state
 %p
   =markdown(h(@story.description))
+%p
+  Created
+  =@story.created_at.to_s(:short)
+  %br/
+  Modified
+  =@story.updated_at.to_s(:short)
 
 -if  ((@story.available_events-[:task_changed]).size > 0)
   #stateform

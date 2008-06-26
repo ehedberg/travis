@@ -1,0 +1,6 @@
+%tr[release, cycle('odd', 'even')]
+  %td
+    =link_to(h(release.title), release_path(release))
+  %td.rctl
+    =link_to("Show", release_path(release))
+    =link_to("Edit", edit_release_path(release))

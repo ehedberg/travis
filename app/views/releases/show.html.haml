@@ -1,0 +1,19 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_release');
+  element.className = 'current';
+%h1
+  =h(@release.title)
+
+%table#iterations
+  %caption Iterations
+  %th Id
+  %th Title
+  %th &nbsp;
+  =render :partial=>"iterations/iteration", :collection=>@release.iterations
+
+#sum
+  =link_to("Show All", releases_path)
+  |
+  =link_to("Edit", edit_release_path(@release))
+  |
+  =link_to("Delete", { :id => @release.id }, :confirm => "Are you sure?", :method => :delete)

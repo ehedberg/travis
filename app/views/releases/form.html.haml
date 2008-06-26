@@ -1,0 +1,14 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_release');
+  element.className = 'current';
+=error_messages_for "release"
+- form_for @release, :html=>{:id=>'columnarForm'} do |f|
+  %fieldset
+    %legend
+      Release Form
+    %label.first
+      Title
+      =f.text_field :title
+    %p
+    =submit_tag "Save", {:class=> "submit_button"}
+    =button_to_function "Cancel", "location.href='#{releases_path}'", {:class=>'submit_button'}

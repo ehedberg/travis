@@ -1,0 +1,12 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_release');
+  element.className = 'current';
+%h1 Releases
+
+=link_to "Create Release" , new_release_path
+=will_paginate(@releases)
+%table#releases
+  %th Name
+  %th &nbsp;
+
+  =render :partial=>"release",:collection=>@releases

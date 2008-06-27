@@ -54,28 +54,24 @@ class IterationsController < ApplicationController
     days = []
     points = []
     scope=[]
-    planned = []
     iter.total_days.times do |n| 
-      planned << (total_points/iter.total_days+(planned.last||0)).to_f
       d= (iter.start_date+n)
       days << d
       points << (Story.connection.select_value("select sum(swag) from stories where state='pass' and date(completed_at)=date('%s')"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
       scope << (Story.connection.select_value("select sum(swag) from stories where  date(created_at)=date('%s') and iteration_id=%d"%[d.to_s(:db), iter.id])|| 0).to_f
     end
-    z  = []
-    points.each{|x| z<< (x+(z.last||0.0))}
-    y= []
-    #find stories on this iterawtion created before the start of the iteration.
-    bstories = iter.stories.find(:all, :conditions=>['created_at < ? or created_at > ?', iter.start_date, iter.end_date]).map{|x|x.swag}.compact
-    y<< bstories.inject(0){|x,k|x+k}.to_i
-    logger.debug("y started with: "+y.inspect)
-    scope.each{|x| y << (x+(y.last||0.0))}
+    point_totals  = []
+    points.each{|x| point_totals<< (x+(point_totals.last||0.0))}
+    scope_totals= []
+    #find stories on this iteration created before the start of the iteration, or after the end.
+    outside_stories = iter.stories.find(:all, :conditions=>['created_at < ? or created_at > ?', iter.start_date, iter.end_date]).map{|x|x.swag}.compact
+    scope_totals<< outside_stories.inject(0){|x,k|x+k}.to_i
+    scope.each{|x| scope_totals << (x+(scope_totals.last||0.0))}
 
     strdays= days.map{|x| x.to_s(:db)}
     chart.add( :axis_category_text,  strdays)
-    chart.add( :series, "Points complete", z) unless z.empty?
-    chart.add( :series, "Scope", y)
-    chart.add( :series, "Planned", planned)
+    chart.add( :series, "Points complete", point_totals) unless point_totals.empty?
+    chart.add( :series, "Scope", scope_totals)
     respond_to do |fmt| 
       fmt.xml { render :xml => chart.to_xml } 
     end 

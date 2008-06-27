@@ -19,7 +19,7 @@
 %div
   %h2
     Assigned Iteration:
-    =h @story.iteration.title
+    =h @story.iteration.title if @story.iteration
 %p
   Created
   =@story.created_at.to_s(:short)

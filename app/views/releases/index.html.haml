@@ -7,6 +7,9 @@
 =will_paginate(@releases)
 %table#releases
   %th Name
+  %th Iterations
+  %th.centered Start
+  %th.centered End 
   %th &nbsp;
 
   =render :partial=>"release",:collection=>@releases

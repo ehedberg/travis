@@ -10,5 +10,8 @@
       Title
       =f.text_field :title
     %p
+    %label
+      Iterations
+      = f.collection_select :iteration_ids, Iteration.find(:all), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'release[iteration_ids][]'}
     =submit_tag "Save", {:class=> "submit_button"}
     =button_to_function "Cancel", "location.href='#{releases_path}'", {:class=>'submit_button'}

@@ -1,4 +1,5 @@
 class ReleasesController < ApplicationController
+  before_filter :requires_login
   
   def index
     @releases = Release.paginate(:page=>params[:page], :order=>'created_at asc')

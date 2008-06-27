@@ -1,6 +1,14 @@
 require 'test_helper'
 
 class ReleasesControllerTest < ActionController::TestCase
+  def setup
+    @request.session[:login]='fubar'
+  end
+
+  def teardown
+    @request.session[:login]=nil
+  end
+
   def test_routes
     do_default_routing_tests('releases')
   end
@@ -100,6 +108,17 @@ class ReleasesControllerTest < ActionController::TestCase
     assert_equal "Release New", new_release.title
 
     assert_redirected_to releases_path
+  end
+
+  def test_requires_login
+    @request.session[:login]=nil
+    get :index
+    assert_response :redirect
+    assert_redirected_to new_session_path
+    @request.session[:login]='foo'
+    get :index
+    assert_response :success
+    assert_template 'index'
   end
 
 

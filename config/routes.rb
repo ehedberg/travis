@@ -37,6 +37,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :tasks, :collection=>{:search=>:get, :do_search=>:post}
   map.resource :session
   map.resources :iterations, :member=>{:chart=> :get}, :collection=>{:generate=>:post}, :new=>{:new_generate=>:get}
-  map.resources :releases
+  map.resources :releases,  :member=>{:chart=> :get}
   map.dashboard '/', :controller => 'dashboard', :action => 'index'
 end

@@ -3,6 +3,14 @@
   element.className = 'current';
 %h1
   =h(@release.title)
+= ziya_chart chart_release_path(@release), :size=>"700x300", :swf_path=>root_path+'charts' if Release.count > 0 and !@release.iterations.empty?
+
+%h2
+  Total days
+  =@release.total_days
+%h2
+  Total swag
+  =@release.total_points
 
 %table#iterations
   %caption Iterations

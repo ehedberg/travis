@@ -63,10 +63,10 @@ class IterationsController < ApplicationController
     point_totals  = []
     points.each{|x| point_totals<< (x+(point_totals.last||0.0))}
     scope_totals= []
-    #find stories on this iteration created before the start of the iteration, or after the end.
-    outside_stories = iter.stories.find(:all, :conditions=>['created_at < ? or created_at > ?', iter.start_date, iter.end_date]).map{|x|x.swag}.compact
-    scope_totals<< outside_stories.inject(0){|x,k|x+k}.to_i
     scope.each{|x| scope_totals << (x+(scope_totals.last||0.0))}
+    #add swags from stories defined outside the iteration (but included in this iteration) to element 0
+    outside_scope = iter.stories.find(:all, :conditions=>['created_at < ? or created_at > ?', iter.start_date, iter.end_date]).map{|x|x.swag}.compact.sum
+    scope_totals = scope_totals.map{|x| x+outside_scope}
 
     strdays= days.map{|x| x.to_s(:db)}
     chart.add( :axis_category_text,  strdays)

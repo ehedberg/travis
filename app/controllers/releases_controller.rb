@@ -1,4 +1,5 @@
 class ReleasesController < ApplicationController
+  helper Ziya::Helper
   before_filter :requires_login
   
   def index
@@ -44,39 +45,35 @@ class ReleasesController < ApplicationController
       render :template=>"releases/form"
     end
   end
-
   def chart
-    rel = Release.find(params[:id], :include=>[:iterations])
+    rel = Release.find(params[:id], :include=>[:iterations=>[:stories=>:tasks]])
     total_points = rel.total_points
     chart = Ziya::Charts::Line.new 
     days = []
     points = []
     scope=[]
+      iters = rel.iteration_ids.join(',')
     rel.total_days.times do |n| 
       d= (rel.start_date+n)
       days << d
-      iter_ids = rel.iteration.map(&:id).join(", ")
-      points << (Story.connection.select_value("select sum(swag) from stories where iteration_id in ("+iter_ids+") and state='pass' and date(completed_at)=date('%s')"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
-      scope << (Story.connection.select_value("select sum(swag) from stories where  date(created_at)=date('%s') and iteration_id in ("+iter_ids+") "%[d.to_s(:db)])|| 0).to_f
+      points << (Story.connection.select_value("select sum(swag) from stories where iteration_id in ("+iters+") and state='pass' and date(completed_at)=date('%s')"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
+      scope << (Story.connection.select_value("select sum(swag) from stories where iteration_id in ("+iters+") and  date(created_at)=date('%s') and iteration_id=%d"%[d.to_s(:db), rel.id])|| 0).to_f
     end
-    z  = []
-    points.each{|x| z<< (x+(z.last||0.0))}
-    y= []
-    #find stories on this iterawtion created before the start of the iteration.
-    bstories = (Story.connection.select_value("select sum(swag) from stories where  date(created_at) < date('%s') and iteration_id in ("+iter_ids+") "%[rel.start_date.to_s(:db)])|| 0).to_f
-    
-#    bstories = iter.stories.find(:all, :conditions=>['created_at < ? or created_at > ?', iter.start_date, iter.end_date]).map{|x|x.swag}.compact
-    y<< bstories.inject(0){|x,k|x+k}.to_i
-    scope.each{|x| y << (x+(y.last||0.0))}
+    point_totals  = []
+    points.each{|x| point_totals<< (x+(point_totals.last||0.0))}
+    scope_totals= []
+    scope.each{|x| scope_totals << (x+(scope_totals.last||0.0))}
+    #add swags from stories defined outside the iteration (but included in this iteration) to element 0
+    outside_scope = rel.iterations.find(:all, :conditions=>['created_at < ? or created_at > ?', rel.start_date, rel.end_date]).map{|x|x.total_points}.compact.sum
+    scope_totals = scope_totals.map{|x| x+outside_scope}
 
     strdays= days.map{|x| x.to_s(:db)}
     chart.add( :axis_category_text,  strdays)
-    chart.add( :series, "Points complete", z) unless z.empty?
-    chart.add( :series, "Scope", y)
+    chart.add( :series, "Points complete", point_totals) unless point_totals.empty?
+    chart.add( :series, "Scope", scope_totals)
     respond_to do |fmt| 
       fmt.xml { render :xml => chart.to_xml } 
     end 
   end
 
-  
 end

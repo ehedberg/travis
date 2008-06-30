@@ -1,5 +1,4 @@
 # Pull in the ZiYa gem framework 
-gem "ziya", "~> 1.0.0" 
 require 'ziya' 
 # Initializes the ZiYa Framework 
 Ziya.initialize( :logger      => RAILS_DEFAULT_LOGGER, 

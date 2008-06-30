@@ -65,7 +65,9 @@ class StoriesController < ApplicationController
 
   def update
     @story = Story.find(params[:id])
+    action = params[:story].delete(:state)
     if @story.update_attributes(params[:story])
+      @story.send("#{action}!".to_sym) if action
       redirect_to(stories_path)
     else
       render :template=>"stories/form"

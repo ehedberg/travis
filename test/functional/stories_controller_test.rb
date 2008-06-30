@@ -163,6 +163,24 @@ class StoriesControllerTest < ActionController::TestCase
     end
     assert_select "a[href=#taskform][id=tasklink]"
   end
+  def test_update_fires_event
+    story = stories(:one)
+    story.tasks.clear
+    story.save!
+    story.tasks=[tasks(:one)]
+    story.save!
+    story.tasks.first.start!
+    story.tasks.first.reload.finish!
+    story.reload
+    assert_equal :in_qc, story.current_state
+    put :update, :id=>story.id, :story=> {:title=>"New title", :description=>"New Description", :swag=>"9999.99", :state=>'fail' }
+    new_story = Story.find(story.id)
+    assert_equal "New title", new_story.title
+    assert_equal "New Description", new_story.description
+    assert_equal 9999.99, new_story.swag
+    assert_redirected_to stories_path
+    assert_equal :failed, new_story.current_state
+  end
 
   def test_update
     story = stories(:one)
@@ -172,6 +190,7 @@ class StoriesControllerTest < ActionController::TestCase
     assert_equal "New Description", new_story.description
     assert_equal 9999.99, new_story.swag
     assert_redirected_to stories_path
+    assert_not_equal :fubar, new_story.current_state
   end
 
   def test_update_invalid_title

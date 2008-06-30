@@ -44,10 +44,10 @@ class Iteration < ActiveRecord::Base
   end
   def self.current
     t=Date.today
-    Iteration.find(:first, :conditions=>['start_date <= ? and end_date >= ?', t,t])
+    Iteration.find(:first, :conditions=>["start_date<=? and end_date>=?", t, t])
   end
   def velocity
-    stories.find(:all, :conditions=>"state='pass'").inject(0){|x,s| x+(s.swag||0)}.to_f
+    stories.find(:all, :conditions=>"state='pass'").map(&:swag).sum
   end
   
   def previous

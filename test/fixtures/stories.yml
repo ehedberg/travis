@@ -1,22 +1,21 @@
 one:
-  id: 1 
   title: "List Stories"
   description: "Our First Rails Story!  How EXCITING!!!"
   swag: 1.5
-  iteration_id: 1
+  iteration: last
   mnemonic: List-1
   nodule: foo
+  tasks: one 
 
 two:
-  id: 2 
   title: 'Create/Edit Story'
   description: 'Description'
   swag: 1.5
   mnemonic: Crea-2
   nodule: foo
+  tasks: one, two
 
 three:
-  id: 3 
   title: 'Yet Another Story'
   description: 'Blah Blah Blah'
   swag: 2.7
@@ -24,35 +23,44 @@ three:
   nodule: foo
 
 four:
-  id: 4 
   title: 'This one'
   description: 'This is the description for a future story'
   swag: 2
-  iteration_id: 3
+  iteration: next
   mnemonic: THIS-4
   nodule: foo
 unswagged:
-  id: 5
+  #id: 5
   title: 'this has no swag'
   description: 'desc'
-  iteration_id: 3
+  iteration: next
   mnemonic: THIS-5
   nodule: foo
 passed:
-  id: 6
+  #id: 6
   title: 'this has passed'
   description: 'desc'
   state: pass
-  iteration_id: 2
+  iteration: current
   swag: 2.3
   mnemonic: THIS-6
   nodule: foo
+  tasks: completed, also_completed
 open:
-  id: 7
+  #id: 7
   title: 'this is not passed'
   description: 'desc'
   state: new
   swag: 7.0
-  iteration_id: 2
+  iteration: current
   mnemonic: THIS-7
+  nodule: foo
+
+failed:
+  title: 'this is failed'
+  description: 'desc'
+  state: fail
+  swag: 7.0
+  iteration: current
+  mnemonic: THIS-9
   nodule: foo

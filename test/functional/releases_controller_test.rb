@@ -28,9 +28,9 @@ class ReleasesControllerTest < ActionController::TestCase
   end
 
   def test_destroy
-    release = releases(:current)
+    release = releases(:currel)
 
-    delete :destroy, :id=>releases(:current).id
+    delete :destroy, :id=>release.id
 
     assert !Release.exists?(release.id)
 

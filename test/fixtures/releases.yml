@@ -6,13 +6,10 @@
 # two:
 #   column: value
 last:
-  id: 1
   title: 'Release 1'
 
-current:
-  id: 2
+currel:
   title: 'Release 2'
 
 next:
-  id: 3 
   title: 'Release 3'

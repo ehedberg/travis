@@ -1,24 +1,21 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 last:
-  id: 1
   title: 'Iteration 1'
   start_date: <%= 21.days.ago.to_date.to_s(:db) %>
   end_date: <%= 7.days.ago.to_date.to_s(:db) %>
-  release_id: 1
+  release: last
 
 current:
-  id: 2
   title: 'Iteration 2'
   start_date: <%= 6.days.ago.to_date.to_s(:db) %>
   end_date: <%= 6.days.from_now.to_date.to_s(:db) %>
-  release_id: 2
+  release: currel
 
 next:
-  id: 3 
   title: 'Iteration 3'
   start_date: <%= 7.days.from_now.to_date.to_s(:db) %>
   end_date: <%= 21.days.from_now.to_date.to_s(:db) %>
-  release_id: 2
+  release: currel
   
 

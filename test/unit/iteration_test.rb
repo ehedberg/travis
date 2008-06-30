@@ -1,6 +1,9 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class IterationTest < ActiveSupport::TestCase
+  def test_fixtures
+    Iteration.find(:all).each {|x| assert x.valid?}
+  end
   def test_story_relation
     s = Iteration.new
     assert s.respond_to?("stories")
@@ -42,10 +45,10 @@ class IterationTest < ActiveSupport::TestCase
   def test_total_points
     i = iterations(:current)
     assert 2, i.stories.size
-    assert_equal 9.3, iterations(:current).total_points
+    assert_equal 16.3, iterations(:current).total_points
   end
   def test_open_points
-    assert_equal 7, iterations(:current).open_points
+    assert_equal 14, iterations(:current).open_points
   end
 
   def test_completed_points

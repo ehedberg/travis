@@ -7,7 +7,7 @@ class ReleaseTest < ActiveSupport::TestCase
   end
   
   def test_find_current
-    assert_equal releases(:current), Release.current
+    assert_equal releases(:currel), Release.current
   end
 
   def test_find_all_releases

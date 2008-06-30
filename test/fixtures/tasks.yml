@@ -1,23 +1,19 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  id: 1
   title: "Task Title 1"
   description: "Task Description 1"
   state: new
 
 two:
-  id: 2
   title: "Task Title 2"
   description: "Task Description 2"
   state: in_progress
 completed:
-  id: 3
   title: "done"
   state: "completed"
   description: "completed task"
 also_completed:
-  id: 4
   title: "done"
   state: "completed"
   description: "completed task"

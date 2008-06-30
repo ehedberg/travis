@@ -127,7 +127,7 @@ class StoriesControllerTest < ActionController::TestCase
   end
 
   def test_update_swag
-    xhr :post, :update_swag, "id"=>"1", "value"=>"2.0\n            ", "controller"=>"stories", "editorId"=>"swag_1"
+    xhr :post, :update_swag, "id"=>stories(:one).id, "value"=>"2.0\n            ", "controller"=>"stories", "editorId"=>"swag_1"
     assert_response :success
     assert_equal "2.0", @response.body
 

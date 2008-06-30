@@ -5,7 +5,7 @@ class Iteration < ActiveRecord::Base
   validates_length_of :title, :within=>1..200
   
   def calculate_end_date
-    unpassed_points = Story.find(:all, :conditions=>"state != 'pass'", :select=>'swag').map{|x| x.swag.to_f}.sum
+    unpassed_points = Story.find(:all, :conditions=>"state != 'passed'", :select=>'swag').map{|x| x.swag.to_f}.sum
     prev_iter = self.previous
     if prev_iter.velocity !=0
       return self.start_date + ((unpassed_points/prev_iter.velocity)*self.total_days)
@@ -34,10 +34,10 @@ class Iteration < ActiveRecord::Base
   end
 
   def completed_points
-    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state='pass'").to_f
+    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state='passed'").to_f
   end
   def open_points
-    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state!='pass'").to_f
+    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state!='passed'").to_f
   end
   def total_days
     (end_date - start_date).numerator
@@ -47,7 +47,7 @@ class Iteration < ActiveRecord::Base
     Iteration.find(:first, :conditions=>["start_date<=? and end_date>=?", t, t])
   end
   def velocity
-    stories.find(:all, :conditions=>"state='pass'").map(&:swag).sum
+    stories.find(:all, :conditions=>"state='passed'").map(&:swag).sum
   end
   
   def previous

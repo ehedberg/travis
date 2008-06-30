@@ -56,7 +56,7 @@ class ReleasesController < ApplicationController
     rel.total_days.times do |n| 
       d= (rel.start_date+n)
       days << d
-      points << (Story.connection.select_value("select sum(swag) from stories where iteration_id in ("+iters+") and state='pass' and date(completed_at)=date('%s')"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
+      points << (Story.connection.select_value("select sum(swag) from stories where iteration_id in ("+iters+") and state='passed' and date(completed_at)=date('%s')"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
       scope << (Story.connection.select_value("select sum(swag) from stories where iteration_id in ("+iters+") and  date(created_at)=date('%s') and iteration_id=%d"%[d.to_s(:db), rel.id])|| 0).to_f
     end
     point_totals  = []

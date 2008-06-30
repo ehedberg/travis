@@ -40,7 +40,7 @@ passed:
   #id: 6
   title: 'this has passed'
   description: 'desc'
-  state: pass
+  state: passed
   iteration: current
   swag: 2.3
   mnemonic: THIS-6
@@ -59,7 +59,7 @@ open:
 failed:
   title: 'this is failed'
   description: 'desc'
-  state: fail
+  state: failed
   swag: 7.0
   iteration: current
   mnemonic: THIS-9

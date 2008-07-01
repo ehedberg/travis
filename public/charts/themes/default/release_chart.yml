@@ -8,5 +8,5 @@
     point_shape: none
     line_thickness: 2
   <%=component :chart_grid_v %>
-    thickness: 1
+     thickness: 0
 

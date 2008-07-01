@@ -17,4 +17,13 @@ namespace :db do
     end 
 
   end
+  namespace :seed do
+    task :load => :environment do 
+      require 'active_record/fixtures'
+      ActiveRecord::Base.establish_connection(RAILS_ENV.to_sym)
+      (ENV['FIXTURES'] ? ENV['FIXTURES'].split(/,/) : Dir.glob(File.join(RAILS_ROOT, 'seed',  '*.{yml,csv}'))).each do |fixture_file|
+        Fixtures.create_fixtures('seed', File.basename(fixture_file, '.*'))
+      end
+    end
+  end
 end

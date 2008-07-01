@@ -1,19 +1,19 @@
 tr.current_iteration {
-  background: #c0c0ff;
-  border: 2px solid #00f;
+background: #c0c0ff;
+border: 2px solid #00f;
 }
 #storydesc ul {
   list-style-type: circle;
-  margin: 1em;
+margin: 1em;
 }
 #storydesc ol {
   list-style-type: decimal;
-  margin: 1em;
+margin: 1em;
 }
 #storydesc ol  li {
-  display: list-item;
-  list-style-position: inside;
-  margin-left: 4em;
+display: list-item;
+         list-style-position: inside;
+         margin-left: 4em;
 }
 #rightchart {
 float: right;
@@ -46,6 +46,7 @@ th.centered {
 
 table {
 width: 100%;
+       margin-top: 10px;
        text-align: left;
        border-top: 1px solid #ddd ;
        border-left: 1px solid  #ddd;

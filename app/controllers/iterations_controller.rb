@@ -3,7 +3,7 @@ class IterationsController < ApplicationController
   before_filter :requires_login, :except=>:chart
   def index
 
-    @iterations = Iteration.paginate(:page=>params[:page], :order=>'created_at asc')
+    @iterations = Iteration.paginate(:page=>params[:page], :order=>'start_date  asc')
   end
 
   def show

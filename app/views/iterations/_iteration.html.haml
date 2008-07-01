@@ -1,4 +1,5 @@
-%tr[iteration, cycle('odd', 'even')]
+- curClass = Iteration.current == iteration ? 'current' : cycle('odd', 'even')
+%tr[iteration, curClass]
   %td
     =link_to(h(iteration.title), iteration_path(iteration))
   %td.centered

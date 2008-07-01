@@ -1,0 +1,748 @@
+--- 
+tasks_1214945541: 
+  updated_at: 2008-07-01 11:05:57
+  title: Generate model
+  lock_version: "334"
+  id: "24"
+  description: model
+  login: mml
+  state: complete
+  created_at: 2008-06-18 14:15:06
+tasks_1214945562: 
+  updated_at: 2008-06-24 13:54:25
+  title: End Date calculation is wrong
+  lock_version: "6"
+  id: "49"
+  description: On the dashboard (front) page, the end date is not being calculated.  The data is available so the formula must be incorrect
+  login: Paul
+  state: complete
+  created_at: 2008-06-24 08:34:19
+tasks_1214945583: 
+  updated_at: 2008-06-27 14:18:08
+  title: Develop It
+  lock_version: "6"
+  id: "75"
+  description: See story [ACOU-6](http://buildbox/travis/stories/6) for all tasks
+  login: Brian
+  state: complete
+  created_at: 2008-06-27 14:18:01
+tasks_1214945521: 
+  updated_at: 2008-06-18 10:16:06
+  title: Navigation issue with login
+  lock_version: "5"
+  id: "1"
+  description: |-
+    Login takes you to Stories.  I clicked "Iterations", was prompted to login, and then was taken to "Stories"
+    
+    This is very low priority
+  login: mml
+  state: in_progress
+  created_at: 2008-06-17 13:35:32
+tasks_1214945542: 
+  updated_at: 2008-06-18 15:41:29
+  title: Generate controller
+  lock_version: "9"
+  id: "25"
+  description: controller
+  login: Paul
+  state: complete
+  created_at: 2008-06-18 14:15:51
+tasks_1214945563: 
+  updated_at: 2008-06-24 11:36:02
+  title: Dummy Task 1
+  lock_version: "21"
+  id: "50"
+  description: just being used to move Stories through their lifecycle
+  login: ""
+  state: complete
+  created_at: 2008-06-24 11:08:46
+tasks_1214945584: 
+  updated_at: 2008-06-30 11:27:02
+  title: limit find based on category visibility
+  lock_version: "0"
+  id: "76"
+  description: Need to scope document finds based on category
+  login: 
+  state: new
+  created_at: 2008-06-30 11:27:02
+tasks_1214945522: 
+  updated_at: 2008-06-18 17:01:54
+  title: Adding tasks to stories does not persist the relationship
+  lock_version: "14"
+  id: "2"
+  description: |
+    From Story Edit screen, I select "Add New Task" and use the green popup dialog to create a new task.  
+    
+    The new task is created, but is not associated with the Story I was editing.
+
+  login: mml
+  state: complete
+  created_at: 2008-06-17 13:39:55
+tasks_1214945543: 
+  updated_at: 2008-06-18 15:16:47
+  title: Generate view
+  lock_version: "7"
+  id: "26"
+  description: view
+  login: Paul
+  state: complete
+  created_at: 2008-06-18 14:16:17
+tasks_1214945564: 
+  updated_at: 2008-06-26 11:20:04
+  title: rake
+  lock_version: "12"
+  id: "51"
+  description: migration was deleted in favor of a rake task...but rake task needs to be created
+  login: tom
+  state: complete
+  created_at: 2008-06-24 11:12:49
+tasks_1214945585: 
+  updated_at: 2008-07-01 11:47:26
+  title: AccountModule
+  lock_version: "0"
+  id: "77"
+  description: |
+    - tie Modules to Accounts
+    - limit Modules dropdown on Permissions page to only show those Modules enabled for that user's account
+
+  login: 
+  state: new
+  created_at: 2008-07-01 11:47:26
+tasks_1214945523: 
+  updated_at: 2008-06-17 14:07:57
+  title: "\"New Task\" is annoying"
+  lock_version: "7"
+  id: "3"
+  description: |-
+    A Story has a task called "New Task".  It can not be edited.  Clicking it takes you to the Task list.
+    
+    Does not seem to serve much purpose
+  login: mml
+  state: complete
+  created_at: 2008-06-17 13:41:10
+tasks_1214945544: 
+  updated_at: 2008-06-18 16:22:41
+  title: application landing screen and controller
+  lock_version: "7"
+  id: "27"
+  description: some place to start at
+  login: Paul
+  state: complete
+  created_at: 2008-06-18 14:16:59
+tasks_1214945565: 
+  updated_at: 2008-06-24 11:17:04
+  title: Assign existing task to story
+  lock_version: "0"
+  id: "52"
+  description: |-
+    Currently, only way is to edit Task and assign the Story.  
+    
+    Issue is no way to do it from Story to existing Tasks.
+    
+    Second issue (regardless of Story->Task or Task->Story) is no way to filter down the result set of possibles
+  login: 
+  state: new
+  created_at: 2008-06-24 11:17:04
+tasks_1214945586: 
+  updated_at: 2008-07-01 11:50:17
+  title: enforce security
+  lock_version: "0"
+  id: "78"
+  description: |-
+    - you can only edit permissions for a user if logged_in_user.role >= target_user.role
+    - can't edit your own permissions
+    - requires role hierarchy to be in place
+  login: 
+  state: new
+  created_at: 2008-07-01 11:50:17
+tasks_1214945587: 
+  updated_at: 2008-07-01 11:54:20
+  title: enforce security
+  lock_version: "0"
+  id: "79"
+  description: |-
+    see security grid for details
+    
+    sbserver / 09 Product Management / GovDelivery / Requirements / Evolution
+  login: 
+  state: new
+  created_at: 2008-07-01 11:54:20
+tasks_1214945524: 
+  updated_at: 2008-06-17 14:51:29
+  title: "'Create Task' from Task List navigation"
+  lock_version: "7"
+  id: "5"
+  description: When using 'Create Task' from the Task List screen, when finishing and saving the Task, navigation should return the user to the Task List, not to the Task Edit screen for the task they just created
+  login: mml
+  state: complete
+  created_at: 2008-06-17 13:46:00
+tasks_1214945545: 
+  updated_at: 2008-06-19 15:44:30
+  title: Task state changes
+  lock_version: "14"
+  id: "30"
+  description: |-
+    Add a task to a story.  Start the task and the story goes to 'In Progress'
+    Now, find a story in 'New' state and assign the task to this story.
+    The new story stays in 'new' and it should have moved to 'In Progress'
+  login: mml
+  state: complete
+  created_at: 2008-06-18 15:40:37
+tasks_1214945566: 
+  updated_at: 2008-06-24 11:36:59
+  title: Dummy 2 Task
+  lock_version: "6"
+  id: "53"
+  description: Dummy 2 Task
+  login: ""
+  state: complete
+  created_at: 2008-06-24 11:36:45
+tasks_1214945588: 
+  updated_at: 2008-07-01 13:34:31
+  title: create role hierarchy
+  lock_version: "6"
+  id: "80"
+  description: |
+    - remove SalesRep
+    - change ItemAdmin to TopicAdmin
+    - add level to roles.  levels:  SU=1, AM=2, AA=100, CA=101, IA=102, RV=103
+
+  login: Jim
+  state: complete
+  created_at: 2008-07-01 11:55:45
+tasks_1214945525: 
+  updated_at: 2008-06-17 15:13:39
+  title: Search results - IE browser compatibility
+  lock_version: "7"
+  id: "6"
+  description: Search results (did Task search) in IE display horizantally rather than vertically
+  login: mml
+  state: complete
+  created_at: 2008-06-17 13:49:27
+tasks_1214945546: 
+  updated_at: 2008-06-20 10:00:00
+  title: Scope partners by type and visibility
+  lock_version: "7"
+  id: "31"
+  description: use named_scope to limit view of partners and cascade down to documents
+  login: tom
+  state: complete
+  created_at: 2008-06-18 15:43:40
+tasks_1214945567: 
+  updated_at: 2008-06-25 09:17:20
+  title: Associate administrator with account
+  lock_version: "8"
+  id: "54"
+  description: "internal admins should have a null association "
+  login: Brian
+  state: complete
+  created_at: 2008-06-24 13:33:49
+tasks_1214945589: 
+  updated_at: 2008-07-01 11:57:38
+  title: enforce security
+  lock_version: "1"
+  id: "81"
+  description: |-
+    - change Admin CRUD operations to only work if logged_in_user.role.level >= target_user.role.level
+    - disabling Read == remove from list
+    - remove buttons/links from UI 
+    - add checks to controller methods
+    - see security grid for details
+    
+    sbserver / 09 Product Management / GovDelivery / Requirements / Evolution
+  login: 
+  state: new
+  created_at: 2008-07-01 11:56:52
+tasks_1214945526: 
+  updated_at: 2008-06-18 15:44:23
+  title: Identify SQL for DB View
+  lock_version: "7"
+  id: "7"
+  description: Isolate the logic away from the application as Evolution will hopefully not put test data in a production database and will not need this legacy processing
+  login: tom
+  state: complete
+  created_at: 2008-06-17 13:58:35
+tasks_1214945547: 
+  updated_at: 2008-06-19 08:18:45
+  title: Task for testing
+  lock_version: "3"
+  id: "33"
+  description: test
+  login: Paul
+  state: in_progress
+  created_at: 2008-06-19 08:18:36
+tasks_1214945568: 
+  updated_at: 2008-06-25 09:17:25
+  title: Modify the session controller to redirect based on user role
+  lock_version: "6"
+  id: "55"
+  description: |-
+    If user role is internal admin then redirect to AccountController#index.
+    
+    If external admin, the redirect to associated account (AccountController#show)
+  login: Brian
+  state: complete
+  created_at: 2008-06-24 13:38:30
+tasks_1214945527: 
+  updated_at: 2008-06-18 14:41:44
+  title: Saved searches
+  lock_version: "6"
+  id: "8"
+  description: |-
+    Ability to save a search that is used repeatedly.  Use case would be something like:
+    1.  do a search
+    2.  have 'save search' link.  Requires a name for the search
+    
+    3.  Search screen lists saved searches so they can be re-executed
+    
+    
+    Possibly (probably not) have ability to save on a per user vs global option
+  login: mml
+  state: complete
+  created_at: 2008-06-17 14:03:09
+tasks_1214945548: 
+  updated_at: 2008-06-19 15:46:46
+  title: Task Search results should show 'Assigned to'
+  lock_version: "6"
+  id: "34"
+  description: In the results for a Task search, show "Assigned to" field
+  login: mml
+  state: complete
+  created_at: 2008-06-19 08:21:16
+tasks_1214945570: 
+  updated_at: 2008-06-26 13:09:43
+  title: Should be able to create a new external admin when viewing an account
+  lock_version: "6"
+  id: "57"
+  description: This control should appear when looking at a specific account (AccountController#show)
+  login: Brian
+  state: complete
+  created_at: 2008-06-24 13:43:46
+tasks_1214945569: 
+  updated_at: 2008-06-26 13:09:53
+  title: Should be able to create a new internal admin without associating the user with an account
+  lock_version: "6"
+  id: "56"
+  description: The control should appear on the AccountController#index view ("Create Internal Admin")
+  login: Brian
+  state: complete
+  created_at: 2008-06-24 13:41:16
+tasks_1214945549: 
+  updated_at: 2008-06-19 13:17:48
+  title: Account Create
+  lock_version: "7"
+  id: "35"
+  description: Add an account create page.
+  login: Brian
+  state: complete
+  created_at: 2008-06-19 12:57:40
+tasks_1214945571: 
+  updated_at: 2008-06-27 13:54:16
+  title: Scope users by account
+  lock_version: "8"
+  id: "58"
+  description: /accounts/1/users = UsersController#index, etc...
+  login: Brian
+  state: complete
+  created_at: 2008-06-24 13:54:19
+tasks_1214945528: 
+  updated_at: 2008-06-18 16:32:57
+  title: SWAGGING feature
+  lock_version: "7"
+  id: "9"
+  description: |-
+    Need a way to rapidly SWAG many stories.  Like display a list of stories with a SWAG column and have the SWAG column editable.
+    
+    Probably low priority (as once we get all the stories swagged, we won't have to do it again)
+  login: mml
+  state: complete
+  created_at: 2008-06-17 14:05:28
+tasks_1214945550: 
+  updated_at: 2008-06-19 14:38:33
+  title: Account Validation
+  lock_version: "6"
+  id: "36"
+  description: Add validation to the account maintenance form
+  login: Brian
+  state: complete
+  created_at: 2008-06-19 12:58:23
+tasks_1214945530: 
+  updated_at: 2008-06-17 14:24:29
+  title: Burn chart disappears
+  lock_version: "7"
+  id: "11"
+  description: The burn chart for the current iteration is no longer displaying.  I have not left the browser and there were changes to stories and tasks
+  login: mml
+  state: complete
+  created_at: 2008-06-17 14:15:11
+tasks_1214945529: 
+  updated_at: 2008-06-17 14:48:25
+  title: Story description too short
+  lock_version: "7"
+  id: "10"
+  description: |-
+    200 characters is not enough for a description.  This probably applies to Tasks as well.
+    
+    Should allow 500 characters
+  login: mml
+  state: complete
+  created_at: 2008-06-17 14:09:20
+tasks_1214945551: 
+  updated_at: 2008-06-19 15:15:19
+  title: Account Delete
+  lock_version: "6"
+  id: "37"
+  description: Add a delete button to the account maintenance page.
+  login: Brian
+  state: complete
+  created_at: 2008-06-19 12:58:43
+tasks_1214945572: 
+  updated_at: 2008-06-27 13:54:11
+  title: Validate that account on a user is nil when internal admin
+  lock_version: "6"
+  id: "59"
+  description: An internal admin must not have an associated account.  This needs to be validated.
+  login: Brian
+  state: complete
+  created_at: 2008-06-24 14:29:26
+tasks_1214945531: 
+  updated_at: 2008-06-18 14:51:41
+  title: Story needs 'Area' field
+  lock_version: "7"
+  id: "12"
+  description: |-
+    'Area' or 'Component' or 'Module' or something like that.  Brett calls it 'Area' on his spreadsheet.
+    
+    For the first cut, just a text field that should take 50 or 100 characters.
+    
+    For a final cut, probably should have an Area object with CRUD screens and then the Story screen will select it from a drop down
+  login: mml
+  state: complete
+  created_at: 2008-06-17 14:58:00
+tasks_1214945552: 
+  updated_at: 2008-06-19 13:34:31
+  title: Account Update
+  lock_version: "6"
+  id: "38"
+  description: Add links to the account list screen to access an account update page.
+  login: Brian
+  state: complete
+  created_at: 2008-06-19 12:59:28
+tasks_1214945573: 
+  updated_at: 2008-06-25 09:30:46
+  title: Add ability to view account and administrators for internal admin
+  lock_version: "6"
+  id: "60"
+  description: Need the ability to access show view for account from internal admin account list.
+  login: Brian
+  state: complete
+  created_at: 2008-06-25 09:24:33
+tasks_1214945532: 
+  updated_at: 2008-06-17 15:26:09
+  title: Story View screen should display SWAG
+  lock_version: "7"
+  id: "13"
+  description: Currently, if SWAG is nil, then it is not displayed.  Should display it as 'nil' as that is meaningful
+  login: mml
+  state: complete
+  created_at: 2008-06-17 15:02:45
+tasks_1214945553: 
+  updated_at: 2008-06-23 17:11:26
+  title: Account Audit Fields
+  lock_version: "6"
+  id: "39"
+  description: Add audit fields created_by and updated_by to account.
+  login: Brian
+  state: complete
+  created_at: 2008-06-19 13:35:17
+tasks_1214945574: 
+  updated_at: 2008-06-30 11:45:16
+  title: Develop It
+  lock_version: "161"
+  id: "61"
+  description: See story [ACOU-6](http://buildbox/travis/stories/6) for all tasks
+  login: mml
+  state: complete
+  created_at: 2008-06-25 14:03:55
+tasks_1214945533: 
+  updated_at: 2008-06-24 14:09:49
+  title: wiki markup
+  lock_version: "7"
+  id: "14"
+  description: use bluecloth/redcloth to display descriptions
+  login: Paul
+  state: complete
+  created_at: 2008-06-17 15:16:41
+tasks_1214945554: 
+  updated_at: 2008-06-19 14:46:55
+  title: Force login on back
+  lock_version: "6"
+  id: "40"
+  description: If you log off and navigate to the list screen using the back button, you can still access the account screens.
+  login: Brian
+  state: complete
+  created_at: 2008-06-19 13:43:53
+tasks_1214945575: 
+  updated_at: 2008-06-30 11:01:17
+  title: password create page
+  lock_version: "24"
+  id: "64"
+  description: |
+    - remove password field from Basic Info
+    - make password nullable in db so initial save will work even though password field is on different screen
+    - add enabled? flag to Administrator.  default is false, only set to true once a valid password is entered on create passwd page. login screen must honor this value
+    - create new page just for entering password
+    - page not accessible until user is saved (a la Permissions)
+    - see story description for password rules
+    - page should be accessible for other admins with >= role (will be done as a separate story since role hierarchy is not implemented yet)
+
+  login: Jim
+  state: complete
+  created_at: 2008-06-26 11:05:25
+tasks_1214945534: 
+  updated_at: 2008-06-18 14:43:09
+  title: "Big word:  'Stories' on Story List"
+  lock_version: "7"
+  id: "16"
+  description: |-
+    At the top of the Task List screen is the word "Tasks" in a large font.
+    
+    Story List screen does not have this useful feature.  Add the word "Stories" in a big font at the top of the Story List screen
+  login: mml
+  state: complete
+  created_at: 2008-06-17 15:21:18
+tasks_1214945555: 
+  updated_at: 2008-06-19 14:24:20
+  title: Change Area to Nodule
+  lock_version: "6"
+  id: "41"
+  description: Area was changed to Module, then Nodule. Make it so!
+  login: mml
+  state: complete
+  created_at: 2008-06-19 14:16:51
+tasks_1214945576: 
+  updated_at: 2008-07-01 11:21:35
+  title: reset password feature
+  lock_version: "9"
+  id: "66"
+  description: |-
+    - add "I forgot my password" link to login page
+    - for now send user directly to create password page; eventually this will generate an email (once email sending is implemented)
+  login: Jim
+  state: complete
+  created_at: 2008-06-26 11:11:48
+tasks_1214945535: 
+  updated_at: 2008-06-18 15:05:46
+  title: pretty descriptions
+  lock_version: "7"
+  id: "17"
+  description: bluecloth/wiki markup for description
+  login: mml
+  state: complete
+  created_at: 2008-06-18 10:26:32
+tasks_1214945556: 
+  updated_at: 2008-06-19 15:42:34
+  title: Create display mnemonic
+  lock_version: "6"
+  id: "42"
+  description: some sort of short mnemonic story id should be created and visible on story.
+  login: mml
+  state: complete
+  created_at: 2008-06-19 14:17:40
+tasks_1214945577: 
+  updated_at: 2008-06-26 12:11:04
+  title: create a method to load seed data
+  lock_version: "6"
+  id: "68"
+  description: We need a way to load data into the database that the application requires to run
+  login: tom
+  state: complete
+  created_at: 2008-06-26 11:19:55
+tasks_1214945536: 
+  updated_at: 2008-06-18 15:39:57
+  title: Rename User -> Administrator
+  lock_version: "7"
+  id: "18"
+  description: Rename User -> Administrator
+  login: Jim
+  state: complete
+  created_at: 2008-06-18 13:04:41
+tasks_1214945557: 
+  updated_at: 2008-06-23 17:12:58
+  title: Create Module
+  lock_version: "13"
+  id: "44"
+  description: Create the audit plugin module thingy
+  login: mml
+  state: complete
+  created_at: 2008-06-20 12:40:13
+tasks_1214945578: 
+  updated_at: 2008-06-26 14:05:39
+  title: Rake task for 'auto_tag'
+  lock_version: "15"
+  id: "69"
+  description: |
+    see [auto_tag.rb in Subversion](http://buildbox.office.gdi/svn/showfile.svn?path=%2ftag_service%2ftrunk%2flib%2fauto_tag.rb&revision=HEAD&name=govdelivery).
+    
+    This can be run as follows:
+    
+    `cd /path/to/app/root/dir  ` && `  jruby script/runner auto_tag.rb`
+    
+    actual usage might look something like this:
+    
+    		~/scratch/tag_service$ jruby script/runner -e development lib/auto_tag.rb
+    		JRuby limited openssl loaded. gem install jruby-openssl for full support.
+    		http://wiki.jruby.org/wiki/JRuby_Builtin_OpenSSL
+    		Enter a partner id: 5109
+    		Found 8 to autotag, continue? y
+    		autotagging...
+    		
+
+  login: tom
+  state: complete
+  created_at: 2008-06-26 13:56:25
+tasks_1214945537: 
+  updated_at: 2008-06-23 13:07:33
+  title: Roles & RolePermissions
+  lock_version: "11"
+  id: "19"
+  description: |
+    REQUIRES Modules & Permissions TASK TO BE COMPLETED FIRST
+    
+    - create DB migration for table definition & default roles
+    - create fixture data for default roles
+    - columns:  id, name
+    - see spreadsheet for default roles
+    - no maintenance UI
+
+  login: Jim
+  state: complete
+  created_at: 2008-06-18 13:06:31
+tasks_1214945558: 
+  updated_at: 2008-06-24 14:50:27
+  title: Label columns in Search results
+  lock_version: "6"
+  id: "45"
+  description: for both task and story
+  login: mml
+  state: complete
+  created_at: 2008-06-23 15:56:39
+tasks_1214945580: 
+  updated_at: 2008-06-27 13:18:08
+  title: email new password
+  lock_version: "4"
+  id: "71"
+  description: |
+    - email link to password create page when a new user is created
+    - email link to password create page when "I forgot my password" is clicked on login page
+    
+    options:
+    - use GDCore's AdminMailMachine & ludicrous?
+    - write directly to [new] mail tables?
+    - generate email & send directly to Postfix or StrongMail?
+
+  login: 
+  state: new
+  created_at: 2008-06-26 15:55:16
+tasks_1214945579: 
+  updated_at: 2008-06-26 15:31:29
+  title: Map "partner_attributes" created for Legend
+  lock_version: "3"
+  id: "70"
+  description: Need to update lookups and model attributes (properties? what's the best name for these things?).  Get ActiveRecord to "work" with this stuff
+  login: tom
+  state: in_progress
+  created_at: 2008-06-26 15:31:23
+tasks_1214945538: 
+  updated_at: 2008-06-24 14:42:33
+  title: Assign Role to Administrator
+  lock_version: "9"
+  id: "21"
+  description: |-
+    - add Role to Administrator object
+    - add Role select box to Administrator UI
+    - when Role selected, populate AdministratorPermissions with relevant set of rows from RolePermission
+    - changing a User's Role replaces all of their existing Permissions
+  login: Jim
+  state: complete
+  created_at: 2008-06-18 13:11:20
+tasks_1214945560: 
+  updated_at: 2008-06-24 14:38:07
+  title: Change 'nodule' to 'feature'
+  lock_version: "6"
+  id: "47"
+  description: everywhere
+  login: mml
+  state: complete
+  created_at: 2008-06-23 15:58:16
+tasks_1214945559: 
+  updated_at: 2008-06-24 14:10:05
+  title: Display Story id (Display ID) on detail page
+  lock_version: "6"
+  id: "46"
+  description: Display ID for Story should be on the edit page
+  login: Paul
+  state: complete
+  created_at: 2008-06-23 15:57:50
+tasks_1214945581: 
+  updated_at: 2008-06-30 11:01:45
+  title: disabled administrators
+  lock_version: "8"
+  id: "73"
+  description: |
+    - create new admins in disabled state
+    - enable only once valid new password is entered on create password page
+
+  login: Jim
+  state: complete
+  created_at: 2008-06-27 12:56:08
+tasks_1214945582: 
+  updated_at: 2008-06-27 13:53:09
+  title: Add ability to disable an account
+  lock_version: "6"
+  id: "74"
+  description: Add the ability to disable an account.  When an account is disabled, administrators associated with that account should no longer be able to log in to the application.
+  login: Brian
+  state: complete
+  created_at: 2008-06-27 13:53:04
+tasks_1214945540: 
+  updated_at: 2008-06-25 16:32:39
+  title: Modify User Permissions
+  lock_version: "7"
+  id: "23"
+  description: |
+    - checkboxes are checked/unchecked by rows in AdminPermissions
+    - checkbox existence is determined by rows Permission
+    - set of visible checkboxes is based on selected Module
+    
+    - add Module dropdown to User UI
+    - add checkboxes to User UI
+    - make checkboxes vary based on selected Module
+
+  login: Jim
+  state: complete
+  created_at: 2008-06-18 13:44:35
+tasks_1214945539: 
+  updated_at: 2008-06-19 14:39:24
+  title: Modules & Permissions
+  lock_version: "9"
+  id: "22"
+  description: |-
+    - create migrations for table definitions
+    - create fixtures for default data
+    - see spreadsheet for default data
+    - create & test model objects
+    - no maintenance UI
+    - assignment of Modules to Accounts will be done as a separate story (after initial Modules & Accounts stories are done)
+  login: Jim
+  state: complete
+  created_at: 2008-06-18 13:13:57
+tasks_1214945561: 
+  updated_at: 2008-06-24 13:33:09
+  title: "Show assigned iteration for Story "
+  lock_version: "6"
+  id: "48"
+  description: on Edit and View pages
+  login: Paul
+  state: complete
+  created_at: 2008-06-23 15:58:46

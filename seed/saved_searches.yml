@@ -1,0 +1,64 @@
+--- 
+saved_searches_1214945524: 
+  name: "Tasks:  In Progress"
+  updated_at: 2008-06-19 08:19:29
+  id: "4"
+  query_type: Task
+  query: state='in_progress'
+  created_at: 2008-06-19 08:19:29
+saved_searches_1214945525: 
+  name: GovDelivery.net nodule
+  updated_at: 2008-06-24 09:18:09
+  id: "5"
+  query_type: Story
+  query: nodule = 'govdelivery.net'
+  created_at: 2008-06-24 09:18:09
+saved_searches_1214945526: 
+  name: Travis Stories
+  updated_at: 2008-06-24 14:50:10
+  id: "6"
+  query_type: Story
+  query: nodule='travis'
+  created_at: 2008-06-24 14:50:10
+saved_searches_1214945527: 
+  name: SUBS stories
+  updated_at: 2008-07-01 12:51:37
+  id: "11"
+  query_type: Story
+  query: mnemonic like 'subs%'
+  created_at: 2008-07-01 12:51:37
+saved_searches_1214945528: 
+  name: USER stories
+  updated_at: 2008-07-01 13:27:14
+  id: "12"
+  query_type: Story
+  query: mnemonic like 'user%'
+  created_at: 2008-07-01 13:27:14
+saved_searches_1214945529: 
+  name: TOPI stories
+  updated_at: 2008-07-01 13:44:22
+  id: "13"
+  query_type: Story
+  query: mnemonic like 'TOPI%'
+  created_at: 2008-07-01 13:44:22
+saved_searches_1214945521: 
+  name: New Tasks
+  updated_at: 2008-06-18 14:38:05
+  id: "1"
+  query_type: Story
+  query: state='new'
+  created_at: 2008-06-18 14:38:05
+saved_searches_1214945522: 
+  name: Not New
+  updated_at: 2008-06-18 14:38:38
+  id: "2"
+  query_type: Story
+  query: state!='new'
+  created_at: 2008-06-18 14:38:38
+saved_searches_1214945523: 
+  name: Incomplete MML
+  updated_at: 2008-06-18 14:41:58
+  id: "3"
+  query_type: Task
+  query: state!='complete' and login='mml'
+  created_at: 2008-06-18 14:41:58

@@ -1,0 +1,97 @@
+--- 
+iterations_1214945532: 
+  end_date: "2010-07-03"
+  start_date: "2010-07-01"
+  updated_at: 2008-07-01 15:23:37
+  title: GovDelivery.net
+  id: "12"
+  release_id: 
+  created_at: 2008-07-01 14:14:42
+iterations_1214945521: 
+  end_date: "2008-06-22"
+  start_date: "2008-06-09"
+  updated_at: 2008-06-27 14:30:04
+  title: Iteration 1
+  id: "1"
+  release_id: "2"
+  created_at: 2008-06-17 13:31:05
+iterations_1214945522: 
+  end_date: "2008-07-06"
+  start_date: "2008-06-23"
+  updated_at: 2008-06-27 14:30:04
+  title: Iteration 2
+  id: "2"
+  release_id: "2"
+  created_at: 2008-06-17 13:31:05
+iterations_1214945523: 
+  end_date: "2008-07-20"
+  start_date: "2008-07-07"
+  updated_at: 2008-06-27 14:30:04
+  title: Iteration 3
+  id: "3"
+  release_id: "2"
+  created_at: 2008-06-17 13:31:05
+iterations_1214945524: 
+  end_date: "2008-08-03"
+  start_date: "2008-07-21"
+  updated_at: 2008-06-30 13:44:43
+  title: Iteration 4
+  id: "4"
+  release_id: "2"
+  created_at: 2008-06-17 13:31:05
+iterations_1214945525: 
+  end_date: "2008-08-17"
+  start_date: "2008-08-04"
+  updated_at: 2008-06-30 13:44:43
+  title: Iteration 5
+  id: "5"
+  release_id: "2"
+  created_at: 2008-06-17 13:31:05
+iterations_1214945526: 
+  end_date: "2008-10-26"
+  start_date: "2008-10-13"
+  updated_at: 2008-07-01 15:23:58
+  title: Iteration 10
+  id: "6"
+  release_id: "2"
+  created_at: 2008-07-01 11:15:01
+iterations_1214945527: 
+  end_date: "2008-08-31"
+  start_date: "2008-08-18"
+  updated_at: 2008-07-01 15:23:58
+  title: Iteration 6
+  id: "7"
+  release_id: "2"
+  created_at: 2008-07-01 11:28:35
+iterations_1214945528: 
+  end_date: "2008-09-14"
+  start_date: "2008-09-01"
+  updated_at: 2008-07-01 15:23:58
+  title: Iteration 7
+  id: "8"
+  release_id: "2"
+  created_at: 2008-07-01 11:28:41
+iterations_1214945529: 
+  end_date: "2008-09-28"
+  start_date: "2008-09-15"
+  updated_at: 2008-07-01 15:23:58
+  title: Iteration 8
+  id: "9"
+  release_id: "2"
+  created_at: 2008-07-01 11:28:55
+iterations_1214945530: 
+  end_date: "2008-10-12"
+  start_date: "2008-09-29"
+  updated_at: 2008-07-01 15:23:58
+  title: Iteration 9
+  id: "10"
+  release_id: "2"
+  created_at: 2008-07-01 11:30:56
+iterations_1214945531: 
+  end_date: "2008-11-09"
+  start_date: "2008-10-27"
+  updated_at: 2008-07-01 15:23:58
+  title: Iteration 11
+  id: "11"
+  release_id: "2"
+  created_at: 2008-07-01 11:55:29

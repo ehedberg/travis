@@ -1,26 +1,39 @@
+#storydesc ul {
+  list-style-type: circle;
+  margin: 1em;
+}
+#storydesc ol {
+  list-style-type: decimal;
+  margin: 1em;
+}
+#storydesc ol  li {
+  display: list-item;
+  list-style-position: inside;
+  margin-left: 4em;
+}
 #rightchart {
-  float: right;
+float: right;
 }
 #chart {
-  float: right;
+float: right;
 }
 #iterInfo {
 float: left;
 }
 
 #storyerror {
-  background:
+background:
 }
 
 #content{
-	margin:10px;
+margin:10px;
 }
 
 
 #footer {
   font-size: .7em;
-  display: block;
-  clear: both;
+display: block;
+clear: both;
 }
 
 th.centered {
@@ -28,10 +41,10 @@ th.centered {
 }
 
 table {
-  width: 100%;
-  text-align: left;
-  border-top: 1px solid #ddd ;
-  border-left: 1px solid  #ddd;
+width: 100%;
+       text-align: left;
+       border-top: 1px solid #ddd ;
+       border-left: 1px solid  #ddd;
 }
 
 td.rctl {
@@ -45,7 +58,7 @@ td.centered {
 }
 
 th {
-  background: #ddd;
+background: #ddd;
 }
 
 td,th {
@@ -55,36 +68,36 @@ td,th {
 }
 
 tr.even_task td {
-  background: #eee;
+background: #eee;
 }
 tr.even_story {
-  background: #eee;
+background: #eee;
 }
 tr.even_iteration {
-  background: #eee;
+background: #eee;
 }
 a.expando {
   font-weight: bold;
   text-decoration: none;
-  color:green;
+color:green;
 }
 a:hover.expando {
-  background:yellow;
-}
+background:yellow;
+  }
 a:visited.expando {
-  color:green;
-}
+color:green;
+  }
 caption {
   caption-side: top;
   font-weight: bold;
   font-size: 2em;
-  margin: 10px;
+margin: 10px;
 }
 .opform fieldset {
-  background: #d0f0d0;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+background: #d0f0d0;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
 }
 #modal_overlay {  
   background-color:#000000;
@@ -94,5 +107,5 @@ div.formError  {
   font-size: .8em;
 }
 div.fieldWithErrors {
-  border: 2px dotted orange;
+border: 2px dotted orange;
 }

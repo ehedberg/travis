@@ -1,15 +1,14 @@
 class StoriesController < ApplicationController
   before_filter :requires_login
+  before_filter :load_parent 
   def index
     @stories=Story.paginate(:page=>params[:page], :order=>'created_at asc')
   end
 
   def show
-    @story= Story.find(params[:id])
   end
 
   def edit
-    @story=Story.find(params[:id])
     render :template=>"stories/form"
   end
 
@@ -18,7 +17,7 @@ class StoriesController < ApplicationController
   end
 
   def update_swag
-    s = Story.find(params[:id])
+    s = @story
     s.swag=params[:value].to_f
     s.save!
     render :text=>s.reload.swag
@@ -64,7 +63,6 @@ class StoriesController < ApplicationController
   end
 
   def update
-    @story = Story.find(params[:id])
     action = params[:story].delete(:state)
     if @story.update_attributes(params[:story])
       @story.send("#{action}!".to_sym) if action
@@ -81,8 +79,16 @@ class StoriesController < ApplicationController
   end
 
   def destroy
-    Story.delete(params[:id])
-
+    Story.delete(@story.id)
     redirect_to(stories_path)
+  end
+  private
+  def load_parent
+    if params[:iteration_id]
+    @iteration = Iteration.find(params[:iteration_id]) if params[:iteration_id]
+    @story = @iteration.stories.find(params[:id]) if params[:id]
+    else
+      @story = Story.find(params[:id]) if params[:id]
+    end
   end
 end

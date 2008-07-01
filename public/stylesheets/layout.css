@@ -4,11 +4,9 @@ border: 2px solid #00f;
 }
 #storydesc ul {
   list-style-type: circle;
-margin: 1em;
 }
 #storydesc ol {
   list-style-type: decimal;
-margin: 1em;
 }
 #storydesc ol  li {
 display: list-item;

@@ -1,0 +1,13 @@
+<%= chart :base %> 
+  <%=component :axis_category %>
+    skip:7 
+  <%=component :chart_value %>
+    hide_zero: true
+    position: above
+  <%=component :chart_pref %>
+    hide_zero: true
+    point_shape: none
+    line_thickness: 2
+  <%=component :chart_grid_v %>
+    thickness: 1
+

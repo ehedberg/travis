@@ -2,7 +2,11 @@ class StoriesController < ApplicationController
   before_filter :requires_login
   before_filter :load_parent 
   def index
-    @stories=Story.paginate(:page=>params[:page], :order=>'created_at asc')
+    unless @iteration
+      @stories=Story.paginate(:page=>params[:page], :order=>'created_at asc')
+    else
+      @stories = @iteration.stories.paginate :page=>params[:page], :order=>'created_at asc'
+    end
   end
 
   def show

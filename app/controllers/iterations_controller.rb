@@ -50,7 +50,7 @@ class IterationsController < ApplicationController
   def chart
     iter = Iteration.find(params[:id], :include=>[:stories=>:tasks])
     total_points = iter.total_points
-    chart = Ziya::Charts::Line.new 
+    chart = Ziya::Charts::Line.new(nil, "iteration_chart") 
     days = []
     points = []
     scope=[]

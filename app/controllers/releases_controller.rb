@@ -48,7 +48,7 @@ class ReleasesController < ApplicationController
   def chart
     rel = Release.find(params[:id], :include=>[:iterations=>[:stories=>:tasks]])
     total_points = rel.total_points
-    chart = Ziya::Charts::Line.new 
+    chart = Ziya::Charts::Line.new(nil,  "release_chart")
     days = []
     points = []
     scope=[]

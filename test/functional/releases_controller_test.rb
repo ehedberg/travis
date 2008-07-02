@@ -1,4 +1,4 @@
-require 'test_helper'
+require File.dirname(__FILE__)+'/../test_helper'
 
 class ReleasesControllerTest < ActionController::TestCase
   def setup
@@ -72,6 +72,24 @@ class ReleasesControllerTest < ActionController::TestCase
     end
 
     assert_select "a[href=?]", new_release_path
+  end
+
+  def test_plan
+    assert_routing '/releases/1/planner', :controller=>'releases', :action=>'planner', :id=>'1'
+    r = releases(:currel)
+    get :planner, :id=>r.id
+    assert_response :success
+    assert_template 'planner'
+    assert assigns(:releases)
+    assert assigns(:iterations)
+    r = assigns(:releases)
+    is = assigns(:iterations)
+    r.each do |rel|
+      assert_select "div[id=?]", "drop_release_#{rel.id}"
+    end
+    is.each do |iter|
+      assert_select "div[id=?]", "drag_iteration_#{iter.id}"
+    end
   end
   
   def test_new

@@ -5,6 +5,11 @@ class ReleasesController < ApplicationController
   def index
     @releases = Release.paginate(:page=>params[:page], :order=>'created_at asc')
   end
+
+  def planner
+    @iterations = Iteration.find(:all, :order=>'start_date asc')
+    @releases = Release.find(:all, :order=>'title asc')
+  end
   def create
     @release=Release.new(params[:release])
 

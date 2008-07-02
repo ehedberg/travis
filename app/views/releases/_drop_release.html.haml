@@ -1,0 +1,6 @@
+%div[drop_release, 'drop']
+  .title
+    =h drop_release.title
+  =render  :partial=>'drag_iteration',:collection=>drop_release.iterations
+    
+  =drop_receiving_element "drop_release_#{drop_release.id}", :url=>releases_path

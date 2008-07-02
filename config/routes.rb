@@ -40,6 +40,6 @@ ActionController::Routing::Routes.draw do |map|
     r.resources :stories
   end
 
-  map.resources :releases,  :member=>{:chart=> :get}
+  map.resources :releases,  :member=>{:chart=> :get, :planner=>:get}
   map.dashboard '/', :controller => 'dashboard', :action => 'index'
 end

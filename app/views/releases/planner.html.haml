@@ -1,0 +1,7 @@
+#releases
+  =render :partial=>'drop_release', :collection=>@releases
+#iterations
+  .title
+    =h 'Free Iterations'
+  =render :partial=>'drag_iteration', :collection=>@iterations.select{|x| !x.release}
+=drop_receiving_element 'iterations', :url=>releases_path

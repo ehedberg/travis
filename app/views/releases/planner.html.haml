@@ -1,6 +1,8 @@
 #releases
   =render :partial=>'drop_release', :collection=>@releases
 #iterations
+  .drag_iteration{:style=>'z-index:-1'}
+    hey!
   .title
     =h 'Free Iterations'
   =render :partial=>'drag_iteration', :collection=>@iterations.select{|x| !x.release}

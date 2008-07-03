@@ -9,6 +9,14 @@ class ReleasesControllerTest < ActionController::TestCase
     @request.session[:login]=nil
   end
 
+  def test_assoc_rel_rel
+    assert_routing({:method=>:post, :path=>'/releases/1/do_assoc'}, :controller=>'releases', :action=>'do_assoc', :id=>1)
+    assert_not_nil releases(:currel).iterations.first
+    xhr :post, :do_assoc, :drop_r=>releases(:currel).id, :drag_r=>releases(:next).id, :iter=>releases(:currel).iterations.first
+    assert_response :success
+    assert_rjs_select "drag_release_#{releases(:currel).id}"
+    assert_rjs_select "drag_release_#{releases(:next).id}"
+  end
   def test_routes
     do_default_routing_tests('releases')
   end

@@ -34,6 +34,7 @@ class StoriesController < ApplicationController
       unless @stories.empty?
         page.replace_html 'results', :partial=>'stories/story_header'
         page.insert_html :bottom,  'results', :partial=>'stories/story', :collection=>@stories
+        page.replace_html  'summary', "<p>#{@stories.size} stories</p>"
         page.replace_html 'saveform', :partial=>'shared/save_search_form'
       else
         page.replace_html 'results', '<p>No results found</p>'

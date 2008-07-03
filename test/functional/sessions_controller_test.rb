@@ -9,9 +9,16 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   def test_create
-    post :create, :login=>'blah'
+    post :create, {:login=>'blah'}, nil, {:back=>'/blah'}
     assert_response :redirect
-    assert_redirected_to stories_path
+    assert_redirected_to '/blah'
+    assert_equal 'blah', session[:login]
+    assert_equal 'blah', Session.current_login
+  end
+  def test_redirects_default_no_flash
+    post :create, {:login=>'blah'}
+    assert_response :redirect
+    assert_redirected_to root_path
     assert_equal 'blah', session[:login]
     assert_equal 'blah', Session.current_login
   end
@@ -28,7 +35,7 @@ class SessionsControllerTest < ActionController::TestCase
     assert_nil session[:login]
     assert_nil Session.current_login
     assert_response :redirect
-    assert_redirected_to stories_path
+    assert_redirected_to root_path
   end
 
   def test_new

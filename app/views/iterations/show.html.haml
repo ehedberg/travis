@@ -8,12 +8,15 @@
 %h2
   Start Date:
   =h @iteration.start_date
-%h2#sum
-  Total swag: 
-  =@iteration.total_points
 %h2
   End Date:
   =h @iteration.end_date
+%h3#sum
+  Total swag: 
+  =@iteration.total_points
+%h3
+  Earned Velocity:
+  =@iteration.completed_points
 
 =link_to "Add New Story", "#storyform", :id=>'addStoryLink'
 

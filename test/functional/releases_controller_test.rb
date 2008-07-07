@@ -3,10 +3,12 @@ require File.dirname(__FILE__)+'/../test_helper'
 class ReleasesControllerTest < ActionController::TestCase
   def setup
     @request.session[:login]='fubar'
+    Session.current_login=@request.session[:login]
   end
 
   def teardown
     @request.session[:login]=nil
+    Session.current_login=@request.session[:login]
   end
 
   def xtest_assoc_rel_rel

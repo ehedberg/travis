@@ -2,6 +2,9 @@ require File.dirname(__FILE__)+'/../test_helper'
 
 class SessionsControllerTest < ActionController::TestCase
 
+  def teardown
+    Session.current_login=@request.session[:login]
+  end
   def test_routes
     assert_routing "/session/new", :controller=>"sessions", :action=>"new"
     assert_recognizes({:controller=>"sessions",:action=>"create"}, :path=>"/session", :method=>"post")

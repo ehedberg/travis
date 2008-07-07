@@ -5,10 +5,12 @@ class TasksControllerTest < ActionController::TestCase
 
   def setup
     @request.session[:login]='fubar'
+    Session.current_login=@request.session[:login]
   end
 
   def teardown
     @request.session[:login]=nil
+    Session.current_login=@request.session[:login]
   end
 
   def test_create_ajax
@@ -259,7 +261,7 @@ class TasksControllerTest < ActionController::TestCase
     put :update, :id=>t.id, :task=>{"state"=>"start"}
     t = assigns(:task)
     assert_equal "in_progress", t.state
-    assert_not_nil t.login
+    assert_equal Session.current_login, t.login 
 
     put :update, :id=>t.id, :task=>{"state"=>"stop"}
     t = assigns(:task)
@@ -270,7 +272,7 @@ class TasksControllerTest < ActionController::TestCase
     put :update, :id=>t.id, :task=>{"state"=>"finish"}
     t = assigns(:task)
     assert_equal "complete", t.state
-    assert_not_nil t.login
+    assert_equal Session.current_login, t.login 
   end
 
   def test_relates_properly

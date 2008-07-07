@@ -253,12 +253,13 @@ class TasksControllerTest < ActionController::TestCase
     t = Task.new :title=>"My Title", :description=>"My Description"
     assert(t.save)
     assert_equal "new", t.state
+    assert_nil t.login
     assert_equal nil, t.login
 
     put :update, :id=>t.id, :task=>{"state"=>"start"}
     t = assigns(:task)
     assert_equal "in_progress", t.state
-    assert_equal session[:login], t.login
+    assert_not_nil t.login
 
     put :update, :id=>t.id, :task=>{"state"=>"stop"}
     t = assigns(:task)
@@ -269,7 +270,7 @@ class TasksControllerTest < ActionController::TestCase
     put :update, :id=>t.id, :task=>{"state"=>"finish"}
     t = assigns(:task)
     assert_equal "complete", t.state
-    assert_equal session[:login], t.login
+    assert_not_nil t.login
   end
 
   def test_relates_properly

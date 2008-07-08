@@ -11,6 +11,9 @@ class Release < ActiveRecord::Base
   def total_days
     iterations.map{|x|x.total_days}.sum
   end
+  def open_points
+    iterations.map{|x|x.open_points}.sum
+  end
   
   def start_date
     if has_iterations?

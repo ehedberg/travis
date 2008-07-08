@@ -11,6 +11,9 @@
 %h2
   Total swag
   =@release.total_points
+%h2
+  Remaining Scope
+  =@release.open_points
 =link_to "Plan Release" , planner_release_path(@release)
 
 %table#iterations

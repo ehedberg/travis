@@ -1,6 +1,9 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class StoryTest < ActiveSupport::TestCase
+  def setup
+    Session.current_login='fubar'
+  end
   def test_mnemonic
     s = Story.create(:nodule=>'ab -c ?.%   d', :title=>'balh')
     assert_not_nil s.mnemonic
@@ -385,6 +388,23 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :in_progress, s.current_state
   end
 
+  def test_audit_record
+    s = stories(:one)
+    assert_not_nil s.audit_records
+  end
 
+  def test_audit_record_on_create
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
+    assert s.save
+    assert !s.audit_records.empty?
+    r = s.audit_records.first
 
+    s = Story.find(s.id)
+    assert_equal s.audit_records.first, r
+
+    s.title="fubar_change"
+    assert s.save
+    assert_equal 3, s.audit_records.size
+    assert_match /title.*fubar_change/, s.audit_records.last.diff
+  end
 end

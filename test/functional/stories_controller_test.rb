@@ -166,6 +166,24 @@ class StoriesControllerTest < ActionController::TestCase
     end
     assert_select "a[href=#taskform][id=tasklink]"
   end
+
+  def test_show_history_link
+    assert_routing "/stories/1/history", {:action=>"history", :controller=>"stories", :id=>"1"}
+    get :show, :id=>stories(:one).id
+    assert assigns(:story)
+    assert_equal assigns(:story), stories(:one)
+    assert_template "show"
+    assert_select "a[href=#]"
+  end
+
+  def test_get_history
+    get :history, :id=>stories(:one).id
+    assert_response :success
+    assert_template "history"
+    assert assigns(:story)
+    assert_equal stories(:one), assigns(:story)
+  end
+  
   def test_update_fires_event
     story = stories(:one)
     story.tasks.clear

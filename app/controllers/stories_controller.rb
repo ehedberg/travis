@@ -9,8 +9,6 @@ class StoriesController < ApplicationController
     end
   end
 
-  def show
-  end
 
   def edit
     render :template=>"stories/form"
@@ -86,6 +84,9 @@ class StoriesController < ApplicationController
   def destroy
     Story.delete(@story.id)
     redirect_to(stories_path)
+  end
+  def history
+    
   end
   private
   def load_parent

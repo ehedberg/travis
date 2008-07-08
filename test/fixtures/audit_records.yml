@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  diff: test
+  login: fubar
+  story: one
+#
+two:
+  diff: test2
+  login: fubar
+  story: twoe

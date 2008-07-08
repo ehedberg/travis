@@ -1,13 +1,18 @@
 class Story < ActiveRecord::Base
   acts_as_state_machine :initial=>:new
+  has_many :audit_records
 
   validates_uniqueness_of :mnemonic
   has_and_belongs_to_many :tasks , 
     :before_add=>Proc.new{|s, t|  raise ActiveRecord::ActiveRecordError.new("Can't add a task to a passed story") if (s.current_state == :passed)}, 
     :after_add=>Proc.new{|s, t| s.task_changed! }, 
     :after_remove=>Proc.new{|s,t| s.task_changed!}
+  
+  before_create { |record| record.audit_records.build(:diff=>"Created story", :login=>Session.current_login ) }
+  
   after_create :set_mnemonic
 
+  before_update { |record| record.audit_records.build(:diff=>record.changes.inspect, :login=>Session.current_login ) }
 
   belongs_to :iteration
 

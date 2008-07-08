@@ -37,6 +37,18 @@
 =link_to "Add New Task", "#taskform", :id=>'tasklink'
 #taskform
   =render :partial=>'stories/ajax_task',:locals=>{:task=>Task.new(:title=>'New Task', :story_ids=>[@story.id])}
+=link_to("Show All", stories_path)
+|
+=link_to("Edit", edit_story_path(@story))
+|
+=link_to("Delete", { :id => @story.id }, :confirm => "Are you sure?", :method => :delete)
+|
+=link_to_function "Show History", nil, :update do |page|
+  -page.replace_html "history", :partial=>"stories/audit_record", :collection=>@story.audit_records
+  -page.insert_html :top,'history', '<tr><th>Login</th><th>Updated At</th><th>Diff</th></tr>'
+  -page.visual_effect :toggle_appear, 'history'
+  -page.visual_effect :highlight, 'history'
+%table#history{:style=>'display:none'}
 
 %table#tasks
   %caption Tasks
@@ -48,10 +60,6 @@
   #taskrows
     =render :partial=>"story_task", :collection=>@story.tasks
 
-  =link_to("Show All", stories_path)
-  |
-  =link_to("Edit", edit_story_path(@story))
-  |
-  =link_to("Delete", { :id => @story.id }, :confirm => "Are you sure?", :method => :delete)
+  
 %script
   new Control.Modal('tasklink', { opacity:0.6, fade:true, width:600, height:450});

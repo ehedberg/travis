@@ -1,0 +1,10 @@
+%h1
+  History for
+  ="\"" + h(@story.title) + "\""
+
+%table
+  %tr
+    %th Login
+    %th Update At
+    %th Diff
+  =render :partial=>"audit_record", :collection=>@story.audit_records

@@ -1,15 +1,23 @@
 class Release < ActiveRecord::Base
   has_many :iterations, :order=>"start_date asc"
   validates_length_of :title, :within=>1..75
+  has_many :stories, :through=>:iterations
   
   def self.current
     Iteration.current.release
   end
+  def swags_created_on(d)
+    stories.find(:all, :conditions=>['stories.created_at = ?', d]).map{|x| x.swag ? x.swag : 0.0}
+  end
+  def stories_passed_on(d)
+    s = stories.find(:all, :conditions=>['stories.state=\'passed\' and date(completed_at)=date(?)', d])
+    s.map{|x| x.swag ? x.swag : 0.0}
+  end
   def total_points
-    iterations.map{|x|x.total_points}.sum
+    @tswag||=stories.map(&:swag).compact.sum
   end
   def total_days
-    iterations.map{|x|x.total_days}.sum
+    @tdays||=iterations.map(&:total_days).compact.sum
   end
   def open_points
     iterations.map{|x|x.open_points}.sum

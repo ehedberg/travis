@@ -64,15 +64,15 @@ class ReleasesController < ApplicationController
     rel.total_days.times do |n| 
       d= (rel.start_date+n)
       days << d
-      points << (Story.connection.select_value("select sum(swag) from stories where iteration_id in ("+iters+") and state='passed' and date(completed_at)=date('%s')"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
-      scope << (Story.connection.select_value("select sum(swag) from stories where iteration_id in ("+iters+") and  date(created_at)=date('%s') and iteration_id=%d"%[d.to_s(:db), rel.id])|| 0).to_f
+      points << rel.stories_passed_on(d).sum if d <= Date.today
+      scope << rel.swags_created_on(d).sum
     end
     point_totals  = []
     points.each{|x| point_totals<< (x+(point_totals.last||0.0))}
     scope_totals= []
     scope.each{|x| scope_totals << (x+(scope_totals.last||0.0))}
     #add swags from stories defined outside the iteration (but included in this iteration) to element 0
-    outside_scope = rel.iterations.find(:all, :conditions=>['created_at < ? or created_at > ?', rel.start_date, rel.end_date]).map{|x|x.total_points}.compact.sum
+    outside_scope = rel.total_points - scope.sum
     scope_totals = scope_totals.map{|x| x+outside_scope}
 
     strdays= days.map{|x| x.to_s(:db)}

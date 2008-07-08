@@ -26,7 +26,7 @@ class StoriesController < ApplicationController
   end
 
   def do_search
-    @stories = Story.find(:all, :conditions=>params[:expr])
+    @stories = Story.find(:all, :conditions=>params[:expr], :include=>:iteration)
     @saved_search = SavedSearch.new(:query=>params[:expr], :query_type=>'Story')
     render :update do |page|
       unless @stories.empty?

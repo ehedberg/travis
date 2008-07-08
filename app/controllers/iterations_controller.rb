@@ -57,15 +57,16 @@ class IterationsController < ApplicationController
     iter.total_days.times do |n| 
       d= (iter.start_date+n)
       days << d
-      points << (Story.connection.select_value("select sum(swag) from stories where state='pass' and date(completed_at)=date('%s')"%d.to_s(:db))|| 0).to_f  if d <= Date.today 
-      scope << (Story.connection.select_value("select sum(swag) from stories where  date(created_at)=date('%s') and iteration_id=%d"%[d.to_s(:db), iter.id])|| 0).to_f
+      points << iter.stories_passed_on(d).sum  if d <= Date.today 
+      scope << iter.swags_created_on(d).sum 
     end
     point_totals  = []
     points.each{|x| point_totals<< (x+(point_totals.last||0.0))}
     scope_totals= []
     scope.each{|x| scope_totals << (x+(scope_totals.last||0.0))}
     #add swags from stories defined outside the iteration (but included in this iteration) to element 0
-    outside_scope = iter.stories.find(:all, :conditions=>['created_at < ? or created_at > ?', iter.start_date, iter.end_date]).map{|x|x.swag}.compact.sum
+    outside_scope = iter.total_points - scope.sum
+
     scope_totals = scope_totals.map{|x| x+outside_scope}
 
     strdays= days.map{|x| x.to_s(:db)}

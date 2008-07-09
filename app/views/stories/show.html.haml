@@ -6,6 +6,9 @@
   =h(@story.title)
   ="(%s)"%h(@story.mnemonic)
 %h2
+  Tags:
+  =h(@story.tags.join(', '))
+%h2
   Swag: 
   -if @story.swag
     =h @story.swag

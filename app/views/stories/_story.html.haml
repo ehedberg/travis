@@ -3,7 +3,7 @@
     =link_to(h(story.mnemonic), story_path(story))
   %td{:id=>"td_#{story.id}"}
     = link_to_function h(story.title), nil, :update do |page|
-      - page.replace_html "td_#{story.id}", simple_format(story.description)
+      - page.replace_html "td_#{story.id}", "<h3>#{h(story.title)}</h3><br/>"+markdown(h(story.description))
   %td
     %span{:id=>"swag_#{story.id}"}
       -if story.swag
@@ -19,7 +19,7 @@
   %td.centered
     =story.iteration.title if story.iteration
   %td
-    =story.tag_list.join(',')
+    =truncate(story.tag_list.join(','))
   %td.rctl
     =link_to("Show", story_path(story))
     =link_to("Edit", edit_story_path(story))

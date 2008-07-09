@@ -1,6 +1,9 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class TaskTest < ActiveSupport::TestCase
+  def setup
+    Session.current_login='fubar'
+  end
 
   def test_optimistic_locks
     t = Task.new({:title=>'fubar', :description=>'baz'})
@@ -103,4 +106,25 @@ class TaskTest < ActiveSupport::TestCase
     assert_equal "new", t.state
   end
 
+  def test_audit_record
+     t = Task.create :title=>"New Task Title", :description=>"New Task Description"
+     assert_not_nil t.audit_records
+  end
+ 
+  def test_audit_record_on_create
+     t = Task.create :title=>"New Task Title", :description=>"New Task Description"
+     assert t.save
+     assert !t.reload.audit_records.empty?
+     r = t.audit_records.first
+ 
+     t = Task.find(t.id)
+     assert_equal t.audit_records.first, r
+ 
+     t.title="fubar_change"
+     assert t.save
+     assert_equal 3, t.audit_records.size
+     assert_match /\ntitle: \n- New Task Title\n- fubar_change\n/, t.audit_records.last.diff
+  end
+
 end
+

@@ -1,7 +1,18 @@
 class Task < ActiveRecord::Base
   acts_as_state_machine :initial=>:new
-
+  has_many :audit_records, :as => :auditable
+  
   attr_protected :state
+
+  before_create { |record| record.audit_records.build(:diff=>{:self=>[:nonexistent, :existent]}.to_yaml, :login=>Session.current_login ) }
+  
+  before_update { |record| 
+    his = record.changes.dup
+    his.delete(:updated_at)
+    his.delete(:created_at)
+    r = record.audit_records.build(:diff=>his.to_yaml, :login=>Session.current_login ) 
+    raise "invalid audit record?" unless r.valid?
+  }
 
   state :new, :enter=> Proc.new{ |t| t.login = nil; t.task_changed!}
 

@@ -1,0 +1,7 @@
+%p
+  %h2
+    Tag it!
+  - form_remote_tag :url=>mass_tag_stories_path, :html=>{:method=>'post' , :id=>'masstagform'} do 
+    =hidden_field_tag 'ids[]', masstagform
+    =text_field_tag 'tags'
+    =submit_tag "Save"

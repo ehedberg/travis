@@ -58,6 +58,31 @@ class StoriesControllerTest < ActionController::TestCase
       end
     end
   end
+  def test_do_tag_search
+    s = stories(:one)
+    s.tag_list.add('abc')
+    s.save!
+
+    assert_routing({:path=>"/stories/do_search",:method=>'post'}, :controller=>'stories', :action=>'do_search')
+    xhr :post, :do_search, "tagsearch"=>"1", "expr"=>"abc"
+
+    assert_response :success
+    assert assigns(:stories)
+    ts = assigns(:stories)
+    ts.each do |t|
+      assert_equal  :new, t.current_state
+    end
+    assert_equal 1, ts.size
+    assert_select_rjs  'results'
+    assert_select_rjs :replace_html, "saveform" do
+      assert_select "form[action=?]", saved_searches_path do
+        assert_select 'input[type=hidden][id=saved_search_query]'
+        assert_select 'input[type=hidden][id=saved_search_query_type]'
+        assert_select 'input[type=text][id=saved_search_name]'
+        assert_select "input[type=submit]"
+      end
+    end
+  end
 
 
   def test_do_search
@@ -172,6 +197,32 @@ class StoriesControllerTest < ActionController::TestCase
     assert_select "a[href=#taskform][id=tasklink]"
   end
 
+  def test_mass_bigtag
+    s1 = stories(:one)
+    s2 = stories(:two)
+    assert_routing({:method=>'post', :path=>'/stories/mass_tag'}, :controller=>'stories', :action=>'mass_tag')
+    post :mass_tag, :ids=>[s2.id, s1.id], :tags=>'some dumb tag'
+    assert_response :success
+    s1.reload
+    s2.reload
+    assert_equal ["some dumb tag"], s1.tag_list
+    assert_equal ["some dumb tag"], s2.tag_list
+    
+  end
+  def test_mass_tag
+    s1 = stories(:one)
+    s2 = stories(:two)
+    s2.tag_list.add("foo")
+    s2.save!
+    assert_routing({:method=>'post', :path=>'/stories/mass_tag'}, :controller=>'stories', :action=>'mass_tag')
+    post :mass_tag, :ids=>[s2.id, s1.id], :tags=>'some, dumb, tag'
+    assert_response :success
+    s1.reload
+    s2.reload
+    assert_equal %w(some dumb tag), s1.tag_list
+    assert_equal %w(foo some dumb tag), s2.tag_list
+    
+  end
   def test_show_history_link
     assert_routing "/stories/1/history", {:action=>"history", :controller=>"stories", :id=>"1"}
     get :show, :id=>stories(:one).id

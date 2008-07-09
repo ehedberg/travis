@@ -18,6 +18,8 @@
     =story.nodule
   %td.centered
     =story.iteration.title if story.iteration
+  %td
+    =story.tag_list.join(',')
   %td.rctl
     =link_to("Show", story_path(story))
     =link_to("Edit", edit_story_path(story))

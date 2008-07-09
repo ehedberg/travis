@@ -7,6 +7,9 @@ class StoryTest < ActiveSupport::TestCase
   def test_story_taggable
     s= Story.find(:first)
     assert_equal [],s.tag_list
+    s.tag_list="Stupid, lame"
+    assert s.save
+    assert_equal %w(Stupid lame), s.tag_list
   end
   def test_mnemonic
     s = Story.create(:nodule=>'ab -c ?.%   d', :title=>'balh')

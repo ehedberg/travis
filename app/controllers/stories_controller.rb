@@ -26,8 +26,13 @@ class StoriesController < ApplicationController
   end
 
   def do_search
-    @stories = Story.find(:all, :conditions=>params[:expr], :include=>:iteration)
-    @saved_search = SavedSearch.new(:query=>params[:expr], :query_type=>'Story')
+    unless params[:tagsearch]
+      @stories = Story.find(:all, :conditions=>params[:expr], :include=>:iteration)
+      @saved_search = SavedSearch.new(:query=>params[:expr], :query_type=>'Story')
+    else
+      @stories = Story.find_tagged_with(params[:expr])
+      @saved_search = SavedSearch.new(:query=>params[:expr], :query_type=>'Story')
+    end
     render :update do |page|
       unless @stories.empty?
         page.replace_html 'results', :partial=>'stories/story_header'
@@ -37,6 +42,19 @@ class StoriesController < ApplicationController
       else
         page.replace_html 'results', '<p>No results found</p>'
       end
+    end
+  end
+
+  def mass_tag
+    ids = params[:ids]
+    s = Story.find(ids)
+    tags = params[:tags].split(',')
+    s.each do |x|
+      x.tag_list.add tags
+      x.save!
+    end
+    render :update do |page|
+      page.visual_effect :toggle_appear, 'masstagform'
     end
   end
 
@@ -88,8 +106,8 @@ class StoriesController < ApplicationController
   private
   def load_parent
     if params[:iteration_id]
-    @iteration = Iteration.find(params[:iteration_id]) if params[:iteration_id]
-    @story = @iteration.stories.find(params[:id]) if params[:id]
+      @iteration = Iteration.find(params[:iteration_id]) if params[:iteration_id]
+      @story = @iteration.stories.find(params[:id]) if params[:id]
     else
       @story = Story.find(params[:id]) if params[:id]
     end

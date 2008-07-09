@@ -17,13 +17,16 @@
   
 
 
--form_remote_tag :url=>do_search_stories_path, :html=>{:id=>'columnarForm', :method=>'post'}  do
-  %label 
-    Search Expression
+-form_remote_tag :url=>do_search_stories_path, :html=>{:id=>'columnarForm'}  do
+  %label Search Expression
   =text_field_tag 'expr', 'state=\'new\''
+  %label{:style=>'display:inline'} Tag search?
+  =check_box_tag "tagsearch" , 1, false, :style=>'display:inline'
   =submit_tag 'Search'
+%br/
+
 #summary
 
 %table#results
-
 #saveform
+#masstagform

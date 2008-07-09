@@ -32,7 +32,7 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   #map.connect ':controller/:action/:id'
   #map.connect ':controller/:action/:id.:format'
-  map.resources :stories, :collection=>{:search=>:get, :do_search=>:post}, :member=>{:update_swag=>:post, :history=>:get}
+  map.resources :stories, :collection=>{:search=>:get, :do_search=>:post, :mass_tag=>:post}, :member=>{:update_swag=>:post, :history=>:get}
   map.resources :saved_searches
   map.resources :tasks, :collection=>{:search=>:get, :do_search=>:post}
   map.resource :session

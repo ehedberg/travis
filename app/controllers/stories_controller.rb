@@ -39,6 +39,7 @@ class StoriesController < ApplicationController
         page.insert_html :bottom,  'results', :partial=>'stories/story', :collection=>@stories
         page.replace_html  'summary', "<p>#{@stories.size} stories</p>"
         page.replace_html 'saveform', :partial=>'shared/save_search_form'
+        page.replace_html 'masstagform', :partial=>'stories/masstagform', :object=>@stories.map(&:id).join(',')
       else
         page.replace_html 'results', '<p>No results found</p>'
       end
@@ -46,7 +47,7 @@ class StoriesController < ApplicationController
   end
 
   def mass_tag
-    ids = params[:ids]
+    ids = params[:ids].split(',')
     s = Story.find(ids)
     tags = params[:tags].split(',')
     s.each do |x|

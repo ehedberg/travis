@@ -14,6 +14,12 @@
 %h2
   Remaining Scope
   =@release.open_points
+%h2
+  Total Story Count
+  =@release.story_count
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+  Completed Story Count
+  =@release.completed_story_count
 =link_to "Plan Release" , planner_release_path(@release)
 
 %table#iterations

@@ -22,6 +22,13 @@ class Release < ActiveRecord::Base
   def open_points
     iterations.map{|x|x.open_points}.sum
   end
+  def story_count 
+    iterations.map{|x|x.story_count}.sum
+  end
+  
+  def completed_story_count 
+    iterations.map{|x|x.completed_story_count}.sum
+  end
   
   def start_date
     if has_iterations?

@@ -42,6 +42,12 @@ class Iteration < ActiveRecord::Base
   def total_days
     (end_date - start_date).numerator
   end
+  def story_count
+    stories.length
+  end
+  def completed_story_count
+    ActiveRecord::Base.connection.select_value("select count(*) from stories where iteration_id=#{id} and state='passed'").to_f
+  end
   def self.current
     t=Date.today
     Iteration.find(:first, :conditions=>["start_date<=? and end_date>=?", t, t])

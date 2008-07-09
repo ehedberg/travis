@@ -19,7 +19,7 @@ class IterationTest < ActiveSupport::TestCase
     assert_equal 3, iterations(:current).story_count
   end
   def test_completed_story_count
-    assert_equal 1, iterations(:current).completed_story_count
+    assert_equal 1.to_s, iterations(:current).completed_story_count.to_s
   end
   def test_velocity_w_nil_swag
     assert iterations(:current).stories.create(:title=>'nilswag')
@@ -58,7 +58,7 @@ class IterationTest < ActiveSupport::TestCase
   end
 
   def test_completed_points
-    assert_equal 2.3, iterations(:current).completed_points
+    assert_equal 2.3.to_s, iterations(:current).completed_points.to_s
   end
 
   def test_iter_days

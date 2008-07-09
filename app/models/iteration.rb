@@ -30,14 +30,14 @@ class Iteration < ActiveRecord::Base
   end
 
   def total_points
-    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id}").to_f
+    @totalp||=stories.find(:all).map{|x| x.swag ? x.swag : 0.0}.sum
   end
 
   def completed_points
-    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state='passed'").to_f
+    @completedp||=stories.find(:all, :conditions=>['state=?','passed']).map{|x| x.swag ? x.swag : 0.0}.sum
   end
   def open_points
-    ActiveRecord::Base.connection.select_value("select sum(swag) from stories where iteration_id=#{id} and state!='passed'").to_f
+    @openp||=stories.find(:all, :conditions=>['state!=?','passed']).map{|x| x.swag ? x.swag : 0.0}.sum
   end
   def total_days
     (end_date - start_date).numerator
@@ -46,7 +46,7 @@ class Iteration < ActiveRecord::Base
     stories.length
   end
   def completed_story_count
-    ActiveRecord::Base.connection.select_value("select count(*) from stories where iteration_id=#{id} and state='passed'").to_f
+    @compls||=stories.find(:all, :conditions=>['state=?','passed']).size
   end
   def self.current
     t=Date.today

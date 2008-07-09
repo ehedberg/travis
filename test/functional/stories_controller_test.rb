@@ -7,6 +7,11 @@ class StoriesControllerTest < ActionController::TestCase
      
   end
 
+  def test_fixtures
+    s = stories(:one)
+    assert_equal audit_records(:one), s.audit_records.first
+  end
+
   def teardown
     @request.session[:login]=nil
     Session.current_login=@request.session[:login]
@@ -171,18 +176,12 @@ class StoriesControllerTest < ActionController::TestCase
     assert_routing "/stories/1/history", {:action=>"history", :controller=>"stories", :id=>"1"}
     get :show, :id=>stories(:one).id
     assert assigns(:story)
+    assert_not_nil assigns(:story).audit_records
     assert_equal assigns(:story), stories(:one)
     assert_template "show"
     assert_select "a[href=#]"
   end
 
-  def test_get_history
-    get :history, :id=>stories(:one).id
-    assert_response :success
-    assert_template "history"
-    assert assigns(:story)
-    assert_equal stories(:one), assigns(:story)
-  end
   
   def test_update_fires_event
     story = stories(:one)
@@ -199,7 +198,7 @@ class StoriesControllerTest < ActionController::TestCase
     assert_equal "New title", new_story.title
     assert_equal "New Description", new_story.description
     assert_equal 9999.99, new_story.swag
-    assert_redirected_to stories_path
+    assert_redirected_to story_path(assigns(:story))
     assert_equal :failed, new_story.current_state
   end
 
@@ -210,7 +209,8 @@ class StoriesControllerTest < ActionController::TestCase
     assert_equal "New title", new_story.title
     assert_equal "New Description", new_story.description
     assert_equal 9999.99, new_story.swag
-    assert_redirected_to stories_path
+    assert assigns(:story)
+    assert_redirected_to story_path(assigns(:story))
     assert_not_equal :fubar, new_story.current_state
   end
 

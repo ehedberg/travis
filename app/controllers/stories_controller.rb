@@ -69,7 +69,7 @@ class StoriesController < ApplicationController
     action = params[:story].delete(:state)
     if @story.update_attributes(params[:story])
       @story.send("#{action}!".to_sym) if action
-      redirect_to(stories_path)
+      redirect_to story_path(@story)
     else
       render :template=>"stories/form"
     end
@@ -84,9 +84,6 @@ class StoriesController < ApplicationController
   def destroy
     Story.delete(@story.id)
     redirect_to(stories_path)
-  end
-  def history
-    
   end
   private
   def load_parent

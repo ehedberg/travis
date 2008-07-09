@@ -1,7 +1,11 @@
 %tr
   %td
-    =h(audit_record.login)
+    =audit_record.login
   %td
-    =h(audit_record.updated_at)
+    =audit_record.updated_at.to_s(:long)
   %td
-    =audit_record.diff
+    %ul
+      -audit_record.diff_to_hash.each do |k,v| 
+        %li
+          ="<span class=\"attr\">%s</span> was <span class=\"beforev\">'%s'</span> and became <span class=\"afterv\">'%s'</span>"%[k, v.first,v.last]
+

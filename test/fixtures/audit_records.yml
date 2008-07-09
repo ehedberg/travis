@@ -1,11 +1,14 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
 one:
-  diff: test
   login: fubar
   story: one
-#
+  diff: "--- \n\
+    :self: \n\
+    - :nonexistent\n\
+    - :existent\n"
 two:
-  diff: test2
   login: fubar
   story: twoe
+  diff: "--- \n\
+    :self: \n\
+    - :nonexistent\n\
+    - :existent\n"

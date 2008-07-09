@@ -5,6 +5,15 @@ border: 2px solid #00f;
 #storydesc ul {
   list-style-type: circle;
 }
+span.afterv {
+  color: orange;
+}
+span.beforev {
+  color: green;
+}
+span.attr {
+  color: blue;
+}
 #storydesc ol {
   list-style-type: decimal;
 }

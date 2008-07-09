@@ -4,6 +4,10 @@ class StoryTest < ActiveSupport::TestCase
   def setup
     Session.current_login='fubar'
   end
+  def test_story_taggable
+    s= Story.find(:first)
+    assert_equal [],s.tag_list
+  end
   def test_mnemonic
     s = Story.create(:nodule=>'ab -c ?.%   d', :title=>'balh')
     assert_not_nil s.mnemonic
@@ -405,6 +409,6 @@ class StoryTest < ActiveSupport::TestCase
     s.title="fubar_change"
     assert s.save
     assert_equal 3, s.audit_records.size
-    assert_match /title.*fubar_change/, s.audit_records.last.diff
+    assert_match /\ntitle: \n- Title\n- fubar_change\n/, s.audit_records.last.diff
   end
 end

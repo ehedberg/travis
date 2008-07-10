@@ -1,9 +1,12 @@
 %tr[story, cycle('odd', 'even')]
   %td
     =link_to(h(story.mnemonic), story_path(story))
-  %td{:id=>"td_#{story.id}"}
+  %td
     = link_to_function h(story.title), nil, :update do |page|
-      - page.replace_html "td_#{story.id}", "<h3>#{h(story.title)}</h3><br/>"+markdown(h(story.description))
+      - page.visual_effect :toggle_slide, "td_#{story.id}"
+
+    %div{:id=>"td_#{story.id}", :style=>'display:none'}
+      =markdown(story.description)
   %td
     %span{:id=>"swag_#{story.id}"}
       -if story.swag

@@ -4,6 +4,7 @@
   %td
     = link_to_function h(story.title), nil, :update do |page|
       - page.visual_effect :toggle_slide, "td_#{story.id}"
+      - page.visual_effect :highlight, "td_#{story.id}", :duration=>3
 
     %div{:id=>"td_#{story.id}", :style=>'display:none'}
       =markdown(story.description)

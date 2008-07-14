@@ -1,7 +1,6 @@
 --- 
 audit_records_1216065800: 
   updated_at: 2008-07-11 07:54:48
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -17,7 +16,6 @@ audit_records_1216065800:
   created_at: 2008-07-11 07:54:48
 audit_records_1216065610: 
   updated_at: 2008-07-10 07:58:38
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -33,7 +31,6 @@ audit_records_1216065610:
   created_at: 2008-07-10 07:58:38
 audit_records_1216065798: 
   updated_at: 2008-07-11 07:54:24
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -49,7 +46,6 @@ audit_records_1216065798:
   created_at: 2008-07-11 07:54:24
 audit_records_1216065801: 
   updated_at: 2008-07-11 07:54:59
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -65,7 +61,6 @@ audit_records_1216065801:
   created_at: 2008-07-11 07:54:59
 audit_records_1216065611: 
   updated_at: 2008-07-10 07:58:59
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -81,7 +76,6 @@ audit_records_1216065611:
   created_at: 2008-07-10 07:58:59
 audit_records_1216065799: 
   updated_at: 2008-07-11 07:54:36
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -97,7 +91,6 @@ audit_records_1216065799:
   created_at: 2008-07-11 07:54:36
 audit_records_1216065802: 
   updated_at: 2008-07-11 07:55:16
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -113,7 +106,6 @@ audit_records_1216065802:
   created_at: 2008-07-11 07:55:16
 audit_records_1216065612: 
   updated_at: 2008-07-10 07:59:37
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -138,7 +130,6 @@ audit_records_1216065612:
   created_at: 2008-07-10 07:59:37
 audit_records_1216065850: 
   updated_at: 2008-07-11 10:05:28
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -154,7 +145,6 @@ audit_records_1216065850:
   created_at: 2008-07-11 10:05:28
 audit_records_1216065660: 
   updated_at: 2008-07-10 11:06:05
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -170,7 +160,6 @@ audit_records_1216065660:
   created_at: 2008-07-10 11:06:05
 audit_records_1216065803: 
   updated_at: 2008-07-11 07:55:28
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -186,7 +175,6 @@ audit_records_1216065803:
   created_at: 2008-07-11 07:55:28
 audit_records_1216065613: 
   updated_at: 2008-07-10 08:00:10
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -202,7 +190,6 @@ audit_records_1216065613:
   created_at: 2008-07-10 08:00:10
 audit_records_1216065851: 
   updated_at: 2008-07-11 10:09:36
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -218,7 +205,6 @@ audit_records_1216065851:
   created_at: 2008-07-11 10:09:36
 audit_records_1216065661: 
   updated_at: 2008-07-10 11:15:08
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -234,7 +220,6 @@ audit_records_1216065661:
   created_at: 2008-07-10 11:15:08
 audit_records_1216065804: 
   updated_at: 2008-07-11 07:55:41
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -250,7 +235,6 @@ audit_records_1216065804:
   created_at: 2008-07-11 07:55:41
 audit_records_1216065614: 
   updated_at: 2008-07-10 08:00:39
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -266,7 +250,6 @@ audit_records_1216065614:
   created_at: 2008-07-10 08:00:39
 audit_records_1216065852: 
   updated_at: 2008-07-11 10:45:28
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -282,7 +265,6 @@ audit_records_1216065852:
   created_at: 2008-07-11 10:45:28
 audit_records_1216065662: 
   updated_at: 2008-07-10 11:24:25
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -298,7 +280,6 @@ audit_records_1216065662:
   created_at: 2008-07-10 11:24:25
 audit_records_1216065805: 
   updated_at: 2008-07-11 07:55:53
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -314,7 +295,6 @@ audit_records_1216065805:
   created_at: 2008-07-11 07:55:53
 audit_records_1216065615: 
   updated_at: 2008-07-10 08:01:00
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -330,7 +310,6 @@ audit_records_1216065615:
   created_at: 2008-07-10 08:01:00
 audit_records_1216065853: 
   updated_at: 2008-07-11 13:21:23
-  auditable_type: 
   diff: "--- \n\
     :self: \n\
     - :nonexistent\n\
@@ -341,7 +320,6 @@ audit_records_1216065853:
   created_at: 2008-07-11 13:21:23
 audit_records_1216065663: 
   updated_at: 2008-07-10 11:32:49
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -357,7 +335,6 @@ audit_records_1216065663:
   created_at: 2008-07-10 11:32:49
 audit_records_1216065806: 
   updated_at: 2008-07-11 07:56:04
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -373,7 +350,6 @@ audit_records_1216065806:
   created_at: 2008-07-11 07:56:04
 audit_records_1216065616: 
   updated_at: 2008-07-10 08:02:39
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -398,7 +374,6 @@ audit_records_1216065616:
   created_at: 2008-07-10 08:02:39
 audit_records_1216065854: 
   updated_at: 2008-07-11 13:21:23
-  auditable_type: 
   diff: |
     --- 
     nodule: 
@@ -435,7 +410,6 @@ audit_records_1216065854:
   created_at: 2008-07-11 13:21:23
 audit_records_1216065664: 
   updated_at: 2008-07-10 11:33:11
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -451,7 +425,6 @@ audit_records_1216065664:
   created_at: 2008-07-10 11:33:11
 audit_records_1216065807: 
   updated_at: 2008-07-11 07:56:15
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -467,7 +440,6 @@ audit_records_1216065807:
   created_at: 2008-07-11 07:56:15
 audit_records_1216065617: 
   updated_at: 2008-07-10 08:03:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -483,7 +455,6 @@ audit_records_1216065617:
   created_at: 2008-07-10 08:03:14
 audit_records_1216065855: 
   updated_at: 2008-07-11 14:36:42
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -499,7 +470,6 @@ audit_records_1216065855:
   created_at: 2008-07-11 14:36:42
 audit_records_1216065665: 
   updated_at: 2008-07-10 11:33:38
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -515,7 +485,6 @@ audit_records_1216065665:
   created_at: 2008-07-10 11:33:38
 audit_records_1216065808: 
   updated_at: 2008-07-11 07:56:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -531,7 +500,6 @@ audit_records_1216065808:
   created_at: 2008-07-11 07:56:31
 audit_records_1216065618: 
   updated_at: 2008-07-10 08:04:04
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -547,7 +515,6 @@ audit_records_1216065618:
   created_at: 2008-07-10 08:04:04
 audit_records_1216065856: 
   updated_at: 2008-07-11 14:38:05
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -563,7 +530,6 @@ audit_records_1216065856:
   created_at: 2008-07-11 14:38:05
 audit_records_1216065666: 
   updated_at: 2008-07-10 11:36:07
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -579,7 +545,6 @@ audit_records_1216065666:
   created_at: 2008-07-10 11:36:07
 audit_records_1216065809: 
   updated_at: 2008-07-11 07:57:01
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -595,7 +560,6 @@ audit_records_1216065809:
   created_at: 2008-07-11 07:57:01
 audit_records_1216065619: 
   updated_at: 2008-07-10 08:05:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -620,7 +584,6 @@ audit_records_1216065619:
   created_at: 2008-07-10 08:05:02
 audit_records_1216065857: 
   updated_at: 2008-07-11 15:30:39
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -636,7 +599,6 @@ audit_records_1216065857:
   created_at: 2008-07-11 15:30:39
 audit_records_1216065667: 
   updated_at: 2008-07-10 11:36:51
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -652,7 +614,6 @@ audit_records_1216065667:
   created_at: 2008-07-10 11:36:51
 audit_records_1216065858: 
   updated_at: 2008-07-14 09:50:49
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -668,7 +629,6 @@ audit_records_1216065858:
   created_at: 2008-07-14 09:50:49
 audit_records_1216065668: 
   updated_at: 2008-07-10 11:37:20
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -684,7 +644,6 @@ audit_records_1216065668:
   created_at: 2008-07-10 11:37:20
 audit_records_1216065859: 
   updated_at: 2008-07-14 09:54:20
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -700,7 +659,6 @@ audit_records_1216065859:
   created_at: 2008-07-14 09:54:20
 audit_records_1216065669: 
   updated_at: 2008-07-10 11:37:38
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -716,7 +674,6 @@ audit_records_1216065669:
   created_at: 2008-07-10 11:37:38
 audit_records_1216065910: 
   updated_at: 2008-07-14 11:47:21
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -732,7 +689,6 @@ audit_records_1216065910:
   created_at: 2008-07-14 11:47:21
 audit_records_1216065720: 
   updated_at: 2008-07-10 14:50:24
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -748,7 +704,6 @@ audit_records_1216065720:
   created_at: 2008-07-10 14:50:24
 audit_records_1216065530: 
   updated_at: 2008-07-09 13:59:25
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -764,7 +719,6 @@ audit_records_1216065530:
   created_at: 2008-07-09 13:59:25
 audit_records_1216065911: 
   updated_at: 2008-07-14 11:47:30
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -780,7 +734,6 @@ audit_records_1216065911:
   created_at: 2008-07-14 11:47:30
 audit_records_1216065721: 
   updated_at: 2008-07-10 14:50:56
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -796,7 +749,6 @@ audit_records_1216065721:
   created_at: 2008-07-10 14:50:56
 audit_records_1216065531: 
   updated_at: 2008-07-09 13:59:38
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -824,7 +776,6 @@ audit_records_1216065531:
   created_at: 2008-07-09 13:59:38
 audit_records_1216065912: 
   updated_at: 2008-07-14 11:47:42
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -840,7 +791,6 @@ audit_records_1216065912:
   created_at: 2008-07-14 11:47:42
 audit_records_1216065722: 
   updated_at: 2008-07-10 14:51:12
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -856,7 +806,6 @@ audit_records_1216065722:
   created_at: 2008-07-10 14:51:12
 audit_records_1216065532: 
   updated_at: 2008-07-09 14:01:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -881,7 +830,6 @@ audit_records_1216065532:
   created_at: 2008-07-09 14:01:02
 audit_records_1216065770: 
   updated_at: 2008-07-11 07:44:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -897,7 +845,6 @@ audit_records_1216065770:
   created_at: 2008-07-11 07:44:31
 audit_records_1216065580: 
   updated_at: 2008-07-09 14:50:28
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -913,7 +860,6 @@ audit_records_1216065580:
   created_at: 2008-07-09 14:50:28
 audit_records_1216065913: 
   updated_at: 2008-07-14 11:47:53
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -929,7 +875,6 @@ audit_records_1216065913:
   created_at: 2008-07-14 11:47:53
 audit_records_1216065723: 
   updated_at: 2008-07-10 14:51:28
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -945,7 +890,6 @@ audit_records_1216065723:
   created_at: 2008-07-10 14:51:28
 audit_records_1216065533: 
   updated_at: 2008-07-09 14:02:04
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -972,7 +916,6 @@ audit_records_1216065533:
   created_at: 2008-07-09 14:02:04
 audit_records_1216065771: 
   updated_at: 2008-07-11 07:44:44
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -988,7 +931,6 @@ audit_records_1216065771:
   created_at: 2008-07-11 07:44:44
 audit_records_1216065581: 
   updated_at: 2008-07-09 14:50:45
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1004,7 +946,6 @@ audit_records_1216065581:
   created_at: 2008-07-09 14:50:45
 audit_records_1216065914: 
   updated_at: 2008-07-14 11:48:18
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1020,7 +961,6 @@ audit_records_1216065914:
   created_at: 2008-07-14 11:48:18
 audit_records_1216065724: 
   updated_at: 2008-07-10 14:51:51
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1036,7 +976,6 @@ audit_records_1216065724:
   created_at: 2008-07-10 14:51:51
 audit_records_1216065534: 
   updated_at: 2008-07-09 14:03:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1062,7 +1001,6 @@ audit_records_1216065534:
   created_at: 2008-07-09 14:03:31
 audit_records_1216065772: 
   updated_at: 2008-07-11 07:45:21
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1078,7 +1016,6 @@ audit_records_1216065772:
   created_at: 2008-07-11 07:45:21
 audit_records_1216065582: 
   updated_at: 2008-07-09 14:51:32
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1094,7 +1031,6 @@ audit_records_1216065582:
   created_at: 2008-07-09 14:51:32
 audit_records_1216065915: 
   updated_at: 2008-07-14 11:48:19
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1110,7 +1046,6 @@ audit_records_1216065915:
   created_at: 2008-07-14 11:48:19
 audit_records_1216065725: 
   updated_at: 2008-07-10 14:52:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1126,7 +1061,6 @@ audit_records_1216065725:
   created_at: 2008-07-10 14:52:02
 audit_records_1216065535: 
   updated_at: 2008-07-09 14:25:11
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1142,7 +1076,6 @@ audit_records_1216065535:
   created_at: 2008-07-09 14:25:11
 audit_records_1216065773: 
   updated_at: 2008-07-11 07:45:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1158,7 +1091,6 @@ audit_records_1216065773:
   created_at: 2008-07-11 07:45:31
 audit_records_1216065583: 
   updated_at: 2008-07-09 14:52:05
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1174,7 +1106,6 @@ audit_records_1216065583:
   created_at: 2008-07-09 14:52:05
 audit_records_1216065916: 
   updated_at: 2008-07-14 12:53:20
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1198,7 +1129,6 @@ audit_records_1216065916:
   created_at: 2008-07-14 12:53:20
 audit_records_1216065726: 
   updated_at: 2008-07-10 14:52:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1214,7 +1144,6 @@ audit_records_1216065726:
   created_at: 2008-07-10 14:52:14
 audit_records_1216065536: 
   updated_at: 2008-07-09 14:30:31
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -1224,7 +1153,6 @@ audit_records_1216065536:
   created_at: 2008-07-09 14:30:31
 audit_records_1216065774: 
   updated_at: 2008-07-11 07:46:06
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1240,7 +1168,6 @@ audit_records_1216065774:
   created_at: 2008-07-11 07:46:06
 audit_records_1216065584: 
   updated_at: 2008-07-09 14:54:39
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1256,7 +1183,6 @@ audit_records_1216065584:
   created_at: 2008-07-09 14:54:39
 audit_records_1216065917: 
   updated_at: 2008-07-14 13:00:09
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1279,7 +1205,6 @@ audit_records_1216065917:
   created_at: 2008-07-14 13:00:09
 audit_records_1216065727: 
   updated_at: 2008-07-10 15:24:13
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1295,7 +1220,6 @@ audit_records_1216065727:
   created_at: 2008-07-10 15:24:13
 audit_records_1216065537: 
   updated_at: 2008-07-09 14:32:32
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -1305,7 +1229,6 @@ audit_records_1216065537:
   created_at: 2008-07-09 14:32:32
 audit_records_1216065775: 
   updated_at: 2008-07-11 07:46:18
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1321,7 +1244,6 @@ audit_records_1216065775:
   created_at: 2008-07-11 07:46:18
 audit_records_1216065585: 
   updated_at: 2008-07-09 14:55:34
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1337,7 +1259,6 @@ audit_records_1216065585:
   created_at: 2008-07-09 14:55:34
 audit_records_1216065918: 
   updated_at: 2008-07-14 13:00:22
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1365,7 +1286,6 @@ audit_records_1216065918:
   created_at: 2008-07-14 13:00:22
 audit_records_1216065728: 
   updated_at: 2008-07-10 15:26:15
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1381,7 +1301,6 @@ audit_records_1216065728:
   created_at: 2008-07-10 15:26:15
 audit_records_1216065538: 
   updated_at: 2008-07-09 14:33:59
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -1391,7 +1310,6 @@ audit_records_1216065538:
   created_at: 2008-07-09 14:33:59
 audit_records_1216065776: 
   updated_at: 2008-07-11 07:46:47
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1407,7 +1325,6 @@ audit_records_1216065776:
   created_at: 2008-07-11 07:46:47
 audit_records_1216065586: 
   updated_at: 2008-07-09 15:15:00
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -1417,7 +1334,6 @@ audit_records_1216065586:
   created_at: 2008-07-09 15:15:00
 audit_records_1216065919: 
   updated_at: 2008-07-14 13:00:30
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1446,7 +1362,6 @@ audit_records_1216065919:
   created_at: 2008-07-14 13:00:30
 audit_records_1216065729: 
   updated_at: 2008-07-10 15:26:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1462,7 +1377,6 @@ audit_records_1216065729:
   created_at: 2008-07-10 15:26:31
 audit_records_1216065539: 
   updated_at: 2008-07-09 14:34:45
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -1472,7 +1386,6 @@ audit_records_1216065539:
   created_at: 2008-07-09 14:34:45
 audit_records_1216065777: 
   updated_at: 2008-07-11 07:47:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1488,7 +1401,6 @@ audit_records_1216065777:
   created_at: 2008-07-11 07:47:02
 audit_records_1216065587: 
   updated_at: 2008-07-09 15:17:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1504,7 +1416,6 @@ audit_records_1216065587:
   created_at: 2008-07-09 15:17:02
 audit_records_1216065778: 
   updated_at: 2008-07-11 07:47:26
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1520,7 +1431,6 @@ audit_records_1216065778:
   created_at: 2008-07-11 07:47:26
 audit_records_1216065588: 
   updated_at: 2008-07-09 15:18:27
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1536,7 +1446,6 @@ audit_records_1216065588:
   created_at: 2008-07-09 15:18:27
 audit_records_1216065779: 
   updated_at: 2008-07-11 07:47:37
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1552,7 +1461,6 @@ audit_records_1216065779:
   created_at: 2008-07-11 07:47:37
 audit_records_1216065589: 
   updated_at: 2008-07-09 15:19:40
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1568,7 +1476,6 @@ audit_records_1216065589:
   created_at: 2008-07-09 15:19:40
 audit_records_1216065830: 
   updated_at: 2008-07-11 08:03:11
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1584,7 +1491,6 @@ audit_records_1216065830:
   created_at: 2008-07-11 08:03:11
 audit_records_1216065640: 
   updated_at: 2008-07-10 08:34:23
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1600,7 +1506,6 @@ audit_records_1216065640:
   created_at: 2008-07-10 08:34:23
 audit_records_1216065831: 
   updated_at: 2008-07-11 08:03:22
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1616,7 +1521,6 @@ audit_records_1216065831:
   created_at: 2008-07-11 08:03:22
 audit_records_1216065641: 
   updated_at: 2008-07-10 08:36:38
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1632,7 +1536,6 @@ audit_records_1216065641:
   created_at: 2008-07-10 08:36:38
 audit_records_1216065832: 
   updated_at: 2008-07-11 08:03:40
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1648,7 +1551,6 @@ audit_records_1216065832:
   created_at: 2008-07-11 08:03:40
 audit_records_1216065642: 
   updated_at: 2008-07-10 08:37:26
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1664,7 +1566,6 @@ audit_records_1216065642:
   created_at: 2008-07-10 08:37:26
 audit_records_1216065880: 
   updated_at: 2008-07-14 10:38:12
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1680,7 +1581,6 @@ audit_records_1216065880:
   created_at: 2008-07-14 10:38:12
 audit_records_1216065690: 
   updated_at: 2008-07-10 12:41:11
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1696,7 +1596,6 @@ audit_records_1216065690:
   created_at: 2008-07-10 12:41:11
 audit_records_1216065833: 
   updated_at: 2008-07-11 08:03:51
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1712,7 +1611,6 @@ audit_records_1216065833:
   created_at: 2008-07-11 08:03:51
 audit_records_1216065643: 
   updated_at: 2008-07-10 08:39:22
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1728,7 +1626,6 @@ audit_records_1216065643:
   created_at: 2008-07-10 08:39:22
 audit_records_1216065881: 
   updated_at: 2008-07-14 10:38:24
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1744,7 +1641,6 @@ audit_records_1216065881:
   created_at: 2008-07-14 10:38:24
 audit_records_1216065691: 
   updated_at: 2008-07-10 12:41:30
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1760,7 +1656,6 @@ audit_records_1216065691:
   created_at: 2008-07-10 12:41:30
 audit_records_1216065834: 
   updated_at: 2008-07-11 08:04:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1776,7 +1671,6 @@ audit_records_1216065834:
   created_at: 2008-07-11 08:04:02
 audit_records_1216065644: 
   updated_at: 2008-07-10 08:39:48
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1792,7 +1686,6 @@ audit_records_1216065644:
   created_at: 2008-07-10 08:39:48
 audit_records_1216065882: 
   updated_at: 2008-07-14 10:38:39
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1808,7 +1701,6 @@ audit_records_1216065882:
   created_at: 2008-07-14 10:38:39
 audit_records_1216065692: 
   updated_at: 2008-07-10 12:42:17
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1824,7 +1716,6 @@ audit_records_1216065692:
   created_at: 2008-07-10 12:42:17
 audit_records_1216065835: 
   updated_at: 2008-07-11 08:04:13
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1840,7 +1731,6 @@ audit_records_1216065835:
   created_at: 2008-07-11 08:04:13
 audit_records_1216065645: 
   updated_at: 2008-07-10 08:40:10
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1856,7 +1746,6 @@ audit_records_1216065645:
   created_at: 2008-07-10 08:40:10
 audit_records_1216065883: 
   updated_at: 2008-07-14 10:38:54
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1872,7 +1761,6 @@ audit_records_1216065883:
   created_at: 2008-07-14 10:38:54
 audit_records_1216065693: 
   updated_at: 2008-07-10 12:42:53
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1888,7 +1776,6 @@ audit_records_1216065693:
   created_at: 2008-07-10 12:42:53
 audit_records_1216065836: 
   updated_at: 2008-07-11 08:04:22
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1904,7 +1791,6 @@ audit_records_1216065836:
   created_at: 2008-07-11 08:04:22
 audit_records_1216065646: 
   updated_at: 2008-07-10 08:41:10
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1920,7 +1806,6 @@ audit_records_1216065646:
   created_at: 2008-07-10 08:41:10
 audit_records_1216065884: 
   updated_at: 2008-07-14 10:39:23
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1936,7 +1821,6 @@ audit_records_1216065884:
   created_at: 2008-07-14 10:39:23
 audit_records_1216065694: 
   updated_at: 2008-07-10 12:43:07
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1952,7 +1836,6 @@ audit_records_1216065694:
   created_at: 2008-07-10 12:43:07
 audit_records_1216065837: 
   updated_at: 2008-07-11 08:04:32
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1968,7 +1851,6 @@ audit_records_1216065837:
   created_at: 2008-07-11 08:04:32
 audit_records_1216065647: 
   updated_at: 2008-07-10 08:41:22
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -1984,7 +1866,6 @@ audit_records_1216065647:
   created_at: 2008-07-10 08:41:22
 audit_records_1216065885: 
   updated_at: 2008-07-14 10:39:37
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2000,7 +1881,6 @@ audit_records_1216065885:
   created_at: 2008-07-14 10:39:37
 audit_records_1216065695: 
   updated_at: 2008-07-10 12:43:29
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2016,7 +1896,6 @@ audit_records_1216065695:
   created_at: 2008-07-10 12:43:29
 audit_records_1216065838: 
   updated_at: 2008-07-11 08:04:41
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2032,7 +1911,6 @@ audit_records_1216065838:
   created_at: 2008-07-11 08:04:41
 audit_records_1216065648: 
   updated_at: 2008-07-10 08:41:57
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2048,7 +1926,6 @@ audit_records_1216065648:
   created_at: 2008-07-10 08:41:57
 audit_records_1216065886: 
   updated_at: 2008-07-14 10:39:48
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2064,7 +1941,6 @@ audit_records_1216065886:
   created_at: 2008-07-14 10:39:48
 audit_records_1216065696: 
   updated_at: 2008-07-10 12:43:44
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2080,7 +1956,6 @@ audit_records_1216065696:
   created_at: 2008-07-10 12:43:44
 audit_records_1216065839: 
   updated_at: 2008-07-11 08:04:56
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2096,7 +1971,6 @@ audit_records_1216065839:
   created_at: 2008-07-11 08:04:56
 audit_records_1216065649: 
   updated_at: 2008-07-10 08:42:22
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2112,7 +1986,6 @@ audit_records_1216065649:
   created_at: 2008-07-10 08:42:22
 audit_records_1216065887: 
   updated_at: 2008-07-14 10:40:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2128,7 +2001,6 @@ audit_records_1216065887:
   created_at: 2008-07-14 10:40:02
 audit_records_1216065697: 
   updated_at: 2008-07-10 12:44:09
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2144,7 +2016,6 @@ audit_records_1216065697:
   created_at: 2008-07-10 12:44:09
 audit_records_1216065700: 
   updated_at: 2008-07-10 12:49:20
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2160,7 +2031,6 @@ audit_records_1216065700:
   created_at: 2008-07-10 12:49:20
 audit_records_1216065888: 
   updated_at: 2008-07-14 10:40:35
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2176,7 +2046,6 @@ audit_records_1216065888:
   created_at: 2008-07-14 10:40:35
 audit_records_1216065698: 
   updated_at: 2008-07-10 12:45:11
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2192,7 +2061,6 @@ audit_records_1216065698:
   created_at: 2008-07-10 12:45:11
 audit_records_1216065701: 
   updated_at: 2008-07-10 12:49:36
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2208,7 +2076,6 @@ audit_records_1216065701:
   created_at: 2008-07-10 12:49:36
 audit_records_1216065889: 
   updated_at: 2008-07-14 10:40:55
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2224,7 +2091,6 @@ audit_records_1216065889:
   created_at: 2008-07-14 10:40:55
 audit_records_1216065699: 
   updated_at: 2008-07-10 12:48:55
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2240,7 +2106,6 @@ audit_records_1216065699:
   created_at: 2008-07-10 12:48:55
 audit_records_1216065702: 
   updated_at: 2008-07-10 12:50:08
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2256,7 +2121,6 @@ audit_records_1216065702:
   created_at: 2008-07-10 12:50:08
 audit_records_1216065940: 
   updated_at: 2008-07-14 14:09:49
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2275,7 +2139,6 @@ audit_records_1216065940:
   created_at: 2008-07-14 14:09:49
 audit_records_1216065750: 
   updated_at: 2008-07-10 15:35:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2291,7 +2154,6 @@ audit_records_1216065750:
   created_at: 2008-07-10 15:35:14
 audit_records_1216065560: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2301,7 +2163,6 @@ audit_records_1216065560:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065703: 
   updated_at: 2008-07-10 12:50:24
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2317,7 +2178,6 @@ audit_records_1216065703:
   created_at: 2008-07-10 12:50:24
 audit_records_1216065941: 
   updated_at: 2008-07-14 14:10:00
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2336,7 +2196,6 @@ audit_records_1216065941:
   created_at: 2008-07-14 14:10:00
 audit_records_1216065751: 
   updated_at: 2008-07-10 15:35:28
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2352,7 +2211,6 @@ audit_records_1216065751:
   created_at: 2008-07-10 15:35:28
 audit_records_1216065561: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2362,7 +2220,6 @@ audit_records_1216065561:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065704: 
   updated_at: 2008-07-10 12:50:36
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2378,7 +2235,6 @@ audit_records_1216065704:
   created_at: 2008-07-10 12:50:36
 audit_records_1216065942: 
   updated_at: 2008-07-14 14:10:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2397,7 +2253,6 @@ audit_records_1216065942:
   created_at: 2008-07-14 14:10:14
 audit_records_1216065752: 
   updated_at: 2008-07-10 15:36:29
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2413,7 +2268,6 @@ audit_records_1216065752:
   created_at: 2008-07-10 15:36:29
 audit_records_1216065562: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2423,7 +2277,6 @@ audit_records_1216065562:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065705: 
   updated_at: 2008-07-10 12:50:48
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2439,7 +2292,6 @@ audit_records_1216065705:
   created_at: 2008-07-10 12:50:48
 audit_records_1216065943: 
   updated_at: 2008-07-14 14:10:27
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2458,7 +2310,6 @@ audit_records_1216065943:
   created_at: 2008-07-14 14:10:27
 audit_records_1216065753: 
   updated_at: 2008-07-10 15:36:42
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2474,7 +2325,6 @@ audit_records_1216065753:
   created_at: 2008-07-10 15:36:42
 audit_records_1216065563: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2484,7 +2334,6 @@ audit_records_1216065563:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065706: 
   updated_at: 2008-07-10 12:56:05
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2500,7 +2349,6 @@ audit_records_1216065706:
   created_at: 2008-07-10 12:56:05
 audit_records_1216065944: 
   updated_at: 2008-07-14 14:10:41
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2519,7 +2367,6 @@ audit_records_1216065944:
   created_at: 2008-07-14 14:10:41
 audit_records_1216065754: 
   updated_at: 2008-07-10 15:36:59
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2535,7 +2382,6 @@ audit_records_1216065754:
   created_at: 2008-07-10 15:36:59
 audit_records_1216065564: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2545,7 +2391,6 @@ audit_records_1216065564:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065707: 
   updated_at: 2008-07-10 13:55:27
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2576,7 +2421,6 @@ audit_records_1216065707:
   created_at: 2008-07-10 13:55:27
 audit_records_1216065945: 
   updated_at: 2008-07-14 14:10:45
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2586,7 +2430,6 @@ audit_records_1216065945:
   created_at: 2008-07-14 14:10:45
 audit_records_1216065755: 
   updated_at: 2008-07-10 15:37:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2602,7 +2445,6 @@ audit_records_1216065755:
   created_at: 2008-07-10 15:37:14
 audit_records_1216065565: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2612,7 +2454,6 @@ audit_records_1216065565:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065708: 
   updated_at: 2008-07-10 14:04:36
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2632,7 +2473,6 @@ audit_records_1216065708:
   created_at: 2008-07-10 14:04:36
 audit_records_1216065946: 
   updated_at: 2008-07-14 14:10:45
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2648,7 +2488,6 @@ audit_records_1216065946:
   created_at: 2008-07-14 14:10:45
 audit_records_1216065756: 
   updated_at: 2008-07-10 15:37:55
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2664,7 +2503,6 @@ audit_records_1216065756:
   created_at: 2008-07-10 15:37:55
 audit_records_1216065566: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2674,7 +2512,6 @@ audit_records_1216065566:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065709: 
   updated_at: 2008-07-10 14:05:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2690,7 +2527,6 @@ audit_records_1216065709:
   created_at: 2008-07-10 14:05:02
 audit_records_1216065947: 
   updated_at: 2008-07-14 14:10:45
-  auditable_type: 
   diff: |
     --- 
     completed_at: 
@@ -2706,7 +2542,6 @@ audit_records_1216065947:
   created_at: 2008-07-14 14:10:45
 audit_records_1216065757: 
   updated_at: 2008-07-10 15:44:43
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2722,7 +2557,6 @@ audit_records_1216065757:
   created_at: 2008-07-10 15:44:43
 audit_records_1216065567: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2732,7 +2566,6 @@ audit_records_1216065567:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065948: 
   updated_at: 2008-07-14 14:11:23
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2751,7 +2584,6 @@ audit_records_1216065948:
   created_at: 2008-07-14 14:11:23
 audit_records_1216065758: 
   updated_at: 2008-07-10 15:53:38
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2767,7 +2599,6 @@ audit_records_1216065758:
   created_at: 2008-07-10 15:53:38
 audit_records_1216065568: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2777,7 +2608,6 @@ audit_records_1216065568:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065949: 
   updated_at: 2008-07-14 14:11:40
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2796,7 +2626,6 @@ audit_records_1216065949:
   created_at: 2008-07-14 14:11:40
 audit_records_1216065759: 
   updated_at: 2008-07-10 15:54:20
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2812,7 +2641,6 @@ audit_records_1216065759:
   created_at: 2008-07-10 15:54:20
 audit_records_1216065569: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -2822,7 +2650,6 @@ audit_records_1216065569:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065620: 
   updated_at: 2008-07-10 08:05:27
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2845,7 +2672,6 @@ audit_records_1216065620:
   created_at: 2008-07-10 08:05:27
 audit_records_1216065810: 
   updated_at: 2008-07-11 07:57:11
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2861,7 +2687,6 @@ audit_records_1216065810:
   created_at: 2008-07-11 07:57:11
 audit_records_1216065811: 
   updated_at: 2008-07-11 07:57:22
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2877,7 +2702,6 @@ audit_records_1216065811:
   created_at: 2008-07-11 07:57:22
 audit_records_1216065621: 
   updated_at: 2008-07-10 08:06:43
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2900,7 +2724,6 @@ audit_records_1216065621:
   created_at: 2008-07-10 08:06:43
 audit_records_1216065812: 
   updated_at: 2008-07-11 07:57:49
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2916,7 +2739,6 @@ audit_records_1216065812:
   created_at: 2008-07-11 07:57:49
 audit_records_1216065622: 
   updated_at: 2008-07-10 08:07:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2937,7 +2759,6 @@ audit_records_1216065622:
   created_at: 2008-07-10 08:07:31
 audit_records_1216065860: 
   updated_at: 2008-07-14 10:00:04
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2953,7 +2774,6 @@ audit_records_1216065860:
   created_at: 2008-07-14 10:00:04
 audit_records_1216065670: 
   updated_at: 2008-07-10 11:37:58
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2969,7 +2789,6 @@ audit_records_1216065670:
   created_at: 2008-07-10 11:37:58
 audit_records_1216065813: 
   updated_at: 2008-07-11 07:58:05
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -2985,7 +2804,6 @@ audit_records_1216065813:
   created_at: 2008-07-11 07:58:05
 audit_records_1216065623: 
   updated_at: 2008-07-10 08:08:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3001,7 +2819,6 @@ audit_records_1216065623:
   created_at: 2008-07-10 08:08:14
 audit_records_1216065861: 
   updated_at: 2008-07-14 10:00:44
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3017,7 +2834,6 @@ audit_records_1216065861:
   created_at: 2008-07-14 10:00:44
 audit_records_1216065671: 
   updated_at: 2008-07-10 11:38:41
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3033,7 +2849,6 @@ audit_records_1216065671:
   created_at: 2008-07-10 11:38:41
 audit_records_1216065814: 
   updated_at: 2008-07-11 07:58:19
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3049,7 +2864,6 @@ audit_records_1216065814:
   created_at: 2008-07-11 07:58:19
 audit_records_1216065624: 
   updated_at: 2008-07-10 08:08:33
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3065,7 +2879,6 @@ audit_records_1216065624:
   created_at: 2008-07-10 08:08:33
 audit_records_1216065862: 
   updated_at: 2008-07-14 10:01:13
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3081,7 +2894,6 @@ audit_records_1216065862:
   created_at: 2008-07-14 10:01:13
 audit_records_1216065672: 
   updated_at: 2008-07-10 11:41:10
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3097,7 +2909,6 @@ audit_records_1216065672:
   created_at: 2008-07-10 11:41:10
 audit_records_1216065815: 
   updated_at: 2008-07-11 07:59:53
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3113,7 +2924,6 @@ audit_records_1216065815:
   created_at: 2008-07-11 07:59:53
 audit_records_1216065625: 
   updated_at: 2008-07-10 08:08:48
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3129,7 +2939,6 @@ audit_records_1216065625:
   created_at: 2008-07-10 08:08:48
 audit_records_1216065863: 
   updated_at: 2008-07-14 10:01:56
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3145,7 +2954,6 @@ audit_records_1216065863:
   created_at: 2008-07-14 10:01:56
 audit_records_1216065673: 
   updated_at: 2008-07-10 11:44:03
-  auditable_type: 
   diff: "--- \n\
     :self: \n\
     - :nonexistent\n\
@@ -3156,7 +2964,6 @@ audit_records_1216065673:
   created_at: 2008-07-10 11:44:03
 audit_records_1216065816: 
   updated_at: 2008-07-11 08:00:10
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3172,7 +2979,6 @@ audit_records_1216065816:
   created_at: 2008-07-11 08:00:10
 audit_records_1216065626: 
   updated_at: 2008-07-10 08:09:08
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3188,7 +2994,6 @@ audit_records_1216065626:
   created_at: 2008-07-10 08:09:08
 audit_records_1216065864: 
   updated_at: 2008-07-14 10:02:24
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3204,7 +3009,6 @@ audit_records_1216065864:
   created_at: 2008-07-14 10:02:24
 audit_records_1216065674: 
   updated_at: 2008-07-10 11:44:03
-  auditable_type: 
   diff: |
     --- 
     nodule: 
@@ -3242,7 +3046,6 @@ audit_records_1216065674:
   created_at: 2008-07-10 11:44:03
 audit_records_1216065817: 
   updated_at: 2008-07-11 08:00:23
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3258,7 +3061,6 @@ audit_records_1216065817:
   created_at: 2008-07-11 08:00:23
 audit_records_1216065627: 
   updated_at: 2008-07-10 08:10:37
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3274,7 +3076,6 @@ audit_records_1216065627:
   created_at: 2008-07-10 08:10:37
 audit_records_1216065865: 
   updated_at: 2008-07-14 10:03:19
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3290,7 +3091,6 @@ audit_records_1216065865:
   created_at: 2008-07-14 10:03:19
 audit_records_1216065675: 
   updated_at: 2008-07-10 11:44:23
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3309,7 +3109,6 @@ audit_records_1216065675:
   created_at: 2008-07-10 11:44:23
 audit_records_1216065818: 
   updated_at: 2008-07-11 08:00:36
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3325,7 +3124,6 @@ audit_records_1216065818:
   created_at: 2008-07-11 08:00:36
 audit_records_1216065628: 
   updated_at: 2008-07-10 08:11:10
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3341,7 +3139,6 @@ audit_records_1216065628:
   created_at: 2008-07-10 08:11:10
 audit_records_1216065866: 
   updated_at: 2008-07-14 10:04:48
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3357,7 +3154,6 @@ audit_records_1216065866:
   created_at: 2008-07-14 10:04:48
 audit_records_1216065676: 
   updated_at: 2008-07-10 11:45:24
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3373,7 +3169,6 @@ audit_records_1216065676:
   created_at: 2008-07-10 11:45:24
 audit_records_1216065819: 
   updated_at: 2008-07-11 08:00:47
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3389,7 +3184,6 @@ audit_records_1216065819:
   created_at: 2008-07-11 08:00:47
 audit_records_1216065629: 
   updated_at: 2008-07-10 08:11:26
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3405,7 +3199,6 @@ audit_records_1216065629:
   created_at: 2008-07-10 08:11:26
 audit_records_1216065867: 
   updated_at: 2008-07-14 10:04:53
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3421,7 +3214,6 @@ audit_records_1216065867:
   created_at: 2008-07-14 10:04:53
 audit_records_1216065677: 
   updated_at: 2008-07-10 11:46:49
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3437,7 +3229,6 @@ audit_records_1216065677:
   created_at: 2008-07-10 11:46:49
 audit_records_1216065868: 
   updated_at: 2008-07-14 10:06:53
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3465,7 +3256,6 @@ audit_records_1216065868:
   created_at: 2008-07-14 10:06:53
 audit_records_1216065678: 
   updated_at: 2008-07-10 11:47:22
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3481,7 +3271,6 @@ audit_records_1216065678:
   created_at: 2008-07-10 11:47:22
 audit_records_1216065869: 
   updated_at: 2008-07-14 10:07:06
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3511,7 +3300,6 @@ audit_records_1216065869:
   created_at: 2008-07-14 10:07:06
 audit_records_1216065679: 
   updated_at: 2008-07-10 11:48:05
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3527,7 +3315,6 @@ audit_records_1216065679:
   created_at: 2008-07-10 11:48:05
 audit_records_1216065920: 
   updated_at: 2008-07-14 13:05:50
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3549,7 +3336,6 @@ audit_records_1216065920:
   created_at: 2008-07-14 13:05:50
 audit_records_1216065730: 
   updated_at: 2008-07-10 15:27:16
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3565,7 +3351,6 @@ audit_records_1216065730:
   created_at: 2008-07-10 15:27:16
 audit_records_1216065540: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -3575,7 +3360,6 @@ audit_records_1216065540:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065921: 
   updated_at: 2008-07-14 13:06:24
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3591,7 +3375,6 @@ audit_records_1216065921:
   created_at: 2008-07-14 13:06:24
 audit_records_1216065731: 
   updated_at: 2008-07-10 15:28:03
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3607,7 +3390,6 @@ audit_records_1216065731:
   created_at: 2008-07-10 15:28:03
 audit_records_1216065541: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -3617,7 +3399,6 @@ audit_records_1216065541:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065922: 
   updated_at: 2008-07-14 13:06:34
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3633,7 +3414,6 @@ audit_records_1216065922:
   created_at: 2008-07-14 13:06:34
 audit_records_1216065732: 
   updated_at: 2008-07-10 15:28:16
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3649,7 +3429,6 @@ audit_records_1216065732:
   created_at: 2008-07-10 15:28:16
 audit_records_1216065542: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -3659,7 +3438,6 @@ audit_records_1216065542:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065780: 
   updated_at: 2008-07-11 07:48:34
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3675,7 +3453,6 @@ audit_records_1216065780:
   created_at: 2008-07-11 07:48:34
 audit_records_1216065590: 
   updated_at: 2008-07-09 15:55:17
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3691,7 +3468,6 @@ audit_records_1216065590:
   created_at: 2008-07-09 15:55:17
 audit_records_1216065923: 
   updated_at: 2008-07-14 13:29:48
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3707,7 +3483,6 @@ audit_records_1216065923:
   created_at: 2008-07-14 13:29:48
 audit_records_1216065733: 
   updated_at: 2008-07-10 15:28:49
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3723,7 +3498,6 @@ audit_records_1216065733:
   created_at: 2008-07-10 15:28:49
 audit_records_1216065543: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -3733,7 +3507,6 @@ audit_records_1216065543:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065781: 
   updated_at: 2008-07-11 07:49:01
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3749,7 +3522,6 @@ audit_records_1216065781:
   created_at: 2008-07-11 07:49:01
 audit_records_1216065591: 
   updated_at: 2008-07-09 15:56:26
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3765,7 +3537,6 @@ audit_records_1216065591:
   created_at: 2008-07-09 15:56:26
 audit_records_1216065924: 
   updated_at: 2008-07-14 13:42:19
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3781,7 +3552,6 @@ audit_records_1216065924:
   created_at: 2008-07-14 13:42:19
 audit_records_1216065734: 
   updated_at: 2008-07-10 15:28:59
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3797,7 +3567,6 @@ audit_records_1216065734:
   created_at: 2008-07-10 15:28:59
 audit_records_1216065544: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -3807,7 +3576,6 @@ audit_records_1216065544:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065782: 
   updated_at: 2008-07-11 07:49:27
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3823,7 +3591,6 @@ audit_records_1216065782:
   created_at: 2008-07-11 07:49:27
 audit_records_1216065592: 
   updated_at: 2008-07-09 15:57:18
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3839,7 +3606,6 @@ audit_records_1216065592:
   created_at: 2008-07-09 15:57:18
 audit_records_1216065925: 
   updated_at: 2008-07-14 13:42:32
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3855,7 +3621,6 @@ audit_records_1216065925:
   created_at: 2008-07-14 13:42:32
 audit_records_1216065735: 
   updated_at: 2008-07-10 15:29:27
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3871,7 +3636,6 @@ audit_records_1216065735:
   created_at: 2008-07-10 15:29:27
 audit_records_1216065545: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -3881,7 +3645,6 @@ audit_records_1216065545:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065783: 
   updated_at: 2008-07-11 07:49:47
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3897,7 +3660,6 @@ audit_records_1216065783:
   created_at: 2008-07-11 07:49:47
 audit_records_1216065593: 
   updated_at: 2008-07-09 15:57:47
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3913,7 +3675,6 @@ audit_records_1216065593:
   created_at: 2008-07-09 15:57:47
 audit_records_1216065926: 
   updated_at: 2008-07-14 13:42:46
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3929,7 +3690,6 @@ audit_records_1216065926:
   created_at: 2008-07-14 13:42:46
 audit_records_1216065736: 
   updated_at: 2008-07-10 15:29:39
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3945,7 +3705,6 @@ audit_records_1216065736:
   created_at: 2008-07-10 15:29:39
 audit_records_1216065546: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -3955,7 +3714,6 @@ audit_records_1216065546:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065784: 
   updated_at: 2008-07-11 07:50:01
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3971,7 +3729,6 @@ audit_records_1216065784:
   created_at: 2008-07-11 07:50:01
 audit_records_1216065594: 
   updated_at: 2008-07-09 16:00:16
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -3987,7 +3744,6 @@ audit_records_1216065594:
   created_at: 2008-07-09 16:00:16
 audit_records_1216065927: 
   updated_at: 2008-07-14 13:43:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4003,7 +3759,6 @@ audit_records_1216065927:
   created_at: 2008-07-14 13:43:02
 audit_records_1216065737: 
   updated_at: 2008-07-10 15:30:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4019,7 +3774,6 @@ audit_records_1216065737:
   created_at: 2008-07-10 15:30:02
 audit_records_1216065547: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -4029,7 +3783,6 @@ audit_records_1216065547:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065928: 
   updated_at: 2008-07-14 13:43:20
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4048,7 +3801,6 @@ audit_records_1216065928:
   created_at: 2008-07-14 13:43:20
 audit_records_1216065785: 
   updated_at: 2008-07-11 07:50:45
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4064,7 +3816,6 @@ audit_records_1216065785:
   created_at: 2008-07-11 07:50:45
 audit_records_1216065595: 
   updated_at: 2008-07-09 16:00:54
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4080,7 +3831,6 @@ audit_records_1216065595:
   created_at: 2008-07-09 16:00:54
 audit_records_1216065738: 
   updated_at: 2008-07-10 15:30:40
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4096,7 +3846,6 @@ audit_records_1216065738:
   created_at: 2008-07-10 15:30:40
 audit_records_1216065548: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -4106,7 +3855,6 @@ audit_records_1216065548:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065929: 
   updated_at: 2008-07-14 13:43:33
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4125,7 +3873,6 @@ audit_records_1216065929:
   created_at: 2008-07-14 13:43:33
 audit_records_1216065786: 
   updated_at: 2008-07-11 07:51:03
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4141,7 +3888,6 @@ audit_records_1216065786:
   created_at: 2008-07-11 07:51:03
 audit_records_1216065596: 
   updated_at: 2008-07-09 16:01:18
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4164,7 +3910,6 @@ audit_records_1216065596:
   created_at: 2008-07-09 16:01:18
 audit_records_1216065739: 
   updated_at: 2008-07-10 15:30:59
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4180,7 +3925,6 @@ audit_records_1216065739:
   created_at: 2008-07-10 15:30:59
 audit_records_1216065549: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -4190,7 +3934,6 @@ audit_records_1216065549:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065787: 
   updated_at: 2008-07-11 07:51:19
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4206,7 +3949,6 @@ audit_records_1216065787:
   created_at: 2008-07-11 07:51:19
 audit_records_1216065597: 
   updated_at: 2008-07-09 16:31:30
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4222,7 +3964,6 @@ audit_records_1216065597:
   created_at: 2008-07-09 16:31:30
 audit_records_1216065600: 
   updated_at: 2008-07-10 07:47:39
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4238,7 +3979,6 @@ audit_records_1216065600:
   created_at: 2008-07-10 07:47:39
 audit_records_1216065788: 
   updated_at: 2008-07-11 07:51:47
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4254,7 +3994,6 @@ audit_records_1216065788:
   created_at: 2008-07-11 07:51:47
 audit_records_1216065598: 
   updated_at: 2008-07-10 07:46:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4270,7 +4009,6 @@ audit_records_1216065598:
   created_at: 2008-07-10 07:46:02
 audit_records_1216065601: 
   updated_at: 2008-07-10 07:48:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4295,7 +4033,6 @@ audit_records_1216065601:
   created_at: 2008-07-10 07:48:14
 audit_records_1216065789: 
   updated_at: 2008-07-11 07:52:06
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4311,7 +4048,6 @@ audit_records_1216065789:
   created_at: 2008-07-11 07:52:06
 audit_records_1216065599: 
   updated_at: 2008-07-10 07:46:23
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4327,7 +4063,6 @@ audit_records_1216065599:
   created_at: 2008-07-10 07:46:23
 audit_records_1216065602: 
   updated_at: 2008-07-10 07:49:01
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4350,7 +4085,6 @@ audit_records_1216065602:
   created_at: 2008-07-10 07:49:01
 audit_records_1216065603: 
   updated_at: 2008-07-10 07:49:20
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4366,7 +4100,6 @@ audit_records_1216065603:
   created_at: 2008-07-10 07:49:20
 audit_records_1216065840: 
   updated_at: 2008-07-11 08:05:04
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4382,7 +4115,6 @@ audit_records_1216065840:
   created_at: 2008-07-11 08:05:04
 audit_records_1216065650: 
   updated_at: 2008-07-10 08:43:19
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4398,7 +4130,6 @@ audit_records_1216065650:
   created_at: 2008-07-10 08:43:19
 audit_records_1216065604: 
   updated_at: 2008-07-10 07:49:35
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4421,7 +4152,6 @@ audit_records_1216065604:
   created_at: 2008-07-10 07:49:35
 audit_records_1216065841: 
   updated_at: 2008-07-11 08:05:16
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4437,7 +4167,6 @@ audit_records_1216065841:
   created_at: 2008-07-11 08:05:16
 audit_records_1216065651: 
   updated_at: 2008-07-10 08:46:52
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4453,7 +4182,6 @@ audit_records_1216065651:
   created_at: 2008-07-10 08:46:52
 audit_records_1216065605: 
   updated_at: 2008-07-10 07:49:53
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4478,7 +4206,6 @@ audit_records_1216065605:
   created_at: 2008-07-10 07:49:53
 audit_records_1216065842: 
   updated_at: 2008-07-11 08:05:27
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4494,7 +4221,6 @@ audit_records_1216065842:
   created_at: 2008-07-11 08:05:27
 audit_records_1216065652: 
   updated_at: 2008-07-10 08:47:23
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4510,7 +4236,6 @@ audit_records_1216065652:
   created_at: 2008-07-10 08:47:23
 audit_records_1216065606: 
   updated_at: 2008-07-10 07:50:25
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4535,7 +4260,6 @@ audit_records_1216065606:
   created_at: 2008-07-10 07:50:25
 audit_records_1216065890: 
   updated_at: 2008-07-14 10:41:07
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4551,7 +4275,6 @@ audit_records_1216065890:
   created_at: 2008-07-14 10:41:07
 audit_records_1216065843: 
   updated_at: 2008-07-11 08:05:37
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4567,7 +4290,6 @@ audit_records_1216065843:
   created_at: 2008-07-11 08:05:37
 audit_records_1216065653: 
   updated_at: 2008-07-10 08:47:53
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4583,7 +4305,6 @@ audit_records_1216065653:
   created_at: 2008-07-10 08:47:53
 audit_records_1216065607: 
   updated_at: 2008-07-10 07:50:40
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4608,7 +4329,6 @@ audit_records_1216065607:
   created_at: 2008-07-10 07:50:40
 audit_records_1216065891: 
   updated_at: 2008-07-14 10:41:19
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4624,7 +4344,6 @@ audit_records_1216065891:
   created_at: 2008-07-14 10:41:19
 audit_records_1216065844: 
   updated_at: 2008-07-11 08:05:50
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4640,7 +4359,6 @@ audit_records_1216065844:
   created_at: 2008-07-11 08:05:50
 audit_records_1216065654: 
   updated_at: 2008-07-10 08:56:09
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4656,7 +4374,6 @@ audit_records_1216065654:
   created_at: 2008-07-10 08:56:09
 audit_records_1216065608: 
   updated_at: 2008-07-10 07:50:56
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4679,7 +4396,6 @@ audit_records_1216065608:
   created_at: 2008-07-10 07:50:56
 audit_records_1216065892: 
   updated_at: 2008-07-14 11:18:23
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4695,7 +4411,6 @@ audit_records_1216065892:
   created_at: 2008-07-14 11:18:23
 audit_records_1216065845: 
   updated_at: 2008-07-11 08:06:24
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4711,7 +4426,6 @@ audit_records_1216065845:
   created_at: 2008-07-11 08:06:24
 audit_records_1216065655: 
   updated_at: 2008-07-10 10:01:26
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4766,7 +4480,6 @@ audit_records_1216065655:
   created_at: 2008-07-10 10:01:26
 audit_records_1216065609: 
   updated_at: 2008-07-10 07:51:17
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4789,7 +4502,6 @@ audit_records_1216065609:
   created_at: 2008-07-10 07:51:17
 audit_records_1216065893: 
   updated_at: 2008-07-14 11:40:11
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4805,7 +4517,6 @@ audit_records_1216065893:
   created_at: 2008-07-14 11:40:11
 audit_records_1216065846: 
   updated_at: 2008-07-11 08:10:48
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4821,7 +4532,6 @@ audit_records_1216065846:
   created_at: 2008-07-11 08:10:48
 audit_records_1216065656: 
   updated_at: 2008-07-10 10:14:47
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4837,7 +4547,6 @@ audit_records_1216065656:
   created_at: 2008-07-10 10:14:47
 audit_records_1216065894: 
   updated_at: 2008-07-14 11:41:59
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4866,7 +4575,6 @@ audit_records_1216065894:
   created_at: 2008-07-14 11:41:59
 audit_records_1216065847: 
   updated_at: 2008-07-11 08:13:09
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4882,7 +4590,6 @@ audit_records_1216065847:
   created_at: 2008-07-11 08:13:09
 audit_records_1216065657: 
   updated_at: 2008-07-10 10:15:32
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4898,7 +4605,6 @@ audit_records_1216065657:
   created_at: 2008-07-10 10:15:32
 audit_records_1216065895: 
   updated_at: 2008-07-14 11:42:18
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4928,7 +4634,6 @@ audit_records_1216065895:
   created_at: 2008-07-14 11:42:18
 audit_records_1216065848: 
   updated_at: 2008-07-11 08:13:34
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -4944,7 +4649,6 @@ audit_records_1216065848:
   created_at: 2008-07-11 08:13:34
 audit_records_1216065658: 
   updated_at: 2008-07-10 10:16:53
-  auditable_type: 
   diff: |+
     --- 
     updated_at: 
@@ -5000,7 +4704,6 @@ audit_records_1216065658:
   created_at: 2008-07-10 10:16:53
 audit_records_1216065896: 
   updated_at: 2008-07-14 11:42:44
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5031,7 +4734,6 @@ audit_records_1216065896:
   created_at: 2008-07-14 11:42:44
 audit_records_1216065849: 
   updated_at: 2008-07-11 08:59:38
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5047,7 +4749,6 @@ audit_records_1216065849:
   created_at: 2008-07-11 08:59:38
 audit_records_1216065659: 
   updated_at: 2008-07-10 10:18:00
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5057,7 +4758,6 @@ audit_records_1216065659:
   created_at: 2008-07-10 10:18:00
 audit_records_1216065897: 
   updated_at: 2008-07-14 11:44:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5073,7 +4773,6 @@ audit_records_1216065897:
   created_at: 2008-07-14 11:44:14
 audit_records_1216065900: 
   updated_at: 2008-07-14 11:45:22
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5089,7 +4788,6 @@ audit_records_1216065900:
   created_at: 2008-07-14 11:45:22
 audit_records_1216065710: 
   updated_at: 2008-07-10 14:46:54
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5105,7 +4803,6 @@ audit_records_1216065710:
   created_at: 2008-07-10 14:46:54
 audit_records_1216065898: 
   updated_at: 2008-07-14 11:44:17
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5121,7 +4818,6 @@ audit_records_1216065898:
   created_at: 2008-07-14 11:44:17
 audit_records_1216065901: 
   updated_at: 2008-07-14 11:45:24
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5137,7 +4833,6 @@ audit_records_1216065901:
   created_at: 2008-07-14 11:45:24
 audit_records_1216065711: 
   updated_at: 2008-07-10 14:47:05
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5153,7 +4848,6 @@ audit_records_1216065711:
   created_at: 2008-07-10 14:47:05
 audit_records_1216065899: 
   updated_at: 2008-07-14 11:44:53
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5179,7 +4873,6 @@ audit_records_1216065899:
   created_at: 2008-07-14 11:44:53
 audit_records_1216065902: 
   updated_at: 2008-07-14 11:46:15
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5195,7 +4888,6 @@ audit_records_1216065902:
   created_at: 2008-07-14 11:46:15
 audit_records_1216065712: 
   updated_at: 2008-07-10 14:47:23
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5211,7 +4903,6 @@ audit_records_1216065712:
   created_at: 2008-07-10 14:47:23
 audit_records_1216065950: 
   updated_at: 2008-07-14 14:11:51
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5230,7 +4921,6 @@ audit_records_1216065950:
   created_at: 2008-07-14 14:11:51
 audit_records_1216065903: 
   updated_at: 2008-07-14 11:46:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5246,7 +4936,6 @@ audit_records_1216065903:
   created_at: 2008-07-14 11:46:31
 audit_records_1216065713: 
   updated_at: 2008-07-10 14:47:33
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5262,7 +4951,6 @@ audit_records_1216065713:
   created_at: 2008-07-10 14:47:33
 audit_records_1216065760: 
   updated_at: 2008-07-10 16:45:58
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5278,7 +4966,6 @@ audit_records_1216065760:
   created_at: 2008-07-10 16:45:58
 audit_records_1216065570: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5288,7 +4975,6 @@ audit_records_1216065570:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065951: 
   updated_at: 2008-07-14 14:12:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5307,7 +4993,6 @@ audit_records_1216065951:
   created_at: 2008-07-14 14:12:02
 audit_records_1216065904: 
   updated_at: 2008-07-14 11:46:33
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5323,7 +5008,6 @@ audit_records_1216065904:
   created_at: 2008-07-14 11:46:33
 audit_records_1216065714: 
   updated_at: 2008-07-10 14:47:46
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5339,7 +5023,6 @@ audit_records_1216065714:
   created_at: 2008-07-10 14:47:46
 audit_records_1216065761: 
   updated_at: 2008-07-11 07:37:59
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5355,7 +5038,6 @@ audit_records_1216065761:
   created_at: 2008-07-11 07:37:59
 audit_records_1216065571: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5365,7 +5047,6 @@ audit_records_1216065571:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065952: 
   updated_at: 2008-07-14 14:12:17
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5384,7 +5065,6 @@ audit_records_1216065952:
   created_at: 2008-07-14 14:12:17
 audit_records_1216065905: 
   updated_at: 2008-07-14 11:46:37
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5400,7 +5080,6 @@ audit_records_1216065905:
   created_at: 2008-07-14 11:46:37
 audit_records_1216065715: 
   updated_at: 2008-07-10 14:47:58
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5410,7 +5089,6 @@ audit_records_1216065715:
   created_at: 2008-07-10 14:47:58
 audit_records_1216065762: 
   updated_at: 2008-07-11 07:38:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5426,7 +5104,6 @@ audit_records_1216065762:
   created_at: 2008-07-11 07:38:14
 audit_records_1216065572: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5436,7 +5113,6 @@ audit_records_1216065572:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065953: 
   updated_at: 2008-07-14 14:12:42
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5455,7 +5131,6 @@ audit_records_1216065953:
   created_at: 2008-07-14 14:12:42
 audit_records_1216065906: 
   updated_at: 2008-07-14 11:46:50
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5471,7 +5146,6 @@ audit_records_1216065906:
   created_at: 2008-07-14 11:46:50
 audit_records_1216065716: 
   updated_at: 2008-07-10 14:48:38
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5487,7 +5161,6 @@ audit_records_1216065716:
   created_at: 2008-07-10 14:48:38
 audit_records_1216065526: 
   updated_at: 2008-07-09 12:15:19
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5503,7 +5176,6 @@ audit_records_1216065526:
   created_at: 2008-07-09 12:15:19
 audit_records_1216065763: 
   updated_at: 2008-07-11 07:38:34
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5519,7 +5191,6 @@ audit_records_1216065763:
   created_at: 2008-07-11 07:38:34
 audit_records_1216065573: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5529,7 +5200,6 @@ audit_records_1216065573:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065954: 
   updated_at: 2008-07-14 14:13:51
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5545,7 +5215,6 @@ audit_records_1216065954:
   created_at: 2008-07-14 14:13:51
 audit_records_1216065907: 
   updated_at: 2008-07-14 11:47:01
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5561,7 +5230,6 @@ audit_records_1216065907:
   created_at: 2008-07-14 11:47:01
 audit_records_1216065717: 
   updated_at: 2008-07-10 14:48:56
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5577,7 +5245,6 @@ audit_records_1216065717:
   created_at: 2008-07-10 14:48:56
 audit_records_1216065527: 
   updated_at: 2008-07-09 12:17:05
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5593,7 +5260,6 @@ audit_records_1216065527:
   created_at: 2008-07-09 12:17:05
 audit_records_1216065764: 
   updated_at: 2008-07-11 07:40:54
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5609,7 +5275,6 @@ audit_records_1216065764:
   created_at: 2008-07-11 07:40:54
 audit_records_1216065574: 
   updated_at: 2008-07-09 14:37:01
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5619,7 +5284,6 @@ audit_records_1216065574:
   created_at: 2008-07-09 14:37:01
 audit_records_1216065955: 
   updated_at: 2008-07-14 14:20:50
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5653,7 +5317,6 @@ audit_records_1216065955:
   created_at: 2008-07-14 14:20:50
 audit_records_1216065908: 
   updated_at: 2008-07-14 11:47:12
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5669,7 +5332,6 @@ audit_records_1216065908:
   created_at: 2008-07-14 11:47:12
 audit_records_1216065718: 
   updated_at: 2008-07-10 14:49:50
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5685,7 +5347,6 @@ audit_records_1216065718:
   created_at: 2008-07-10 14:49:50
 audit_records_1216065528: 
   updated_at: 2008-07-09 12:33:05
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5701,7 +5362,6 @@ audit_records_1216065528:
   created_at: 2008-07-09 12:33:05
 audit_records_1216065765: 
   updated_at: 2008-07-11 07:42:24
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5717,7 +5377,6 @@ audit_records_1216065765:
   created_at: 2008-07-11 07:42:24
 audit_records_1216065575: 
   updated_at: 2008-07-09 14:37:02
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5727,7 +5386,6 @@ audit_records_1216065575:
   created_at: 2008-07-09 14:37:02
 audit_records_1216065956: 
   updated_at: 2008-07-14 14:35:13
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5737,7 +5395,6 @@ audit_records_1216065956:
   created_at: 2008-07-14 14:35:13
 audit_records_1216065909: 
   updated_at: 2008-07-14 11:47:19
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5753,7 +5410,6 @@ audit_records_1216065909:
   created_at: 2008-07-14 11:47:19
 audit_records_1216065719: 
   updated_at: 2008-07-10 14:50:07
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5769,7 +5425,6 @@ audit_records_1216065719:
   created_at: 2008-07-10 14:50:07
 audit_records_1216065529: 
   updated_at: 2008-07-09 12:54:20
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5785,7 +5440,6 @@ audit_records_1216065529:
   created_at: 2008-07-09 12:54:20
 audit_records_1216065766: 
   updated_at: 2008-07-11 07:42:56
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5801,7 +5455,6 @@ audit_records_1216065766:
   created_at: 2008-07-11 07:42:56
 audit_records_1216065576: 
   updated_at: 2008-07-09 14:37:02
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5811,7 +5464,6 @@ audit_records_1216065576:
   created_at: 2008-07-09 14:37:02
 audit_records_1216065957: 
   updated_at: 2008-07-14 14:35:13
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5827,7 +5479,6 @@ audit_records_1216065957:
   created_at: 2008-07-14 14:35:13
 audit_records_1216065767: 
   updated_at: 2008-07-11 07:43:49
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5843,7 +5494,6 @@ audit_records_1216065767:
   created_at: 2008-07-11 07:43:49
 audit_records_1216065577: 
   updated_at: 2008-07-09 14:37:02
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5853,7 +5503,6 @@ audit_records_1216065577:
   created_at: 2008-07-09 14:37:02
 audit_records_1216065958: 
   updated_at: 2008-07-14 14:35:13
-  auditable_type: 
   diff: |
     --- 
     completed_at: 
@@ -5869,7 +5518,6 @@ audit_records_1216065958:
   created_at: 2008-07-14 14:35:13
 audit_records_1216065768: 
   updated_at: 2008-07-11 07:44:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5885,7 +5533,6 @@ audit_records_1216065768:
   created_at: 2008-07-11 07:44:02
 audit_records_1216065578: 
   updated_at: 2008-07-09 14:37:02
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5895,7 +5542,6 @@ audit_records_1216065578:
   created_at: 2008-07-09 14:37:02
 audit_records_1216065769: 
   updated_at: 2008-07-11 07:44:18
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5911,7 +5557,6 @@ audit_records_1216065769:
   created_at: 2008-07-11 07:44:18
 audit_records_1216065579: 
   updated_at: 2008-07-09 14:37:02
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -5921,7 +5566,6 @@ audit_records_1216065579:
   created_at: 2008-07-09 14:37:02
 audit_records_1216065820: 
   updated_at: 2008-07-11 08:00:59
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5937,7 +5581,6 @@ audit_records_1216065820:
   created_at: 2008-07-11 08:00:59
 audit_records_1216065630: 
   updated_at: 2008-07-10 08:11:42
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5953,7 +5596,6 @@ audit_records_1216065630:
   created_at: 2008-07-10 08:11:42
 audit_records_1216065821: 
   updated_at: 2008-07-11 08:01:12
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5969,7 +5611,6 @@ audit_records_1216065821:
   created_at: 2008-07-11 08:01:12
 audit_records_1216065631: 
   updated_at: 2008-07-10 08:12:03
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -5985,7 +5626,6 @@ audit_records_1216065631:
   created_at: 2008-07-10 08:12:03
 audit_records_1216065822: 
   updated_at: 2008-07-11 08:01:28
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6001,7 +5641,6 @@ audit_records_1216065822:
   created_at: 2008-07-11 08:01:28
 audit_records_1216065632: 
   updated_at: 2008-07-10 08:12:27
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6017,7 +5656,6 @@ audit_records_1216065632:
   created_at: 2008-07-10 08:12:27
 audit_records_1216065823: 
   updated_at: 2008-07-11 08:01:46
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6033,7 +5671,6 @@ audit_records_1216065823:
   created_at: 2008-07-11 08:01:46
 audit_records_1216065633: 
   updated_at: 2008-07-10 08:12:40
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6049,7 +5686,6 @@ audit_records_1216065633:
   created_at: 2008-07-10 08:12:40
 audit_records_1216065870: 
   updated_at: 2008-07-14 10:08:08
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6065,7 +5701,6 @@ audit_records_1216065870:
   created_at: 2008-07-14 10:08:08
 audit_records_1216065680: 
   updated_at: 2008-07-10 12:34:05
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6081,7 +5716,6 @@ audit_records_1216065680:
   created_at: 2008-07-10 12:34:05
 audit_records_1216065824: 
   updated_at: 2008-07-11 08:01:58
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6097,7 +5731,6 @@ audit_records_1216065824:
   created_at: 2008-07-11 08:01:58
 audit_records_1216065634: 
   updated_at: 2008-07-10 08:12:54
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6113,7 +5746,6 @@ audit_records_1216065634:
   created_at: 2008-07-10 08:12:54
 audit_records_1216065871: 
   updated_at: 2008-07-14 10:09:57
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6129,7 +5761,6 @@ audit_records_1216065871:
   created_at: 2008-07-14 10:09:57
 audit_records_1216065681: 
   updated_at: 2008-07-10 12:34:33
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6145,7 +5776,6 @@ audit_records_1216065681:
   created_at: 2008-07-10 12:34:33
 audit_records_1216065825: 
   updated_at: 2008-07-11 08:02:11
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6161,7 +5791,6 @@ audit_records_1216065825:
   created_at: 2008-07-11 08:02:11
 audit_records_1216065635: 
   updated_at: 2008-07-10 08:13:06
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6177,7 +5806,6 @@ audit_records_1216065635:
   created_at: 2008-07-10 08:13:06
 audit_records_1216065872: 
   updated_at: 2008-07-14 10:10:11
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6193,7 +5821,6 @@ audit_records_1216065872:
   created_at: 2008-07-14 10:10:11
 audit_records_1216065682: 
   updated_at: 2008-07-10 12:35:00
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6209,7 +5836,6 @@ audit_records_1216065682:
   created_at: 2008-07-10 12:35:00
 audit_records_1216065826: 
   updated_at: 2008-07-11 08:02:23
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6225,7 +5851,6 @@ audit_records_1216065826:
   created_at: 2008-07-11 08:02:23
 audit_records_1216065636: 
   updated_at: 2008-07-10 08:13:20
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6241,7 +5866,6 @@ audit_records_1216065636:
   created_at: 2008-07-10 08:13:20
 audit_records_1216065873: 
   updated_at: 2008-07-14 10:12:22
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6257,7 +5881,6 @@ audit_records_1216065873:
   created_at: 2008-07-14 10:12:22
 audit_records_1216065683: 
   updated_at: 2008-07-10 12:35:38
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6273,7 +5896,6 @@ audit_records_1216065683:
   created_at: 2008-07-10 12:35:38
 audit_records_1216065827: 
   updated_at: 2008-07-11 08:02:34
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6289,7 +5911,6 @@ audit_records_1216065827:
   created_at: 2008-07-11 08:02:34
 audit_records_1216065637: 
   updated_at: 2008-07-10 08:13:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6305,7 +5926,6 @@ audit_records_1216065637:
   created_at: 2008-07-10 08:13:31
 audit_records_1216065874: 
   updated_at: 2008-07-14 10:12:27
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6321,7 +5941,6 @@ audit_records_1216065874:
   created_at: 2008-07-14 10:12:27
 audit_records_1216065684: 
   updated_at: 2008-07-10 12:36:06
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6337,7 +5956,6 @@ audit_records_1216065684:
   created_at: 2008-07-10 12:36:06
 audit_records_1216065828: 
   updated_at: 2008-07-11 08:02:50
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6353,7 +5971,6 @@ audit_records_1216065828:
   created_at: 2008-07-11 08:02:50
 audit_records_1216065638: 
   updated_at: 2008-07-10 08:13:57
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6369,7 +5986,6 @@ audit_records_1216065638:
   created_at: 2008-07-10 08:13:57
 audit_records_1216065875: 
   updated_at: 2008-07-14 10:20:16
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6385,7 +6001,6 @@ audit_records_1216065875:
   created_at: 2008-07-14 10:20:16
 audit_records_1216065685: 
   updated_at: 2008-07-10 12:36:36
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6401,7 +6016,6 @@ audit_records_1216065685:
   created_at: 2008-07-10 12:36:36
 audit_records_1216065829: 
   updated_at: 2008-07-11 08:03:00
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6417,7 +6031,6 @@ audit_records_1216065829:
   created_at: 2008-07-11 08:03:00
 audit_records_1216065639: 
   updated_at: 2008-07-10 08:14:45
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6433,7 +6046,6 @@ audit_records_1216065639:
   created_at: 2008-07-10 08:14:45
 audit_records_1216065876: 
   updated_at: 2008-07-14 10:34:49
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6449,7 +6061,6 @@ audit_records_1216065876:
   created_at: 2008-07-14 10:34:49
 audit_records_1216065686: 
   updated_at: 2008-07-10 12:38:56
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6465,7 +6076,6 @@ audit_records_1216065686:
   created_at: 2008-07-10 12:38:56
 audit_records_1216065877: 
   updated_at: 2008-07-14 10:35:58
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6481,7 +6091,6 @@ audit_records_1216065877:
   created_at: 2008-07-14 10:35:58
 audit_records_1216065687: 
   updated_at: 2008-07-10 12:39:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6497,7 +6106,6 @@ audit_records_1216065687:
   created_at: 2008-07-10 12:39:31
 audit_records_1216065878: 
   updated_at: 2008-07-14 10:36:15
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6513,7 +6121,6 @@ audit_records_1216065878:
   created_at: 2008-07-14 10:36:15
 audit_records_1216065688: 
   updated_at: 2008-07-10 12:40:02
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6529,7 +6136,6 @@ audit_records_1216065688:
   created_at: 2008-07-10 12:40:02
 audit_records_1216065879: 
   updated_at: 2008-07-14 10:38:00
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6545,7 +6151,6 @@ audit_records_1216065879:
   created_at: 2008-07-14 10:38:00
 audit_records_1216065689: 
   updated_at: 2008-07-10 12:40:40
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6561,7 +6166,6 @@ audit_records_1216065689:
   created_at: 2008-07-10 12:40:40
 audit_records_1216065930: 
   updated_at: 2008-07-14 13:43:47
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6577,7 +6181,6 @@ audit_records_1216065930:
   created_at: 2008-07-14 13:43:47
 audit_records_1216065740: 
   updated_at: 2008-07-10 15:31:17
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6593,7 +6196,6 @@ audit_records_1216065740:
   created_at: 2008-07-10 15:31:17
 audit_records_1216065550: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -6603,7 +6205,6 @@ audit_records_1216065550:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065931: 
   updated_at: 2008-07-14 13:44:00
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6619,7 +6220,6 @@ audit_records_1216065931:
   created_at: 2008-07-14 13:44:00
 audit_records_1216065741: 
   updated_at: 2008-07-10 15:31:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6635,7 +6235,6 @@ audit_records_1216065741:
   created_at: 2008-07-10 15:31:31
 audit_records_1216065551: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -6645,7 +6244,6 @@ audit_records_1216065551:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065932: 
   updated_at: 2008-07-14 13:44:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6661,7 +6259,6 @@ audit_records_1216065932:
   created_at: 2008-07-14 13:44:14
 audit_records_1216065742: 
   updated_at: 2008-07-10 15:31:44
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6677,7 +6274,6 @@ audit_records_1216065742:
   created_at: 2008-07-10 15:31:44
 audit_records_1216065552: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -6687,7 +6283,6 @@ audit_records_1216065552:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065933: 
   updated_at: 2008-07-14 13:44:29
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6703,7 +6298,6 @@ audit_records_1216065933:
   created_at: 2008-07-14 13:44:29
 audit_records_1216065743: 
   updated_at: 2008-07-10 15:31:57
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6719,7 +6313,6 @@ audit_records_1216065743:
   created_at: 2008-07-10 15:31:57
 audit_records_1216065553: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -6729,7 +6322,6 @@ audit_records_1216065553:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065790: 
   updated_at: 2008-07-11 07:52:18
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6745,7 +6337,6 @@ audit_records_1216065790:
   created_at: 2008-07-11 07:52:18
 audit_records_1216065934: 
   updated_at: 2008-07-14 13:44:45
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6761,7 +6352,6 @@ audit_records_1216065934:
   created_at: 2008-07-14 13:44:45
 audit_records_1216065744: 
   updated_at: 2008-07-10 15:32:12
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6777,7 +6367,6 @@ audit_records_1216065744:
   created_at: 2008-07-10 15:32:12
 audit_records_1216065554: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -6787,7 +6376,6 @@ audit_records_1216065554:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065791: 
   updated_at: 2008-07-11 07:52:31
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6803,7 +6391,6 @@ audit_records_1216065791:
   created_at: 2008-07-11 07:52:31
 audit_records_1216065935: 
   updated_at: 2008-07-14 13:44:58
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6819,7 +6406,6 @@ audit_records_1216065935:
   created_at: 2008-07-14 13:44:58
 audit_records_1216065745: 
   updated_at: 2008-07-10 15:33:00
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6835,7 +6421,6 @@ audit_records_1216065745:
   created_at: 2008-07-10 15:33:00
 audit_records_1216065555: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -6845,7 +6430,6 @@ audit_records_1216065555:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065792: 
   updated_at: 2008-07-11 07:52:48
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6861,7 +6445,6 @@ audit_records_1216065792:
   created_at: 2008-07-11 07:52:48
 audit_records_1216065936: 
   updated_at: 2008-07-14 13:45:10
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6877,7 +6460,6 @@ audit_records_1216065936:
   created_at: 2008-07-14 13:45:10
 audit_records_1216065746: 
   updated_at: 2008-07-10 15:34:01
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6893,7 +6475,6 @@ audit_records_1216065746:
   created_at: 2008-07-10 15:34:01
 audit_records_1216065556: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -6903,7 +6484,6 @@ audit_records_1216065556:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065793: 
   updated_at: 2008-07-11 07:53:03
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6919,7 +6499,6 @@ audit_records_1216065793:
   created_at: 2008-07-11 07:53:03
 audit_records_1216065937: 
   updated_at: 2008-07-14 13:45:25
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6935,7 +6514,6 @@ audit_records_1216065937:
   created_at: 2008-07-14 13:45:25
 audit_records_1216065747: 
   updated_at: 2008-07-10 15:34:21
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6951,7 +6529,6 @@ audit_records_1216065747:
   created_at: 2008-07-10 15:34:21
 audit_records_1216065557: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -6961,7 +6538,6 @@ audit_records_1216065557:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065794: 
   updated_at: 2008-07-11 07:53:18
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6977,7 +6553,6 @@ audit_records_1216065794:
   created_at: 2008-07-11 07:53:18
 audit_records_1216065938: 
   updated_at: 2008-07-14 13:55:14
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -6996,7 +6571,6 @@ audit_records_1216065938:
   created_at: 2008-07-14 13:55:14
 audit_records_1216065748: 
   updated_at: 2008-07-10 15:34:36
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -7012,7 +6586,6 @@ audit_records_1216065748:
   created_at: 2008-07-10 15:34:36
 audit_records_1216065558: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -7022,7 +6595,6 @@ audit_records_1216065558:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065795: 
   updated_at: 2008-07-11 07:53:29
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -7038,7 +6610,6 @@ audit_records_1216065795:
   created_at: 2008-07-11 07:53:29
 audit_records_1216065939: 
   updated_at: 2008-07-14 13:55:28
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -7057,7 +6628,6 @@ audit_records_1216065939:
   created_at: 2008-07-14 13:55:28
 audit_records_1216065749: 
   updated_at: 2008-07-10 15:34:58
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -7073,7 +6643,6 @@ audit_records_1216065749:
   created_at: 2008-07-10 15:34:58
 audit_records_1216065559: 
   updated_at: 2008-07-09 14:35:37
-  auditable_type: 
   diff: |+
     --- {}
     
@@ -7083,7 +6652,6 @@ audit_records_1216065559:
   created_at: 2008-07-09 14:35:37
 audit_records_1216065796: 
   updated_at: 2008-07-11 07:53:43
-  auditable_type: 
   diff: |
     --- 
     updated_at: 
@@ -7099,7 +6667,6 @@ audit_records_1216065796:
   created_at: 2008-07-11 07:53:43
 audit_records_1216065797: 
   updated_at: 2008-07-11 07:53:54
-  auditable_type: 
   diff: |
     --- 
     updated_at: 

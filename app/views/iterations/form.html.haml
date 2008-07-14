@@ -5,7 +5,7 @@
 - form_for @iteration, :html=>{:id=>'columnarForm'} do |f|
   %fieldset
     %legend
-      Story Form
+      Iteration
     %label.first
       Title
       =f.text_field :title
@@ -17,6 +17,9 @@
       End Date
       %div.date_field
         =f.calendar_date_select :end_date
+    %label
+      Releases
+      = f.collection_select :release_ids, Release.find(:all, :order=>'title asc'), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'iteration[release_ids][]'}
     %p
     =submit_tag "Save", {:class=> "submit_button"}
     =button_to_function "Cancel", "location.href='#{iterations_path}'", {:class=>'submit_button'}

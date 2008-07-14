@@ -158,13 +158,19 @@ class IterationsControllerTest < ActionController::TestCase
   end
 
   def test_edit
-    get :edit,:id=>iterations(:iter_last).id
-
+    iter = iterations(:iter_last)
+    get :edit,:id=>iter.id
     assert assigns(:iteration)
+    assert_equal iter, assigns(:iteration)
+    assert_template 'form'
+    assert_select "form[action=?]", iteration_path(iter) do
+      assert_select "input[type=text][id=iteration_title]"
+      assert_select "input[type=text][id=iteration_start_date]"
+      assert_select "input[type=text][id=iteration_end_date]"
+      assert_select "select[id=iteration_release_ids]"
+      assert_select "input[type=submit]"
+    end
 
-    iteration = assigns(:iteration)
-
-    assert_equal iterations(:iter_last).id, iteration.id
   end
 
   def test_show_shows_stories

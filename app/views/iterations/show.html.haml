@@ -20,6 +20,10 @@
 %h3
   Open points
   =@iteration.open_points
+%h3
+  ="Assigned to %s:"%pluralize(@iteration.releases.size, 'release')
+  
+  =@iteration.releases.map{|x| link_to(h(x.title), release_path(x))}.join(', ')
 
 =link_to "Add New Story", "#storyform", :id=>'addStoryLink'
 

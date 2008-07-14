@@ -1,6 +1,6 @@
 <%= chart :base %> 
   <%=component :axis_category %>
-    skip: 14
+    skip: 20
   <%=component :chart_value %>
     hide_zero: true
     position: hide

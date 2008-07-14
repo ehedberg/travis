@@ -1,0 +1,7115 @@
+--- 
+audit_records_1216065800: 
+  updated_at: 2008-07-11 07:54:48
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:26:34 -05:00
+    - 2008-07-11 07:54:48.272239 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "128"
+  id: "401"
+  login: nicole
+  created_at: 2008-07-11 07:54:48
+audit_records_1216065610: 
+  updated_at: 2008-07-10 07:58:38
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 14:52:05 -05:00
+    - 2008-07-10 07:58:38.216155 -05:00
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "155"
+  id: "211"
+  login: nicole
+  created_at: 2008-07-10 07:58:38
+audit_records_1216065798: 
+  updated_at: 2008-07-11 07:54:24
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:26:04 -05:00
+    - 2008-07-11 07:54:24.346152 -05:00
+    iteration_id: 
+    - 11
+    - 22
+
+  story_id: "126"
+  id: "399"
+  login: nicole
+  created_at: 2008-07-11 07:54:24
+audit_records_1216065801: 
+  updated_at: 2008-07-11 07:54:59
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:27:00 -05:00
+    - 2008-07-11 07:54:59.257163 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "147"
+  id: "402"
+  login: nicole
+  created_at: 2008-07-11 07:54:59
+audit_records_1216065611: 
+  updated_at: 2008-07-10 07:58:59
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:25:58 -05:00
+    - 2008-07-10 07:58:59.725688 -05:00
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "280"
+  id: "212"
+  login: nicole
+  created_at: 2008-07-10 07:58:59
+audit_records_1216065799: 
+  updated_at: 2008-07-11 07:54:36
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:26:19 -05:00
+    - 2008-07-11 07:54:36.538236 -05:00
+    iteration_id: 
+    - 11
+    - 22
+
+  story_id: "127"
+  id: "400"
+  login: nicole
+  created_at: 2008-07-11 07:54:36
+audit_records_1216065802: 
+  updated_at: 2008-07-11 07:55:16
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:23:35 -05:00
+    - 2008-07-11 07:55:16.814769 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "187"
+  id: "403"
+  login: nicole
+  created_at: 2008-07-11 07:55:16
+audit_records_1216065612: 
+  updated_at: 2008-07-10 07:59:37
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 07:59:37.651049 -05:00
+    description: 
+    - |-
+      Can change my delivery preferences after my profile is created
+      Digesting, subscriptions, password
+      user: subscriber
+    - |-
+      Can change my delivery preferences after my profile is created
+      Digesting, subscriptions, password
+      user: subscriber
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "143"
+  id: "213"
+  login: nicole
+  created_at: 2008-07-10 07:59:37
+audit_records_1216065850: 
+  updated_at: 2008-07-11 10:05:28
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 08:59:38 -05:00
+    - 2008-07-11 10:05:28.655784 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "217"
+  id: "451"
+  login: Brian
+  created_at: 2008-07-11 10:05:28
+audit_records_1216065660: 
+  updated_at: 2008-07-10 11:06:05
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 09:24:29 -05:00
+    - 2008-07-10 11:06:05.327647 -05:00
+    iteration_id: 
+    - 9
+    - 4
+
+  story_id: "55"
+  id: "261"
+  login: nicole
+  created_at: 2008-07-10 11:06:05
+audit_records_1216065803: 
+  updated_at: 2008-07-11 07:55:28
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:52:52 -05:00
+    - 2008-07-11 07:55:28.483583 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "287"
+  id: "404"
+  login: nicole
+  created_at: 2008-07-11 07:55:28
+audit_records_1216065613: 
+  updated_at: 2008-07-10 08:00:10
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-26 12:46:23 -05:00
+    - 2008-07-10 08:00:10.836281 -05:00
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "134"
+  id: "214"
+  login: nicole
+  created_at: 2008-07-10 08:00:10
+audit_records_1216065851: 
+  updated_at: 2008-07-11 10:09:36
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-02 08:13:55 -05:00
+    - 2008-07-11 10:09:36.670868 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "50"
+  id: "452"
+  login: Brian
+  created_at: 2008-07-11 10:09:36
+audit_records_1216065661: 
+  updated_at: 2008-07-10 11:15:08
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:46:47 -05:00
+    - 2008-07-10 11:15:08.736122 -05:00
+    iteration_id: 
+    - 9
+    - 6
+
+  story_id: "348"
+  id: "262"
+  login: nicole
+  created_at: 2008-07-10 11:15:08
+audit_records_1216065804: 
+  updated_at: 2008-07-11 07:55:41
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 08:49:42 -05:00
+    - 2008-07-11 07:55:41.244641 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "315"
+  id: "405"
+  login: nicole
+  created_at: 2008-07-11 07:55:41
+audit_records_1216065614: 
+  updated_at: 2008-07-10 08:00:39
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:25:05 -05:00
+    - 2008-07-10 08:00:39.095635 -05:00
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "225"
+  id: "215"
+  login: nicole
+  created_at: 2008-07-10 08:00:39
+audit_records_1216065852: 
+  updated_at: 2008-07-11 10:45:28
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:56:09 -05:00
+    - 2008-07-11 10:45:28.513986 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "42"
+  id: "453"
+  login: Jim
+  created_at: 2008-07-11 10:45:28
+audit_records_1216065662: 
+  updated_at: 2008-07-10 11:24:25
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:10:37 -05:00
+    - 2008-07-10 11:24:25.497150 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "357"
+  id: "263"
+  login: nicole
+  created_at: 2008-07-10 11:24:25
+audit_records_1216065805: 
+  updated_at: 2008-07-11 07:55:53
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 08:51:43 -05:00
+    - 2008-07-11 07:55:53.376398 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "316"
+  id: "406"
+  login: nicole
+  created_at: 2008-07-11 07:55:53
+audit_records_1216065615: 
+  updated_at: 2008-07-10 08:01:00
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 15:17:02 -05:00
+    - 2008-07-10 08:01:00.629890 -05:00
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "183"
+  id: "216"
+  login: nicole
+  created_at: 2008-07-10 08:01:00
+audit_records_1216065853: 
+  updated_at: 2008-07-11 13:21:23
+  auditable_type: 
+  diff: "--- \n\
+    :self: \n\
+    - :nonexistent\n\
+    - :existent\n"
+  story_id: "397"
+  id: "454"
+  login: nicole
+  created_at: 2008-07-11 13:21:23
+audit_records_1216065663: 
+  updated_at: 2008-07-10 11:32:49
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 07:50:56 -05:00
+    - 2008-07-10 11:32:49.291619 -05:00
+    iteration_id: 
+    - 9
+    - 15
+
+  story_id: "141"
+  id: "264"
+  login: nicole
+  created_at: 2008-07-10 11:32:49
+audit_records_1216065806: 
+  updated_at: 2008-07-11 07:56:04
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:20:04 -05:00
+    - 2008-07-11 07:56:04.839570 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "335"
+  id: "407"
+  login: nicole
+  created_at: 2008-07-11 07:56:04
+audit_records_1216065616: 
+  updated_at: 2008-07-10 08:02:39
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:55 -05:00
+    - 2008-07-10 08:02:39.729116 -05:00
+    description: 
+    - |-
+      can define the default footer for all bulletins sent for the platform for CAN-SPAM compliance.
+      sender, unsubscriber info
+      user: internal admin
+    - |-
+      can define the default footer for all bulletins sent for the platform for CAN-SPAM compliance.
+      sender, unsubscriber info
+      user: internal admin
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "62"
+  id: "217"
+  login: nicole
+  created_at: 2008-07-10 08:02:39
+audit_records_1216065854: 
+  updated_at: 2008-07-11 13:21:23
+  auditable_type: 
+  diff: |
+    --- 
+    nodule: 
+    - 
+    - accounts
+    updated_at: 
+    - 
+    - 2008-07-11 13:21:23.045137 -05:00
+    title: 
+    - ""
+    - Admins can create admin in EVO
+    id: 
+    - 
+    - 397
+    mnemonic: 
+    - 
+    - ACOU-397
+    description: 
+    - 
+    - "Admins can add administrators right from the home page and then have to associate a account admin, cat. admin, topic and report to a account with a list that goes off of text.the information will not be saved if these are not associated with accounts. account managers and super users do not have to be affiliated to an account. "
+    iteration_id: 
+    - 
+    - 4
+    created_at: 
+    - 
+    - 2008-07-11 13:21:23.032442 -05:00
+    swag: 
+    - 
+    - 1.0
+
+  story_id: "397"
+  id: "455"
+  login: nicole
+  created_at: 2008-07-11 13:21:23
+audit_records_1216065664: 
+  updated_at: 2008-07-10 11:33:11
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 07:50:25 -05:00
+    - 2008-07-10 11:33:11.419182 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "140"
+  id: "265"
+  login: nicole
+  created_at: 2008-07-10 11:33:11
+audit_records_1216065807: 
+  updated_at: 2008-07-11 07:56:15
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 14:03:31 -05:00
+    - 2008-07-11 07:56:15.675262 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "338"
+  id: "408"
+  login: nicole
+  created_at: 2008-07-11 07:56:15
+audit_records_1216065617: 
+  updated_at: 2008-07-10 08:03:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 14:51:32 -05:00
+    - 2008-07-10 08:03:14.168900 -05:00
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "182"
+  id: "218"
+  login: nicole
+  created_at: 2008-07-10 08:03:14
+audit_records_1216065855: 
+  updated_at: 2008-07-11 14:36:42
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 10:09:36 -05:00
+    - 2008-07-11 14:36:42.558219 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "50"
+  id: "456"
+  login: Brian
+  created_at: 2008-07-11 14:36:42
+audit_records_1216065665: 
+  updated_at: 2008-07-10 11:33:38
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 07:49:53 -05:00
+    - 2008-07-10 11:33:38.491716 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "139"
+  id: "266"
+  login: nicole
+  created_at: 2008-07-10 11:33:38
+audit_records_1216065808: 
+  updated_at: 2008-07-11 07:56:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:55:57 -05:00
+    - 2008-07-11 07:56:31.524017 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "364"
+  id: "409"
+  login: nicole
+  created_at: 2008-07-11 07:56:31
+audit_records_1216065618: 
+  updated_at: 2008-07-10 08:04:04
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 15:55:16 -05:00
+    - 2008-07-10 08:04:04.117661 -05:00
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "188"
+  id: "219"
+  login: nicole
+  created_at: 2008-07-10 08:04:04
+audit_records_1216065856: 
+  updated_at: 2008-07-11 14:38:05
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 13:51:40 -05:00
+    - 2008-07-11 14:38:05.896788 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "199"
+  id: "457"
+  login: Jim
+  created_at: 2008-07-11 14:38:05
+audit_records_1216065666: 
+  updated_at: 2008-07-10 11:36:07
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 07:49:01 -05:00
+    - 2008-07-10 11:36:07.627767 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "137"
+  id: "267"
+  login: nicole
+  created_at: 2008-07-10 11:36:07
+audit_records_1216065809: 
+  updated_at: 2008-07-11 07:57:01
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:42:24 -05:00
+    - 2008-07-11 07:57:01.072180 -05:00
+    iteration_id: 
+    - 29
+    - 11
+
+  story_id: "47"
+  id: "410"
+  login: nicole
+  created_at: 2008-07-11 07:57:01
+audit_records_1216065619: 
+  updated_at: 2008-07-10 08:05:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:55 -05:00
+    - 2008-07-10 08:05:02.659103 -05:00
+    description: 
+    - |-
+      Can enable/disable the auto-send default page watch bulletin setting
+      When auto-send is enabled at the account level, all page watch items are auto-send enabled by default. This means the page watch bulletins will be sent immediately to the subscribers without approval from the admin.
+      user: internal admin
+    - |-
+      Can enable/disable the auto-send default page watch bulletin setting
+      When auto-send is enabled at the account level, all page watch items are auto-send enabled by default. This means the page watch bulletins will be sent immediately to the subscribers without approval from the admin.
+      user: internal admin
+    iteration_id: 
+    - 5
+    - 14
+
+  story_id: "52"
+  id: "220"
+  login: nicole
+  created_at: 2008-07-10 08:05:02
+audit_records_1216065857: 
+  updated_at: 2008-07-11 15:30:39
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 13:21:23 -05:00
+    - 2008-07-11 15:30:39.049279 -05:00
+    description: 
+    - "Admins can add administrators right from the home page and then have to associate a account admin, cat. admin, topic and report to a account with a list that goes off of text.the information will not be saved if these are not associated with accounts. account managers and super users do not have to be affiliated to an account. "
+    - Admins can add admins right from the home page when selecting administrators. they just have to be sure to identify an account when adding account admin, cat. admin, topic and report before they are able to save any information.the information will not be saved if these are not associated with accounts. account managers and super users do not have to be affiliated to an account. this can either be a filtered text list or a new screen with a list of accounts
+
+  story_id: "397"
+  id: "458"
+  login: nicole
+  created_at: 2008-07-11 15:30:39
+audit_records_1216065667: 
+  updated_at: 2008-07-10 11:36:51
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 07:49:35 -05:00
+    - 2008-07-10 11:36:51.032172 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "124"
+  id: "268"
+  login: nicole
+  created_at: 2008-07-10 11:36:51
+audit_records_1216065858: 
+  updated_at: 2008-07-14 09:50:49
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:59:52 -05:00
+    - 2008-07-14 09:50:49.381937 -05:00
+    swag: 
+    - 0.5
+    - 0.51
+
+  story_id: "20"
+  id: "459"
+  login: mml
+  created_at: 2008-07-14 09:50:49
+audit_records_1216065668: 
+  updated_at: 2008-07-10 11:37:20
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:08:14 -05:00
+    - 2008-07-10 11:37:20.646158 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "88"
+  id: "269"
+  login: nicole
+  created_at: 2008-07-10 11:37:20
+audit_records_1216065859: 
+  updated_at: 2008-07-14 09:54:20
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 09:50:49 -05:00
+    - 2008-07-14 09:54:20.636336 -05:00
+    swag: 
+    - 0.51
+    - 0.5
+
+  story_id: "20"
+  id: "460"
+  login: mml
+  created_at: 2008-07-14 09:54:20
+audit_records_1216065669: 
+  updated_at: 2008-07-10 11:37:38
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:04:33 -05:00
+    - 2008-07-10 11:37:38.206718 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "96"
+  id: "270"
+  login: nicole
+  created_at: 2008-07-10 11:37:38
+audit_records_1216065910: 
+  updated_at: 2008-07-14 11:47:21
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 11:47:12 -05:00
+    - 2008-07-14 11:47:21.802021 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "262"
+  id: "511"
+  login: tom
+  created_at: 2008-07-14 11:47:21
+audit_records_1216065720: 
+  updated_at: 2008-07-10 14:50:24
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:52:53 -05:00
+    - 2008-07-10 14:50:24.408845 -05:00
+    iteration_id: 
+    - 10
+    - 6
+
+  story_id: "15"
+  id: "321"
+  login: nicole
+  created_at: 2008-07-10 14:50:24
+audit_records_1216065530: 
+  updated_at: 2008-07-09 13:59:25
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:33:16 -05:00
+    - 2008-07-09 13:59:25.269672 -05:00
+    iteration_id: 
+    - 6
+    - 4
+
+  story_id: "341"
+  id: "131"
+  login: nicole
+  created_at: 2008-07-09 13:59:25
+audit_records_1216065911: 
+  updated_at: 2008-07-14 11:47:30
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 15:36:29 -05:00
+    - 2008-07-14 11:47:30.448394 -05:00
+    iteration_id: 
+    - 15
+    - 29
+
+  story_id: "343"
+  id: "512"
+  login: nicole
+  created_at: 2008-07-14 11:47:30
+audit_records_1216065721: 
+  updated_at: 2008-07-10 14:50:56
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:13:39 -05:00
+    - 2008-07-10 14:50:56.963127 -05:00
+    iteration_id: 
+    - 16
+    - 6
+
+  story_id: "26"
+  id: "322"
+  login: nicole
+  created_at: 2008-07-10 14:50:56
+audit_records_1216065531: 
+  updated_at: 2008-07-09 13:59:38
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 12:39:59 -05:00
+    - 2008-07-09 13:59:38.617898 -05:00
+    description: 
+    - |-
+      Wish GovDelivery never retried a given message once that message has encountered a 500-series error.
+      When GovDelivery retries a rejected message, GovDelivery looks suspicious.
+      user: internal admin
+    - |-
+      Wish GovDelivery never retried a given message once that message has encountered a 500-series error.
+      When GovDelivery retries a rejected message, GovDelivery looks suspicious.
+      user: internal admin
+      
+      
+      *in the context of ludicrous, this can be configured in postfix -mml*
+    swag: 
+    - 
+    - 0.0
+
+  story_id: "336"
+  id: "132"
+  login: mml
+  created_at: 2008-07-09 13:59:38
+audit_records_1216065912: 
+  updated_at: 2008-07-14 11:47:42
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:48:55 -05:00
+    - 2008-07-14 11:47:42.943708 -05:00
+    iteration_id: 
+    - 15
+    - 29
+
+  story_id: "350"
+  id: "513"
+  login: nicole
+  created_at: 2008-07-14 11:47:42
+audit_records_1216065722: 
+  updated_at: 2008-07-10 14:51:12
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 12:33:19 -05:00
+    - 2008-07-10 14:51:12.191931 -05:00
+    iteration_id: 
+    - 8
+    - 6
+
+  story_id: "69"
+  id: "323"
+  login: nicole
+  created_at: 2008-07-10 14:51:12
+audit_records_1216065532: 
+  updated_at: 2008-07-09 14:01:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-03 14:33:49 -05:00
+    - 2008-07-09 14:01:02.460956 -05:00
+    description: 
+    - |-
+      want the system to automatically manage bounced emails
+      user: internal admin
+    - |-
+      want the system to automatically manage bounced emails
+      user: internal admin
+      
+      *this will require an external process to monitor the postmaster mailbox, and configuration of VERP envelope-sender in postfix -mml*
+    swag: 
+    - 
+    - 7.0
+
+  story_id: "344"
+  id: "133"
+  login: mml
+  created_at: 2008-07-09 14:01:02
+audit_records_1216065770: 
+  updated_at: 2008-07-11 07:44:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:46:52 -05:00
+    - 2008-07-11 07:44:31.201402 -05:00
+    iteration_id: 
+    - 10
+    - 29
+
+  story_id: "341"
+  id: "371"
+  login: nicole
+  created_at: 2008-07-11 07:44:31
+audit_records_1216065580: 
+  updated_at: 2008-07-09 14:50:28
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 11:28:05 -05:00
+    - 2008-07-09 14:50:28.520292 -05:00
+    iteration_id: 
+    - 4
+    - 5
+
+  story_id: "38"
+  id: "181"
+  login: nicole
+  created_at: 2008-07-09 14:50:28
+audit_records_1216065913: 
+  updated_at: 2008-07-14 11:47:53
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:49:36 -05:00
+    - 2008-07-14 11:47:53.153829 -05:00
+    iteration_id: 
+    - 15
+    - 29
+
+  story_id: "354"
+  id: "514"
+  login: nicole
+  created_at: 2008-07-14 11:47:53
+audit_records_1216065723: 
+  updated_at: 2008-07-10 14:51:28
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:21:44 -05:00
+    - 2008-07-10 14:51:28.520099 -05:00
+    iteration_id: 
+    - 10
+    - 6
+
+  story_id: "103"
+  id: "324"
+  login: nicole
+  created_at: 2008-07-10 14:51:28
+audit_records_1216065533: 
+  updated_at: 2008-07-09 14:02:04
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-03 14:33:32 -05:00
+    - 2008-07-09 14:02:04.405950 -05:00
+    description: 
+    - |-
+      Wish there were a failures table that logged (approximately): Time/date, Partner code, E-mail address, E-mail domain, Errors. I wish we added a row to this table every time we encountered a 500-series error.
+      Building block for automated failure handling.
+      user: internal admin
+    - |-
+      Wish there were a failures table that logged (approximately): Time/date, Partner code, E-mail address, E-mail domain, Errors. I wish we added a row to this table every time we encountered a 500-series error.
+      Building block for automated failure handling.
+      user: internal admin
+      
+      *this would be part of the ludicrous port to evolution -mml*
+    swag: 
+    - 
+    - 3.0
+
+  story_id: "337"
+  id: "134"
+  login: mml
+  created_at: 2008-07-09 14:02:04
+audit_records_1216065771: 
+  updated_at: 2008-07-11 07:44:44
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:36:50 -05:00
+    - 2008-07-11 07:44:44.838831 -05:00
+    iteration_id: 
+    - 10
+    - 29
+
+  story_id: "342"
+  id: "372"
+  login: nicole
+  created_at: 2008-07-11 07:44:44
+audit_records_1216065581: 
+  updated_at: 2008-07-09 14:50:45
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-01 13:02:52 -05:00
+    - 2008-07-09 14:50:45.093712 -05:00
+    iteration_id: 
+    - 4
+    - 5
+
+  story_id: "95"
+  id: "182"
+  login: nicole
+  created_at: 2008-07-09 14:50:45
+audit_records_1216065914: 
+  updated_at: 2008-07-14 11:48:18
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:50:24 -05:00
+    - 2008-07-14 11:48:18.701043 -05:00
+    iteration_id: 
+    - 15
+    - 29
+
+  story_id: "357"
+  id: "515"
+  login: nicole
+  created_at: 2008-07-14 11:48:18
+audit_records_1216065724: 
+  updated_at: 2008-07-10 14:51:51
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 13:59:38 -05:00
+    - 2008-07-10 14:51:51.233233 -05:00
+    iteration_id: 
+    - 10
+    - 6
+
+  story_id: "336"
+  id: "325"
+  login: nicole
+  created_at: 2008-07-10 14:51:51
+audit_records_1216065534: 
+  updated_at: 2008-07-09 14:03:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 12:36:39 -05:00
+    - 2008-07-09 14:03:31.539664 -05:00
+    description: 
+    - "Wish I had access to a report with one row for each failure that has not been hand-marked as evaluated and the following columns: Time/date, Partner code, E-mail address, E-mail domain, Errors, \xEF\xBF\xBDEvaluated\xEF\xBF\xBD button. \xEF\xBF\xBDEvaluated.  Delete this profile\xEF\xBF\xBD button. I wish we stored a permanent record of each failure and each action.  (The only actions for now are \xEF\xBF\xBDEvaluated / Do nothing\xEF\xBF\xBD and \xEF\xBF\xBDEvaluated / Delete this Profile\xEF\xBF\xBD\r\n\
+      Easier manual failure handling.\r\n\
+      Building block for automated failure handling.\r\n\
+      user: internal admin"
+    - |-
+      Wish I had access to a report with one row for each failure that has not been hand-marked as evaluated and the following columns: Time/date, Partner code, E-mail address, E-mail domain, Errors, 'Evaluated' button. 'Evaluated.  Delete this profile' button. I wish we stored a permanent record of each failure and each action.  (The only actions for now are 'Evaluated / Do nothing' and 'Evaluated / Delete this Profile'
+      Easier manual failure handling.
+      Building block for automated failure handling.
+      user: internal admin
+    swag: 
+    - 
+    - 2.0
+
+  story_id: "338"
+  id: "135"
+  login: mml
+  created_at: 2008-07-09 14:03:31
+audit_records_1216065772: 
+  updated_at: 2008-07-11 07:45:21
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 11:37:38 -05:00
+    - 2008-07-11 07:45:21.363970 -05:00
+    iteration_id: 
+    - 10
+    - 9
+
+  story_id: "96"
+  id: "373"
+  login: nicole
+  created_at: 2008-07-11 07:45:21
+audit_records_1216065582: 
+  updated_at: 2008-07-09 14:51:32
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:19:01 -05:00
+    - 2008-07-09 14:51:32.372507 -05:00
+    iteration_id: 
+    - 4
+    - 5
+
+  story_id: "182"
+  id: "183"
+  login: nicole
+  created_at: 2008-07-09 14:51:32
+audit_records_1216065915: 
+  updated_at: 2008-07-14 11:48:19
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 11:42:44 -05:00
+    - 2008-07-14 11:48:19.141267 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "9"
+  id: "516"
+  login: tom
+  created_at: 2008-07-14 11:48:19
+audit_records_1216065725: 
+  updated_at: 2008-07-10 14:52:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 14:02:04 -05:00
+    - 2008-07-10 14:52:02.190748 -05:00
+    iteration_id: 
+    - 13
+    - 6
+
+  story_id: "337"
+  id: "326"
+  login: nicole
+  created_at: 2008-07-10 14:52:02
+audit_records_1216065535: 
+  updated_at: 2008-07-09 14:25:11
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 16:23:58 -05:00
+    - 2008-07-09 14:25:11.051762 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "42"
+  id: "136"
+  login: Jim
+  created_at: 2008-07-09 14:25:11
+audit_records_1216065773: 
+  updated_at: 2008-07-11 07:45:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 11:37:58 -05:00
+    - 2008-07-11 07:45:31.294008 -05:00
+    iteration_id: 
+    - 10
+    - 9
+
+  story_id: "97"
+  id: "374"
+  login: nicole
+  created_at: 2008-07-11 07:45:31
+audit_records_1216065583: 
+  updated_at: 2008-07-09 14:52:05
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 11:37:48 -05:00
+    - 2008-07-09 14:52:05.429609 -05:00
+    iteration_id: 
+    - 4
+    - 5
+
+  story_id: "155"
+  id: "184"
+  login: nicole
+  created_at: 2008-07-09 14:52:05
+audit_records_1216065916: 
+  updated_at: 2008-07-14 12:53:20
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-01 11:01:10 -05:00
+    - 2008-07-14 12:53:20.086033 -05:00
+    description: 
+    - |-
+      Can set the visibility of a topic
+      user: admin
+    - |-
+      Can set the visibility of a topic
+      user: admin
+      
+      the visibility options are listed, unlisted, restricted or deleted.
+      
+      user enters new topic information and has to set visibility to topic before saving is complete, otherwise user will receive error message.
+
+  story_id: "36"
+  id: "517"
+  login: nicole
+  created_at: 2008-07-14 12:53:20
+audit_records_1216065726: 
+  updated_at: 2008-07-10 14:52:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 14:01:02 -05:00
+    - 2008-07-10 14:52:14.516908 -05:00
+    iteration_id: 
+    - 13
+    - 6
+
+  story_id: "344"
+  id: "327"
+  login: nicole
+  created_at: 2008-07-10 14:52:14
+audit_records_1216065536: 
+  updated_at: 2008-07-09 14:30:31
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "1"
+  id: "137"
+  login: mml
+  created_at: 2008-07-09 14:30:31
+audit_records_1216065774: 
+  updated_at: 2008-07-11 07:46:06
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 11:21:50 -05:00
+    - 2008-07-11 07:46:06.976833 -05:00
+    iteration_id: 
+    - 6
+    - 11
+
+  story_id: "121"
+  id: "375"
+  login: nicole
+  created_at: 2008-07-11 07:46:06
+audit_records_1216065584: 
+  updated_at: 2008-07-09 14:54:39
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 08:46:43 -05:00
+    - 2008-07-09 14:54:39.341335 -05:00
+    iteration_id: 
+    - 11
+    - 19
+
+  story_id: "309"
+  id: "185"
+  login: nicole
+  created_at: 2008-07-09 14:54:39
+audit_records_1216065917: 
+  updated_at: 2008-07-14 13:00:09
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:57 -05:00
+    - 2008-07-14 13:00:09.882820 -05:00
+    description: 
+    - Subscribers can access and edit their global profile from ,net
+    - |-
+      Subscribers can access and edit their global profile from ,net
+      
+      **Question for Brett**<br />
+      For the current implementation, gd.net is only ever seen as embedded pages or widgets, presumably on a partners website.  To implement this story we will need to put a public face on gd.net itself.  Is this within scope of the deliverable for this summer?
+    swag: 
+    - 
+    - 
+
+  story_id: "281"
+  id: "518"
+  login: tom
+  created_at: 2008-07-14 13:00:09
+audit_records_1216065727: 
+  updated_at: 2008-07-10 15:24:13
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:58:02 -05:00
+    - 2008-07-10 15:24:13.945273 -05:00
+    iteration_id: 
+    - 16
+    - 15
+
+  story_id: "365"
+  id: "328"
+  login: nicole
+  created_at: 2008-07-10 15:24:13
+audit_records_1216065537: 
+  updated_at: 2008-07-09 14:32:32
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "156"
+  id: "138"
+  login: mml
+  created_at: 2008-07-09 14:32:32
+audit_records_1216065775: 
+  updated_at: 2008-07-11 07:46:18
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 11:25:00 -05:00
+    - 2008-07-11 07:46:18.764365 -05:00
+    iteration_id: 
+    - 6
+    - 29
+
+  story_id: "129"
+  id: "376"
+  login: nicole
+  created_at: 2008-07-11 07:46:18
+audit_records_1216065585: 
+  updated_at: 2008-07-09 14:55:34
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 08:53:34 -05:00
+    - 2008-07-09 14:55:34.560533 -05:00
+    iteration_id: 
+    - 5
+    - 4
+
+  story_id: "317"
+  id: "186"
+  login: nicole
+  created_at: 2008-07-09 14:55:34
+audit_records_1216065918: 
+  updated_at: 2008-07-14 13:00:22
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 13:00:09 -05:00
+    - 2008-07-14 13:00:22.096566 -05:00
+    description: 
+    - |-
+      Subscribers can access and edit their global profile from ,net
+      
+      **Question for Brett**<br />
+      For the current implementation, gd.net is only ever seen as embedded pages or widgets, presumably on a partners website.  To implement this story we will need to put a public face on gd.net itself.  Is this within scope of the deliverable for this summer?
+    - |-
+      Subscribers can access and edit their global profile from ,net
+      
+      **Question for Brett**
+      
+      For the current implementation, gd.net is only ever seen as embedded pages or widgets, presumably on a partners website.  To implement this story we will need to put a public face on gd.net itself.  Is this within scope of the deliverable for this summer?
+    swag: 
+    - 
+    - 
+
+  story_id: "281"
+  id: "519"
+  login: tom
+  created_at: 2008-07-14 13:00:22
+audit_records_1216065728: 
+  updated_at: 2008-07-10 15:26:15
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:57:35 -05:00
+    - 2008-07-10 15:26:15.378949 -05:00
+    iteration_id: 
+    - 13
+    - 16
+
+  story_id: "21"
+  id: "329"
+  login: nicole
+  created_at: 2008-07-10 15:26:15
+audit_records_1216065538: 
+  updated_at: 2008-07-09 14:33:59
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "156"
+  id: "139"
+  login: mml
+  created_at: 2008-07-09 14:33:59
+audit_records_1216065776: 
+  updated_at: 2008-07-11 07:46:47
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 12:35:50 -05:00
+    - 2008-07-11 07:46:47.682168 -05:00
+    iteration_id: 
+    - 6
+    - 22
+
+  story_id: "154"
+  id: "377"
+  login: nicole
+  created_at: 2008-07-11 07:46:47
+audit_records_1216065586: 
+  updated_at: 2008-07-09 15:15:00
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "178"
+  id: "187"
+  login: nicole
+  created_at: 2008-07-09 15:15:00
+audit_records_1216065919: 
+  updated_at: 2008-07-14 13:00:30
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 13:00:22 -05:00
+    - 2008-07-14 13:00:30.551801 -05:00
+    description: 
+    - |-
+      Subscribers can access and edit their global profile from ,net
+      
+      **Question for Brett**
+      
+      For the current implementation, gd.net is only ever seen as embedded pages or widgets, presumably on a partners website.  To implement this story we will need to put a public face on gd.net itself.  Is this within scope of the deliverable for this summer?
+    - |-
+      Subscribers can access and edit their global profile from ,net
+      
+      **Question for Brett:**
+      
+      For the current implementation, gd.net is only ever seen as embedded pages or widgets, presumably on a partners website.  To implement this story we will need to put a public face on gd.net itself.  Is this within scope of the deliverable for this summer?
+    swag: 
+    - 
+    - 
+
+  story_id: "281"
+  id: "520"
+  login: tom
+  created_at: 2008-07-14 13:00:30
+audit_records_1216065729: 
+  updated_at: 2008-07-10 15:26:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:56:17 -05:00
+    - 2008-07-10 15:26:31.340110 -05:00
+    iteration_id: 
+    - 13
+    - 16
+
+  story_id: "71"
+  id: "330"
+  login: nicole
+  created_at: 2008-07-10 15:26:31
+audit_records_1216065539: 
+  updated_at: 2008-07-09 14:34:45
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "156"
+  id: "140"
+  login: mml
+  created_at: 2008-07-09 14:34:45
+audit_records_1216065777: 
+  updated_at: 2008-07-11 07:47:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 11:59:46 -05:00
+    - 2008-07-11 07:47:02.749870 -05:00
+    iteration_id: 
+    - 6
+    - 22
+
+  story_id: "162"
+  id: "378"
+  login: nicole
+  created_at: 2008-07-11 07:47:02
+audit_records_1216065587: 
+  updated_at: 2008-07-09 15:17:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:19:59 -05:00
+    - 2008-07-09 15:17:02.102548 -05:00
+    iteration_id: 
+    - 4
+    - 5
+
+  story_id: "183"
+  id: "188"
+  login: nicole
+  created_at: 2008-07-09 15:17:02
+audit_records_1216065778: 
+  updated_at: 2008-07-11 07:47:26
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 10:01:28 -05:00
+    - 2008-07-11 07:47:26.233771 -05:00
+    iteration_id: 
+    - 6
+    - 29
+
+  story_id: "369"
+  id: "379"
+  login: nicole
+  created_at: 2008-07-11 07:47:26
+audit_records_1216065588: 
+  updated_at: 2008-07-09 15:18:27
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:21:10 -05:00
+    - 2008-07-09 15:18:27.739232 -05:00
+    iteration_id: 
+    - 4
+    - 23
+
+  story_id: "245"
+  id: "189"
+  login: nicole
+  created_at: 2008-07-09 15:18:27
+audit_records_1216065779: 
+  updated_at: 2008-07-11 07:47:37
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 10:01:58 -05:00
+    - 2008-07-11 07:47:37.165513 -05:00
+    iteration_id: 
+    - 6
+    - 29
+
+  story_id: "377"
+  id: "380"
+  login: nicole
+  created_at: 2008-07-11 07:47:37
+audit_records_1216065589: 
+  updated_at: 2008-07-09 15:19:40
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:17:13 -05:00
+    - 2008-07-09 15:19:40.758603 -05:00
+    iteration_id: 
+    - 4
+    - 5
+
+  story_id: "178"
+  id: "190"
+  login: nicole
+  created_at: 2008-07-09 15:19:40
+audit_records_1216065830: 
+  updated_at: 2008-07-11 08:03:11
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 08:45:14 -05:00
+    - 2008-07-11 08:03:11.845156 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "224"
+  id: "431"
+  login: nicole
+  created_at: 2008-07-11 08:03:11
+audit_records_1216065640: 
+  updated_at: 2008-07-10 08:34:23
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:14:45 -05:00
+    - 2008-07-10 08:34:23.504000 -05:00
+    iteration_id: 
+    - 7
+    - 5
+
+  story_id: "334"
+  id: "241"
+  login: nicole
+  created_at: 2008-07-10 08:34:23
+audit_records_1216065831: 
+  updated_at: 2008-07-11 08:03:22
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:13:37 -05:00
+    - 2008-07-11 08:03:22.835842 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "227"
+  id: "432"
+  login: nicole
+  created_at: 2008-07-11 08:03:22
+audit_records_1216065641: 
+  updated_at: 2008-07-10 08:36:38
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 12:30:29 -05:00
+    - 2008-07-10 08:36:38.899132 -05:00
+    iteration_id: 
+    - 8
+    - 9
+
+  story_id: "152"
+  id: "242"
+  login: nicole
+  created_at: 2008-07-10 08:36:38
+audit_records_1216065832: 
+  updated_at: 2008-07-11 08:03:40
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:16:12 -05:00
+    - 2008-07-11 08:03:40.061118 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "228"
+  id: "433"
+  login: nicole
+  created_at: 2008-07-11 08:03:40
+audit_records_1216065642: 
+  updated_at: 2008-07-10 08:37:26
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:39:13 -05:00
+    - 2008-07-10 08:37:26.732600 -05:00
+    iteration_id: 
+    - 8
+    - 23
+
+  story_id: "176"
+  id: "243"
+  login: nicole
+  created_at: 2008-07-10 08:37:26
+audit_records_1216065880: 
+  updated_at: 2008-07-14 10:38:12
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:16:45 -05:00
+    - 2008-07-14 10:38:12.819922 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "164"
+  id: "481"
+  login: nicole
+  created_at: 2008-07-14 10:38:12
+audit_records_1216065690: 
+  updated_at: 2008-07-10 12:41:11
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 12:33:18 -05:00
+    - 2008-07-10 12:41:11.819240 -05:00
+    iteration_id: 
+    - 9
+    - 15
+
+  story_id: "160"
+  id: "291"
+  login: nicole
+  created_at: 2008-07-10 12:41:11
+audit_records_1216065833: 
+  updated_at: 2008-07-11 08:03:51
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:17:26 -05:00
+    - 2008-07-11 08:03:51.165030 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "229"
+  id: "434"
+  login: nicole
+  created_at: 2008-07-11 08:03:51
+audit_records_1216065643: 
+  updated_at: 2008-07-10 08:39:22
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:02:39 -05:00
+    - 2008-07-10 08:39:22.018897 -05:00
+    iteration_id: 
+    - 7
+    - 9
+
+  story_id: "62"
+  id: "244"
+  login: nicole
+  created_at: 2008-07-10 08:39:22
+audit_records_1216065881: 
+  updated_at: 2008-07-14 10:38:24
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:41:30 -05:00
+    - 2008-07-14 10:38:24.715897 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "166"
+  id: "482"
+  login: nicole
+  created_at: 2008-07-14 10:38:24
+audit_records_1216065691: 
+  updated_at: 2008-07-10 12:41:30
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:35:36 -05:00
+    - 2008-07-10 12:41:30.221039 -05:00
+    iteration_id: 
+    - 6
+    - 16
+
+  story_id: "166"
+  id: "292"
+  login: nicole
+  created_at: 2008-07-10 12:41:30
+audit_records_1216065834: 
+  updated_at: 2008-07-11 08:04:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:19:15 -05:00
+    - 2008-07-11 08:04:02.065698 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "230"
+  id: "435"
+  login: nicole
+  created_at: 2008-07-11 08:04:02
+audit_records_1216065644: 
+  updated_at: 2008-07-10 08:39:48
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-01 13:27:36 -05:00
+    - 2008-07-10 08:39:48.340943 -05:00
+    iteration_id: 
+    - 7
+    - 9
+
+  story_id: "118"
+  id: "245"
+  login: nicole
+  created_at: 2008-07-10 08:39:48
+audit_records_1216065882: 
+  updated_at: 2008-07-14 10:38:39
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:41:17 -05:00
+    - 2008-07-14 10:38:39.591224 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "177"
+  id: "483"
+  login: nicole
+  created_at: 2008-07-14 10:38:39
+audit_records_1216065692: 
+  updated_at: 2008-07-10 12:42:17
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:51:33 -05:00
+    - 2008-07-10 12:42:17.754385 -05:00
+    iteration_id: 
+    - 9
+    - 19
+
+  story_id: "246"
+  id: "293"
+  login: nicole
+  created_at: 2008-07-10 12:42:17
+audit_records_1216065835: 
+  updated_at: 2008-07-11 08:04:13
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:19:33 -05:00
+    - 2008-07-11 08:04:13.771111 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "231"
+  id: "436"
+  login: nicole
+  created_at: 2008-07-11 08:04:13
+audit_records_1216065645: 
+  updated_at: 2008-07-10 08:40:10
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 07:59:37 -05:00
+    - 2008-07-10 08:40:10.126045 -05:00
+    iteration_id: 
+    - 7
+    - 8
+
+  story_id: "143"
+  id: "246"
+  login: nicole
+  created_at: 2008-07-10 08:40:10
+audit_records_1216065883: 
+  updated_at: 2008-07-14 10:38:54
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:46:06 -05:00
+    - 2008-07-14 10:38:54.279338 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "180"
+  id: "484"
+  login: nicole
+  created_at: 2008-07-14 10:38:54
+audit_records_1216065693: 
+  updated_at: 2008-07-10 12:42:53
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:48:22 -05:00
+    - 2008-07-10 12:42:53.413191 -05:00
+    iteration_id: 
+    - 10
+    - 19
+
+  story_id: "274"
+  id: "294"
+  login: nicole
+  created_at: 2008-07-10 12:42:53
+audit_records_1216065836: 
+  updated_at: 2008-07-11 08:04:22
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:24:10 -05:00
+    - 2008-07-11 08:04:21.972775 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "236"
+  id: "437"
+  login: nicole
+  created_at: 2008-07-11 08:04:22
+audit_records_1216065646: 
+  updated_at: 2008-07-10 08:41:10
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:01:00 -05:00
+    - 2008-07-10 08:41:10.806483 -05:00
+    iteration_id: 
+    - 7
+    - 8
+
+  story_id: "183"
+  id: "247"
+  login: nicole
+  created_at: 2008-07-10 08:41:10
+audit_records_1216065884: 
+  updated_at: 2008-07-14 10:39:23
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 14:05:02 -05:00
+    - 2008-07-14 10:39:23.092347 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "326"
+  id: "485"
+  login: nicole
+  created_at: 2008-07-14 10:39:23
+audit_records_1216065694: 
+  updated_at: 2008-07-10 12:43:07
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:55:51 -05:00
+    - 2008-07-10 12:43:07.826944 -05:00
+    iteration_id: 
+    - 9
+    - 19
+
+  story_id: "285"
+  id: "295"
+  login: nicole
+  created_at: 2008-07-10 12:43:07
+audit_records_1216065837: 
+  updated_at: 2008-07-11 08:04:32
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:24:49 -05:00
+    - 2008-07-11 08:04:32.710085 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "237"
+  id: "438"
+  login: nicole
+  created_at: 2008-07-11 08:04:32
+audit_records_1216065647: 
+  updated_at: 2008-07-10 08:41:22
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:04:04 -05:00
+    - 2008-07-10 08:41:22.544357 -05:00
+    iteration_id: 
+    - 7
+    - 8
+
+  story_id: "188"
+  id: "248"
+  login: nicole
+  created_at: 2008-07-10 08:41:22
+audit_records_1216065885: 
+  updated_at: 2008-07-14 10:39:37
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:50:48 -05:00
+    - 2008-07-14 10:39:37.239176 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "382"
+  id: "486"
+  login: nicole
+  created_at: 2008-07-14 10:39:37
+audit_records_1216065695: 
+  updated_at: 2008-07-10 12:43:29
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:02:55 -05:00
+    - 2008-07-10 12:43:29.032674 -05:00
+    iteration_id: 
+    - 10
+    - 19
+
+  story_id: "324"
+  id: "296"
+  login: nicole
+  created_at: 2008-07-10 12:43:29
+audit_records_1216065838: 
+  updated_at: 2008-07-11 08:04:41
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:25:46 -05:00
+    - 2008-07-11 08:04:41.059482 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "238"
+  id: "439"
+  login: nicole
+  created_at: 2008-07-11 08:04:41
+audit_records_1216065648: 
+  updated_at: 2008-07-10 08:41:57
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 07:58:59 -05:00
+    - 2008-07-10 08:41:57.488826 -05:00
+    iteration_id: 
+    - 7
+    - 8
+
+  story_id: "280"
+  id: "249"
+  login: nicole
+  created_at: 2008-07-10 08:41:57
+audit_records_1216065886: 
+  updated_at: 2008-07-14 10:39:48
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 10:03:14 -05:00
+    - 2008-07-14 10:39:48.853332 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "391"
+  id: "487"
+  login: nicole
+  created_at: 2008-07-14 10:39:48
+audit_records_1216065696: 
+  updated_at: 2008-07-10 12:43:44
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:08:27 -05:00
+    - 2008-07-10 12:43:44.471418 -05:00
+    iteration_id: 
+    - 9
+    - 16
+
+  story_id: "326"
+  id: "297"
+  login: nicole
+  created_at: 2008-07-10 12:43:44
+audit_records_1216065839: 
+  updated_at: 2008-07-11 08:04:56
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:29:56 -05:00
+    - 2008-07-11 08:04:56.225353 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "240"
+  id: "440"
+  login: nicole
+  created_at: 2008-07-11 08:04:56
+audit_records_1216065649: 
+  updated_at: 2008-07-10 08:42:22
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:03:14 -05:00
+    - 2008-07-10 08:42:22.427241 -05:00
+    iteration_id: 
+    - 7
+    - 8
+
+  story_id: "182"
+  id: "250"
+  login: nicole
+  created_at: 2008-07-10 08:42:22
+audit_records_1216065887: 
+  updated_at: 2008-07-14 10:40:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:20:41 -05:00
+    - 2008-07-14 10:40:02.923365 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "393"
+  id: "488"
+  login: nicole
+  created_at: 2008-07-14 10:40:02
+audit_records_1216065697: 
+  updated_at: 2008-07-10 12:44:09
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:24:47 -05:00
+    - 2008-07-10 12:44:09.125662 -05:00
+    iteration_id: 
+    - 10
+    - 19
+
+  story_id: "340"
+  id: "298"
+  login: nicole
+  created_at: 2008-07-10 12:44:09
+audit_records_1216065700: 
+  updated_at: 2008-07-10 12:49:20
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 16:00:54 -05:00
+    - 2008-07-10 12:49:20.071376 -05:00
+    iteration_id: 
+    - 10
+    - 19
+
+  story_id: "353"
+  id: "301"
+  login: nicole
+  created_at: 2008-07-10 12:49:20
+audit_records_1216065888: 
+  updated_at: 2008-07-14 10:40:35
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 15:26:15 -05:00
+    - 2008-07-14 10:40:35.384725 -05:00
+    iteration_id: 
+    - 16
+    - 15
+
+  story_id: "21"
+  id: "489"
+  login: nicole
+  created_at: 2008-07-14 10:40:35
+audit_records_1216065698: 
+  updated_at: 2008-07-10 12:45:11
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:47:59 -05:00
+    - 2008-07-10 12:45:11.579198 -05:00
+    iteration_id: 
+    - 9
+    - 15
+
+  story_id: "349"
+  id: "299"
+  login: nicole
+  created_at: 2008-07-10 12:45:11
+audit_records_1216065701: 
+  updated_at: 2008-07-10 12:49:36
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:09:08 -05:00
+    - 2008-07-10 12:49:36.653301 -05:00
+    iteration_id: 
+    - 9
+    - 15
+
+  story_id: "354"
+  id: "302"
+  login: nicole
+  created_at: 2008-07-10 12:49:36
+audit_records_1216065889: 
+  updated_at: 2008-07-14 10:40:55
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:50:45 -05:00
+    - 2008-07-14 10:40:55.015584 -05:00
+    iteration_id: 
+    - 16
+    - 15
+
+  story_id: "28"
+  id: "490"
+  login: nicole
+  created_at: 2008-07-14 10:40:55
+audit_records_1216065699: 
+  updated_at: 2008-07-10 12:48:55
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 11:34:14 -05:00
+    - 2008-07-10 12:48:55.098536 -05:00
+    iteration_id: 
+    - 23
+    - 15
+
+  story_id: "350"
+  id: "300"
+  login: nicole
+  created_at: 2008-07-10 12:48:55
+audit_records_1216065702: 
+  updated_at: 2008-07-10 12:50:08
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:11:10 -05:00
+    - 2008-07-10 12:50:08.771710 -05:00
+    iteration_id: 
+    - 9
+    - 19
+
+  story_id: "356"
+  id: "303"
+  login: nicole
+  created_at: 2008-07-10 12:50:08
+audit_records_1216065940: 
+  updated_at: 2008-07-14 14:09:49
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:05:21 -05:00
+    - 2008-07-14 14:09:49.684956 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "213"
+  id: "541"
+  login: nicole
+  created_at: 2008-07-14 14:09:49
+audit_records_1216065750: 
+  updated_at: 2008-07-10 15:35:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:59:39 -05:00
+    - 2008-07-10 15:35:14.529690 -05:00
+    iteration_id: 
+    - 15
+    - 14
+
+  story_id: "367"
+  id: "351"
+  login: nicole
+  created_at: 2008-07-10 15:35:14
+audit_records_1216065560: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "392"
+  id: "161"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065703: 
+  updated_at: 2008-07-10 12:50:24
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 11:24:25 -05:00
+    - 2008-07-10 12:50:24.604245 -05:00
+    iteration_id: 
+    - 10
+    - 15
+
+  story_id: "357"
+  id: "304"
+  login: nicole
+  created_at: 2008-07-10 12:50:24
+audit_records_1216065941: 
+  updated_at: 2008-07-14 14:10:00
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:05:43 -05:00
+    - 2008-07-14 14:10:00.237887 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "214"
+  id: "542"
+  login: nicole
+  created_at: 2008-07-14 14:10:00
+audit_records_1216065751: 
+  updated_at: 2008-07-10 15:35:28
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 10:01:10 -05:00
+    - 2008-07-10 15:35:28.651286 -05:00
+    iteration_id: 
+    - 15
+    - 14
+
+  story_id: "368"
+  id: "352"
+  login: nicole
+  created_at: 2008-07-10 15:35:28
+audit_records_1216065561: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "10"
+  id: "162"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065704: 
+  updated_at: 2008-07-10 12:50:36
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:13:31 -05:00
+    - 2008-07-10 12:50:36.159181 -05:00
+    iteration_id: 
+    - 9
+    - 19
+
+  story_id: "358"
+  id: "305"
+  login: nicole
+  created_at: 2008-07-10 12:50:36
+audit_records_1216065942: 
+  updated_at: 2008-07-14 14:10:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:07:08 -05:00
+    - 2008-07-14 14:10:14.104259 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "215"
+  id: "543"
+  login: nicole
+  created_at: 2008-07-14 14:10:14
+audit_records_1216065752: 
+  updated_at: 2008-07-10 15:36:29
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:39:58 -05:00
+    - 2008-07-10 15:36:29.114663 -05:00
+    iteration_id: 
+    - 11
+    - 15
+
+  story_id: "343"
+  id: "353"
+  login: nicole
+  created_at: 2008-07-10 15:36:29
+audit_records_1216065562: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "11"
+  id: "163"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065705: 
+  updated_at: 2008-07-10 12:50:48
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:11:42 -05:00
+    - 2008-07-10 12:50:48.178930 -05:00
+    iteration_id: 
+    - 9
+    - 16
+
+  story_id: "382"
+  id: "306"
+  login: nicole
+  created_at: 2008-07-10 12:50:48
+audit_records_1216065943: 
+  updated_at: 2008-07-14 14:10:27
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:06:00 -05:00
+    - 2008-07-14 14:10:27.157856 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "216"
+  id: "544"
+  login: nicole
+  created_at: 2008-07-14 14:10:27
+audit_records_1216065753: 
+  updated_at: 2008-07-10 15:36:42
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:15:48 -05:00
+    - 2008-07-10 15:36:42.814142 -05:00
+    iteration_id: 
+    - 11
+    - 15
+
+  story_id: "383"
+  id: "354"
+  login: nicole
+  created_at: 2008-07-10 15:36:42
+audit_records_1216065563: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "14"
+  id: "164"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065706: 
+  updated_at: 2008-07-10 12:56:05
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:13:57 -05:00
+    - 2008-07-10 12:56:05.223081 -05:00
+    iteration_id: 
+    - 9
+    - 6
+
+  story_id: "60"
+  id: "307"
+  login: nicole
+  created_at: 2008-07-10 12:56:05
+audit_records_1216065944: 
+  updated_at: 2008-07-14 14:10:41
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:06:17 -05:00
+    - 2008-07-14 14:10:41.583970 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "248"
+  id: "545"
+  login: nicole
+  created_at: 2008-07-14 14:10:41
+audit_records_1216065754: 
+  updated_at: 2008-07-10 15:36:59
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:46:49 -05:00
+    - 2008-07-10 15:36:59.617175 -05:00
+    iteration_id: 
+    - 11
+    - 15
+
+  story_id: "273"
+  id: "355"
+  login: nicole
+  created_at: 2008-07-10 15:36:59
+audit_records_1216065564: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "15"
+  id: "165"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065707: 
+  updated_at: 2008-07-10 13:55:27
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:43:29 -05:00
+    - 2008-07-10 13:55:27.463680 -05:00
+    description: 
+    - |-
+      Can send a bulletin notifying subscribers of a page update, and the bulletin contains a description of the change
+      Screen shot or other reproduction of the change on the site, not just raw HTML code.
+      user: admin
+    - "Can send a bulletin notifying subscribers of a page update, and the bulletin contains a description of the change\r\n\
+      Screen shot or other reproduction of the change on the site, not just raw HTML code.\r\n\
+      user: admin\r\n\
+      \r\n\
+      Today, the legend system only includes a change report in the email sent to the admin who owns the topic (e.g. primary item admin). The change report is difficult to read b/c it shows the HTML markup for both the original and the changed version. We can't send this change report to the subscribers b/c they wouldn't know how to interpret it. Even the admins have trouble with the change report. In order to communicate the change to the subscribers, the admin has a few choices: \r\n\
+      a. Send the default page change content. THis is one line that indicates the page has changed, and includes a link back to the page.\r\n\
+      b. THe admin returns to the changed page and either takes a snapshot or otherwise copies the change and pastes it into the item that is sent to the subscriber. \r\n\
+      c. The agency changes what is watched from an HTML page to an RSS feed. Legend renders RSS feeds directly into the email that is sent out. \r\n\
+      \r\n\
+      There are two theories on the changes. \r\n\
+      1. THe single line of text indicating there is a change is sufficient b/c the admins want the traffic back to their site.2. As a service to the subscribers, we should always include lots of information. \r\n\
+      \r\n\
+      I suggest changing this user story to make it address including the HTML page content only, and turning that feature on/off. A separate story should cover duplicating the legend one line of text story. "
+
+  story_id: "324"
+  id: "308"
+  login: brett
+  created_at: 2008-07-10 13:55:27
+audit_records_1216065945: 
+  updated_at: 2008-07-14 14:10:45
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "4"
+  id: "546"
+  login: vaishali.nimgaonkar@govdelivery.com
+  created_at: 2008-07-14 14:10:45
+audit_records_1216065755: 
+  updated_at: 2008-07-10 15:37:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:54:12 -05:00
+    - 2008-07-10 15:37:14.204037 -05:00
+    iteration_id: 
+    - 11
+    - 15
+
+  story_id: "211"
+  id: "356"
+  login: nicole
+  created_at: 2008-07-10 15:37:14
+audit_records_1216065565: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "17"
+  id: "166"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065708: 
+  updated_at: 2008-07-10 14:04:36
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:43:44 -05:00
+    - 2008-07-10 14:04:36.718186 -05:00
+    description: 
+    - |-
+      Wish there were a new, publicly-available Bulletin Page.  I wish this page displayed the From Name, From Address, Date, Subject and full HTML-formatted Body (sans footer) for a single bulletin
+      user: admin
+    - |-
+      Wish there were a new, publicly-available Bulletin Page.  I wish this page displayed the From Name, From Address, Date, Subject and full HTML-formatted Body for a single bulletin
+      user: admin
+
+  story_id: "326"
+  id: "309"
+  login: brett
+  created_at: 2008-07-10 14:04:36
+audit_records_1216065946: 
+  updated_at: 2008-07-14 14:10:45
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 10:16:53 -05:00
+    - 2008-07-14 14:10:45.529604 -05:00
+    state: 
+    - in_qc
+    - passed
+
+  story_id: "4"
+  id: "547"
+  login: vaishali.nimgaonkar@govdelivery.com
+  created_at: 2008-07-14 14:10:45
+audit_records_1216065756: 
+  updated_at: 2008-07-10 15:37:55
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-01 13:43:23 -05:00
+    - 2008-07-10 15:37:55.178036 -05:00
+    iteration_id: 
+    - 11
+    - 25
+
+  story_id: "153"
+  id: "357"
+  login: nicole
+  created_at: 2008-07-10 15:37:55
+audit_records_1216065566: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "26"
+  id: "167"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065709: 
+  updated_at: 2008-07-10 14:05:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 14:04:36 -05:00
+    - 2008-07-10 14:05:02.616790 -05:00
+    title: 
+    - Wish there were a new, publicly-available Bulletin Page.  I wish this page displayed the From Name, From Address, Date, Subject and full HTML-formatted Body (sans footer) for a single bulle...
+    - Wish there were a new, publicly-available Bulletin Page.  I wish this page displayed the From Name, From Address, Date, Subject and full HTML-formatted Body for a single bulle...
+
+  story_id: "326"
+  id: "310"
+  login: brett
+  created_at: 2008-07-10 14:05:02
+audit_records_1216065947: 
+  updated_at: 2008-07-14 14:10:45
+  auditable_type: 
+  diff: |
+    --- 
+    completed_at: 
+    - 
+    - 2008-07-14
+    updated_at: 
+    - 2008-07-14 14:10:45.529604 -05:00
+    - 2008-07-14 14:10:45.534456 -05:00
+
+  story_id: "4"
+  id: "548"
+  login: vaishali.nimgaonkar@govdelivery.com
+  created_at: 2008-07-14 14:10:45
+audit_records_1216065757: 
+  updated_at: 2008-07-10 15:44:43
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:39:22 -05:00
+    - 2008-07-10 15:44:43.364424 -05:00
+    iteration_id: 
+    - 9
+    - 15
+
+  story_id: "62"
+  id: "358"
+  login: nicole
+  created_at: 2008-07-10 15:44:43
+audit_records_1216065567: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "60"
+  id: "168"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065948: 
+  updated_at: 2008-07-14 14:11:23
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 09:53:28 -05:00
+    - 2008-07-14 14:11:23.610174 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "290"
+  id: "549"
+  login: nicole
+  created_at: 2008-07-14 14:11:23
+audit_records_1216065758: 
+  updated_at: 2008-07-10 15:53:38
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:44:24 -05:00
+    - 2008-07-10 15:53:38.174975 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "167"
+  id: "359"
+  login: nicole
+  created_at: 2008-07-10 15:53:38
+audit_records_1216065568: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "69"
+  id: "169"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065949: 
+  updated_at: 2008-07-14 14:11:40
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:07:23 -05:00
+    - 2008-07-14 14:11:40.837251 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "327"
+  id: "550"
+  login: nicole
+  created_at: 2008-07-14 14:11:40
+audit_records_1216065759: 
+  updated_at: 2008-07-10 15:54:20
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:12:54 -05:00
+    - 2008-07-10 15:54:20.785680 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "242"
+  id: "360"
+  login: nicole
+  created_at: 2008-07-10 15:54:20
+audit_records_1216065569: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "79"
+  id: "170"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065620: 
+  updated_at: 2008-07-10 08:05:27
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:55 -05:00
+    - 2008-07-10 08:05:27.576724 -05:00
+    description: 
+    - |-
+      Can delete individual subscriptions for a subscriber
+      user: admin
+    - |-
+      Can delete individual subscriptions for a subscriber
+      user: admin
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "56"
+  id: "221"
+  login: nicole
+  created_at: 2008-07-10 08:05:27
+audit_records_1216065810: 
+  updated_at: 2008-07-11 07:57:11
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:42:56 -05:00
+    - 2008-07-11 07:57:11.838009 -05:00
+    iteration_id: 
+    - 29
+    - 11
+
+  story_id: "57"
+  id: "411"
+  login: nicole
+  created_at: 2008-07-11 07:57:11
+audit_records_1216065811: 
+  updated_at: 2008-07-11 07:57:22
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:43:49 -05:00
+    - 2008-07-11 07:57:22.938790 -05:00
+    iteration_id: 
+    - 29
+    - 11
+
+  story_id: "118"
+  id: "412"
+  login: nicole
+  created_at: 2008-07-11 07:57:22
+audit_records_1216065621: 
+  updated_at: 2008-07-10 08:06:43
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 08:06:43.387315 -05:00
+    description: 
+    - |-
+      can override the default quick subscribe page with a custom page. 
+      user: internal admin
+    - |-
+      can override the default quick subscribe page with a custom page. 
+      user: internal admin
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "90"
+  id: "222"
+  login: nicole
+  created_at: 2008-07-10 08:06:43
+audit_records_1216065812: 
+  updated_at: 2008-07-11 07:57:49
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:38:14 -05:00
+    - 2008-07-11 07:57:49.004821 -05:00
+    iteration_id: 
+    - 29
+    - 13
+
+  story_id: "195"
+  id: "413"
+  login: nicole
+  created_at: 2008-07-11 07:57:49
+audit_records_1216065622: 
+  updated_at: 2008-07-10 08:07:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 08:07:31.810275 -05:00
+    description: 
+    - "can receive content from GovDelivery on a wireless device\n\
+      user: subscriber "
+    - "can receive content from GovDelivery on a wireless device\r\n\
+      user: subscriber "
+    iteration_id: 
+    - 5
+    - 15
+
+  story_id: "130"
+  id: "223"
+  login: nicole
+  created_at: 2008-07-10 08:07:31
+audit_records_1216065860: 
+  updated_at: 2008-07-14 10:00:04
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 15:44:43 -05:00
+    - 2008-07-14 10:00:04.844528 -05:00
+    iteration_id: 
+    - 15
+    - 10
+
+  story_id: "62"
+  id: "461"
+  login: nicole
+  created_at: 2008-07-14 10:00:04
+audit_records_1216065670: 
+  updated_at: 2008-07-10 11:37:58
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:04:52 -05:00
+    - 2008-07-10 11:37:58.415363 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "97"
+  id: "271"
+  login: nicole
+  created_at: 2008-07-10 11:37:58
+audit_records_1216065813: 
+  updated_at: 2008-07-11 07:58:05
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:38:34 -05:00
+    - 2008-07-11 07:58:05.064563 -05:00
+    iteration_id: 
+    - 29
+    - 13
+
+  story_id: "275"
+  id: "414"
+  login: nicole
+  created_at: 2008-07-11 07:58:05
+audit_records_1216065623: 
+  updated_at: 2008-07-10 08:08:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:04:14 -05:00
+    - 2008-07-10 08:08:14.913724 -05:00
+    iteration_id: 
+    - 7
+    - 9
+
+  story_id: "88"
+  id: "224"
+  login: nicole
+  created_at: 2008-07-10 08:08:14
+audit_records_1216065861: 
+  updated_at: 2008-07-14 10:00:44
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 11:38:15 -05:00
+    - 2008-07-14 10:00:44.337016 -05:00
+    iteration_id: 
+    - 15
+    - 4
+
+  story_id: "94"
+  id: "462"
+  login: nicole
+  created_at: 2008-07-14 10:00:44
+audit_records_1216065671: 
+  updated_at: 2008-07-10 11:38:41
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:08:48 -05:00
+    - 2008-07-10 11:38:41.553892 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "99"
+  id: "272"
+  login: nicole
+  created_at: 2008-07-10 11:38:41
+audit_records_1216065814: 
+  updated_at: 2008-07-11 07:58:19
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:40:54 -05:00
+    - 2008-07-11 07:58:19.148154 -05:00
+    iteration_id: 
+    - 29
+    - 13
+
+  story_id: "299"
+  id: "415"
+  login: nicole
+  created_at: 2008-07-11 07:58:19
+audit_records_1216065624: 
+  updated_at: 2008-07-10 08:08:33
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:09:56 -05:00
+    - 2008-07-10 08:08:33.079200 -05:00
+    iteration_id: 
+    - 7
+    - 9
+
+  story_id: "122"
+  id: "225"
+  login: nicole
+  created_at: 2008-07-10 08:08:33
+audit_records_1216065862: 
+  updated_at: 2008-07-14 10:01:13
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:36:06 -05:00
+    - 2008-07-14 10:01:13.034698 -05:00
+    iteration_id: 
+    - 15
+    - 9
+
+  story_id: "124"
+  id: "463"
+  login: nicole
+  created_at: 2008-07-14 10:01:13
+audit_records_1216065672: 
+  updated_at: 2008-07-10 11:41:10
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:10:13 -05:00
+    - 2008-07-10 11:41:10.403051 -05:00
+    iteration_id: 
+    - 9
+    - 24
+
+  story_id: "123"
+  id: "273"
+  login: nicole
+  created_at: 2008-07-10 11:41:10
+audit_records_1216065815: 
+  updated_at: 2008-07-11 07:59:53
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 08:15:51 -05:00
+    - 2008-07-11 07:59:52.997903 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "20"
+  id: "416"
+  login: nicole
+  created_at: 2008-07-11 07:59:53
+audit_records_1216065625: 
+  updated_at: 2008-07-10 08:08:48
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:05:11 -05:00
+    - 2008-07-10 08:08:48.419576 -05:00
+    iteration_id: 
+    - 7
+    - 9
+
+  story_id: "99"
+  id: "226"
+  login: nicole
+  created_at: 2008-07-10 08:08:48
+audit_records_1216065863: 
+  updated_at: 2008-07-14 10:01:56
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:41:11 -05:00
+    - 2008-07-14 10:01:56.011913 -05:00
+    iteration_id: 
+    - 15
+    - 29
+
+  story_id: "160"
+  id: "464"
+  login: nicole
+  created_at: 2008-07-14 10:01:56
+audit_records_1216065673: 
+  updated_at: 2008-07-10 11:44:03
+  auditable_type: 
+  diff: "--- \n\
+    :self: \n\
+    - :nonexistent\n\
+    - :existent\n"
+  story_id: "396"
+  id: "274"
+  login: nicole
+  created_at: 2008-07-10 11:44:03
+audit_records_1216065816: 
+  updated_at: 2008-07-11 08:00:10
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 08:16:52 -05:00
+    - 2008-07-11 08:00:10.302314 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "22"
+  id: "417"
+  login: nicole
+  created_at: 2008-07-11 08:00:10
+audit_records_1216065626: 
+  updated_at: 2008-07-10 08:09:08
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:07:27 -05:00
+    - 2008-07-10 08:09:08.260616 -05:00
+    iteration_id: 
+    - 7
+    - 9
+
+  story_id: "354"
+  id: "227"
+  login: nicole
+  created_at: 2008-07-10 08:09:08
+audit_records_1216065864: 
+  updated_at: 2008-07-14 10:02:24
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 15:37:14 -05:00
+    - 2008-07-14 10:02:24.352358 -05:00
+    iteration_id: 
+    - 15
+    - 21
+
+  story_id: "211"
+  id: "465"
+  login: nicole
+  created_at: 2008-07-14 10:02:24
+audit_records_1216065674: 
+  updated_at: 2008-07-10 11:44:03
+  auditable_type: 
+  diff: |
+    --- 
+    nodule: 
+    - 
+    - accounts
+    updated_at: 
+    - 
+    - 2008-07-10 11:44:03.415374 -05:00
+    title: 
+    - ""
+    - ACOU-350
+    id: 
+    - 
+    - 396
+    mnemonic: 
+    - 
+    - ACOU-396
+    description: 
+    - 
+    - "Partner Migration:\r\n\
+      Support moving partners from Legend into Evolution. the clients will be identified at a later time. "
+    iteration_id: 
+    - 
+    - 28
+    created_at: 
+    - 
+    - 2008-07-10 11:44:03.403856 -05:00
+    swag: 
+    - 
+    - 
+
+  story_id: "396"
+  id: "275"
+  login: nicole
+  created_at: 2008-07-10 11:44:03
+audit_records_1216065817: 
+  updated_at: 2008-07-11 08:00:23
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 08:16:27 -05:00
+    - 2008-07-11 08:00:23.210561 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "23"
+  id: "418"
+  login: nicole
+  created_at: 2008-07-11 08:00:23
+audit_records_1216065627: 
+  updated_at: 2008-07-10 08:10:37
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:39:48 -05:00
+    - 2008-07-10 08:10:37.066623 -05:00
+    iteration_id: 
+    - 7
+    - 9
+
+  story_id: "357"
+  id: "228"
+  login: nicole
+  created_at: 2008-07-10 08:10:37
+audit_records_1216065865: 
+  updated_at: 2008-07-14 10:03:19
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 15:36:42 -05:00
+    - 2008-07-14 10:03:19.884815 -05:00
+    iteration_id: 
+    - 15
+    - 21
+
+  story_id: "383"
+  id: "466"
+  login: nicole
+  created_at: 2008-07-14 10:03:19
+audit_records_1216065675: 
+  updated_at: 2008-07-10 11:44:23
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 11:44:03 -05:00
+    - 2008-07-10 11:44:23.871951 -05:00
+    iteration_id: 
+    - 28
+    - 16
+    swag: 
+    - 
+    - 
+
+  story_id: "396"
+  id: "276"
+  login: nicole
+  created_at: 2008-07-10 11:44:23
+audit_records_1216065818: 
+  updated_at: 2008-07-11 08:00:36
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 08:16:12 -05:00
+    - 2008-07-11 08:00:36.132809 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "43"
+  id: "419"
+  login: nicole
+  created_at: 2008-07-11 08:00:36
+audit_records_1216065628: 
+  updated_at: 2008-07-10 08:11:10
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:40:49 -05:00
+    - 2008-07-10 08:11:10.411013 -05:00
+    iteration_id: 
+    - 7
+    - 9
+
+  story_id: "356"
+  id: "229"
+  login: nicole
+  created_at: 2008-07-10 08:11:10
+audit_records_1216065866: 
+  updated_at: 2008-07-14 10:04:48
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-03 13:23:36 -05:00
+    - 2008-07-14 10:04:48.089527 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "115"
+  id: "467"
+  login: tom
+  created_at: 2008-07-14 10:04:48
+audit_records_1216065676: 
+  updated_at: 2008-07-10 11:45:24
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:05:32 -05:00
+    - 2008-07-10 11:45:24.745517 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "116"
+  id: "277"
+  login: nicole
+  created_at: 2008-07-10 11:45:24
+audit_records_1216065819: 
+  updated_at: 2008-07-11 08:00:47
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 08:17:11 -05:00
+    - 2008-07-11 08:00:47.199554 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "44"
+  id: "420"
+  login: nicole
+  created_at: 2008-07-11 08:00:47
+audit_records_1216065629: 
+  updated_at: 2008-07-10 08:11:26
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:51:05 -05:00
+    - 2008-07-10 08:11:26.308173 -05:00
+    iteration_id: 
+    - 7
+    - 9
+
+  story_id: "355"
+  id: "230"
+  login: nicole
+  created_at: 2008-07-10 08:11:26
+audit_records_1216065867: 
+  updated_at: 2008-07-14 10:04:53
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 10:04:48 -05:00
+    - 2008-07-14 10:04:53.544180 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "115"
+  id: "468"
+  login: tom
+  created_at: 2008-07-14 10:04:53
+audit_records_1216065677: 
+  updated_at: 2008-07-10 11:46:49
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:39:48 -05:00
+    - 2008-07-10 11:46:49.408881 -05:00
+    iteration_id: 
+    - 9
+    - 10
+
+  story_id: "118"
+  id: "278"
+  login: nicole
+  created_at: 2008-07-10 11:46:49
+audit_records_1216065868: 
+  updated_at: 2008-07-14 10:06:53
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-03 13:14:54 -05:00
+    - 2008-07-14 10:06:53.454200 -05:00
+    description: 
+    - |-
+      Can see the subscription topics available after I perform a search.
+      user: subscriber
+      
+      
+      Was this part of itr 2?
+    - |-
+      Can see the subscription topics available after I perform a search.
+      user: subscriber
+      
+      
+      Was this part of itr 2?
+      
+      _in a way, it was.  Now it needs to be altered to be "embedable" in an iframe in the partner's own HTML page(s)_
+
+  story_id: "84"
+  id: "469"
+  login: tom
+  created_at: 2008-07-14 10:06:53
+audit_records_1216065678: 
+  updated_at: 2008-07-10 11:47:22
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 11:36:54 -05:00
+    - 2008-07-10 11:47:22.667640 -05:00
+    iteration_id: 
+    - 9
+    - 5
+
+  story_id: "101"
+  id: "279"
+  login: nicole
+  created_at: 2008-07-10 11:47:22
+audit_records_1216065869: 
+  updated_at: 2008-07-14 10:07:06
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 10:06:53 -05:00
+    - 2008-07-14 10:07:06.102123 -05:00
+    description: 
+    - |-
+      Can see the subscription topics available after I perform a search.
+      user: subscriber
+      
+      
+      Was this part of itr 2?
+      
+      _in a way, it was.  Now it needs to be altered to be "embedable" in an iframe in the partner's own HTML page(s)_
+    - |-
+      Can see the subscription topics available after I perform a search.
+      user: subscriber
+      
+      
+      Was this part of itr 2?
+      
+      _in a way, it was.  Now it needs to be altered to be "embed-able" in an iframe in the partner's own HTML page(s)_
+
+  story_id: "84"
+  id: "470"
+  login: tom
+  created_at: 2008-07-14 10:07:06
+audit_records_1216065679: 
+  updated_at: 2008-07-10 11:48:05
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 10:15:32 -05:00
+    - 2008-07-10 11:48:05.636635 -05:00
+    iteration_id: 
+    - 5
+    - 4
+
+  story_id: "323"
+  id: "280"
+  login: nicole
+  created_at: 2008-07-10 11:48:05
+audit_records_1216065920: 
+  updated_at: 2008-07-14 13:05:50
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 07:30:19 -05:00
+    - 2008-07-14 13:05:50.200339 -05:00
+    description: 
+    - |-
+      Can assign topic ownership to 0, 1 or N owners
+      user: admin
+    - |-
+      Can assign topic ownership to 0, 1 or N owners
+      user: admin
+      
+      user can associate multiple admins in an account with a topic, whether they are Acct admin, topic, category
+
+  story_id: "78"
+  id: "521"
+  login: nicole
+  created_at: 2008-07-14 13:05:50
+audit_records_1216065730: 
+  updated_at: 2008-07-10 15:27:16
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:57:49 -05:00
+    - 2008-07-10 15:27:16.781221 -05:00
+    iteration_id: 
+    - 13
+    - 16
+
+  story_id: "109"
+  id: "331"
+  login: nicole
+  created_at: 2008-07-10 15:27:16
+audit_records_1216065540: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "156"
+  id: "141"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065921: 
+  updated_at: 2008-07-14 13:06:24
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 08:04:02 -05:00
+    - 2008-07-14 13:06:24.094293 -05:00
+    iteration_id: 
+    - 16
+    - 28
+
+  story_id: "230"
+  id: "522"
+  login: nicole
+  created_at: 2008-07-14 13:06:24
+audit_records_1216065731: 
+  updated_at: 2008-07-10 15:28:03
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:57:19 -05:00
+    - 2008-07-10 15:28:03.113186 -05:00
+    iteration_id: 
+    - 13
+    - 16
+
+  story_id: "111"
+  id: "332"
+  login: nicole
+  created_at: 2008-07-10 15:28:03
+audit_records_1216065541: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "157"
+  id: "142"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065922: 
+  updated_at: 2008-07-14 13:06:34
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 13:06:24 -05:00
+    - 2008-07-14 13:06:34.729410 -05:00
+    iteration_id: 
+    - 28
+    - 16
+
+  story_id: "230"
+  id: "523"
+  login: nicole
+  created_at: 2008-07-14 13:06:34
+audit_records_1216065732: 
+  updated_at: 2008-07-10 15:28:16
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:57:05 -05:00
+    - 2008-07-10 15:28:16.834089 -05:00
+    iteration_id: 
+    - 13
+    - 16
+
+  story_id: "112"
+  id: "333"
+  login: nicole
+  created_at: 2008-07-10 15:28:16
+audit_records_1216065542: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "158"
+  id: "143"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065780: 
+  updated_at: 2008-07-11 07:48:34
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:44:02 -05:00
+    - 2008-07-11 07:48:34.223646 -05:00
+    iteration_id: 
+    - 29
+    - 6
+
+  story_id: "151"
+  id: "381"
+  login: nicole
+  created_at: 2008-07-11 07:48:34
+audit_records_1216065590: 
+  updated_at: 2008-07-09 15:55:17
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:20:09 -05:00
+    - 2008-07-09 15:55:16.996272 -05:00
+    iteration_id: 
+    - 4
+    - 5
+
+  story_id: "188"
+  id: "191"
+  login: nicole
+  created_at: 2008-07-09 15:55:17
+audit_records_1216065923: 
+  updated_at: 2008-07-14 13:29:48
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 15:50:09 -05:00
+    - 2008-07-14 13:29:48.170319 -05:00
+    title: 
+    - ACOU-1
+    - when accounts are deleted they will just be disabled
+
+  story_id: "394"
+  id: "524"
+  login: nicole
+  created_at: 2008-07-14 13:29:48
+audit_records_1216065733: 
+  updated_at: 2008-07-10 15:28:49
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:56:50 -05:00
+    - 2008-07-10 15:28:49.411957 -05:00
+    iteration_id: 
+    - 13
+    - 16
+
+  story_id: "142"
+  id: "334"
+  login: nicole
+  created_at: 2008-07-10 15:28:49
+audit_records_1216065543: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "159"
+  id: "144"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065781: 
+  updated_at: 2008-07-11 07:49:01
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:37:59 -05:00
+    - 2008-07-11 07:49:01.194127 -05:00
+    iteration_id: 
+    - 29
+    - 6
+
+  story_id: "152"
+  id: "382"
+  login: nicole
+  created_at: 2008-07-11 07:49:01
+audit_records_1216065591: 
+  updated_at: 2008-07-09 15:56:26
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:21:15 -05:00
+    - 2008-07-09 15:56:26.626506 -05:00
+    iteration_id: 
+    - 10
+    - 7
+
+  story_id: "80"
+  id: "192"
+  login: nicole
+  created_at: 2008-07-09 15:56:26
+audit_records_1216065924: 
+  updated_at: 2008-07-14 13:42:19
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:52:31 -05:00
+    - 2008-07-14 13:42:19.115749 -05:00
+    iteration_id: 
+    - 23
+    - 21
+
+  story_id: "100"
+  id: "525"
+  login: nicole
+  created_at: 2008-07-14 13:42:19
+audit_records_1216065734: 
+  updated_at: 2008-07-10 15:28:59
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:56:03 -05:00
+    - 2008-07-10 15:28:59.965010 -05:00
+    iteration_id: 
+    - 13
+    - 16
+
+  story_id: "144"
+  id: "335"
+  login: nicole
+  created_at: 2008-07-10 15:28:59
+audit_records_1216065544: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "160"
+  id: "145"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065782: 
+  updated_at: 2008-07-11 07:49:27
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:46:18 -05:00
+    - 2008-07-11 07:49:27.104936 -05:00
+    iteration_id: 
+    - 29
+    - 6
+
+  story_id: "129"
+  id: "383"
+  login: nicole
+  created_at: 2008-07-11 07:49:27
+audit_records_1216065592: 
+  updated_at: 2008-07-09 15:57:18
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 12:30:07 -05:00
+    - 2008-07-09 15:57:18.935261 -05:00
+    iteration_id: 
+    - 8
+    - 5
+
+  story_id: "136"
+  id: "193"
+  login: nicole
+  created_at: 2008-07-09 15:57:18
+audit_records_1216065925: 
+  updated_at: 2008-07-14 13:42:32
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:52:48 -05:00
+    - 2008-07-14 13:42:32.688194 -05:00
+    iteration_id: 
+    - 23
+    - 21
+
+  story_id: "108"
+  id: "526"
+  login: nicole
+  created_at: 2008-07-14 13:42:32
+audit_records_1216065735: 
+  updated_at: 2008-07-10 15:29:27
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:03:25 -05:00
+    - 2008-07-10 15:29:27.177859 -05:00
+    iteration_id: 
+    - 13
+    - 16
+
+  story_id: "222"
+  id: "336"
+  login: nicole
+  created_at: 2008-07-10 15:29:27
+audit_records_1216065545: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "161"
+  id: "146"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065783: 
+  updated_at: 2008-07-11 07:49:47
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:47:26 -05:00
+    - 2008-07-11 07:49:47.394739 -05:00
+    iteration_id: 
+    - 29
+    - 6
+
+  story_id: "369"
+  id: "384"
+  login: nicole
+  created_at: 2008-07-11 07:49:47
+audit_records_1216065593: 
+  updated_at: 2008-07-09 15:57:47
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:52:07 -05:00
+    - 2008-07-09 15:57:47.010910 -05:00
+    iteration_id: 
+    - 10
+    - 7
+
+  story_id: "10"
+  id: "194"
+  login: nicole
+  created_at: 2008-07-09 15:57:47
+audit_records_1216065926: 
+  updated_at: 2008-07-14 13:42:46
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:53:29 -05:00
+    - 2008-07-14 13:42:46.302909 -05:00
+    iteration_id: 
+    - 23
+    - 21
+
+  story_id: "119"
+  id: "527"
+  login: nicole
+  created_at: 2008-07-14 13:42:46
+audit_records_1216065736: 
+  updated_at: 2008-07-10 15:29:39
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:06:26 -05:00
+    - 2008-07-10 15:29:39.709309 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "223"
+  id: "337"
+  login: nicole
+  created_at: 2008-07-10 15:29:39
+audit_records_1216065546: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "162"
+  id: "147"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065784: 
+  updated_at: 2008-07-11 07:50:01
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:47:37 -05:00
+    - 2008-07-11 07:50:01.047275 -05:00
+    iteration_id: 
+    - 29
+    - 6
+
+  story_id: "377"
+  id: "385"
+  login: nicole
+  created_at: 2008-07-11 07:50:01
+audit_records_1216065594: 
+  updated_at: 2008-07-09 16:00:16
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 08:21:11 -05:00
+    - 2008-07-09 16:00:16.265553 -05:00
+    iteration_id: 
+    - 8
+    - 7
+
+  story_id: "17"
+  id: "195"
+  login: nicole
+  created_at: 2008-07-09 16:00:16
+audit_records_1216065927: 
+  updated_at: 2008-07-14 13:43:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:56:31 -05:00
+    - 2008-07-14 13:43:02.142121 -05:00
+    iteration_id: 
+    - 23
+    - 21
+
+  story_id: "364"
+  id: "528"
+  login: nicole
+  created_at: 2008-07-14 13:43:02
+audit_records_1216065737: 
+  updated_at: 2008-07-10 15:30:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:22:43 -05:00
+    - 2008-07-10 15:30:02.681350 -05:00
+    iteration_id: 
+    - 13
+    - 16
+
+  story_id: "233"
+  id: "338"
+  login: nicole
+  created_at: 2008-07-10 15:30:02
+audit_records_1216065547: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "163"
+  id: "148"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065928: 
+  updated_at: 2008-07-14 13:43:20
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:51:28 -05:00
+    - 2008-07-14 13:43:20.436854 -05:00
+    iteration_id: 
+    - 19
+    - 21
+    swag: 
+    - 
+    - 
+
+  story_id: "363"
+  id: "529"
+  login: nicole
+  created_at: 2008-07-14 13:43:20
+audit_records_1216065785: 
+  updated_at: 2008-07-11 07:50:45
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-01 13:29:40 -05:00
+    - 2008-07-11 07:50:45.734143 -05:00
+    iteration_id: 
+    - 11
+    - 16
+
+  story_id: "28"
+  id: "386"
+  login: nicole
+  created_at: 2008-07-11 07:50:45
+audit_records_1216065595: 
+  updated_at: 2008-07-09 16:00:54
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:50:58 -05:00
+    - 2008-07-09 16:00:54.595520 -05:00
+    iteration_id: 
+    - 7
+    - 10
+
+  story_id: "353"
+  id: "196"
+  login: nicole
+  created_at: 2008-07-09 16:00:54
+audit_records_1216065738: 
+  updated_at: 2008-07-10 15:30:40
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:34:39 -05:00
+    - 2008-07-10 15:30:40.148084 -05:00
+    iteration_id: 
+    - 16
+    - 13
+
+  story_id: "16"
+  id: "339"
+  login: nicole
+  created_at: 2008-07-10 15:30:40
+audit_records_1216065548: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "164"
+  id: "149"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065929: 
+  updated_at: 2008-07-14 13:43:33
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 12:26:56 -05:00
+    - 2008-07-14 13:43:33.123306 -05:00
+    iteration_id: 
+    - 19
+    - 21
+    swag: 
+    - 
+    - 
+
+  story_id: "362"
+  id: "530"
+  login: nicole
+  created_at: 2008-07-14 13:43:33
+audit_records_1216065786: 
+  updated_at: 2008-07-11 07:51:03
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-01 13:29:51 -05:00
+    - 2008-07-11 07:51:03.557755 -05:00
+    iteration_id: 
+    - 11
+    - 16
+
+  story_id: "29"
+  id: "387"
+  login: nicole
+  created_at: 2008-07-11 07:51:03
+audit_records_1216065596: 
+  updated_at: 2008-07-09 16:01:18
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-09 16:01:18.650952 -05:00
+    description: 
+    - |-
+      Can send a bulletin to subscribers of one, N, or all topics. Also, send to one, N or all mailing lists. Also, send to subscribers who answer one, N or all questions. Or any combination or the preceding
+      user: admin
+    - |-
+      Can send a bulletin to subscribers of one, N, or all topics. Also, send to one, N or all mailing lists. Also, send to subscribers who answer one, N or all questions. Or any combination or the preceding
+      user: admin
+    iteration_id: 
+    - 5
+    - 10
+
+  story_id: "131"
+  id: "197"
+  login: nicole
+  created_at: 2008-07-09 16:01:18
+audit_records_1216065739: 
+  updated_at: 2008-07-10 15:30:59
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:35:09 -05:00
+    - 2008-07-10 15:30:59.584421 -05:00
+    iteration_id: 
+    - 16
+    - 13
+
+  story_id: "19"
+  id: "340"
+  login: nicole
+  created_at: 2008-07-10 15:30:59
+audit_records_1216065549: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "175"
+  id: "150"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065787: 
+  updated_at: 2008-07-11 07:51:19
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-01 13:30:04 -05:00
+    - 2008-07-11 07:51:19.673012 -05:00
+    iteration_id: 
+    - 11
+    - 16
+
+  story_id: "30"
+  id: "388"
+  login: nicole
+  created_at: 2008-07-11 07:51:19
+audit_records_1216065597: 
+  updated_at: 2008-07-09 16:31:30
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 13:45:40 -05:00
+    - 2008-07-09 16:31:30.827043 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "79"
+  id: "198"
+  login: mml
+  created_at: 2008-07-09 16:31:30
+audit_records_1216065600: 
+  updated_at: 2008-07-10 07:47:39
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 15:56:26 -05:00
+    - 2008-07-10 07:47:39.037152 -05:00
+    iteration_id: 
+    - 7
+    - 5
+
+  story_id: "80"
+  id: "201"
+  login: nicole
+  created_at: 2008-07-10 07:47:39
+audit_records_1216065788: 
+  updated_at: 2008-07-11 07:51:47
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:23:49 -05:00
+    - 2008-07-11 07:51:47.018289 -05:00
+    iteration_id: 
+    - 11
+    - 22
+
+  story_id: "58"
+  id: "389"
+  login: nicole
+  created_at: 2008-07-11 07:51:47
+audit_records_1216065598: 
+  updated_at: 2008-07-10 07:46:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 16:00:16 -05:00
+    - 2008-07-10 07:46:02.718607 -05:00
+    iteration_id: 
+    - 7
+    - 5
+
+  story_id: "17"
+  id: "199"
+  login: nicole
+  created_at: 2008-07-10 07:46:02
+audit_records_1216065601: 
+  updated_at: 2008-07-10 07:48:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 07:48:14.657966 -05:00
+    description: 
+    - |-
+      can create a re-usable template
+      Admin accesses Councilman Stark's newsletter template from a list of templates that they modified in previous sessions.
+      user: admin
+    - |-
+      can create a re-usable template
+      Admin accesses Councilman Stark's newsletter template from a list of templates that they modified in previous sessions.
+      user: admin
+    iteration_id: 
+    - 5
+    - 9
+
+  story_id: "158"
+  id: "202"
+  login: nicole
+  created_at: 2008-07-10 07:48:14
+audit_records_1216065789: 
+  updated_at: 2008-07-11 07:52:06
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:22:14 -05:00
+    - 2008-07-11 07:52:06.120105 -05:00
+    iteration_id: 
+    - 11
+    - 22
+
+  story_id: "63"
+  id: "390"
+  login: nicole
+  created_at: 2008-07-11 07:52:06
+audit_records_1216065599: 
+  updated_at: 2008-07-10 07:46:23
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 15:57:47 -05:00
+    - 2008-07-10 07:46:23.475795 -05:00
+    iteration_id: 
+    - 7
+    - 5
+
+  story_id: "10"
+  id: "200"
+  login: nicole
+  created_at: 2008-07-10 07:46:23
+audit_records_1216065602: 
+  updated_at: 2008-07-10 07:49:01
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 07:49:01.193628 -05:00
+    description: 
+    - |-
+      can filter the recipients of a bulletin based on their responses to questions
+      user: admin
+    - |-
+      can filter the recipients of a bulletin based on their responses to questions
+      user: admin
+    iteration_id: 
+    - 5
+    - 9
+
+  story_id: "137"
+  id: "203"
+  login: nicole
+  created_at: 2008-07-10 07:49:01
+audit_records_1216065603: 
+  updated_at: 2008-07-10 07:49:20
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 14:50:28 -05:00
+    - 2008-07-10 07:49:20.459404 -05:00
+    iteration_id: 
+    - 5
+    - 7
+
+  story_id: "38"
+  id: "204"
+  login: nicole
+  created_at: 2008-07-10 07:49:20
+audit_records_1216065840: 
+  updated_at: 2008-07-11 08:05:04
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:33:10 -05:00
+    - 2008-07-11 08:05:04.696668 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "243"
+  id: "441"
+  login: nicole
+  created_at: 2008-07-11 08:05:04
+audit_records_1216065650: 
+  updated_at: 2008-07-10 08:43:19
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:00:39 -05:00
+    - 2008-07-10 08:43:19.792940 -05:00
+    iteration_id: 
+    - 7
+    - 8
+
+  story_id: "225"
+  id: "251"
+  login: nicole
+  created_at: 2008-07-10 08:43:19
+audit_records_1216065604: 
+  updated_at: 2008-07-10 07:49:35
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 07:49:35.174339 -05:00
+    description: 
+    - |-
+      can organize subscriber addresses into mailing lists
+      user: admin
+    - |-
+      can organize subscriber addresses into mailing lists
+      user: admin
+    iteration_id: 
+    - 5
+    - 9
+
+  story_id: "124"
+  id: "205"
+  login: nicole
+  created_at: 2008-07-10 07:49:35
+audit_records_1216065841: 
+  updated_at: 2008-07-11 08:05:16
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:36:12 -05:00
+    - 2008-07-11 08:05:16.232030 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "244"
+  id: "442"
+  login: nicole
+  created_at: 2008-07-11 08:05:16
+audit_records_1216065651: 
+  updated_at: 2008-07-10 08:46:52
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 13:59:25 -05:00
+    - 2008-07-10 08:46:52.203146 -05:00
+    iteration_id: 
+    - 4
+    - 10
+
+  story_id: "341"
+  id: "252"
+  login: nicole
+  created_at: 2008-07-10 08:46:52
+audit_records_1216065605: 
+  updated_at: 2008-07-10 07:49:53
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 07:49:53.356550 -05:00
+    description: 
+    - |-
+      can modify the header (GovDelivery term) of a bulletin, in text or html
+      header appears above the body in an email client. Some ESPs use it for  "If you can't read this message, click here to see it in a web page"
+      user: admin
+    - |-
+      can modify the header (GovDelivery term) of a bulletin, in text or html
+      header appears above the body in an email client. Some ESPs use it for  "If you can't read this message, click here to see it in a web page"
+      user: admin
+    iteration_id: 
+    - 5
+    - 9
+
+  story_id: "139"
+  id: "206"
+  login: nicole
+  created_at: 2008-07-10 07:49:53
+audit_records_1216065842: 
+  updated_at: 2008-07-11 08:05:27
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:37:49 -05:00
+    - 2008-07-11 08:05:27.749952 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "251"
+  id: "443"
+  login: nicole
+  created_at: 2008-07-11 08:05:27
+audit_records_1216065652: 
+  updated_at: 2008-07-10 08:47:23
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 15:57:18 -05:00
+    - 2008-07-10 08:47:23.323058 -05:00
+    iteration_id: 
+    - 5
+    - 4
+
+  story_id: "136"
+  id: "253"
+  login: nicole
+  created_at: 2008-07-10 08:47:23
+audit_records_1216065606: 
+  updated_at: 2008-07-10 07:50:25
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 07:50:25.329078 -05:00
+    description: 
+    - |-
+      can modify the footer of a bulletin, in text or html
+      footer appears below the body in an email client. This is required for SPAM compliance. We will have this populate with CAN-SPAM required content for all bulletins, but it can be edited
+      user: admin
+    - |-
+      can modify the footer of a bulletin, in text or html
+      footer appears below the body in an email client. This is required for SPAM compliance. We will have this populate with CAN-SPAM required content for all bulletins, but it can be edited
+      user: admin
+    iteration_id: 
+    - 5
+    - 9
+
+  story_id: "140"
+  id: "207"
+  login: nicole
+  created_at: 2008-07-10 07:50:25
+audit_records_1216065890: 
+  updated_at: 2008-07-14 10:41:07
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:51:03 -05:00
+    - 2008-07-14 10:41:07.669238 -05:00
+    iteration_id: 
+    - 16
+    - 15
+
+  story_id: "29"
+  id: "491"
+  login: nicole
+  created_at: 2008-07-14 10:41:07
+audit_records_1216065843: 
+  updated_at: 2008-07-11 08:05:37
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:42:14 -05:00
+    - 2008-07-11 08:05:37.122809 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "252"
+  id: "444"
+  login: nicole
+  created_at: 2008-07-11 08:05:37
+audit_records_1216065653: 
+  updated_at: 2008-07-10 08:47:53
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:33:20 -05:00
+    - 2008-07-10 08:47:53.755820 -05:00
+    iteration_id: 
+    - 7
+    - 5
+
+  story_id: "212"
+  id: "254"
+  login: nicole
+  created_at: 2008-07-10 08:47:53
+audit_records_1216065607: 
+  updated_at: 2008-07-10 07:50:40
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 07:50:40.378403 -05:00
+    description: 
+    - |-
+      Can see the content of bulletins sent from the system before I subscribe to that topic
+      GovDelivery.net returns bulletin and topic results for a keyword. Subscriber can click a bulletin to see its content to determine if the related topics are interesting.
+      user: subscriber
+    - |-
+      Can see the content of bulletins sent from the system before I subscribe to that topic
+      GovDelivery.net returns bulletin and topic results for a keyword. Subscriber can click a bulletin to see its content to determine if the related topics are interesting.
+      user: subscriber
+    iteration_id: 
+    - 5
+    - 9
+
+  story_id: "150"
+  id: "208"
+  login: nicole
+  created_at: 2008-07-10 07:50:40
+audit_records_1216065891: 
+  updated_at: 2008-07-14 10:41:19
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:51:19 -05:00
+    - 2008-07-14 10:41:19.423550 -05:00
+    iteration_id: 
+    - 16
+    - 15
+
+  story_id: "30"
+  id: "492"
+  login: nicole
+  created_at: 2008-07-14 10:41:19
+audit_records_1216065844: 
+  updated_at: 2008-07-11 08:05:50
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:44:14 -05:00
+    - 2008-07-11 08:05:50.473097 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "254"
+  id: "445"
+  login: nicole
+  created_at: 2008-07-11 08:05:50
+audit_records_1216065654: 
+  updated_at: 2008-07-10 08:56:09
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 14:25:11 -05:00
+    - 2008-07-10 08:56:09.791359 -05:00
+    state: 
+    - in_qc
+    - in_progress
+
+  story_id: "42"
+  id: "255"
+  login: Jim
+  created_at: 2008-07-10 08:56:09
+audit_records_1216065608: 
+  updated_at: 2008-07-10 07:50:56
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 07:50:56.087158 -05:00
+    description: 
+    - |-
+      want to include the page change in the email I create for a pagewatch detected change
+      user: admin
+    - |-
+      want to include the page change in the email I create for a pagewatch detected change
+      user: admin
+    iteration_id: 
+    - 5
+    - 9
+
+  story_id: "141"
+  id: "209"
+  login: nicole
+  created_at: 2008-07-10 07:50:56
+audit_records_1216065892: 
+  updated_at: 2008-07-14 11:18:23
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 14:38:05 -05:00
+    - 2008-07-14 11:18:23.509730 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "199"
+  id: "493"
+  login: Jim
+  created_at: 2008-07-14 11:18:23
+audit_records_1216065845: 
+  updated_at: 2008-07-11 08:06:24
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:44:44 -05:00
+    - 2008-07-11 08:06:24.555590 -05:00
+    iteration_id: 
+    - 29
+    - 14
+
+  story_id: "342"
+  id: "446"
+  login: nicole
+  created_at: 2008-07-11 08:06:24
+audit_records_1216065655: 
+  updated_at: 2008-07-10 10:01:26
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:49:55 -05:00
+    - 2008-07-10 10:01:26.335732 -05:00
+    description: 
+    - |
+      From Brett:
+      1) Roles & Rights limit access to features & some object instances
+      2) Requires security grid during rqts process
+      3) UI work
+      4) Assign "role" & "permissions"
+      
+      Notes:
+      - Admin can have only 1 Role
+      - Permissions are tied to Roles
+      - RolePermissions serve as a template for Permissions tied to Admin when Role is selected for that Admin
+      - AdminPermissions (i.e. Authorizations) can be modified independent of RolePermissions
+      - Permissions are broken down by Module
+      - Modules are tied to Accounts
+      - Modules must be made available to Accounts in order to give Admins tied to that Account access to those Modules
+      - Admins must be given access to a Module before they can be given access to Permissions within that Module
+    
+    - |-
+      From Brett:
+      1) Roles & Rights limit access to features & some object instances
+      2) Requires security grid during rqts process
+      3) UI work
+      4) Assign "role" & "permissions"
+      
+      Notes:
+      - Admin can have only 1 Role
+      - Permissions are tied to Roles
+      - RolePermissions serve as a template for Permissions tied to Admin when Role is selected for that Admin
+      - AdminPermissions (i.e. Authorizations) can be modified independent of RolePermissions
+      - Permissions are broken down by Module
+      - Modules are tied to Accounts
+      - Modules must be made available to Accounts in order to give Admins tied to that Account access to those Modules
+      - Admins must be given access to a Module before they can be given access to Permissions within that Module
+      
+      
+      QC Notes:
+      ==========
+      
+      This is where qc notes go
+      
+      *you can do all sorts of coool stuff*
+
+  story_id: "4"
+  id: "256"
+  login: ghsdj
+  created_at: 2008-07-10 10:01:26
+audit_records_1216065609: 
+  updated_at: 2008-07-10 07:51:17
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-20 12:56:56 -05:00
+    - 2008-07-10 07:51:17.882340 -05:00
+    description: 
+    - |-
+      Attachments must be checked for viruses before being stored in database or forwarded to subscribers.
+      user: admin
+    - |-
+      Attachments must be checked for viruses before being stored in database or forwarded to subscribers.
+      user: admin
+    iteration_id: 
+    - 5
+    - 9
+
+  story_id: "146"
+  id: "210"
+  login: nicole
+  created_at: 2008-07-10 07:51:17
+audit_records_1216065893: 
+  updated_at: 2008-07-14 11:40:11
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-03 13:05:37 -05:00
+    - 2008-07-14 11:40:11.249233 -05:00
+    swag: 
+    - 2.0
+    - 3.0
+
+  story_id: "9"
+  id: "494"
+  login: tom
+  created_at: 2008-07-14 11:40:11
+audit_records_1216065846: 
+  updated_at: 2008-07-11 08:10:48
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:44:31 -05:00
+    - 2008-07-11 08:10:48.366014 -05:00
+    iteration_id: 
+    - 29
+    - 28
+
+  story_id: "341"
+  id: "447"
+  login: nicole
+  created_at: 2008-07-11 08:10:48
+audit_records_1216065656: 
+  updated_at: 2008-07-10 10:14:47
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:03:05 -05:00
+    - 2008-07-10 10:14:47.087371 -05:00
+    iteration_id: 
+    - 10
+    - 15
+
+  story_id: "325"
+  id: "257"
+  login: nicole
+  created_at: 2008-07-10 10:14:47
+audit_records_1216065894: 
+  updated_at: 2008-07-14 11:41:59
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 11:40:11 -05:00
+    - 2008-07-14 11:41:59.492938 -05:00
+    description: 
+    - |-
+      Will receive an email from GovDelivery when I CRUD subscriptions
+      user: subscriber
+      
+      Is this done, or is it dependent on the Mail Sending story that is also in Itr 3?
+      
+      Assume that the message will be written directly to the database. This is 1-2 days of work.
+    - "Will receive an email from GovDelivery when I CRUD subscriptions\r\n\
+      user: subscriber\r\n\
+      \r\n\
+      Is this done, or is it dependent on the Mail Sending story that is also in Itr 3?\r\n\
+      \r\n\
+      -Assume that the message will be written directly to the database. This is 1-2 days of work.-\r\n\
+      \r\n\
+      NEw assumption is that the new mail sending mechanism in Legend will be used.  This will shield gd.net from imminent changes to mail sending infrastructure (_hopefully_) "
+
+  story_id: "9"
+  id: "495"
+  login: tom
+  created_at: 2008-07-14 11:41:59
+audit_records_1216065847: 
+  updated_at: 2008-07-11 08:13:09
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 10:08:13 -05:00
+    - 2008-07-11 08:13:09.187913 -05:00
+    iteration_id: 
+    - 15
+    - 28
+
+  story_id: "392"
+  id: "448"
+  login: nicole
+  created_at: 2008-07-11 08:13:09
+audit_records_1216065657: 
+  updated_at: 2008-07-10 10:15:32
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 08:58:21 -05:00
+    - 2008-07-10 10:15:32.825422 -05:00
+    iteration_id: 
+    - 10
+    - 5
+
+  story_id: "323"
+  id: "258"
+  login: nicole
+  created_at: 2008-07-10 10:15:32
+audit_records_1216065895: 
+  updated_at: 2008-07-14 11:42:18
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 11:41:59 -05:00
+    - 2008-07-14 11:42:18.717697 -05:00
+    description: 
+    - "Will receive an email from GovDelivery when I CRUD subscriptions\r\n\
+      user: subscriber\r\n\
+      \r\n\
+      Is this done, or is it dependent on the Mail Sending story that is also in Itr 3?\r\n\
+      \r\n\
+      -Assume that the message will be written directly to the database. This is 1-2 days of work.-\r\n\
+      \r\n\
+      NEw assumption is that the new mail sending mechanism in Legend will be used.  This will shield gd.net from imminent changes to mail sending infrastructure (_hopefully_) "
+    - "Will receive an email from GovDelivery when I CRUD subscriptions\r\n\
+      user: subscriber\r\n\
+      \r\n\
+      Is this done, or is it dependent on the Mail Sending story that is also in Itr 3?\r\n\
+      \r\n\
+      -Assume- that the message will be written directly to the database. This is 1-2 days of work.\r\n\
+      \r\n\
+      NEw assumption is that the new mail sending mechanism in Legend will be used.  This will shield gd.net from imminent changes to mail sending infrastructure (_hopefully_) "
+
+  story_id: "9"
+  id: "496"
+  login: tom
+  created_at: 2008-07-14 11:42:18
+audit_records_1216065848: 
+  updated_at: 2008-07-11 08:13:34
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:34:33 -05:00
+    - 2008-07-11 08:13:34.329295 -05:00
+    iteration_id: 
+    - 15
+    - 9
+
+  story_id: "25"
+  id: "449"
+  login: nicole
+  created_at: 2008-07-11 08:13:34
+audit_records_1216065658: 
+  updated_at: 2008-07-10 10:16:53
+  auditable_type: 
+  diff: |+
+    --- 
+    updated_at: 
+    - 2008-07-10 10:01:26 -05:00
+    - 2008-07-10 10:16:53.604921 -05:00
+    description: 
+    - |-
+      From Brett:
+      1) Roles & Rights limit access to features & some object instances
+      2) Requires security grid during rqts process
+      3) UI work
+      4) Assign "role" & "permissions"
+      
+      Notes:
+      - Admin can have only 1 Role
+      - Permissions are tied to Roles
+      - RolePermissions serve as a template for Permissions tied to Admin when Role is selected for that Admin
+      - AdminPermissions (i.e. Authorizations) can be modified independent of RolePermissions
+      - Permissions are broken down by Module
+      - Modules are tied to Accounts
+      - Modules must be made available to Accounts in order to give Admins tied to that Account access to those Modules
+      - Admins must be given access to a Module before they can be given access to Permissions within that Module
+      
+      
+      QC Notes:
+      ==========
+      
+      This is where qc notes go
+      
+      *you can do all sorts of coool stuff*
+    - |
+      From Brett:
+      1) Roles & Rights limit access to features & some object instances
+      2) Requires security grid during rqts process
+      3) UI work
+      4) Assign "role" & "permissions"
+      
+      Notes:
+      - Admin can have only 1 Role
+      - Permissions are tied to Roles
+      - RolePermissions serve as a template for Permissions tied to Admin when Role is selected for that Admin
+      - AdminPermissions (i.e. Authorizations) can be modified independent of RolePermissions
+      - Permissions are broken down by Module
+      - Modules are tied to Accounts
+      - Modules must be made available to Accounts in order to give Admins tied to that Account access to those Modules
+      - Admins must be given access to a Module before they can be given access to Permissions within that Module
+      
+      
+    
+  story_id: "4"
+  id: "259"
+  login: mml
+  created_at: 2008-07-10 10:16:53
+audit_records_1216065896: 
+  updated_at: 2008-07-14 11:42:44
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 11:42:18 -05:00
+    - 2008-07-14 11:42:44.571249 -05:00
+    description: 
+    - "Will receive an email from GovDelivery when I CRUD subscriptions\r\n\
+      user: subscriber\r\n\
+      \r\n\
+      Is this done, or is it dependent on the Mail Sending story that is also in Itr 3?\r\n\
+      \r\n\
+      -Assume- that the message will be written directly to the database. This is 1-2 days of work.\r\n\
+      \r\n\
+      NEw assumption is that the new mail sending mechanism in Legend will be used.  This will shield gd.net from imminent changes to mail sending infrastructure (_hopefully_) "
+    - "Will receive an email from GovDelivery when I CRUD subscriptions\r\n\
+      user: subscriber\r\n\
+      \r\n\
+      Is this done, or is it dependent on the Mail Sending story that is also in Itr 3?\r\n\
+      \r\n\
+      \r\n\
+      Assume that the message will be written directly to the database. This is 1-2 days of work.\r\n\
+      \r\n\
+      *New assumption* is that the new mail sending mechanism in Legend will be used.  This will shield gd.net from imminent changes to mail sending infrastructure (_hopefully_) "
+
+  story_id: "9"
+  id: "497"
+  login: tom
+  created_at: 2008-07-14 11:42:44
+audit_records_1216065849: 
+  updated_at: 2008-07-11 08:59:38
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 16:45:58 -05:00
+    - 2008-07-11 08:59:38.297601 -05:00
+    state: 
+    - in_qc
+    - in_progress
+
+  story_id: "217"
+  id: "450"
+  login: Brian
+  created_at: 2008-07-11 08:59:38
+audit_records_1216065659: 
+  updated_at: 2008-07-10 10:18:00
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "59"
+  id: "260"
+  login: mml
+  created_at: 2008-07-10 10:18:00
+audit_records_1216065897: 
+  updated_at: 2008-07-14 11:44:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-03 13:17:39 -05:00
+    - 2008-07-14 11:44:14.830083 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "18"
+  id: "498"
+  login: tom
+  created_at: 2008-07-14 11:44:14
+audit_records_1216065900: 
+  updated_at: 2008-07-14 11:45:22
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 11:44:53 -05:00
+    - 2008-07-14 11:45:22.808093 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "104"
+  id: "501"
+  login: tom
+  created_at: 2008-07-14 11:45:22
+audit_records_1216065710: 
+  updated_at: 2008-07-10 14:46:54
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:16:36 -05:00
+    - 2008-07-10 14:46:54.421174 -05:00
+    iteration_id: 
+    - 6
+    - 11
+
+  story_id: "32"
+  id: "311"
+  login: nicole
+  created_at: 2008-07-10 14:46:54
+audit_records_1216065898: 
+  updated_at: 2008-07-14 11:44:17
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 11:44:14 -05:00
+    - 2008-07-14 11:44:17.691535 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "18"
+  id: "499"
+  login: tom
+  created_at: 2008-07-14 11:44:17
+audit_records_1216065901: 
+  updated_at: 2008-07-14 11:45:24
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 11:45:22 -05:00
+    - 2008-07-14 11:45:24.601147 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "104"
+  id: "502"
+  login: tom
+  created_at: 2008-07-14 11:45:24
+audit_records_1216065711: 
+  updated_at: 2008-07-10 14:47:05
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:16:49 -05:00
+    - 2008-07-10 14:47:05.833722 -05:00
+    iteration_id: 
+    - 6
+    - 11
+
+  story_id: "33"
+  id: "312"
+  login: nicole
+  created_at: 2008-07-10 14:47:05
+audit_records_1216065899: 
+  updated_at: 2008-07-14 11:44:53
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-27 12:19:51 -05:00
+    - 2008-07-14 11:44:53.105711 -05:00
+    description: 
+    - |-
+      want GovDelivery.net search results to comply with partner visibility rules and partner type rules
+      user: admin
+      
+      Was this part of Itr 2?
+    - |-
+      want GovDelivery.net search results to comply with partner visibility rules and partner type rules
+      user: admin
+      
+      Was this part of Itr 2?
+      
+      *Yes*
+
+  story_id: "104"
+  id: "500"
+  login: tom
+  created_at: 2008-07-14 11:44:53
+audit_records_1216065902: 
+  updated_at: 2008-07-14 11:46:15
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 15:36:59 -05:00
+    - 2008-07-14 11:46:15.296575 -05:00
+    iteration_id: 
+    - 15
+    - 4
+
+  story_id: "273"
+  id: "503"
+  login: nicole
+  created_at: 2008-07-14 11:46:15
+audit_records_1216065712: 
+  updated_at: 2008-07-10 14:47:23
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:17:07 -05:00
+    - 2008-07-10 14:47:23.809868 -05:00
+    iteration_id: 
+    - 6
+    - 11
+
+  story_id: "34"
+  id: "313"
+  login: nicole
+  created_at: 2008-07-10 14:47:23
+audit_records_1216065950: 
+  updated_at: 2008-07-14 14:11:51
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:07:43 -05:00
+    - 2008-07-14 14:11:51.671791 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "328"
+  id: "551"
+  login: nicole
+  created_at: 2008-07-14 14:11:51
+audit_records_1216065903: 
+  updated_at: 2008-07-14 11:46:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-27 12:20:19 -05:00
+    - 2008-07-14 11:46:31.975258 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "105"
+  id: "504"
+  login: tom
+  created_at: 2008-07-14 11:46:31
+audit_records_1216065713: 
+  updated_at: 2008-07-10 14:47:33
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:17:25 -05:00
+    - 2008-07-10 14:47:33.144724 -05:00
+    iteration_id: 
+    - 6
+    - 11
+
+  story_id: "35"
+  id: "314"
+  login: nicole
+  created_at: 2008-07-10 14:47:33
+audit_records_1216065760: 
+  updated_at: 2008-07-10 16:45:58
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 10:11:18 -05:00
+    - 2008-07-10 16:45:58.674546 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "217"
+  id: "361"
+  login: Brian
+  created_at: 2008-07-10 16:45:58
+audit_records_1216065570: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "80"
+  id: "171"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065951: 
+  updated_at: 2008-07-14 14:12:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:07:57 -05:00
+    - 2008-07-14 14:12:02.535658 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "329"
+  id: "552"
+  login: nicole
+  created_at: 2008-07-14 14:12:02
+audit_records_1216065904: 
+  updated_at: 2008-07-14 11:46:33
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 11:46:31 -05:00
+    - 2008-07-14 11:46:33.106563 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "105"
+  id: "505"
+  login: tom
+  created_at: 2008-07-14 11:46:33
+audit_records_1216065714: 
+  updated_at: 2008-07-10 14:47:46
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:17:41 -05:00
+    - 2008-07-10 14:47:46.324854 -05:00
+    iteration_id: 
+    - 6
+    - 11
+
+  story_id: "39"
+  id: "315"
+  login: nicole
+  created_at: 2008-07-10 14:47:46
+audit_records_1216065761: 
+  updated_at: 2008-07-11 07:37:59
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:36:38 -05:00
+    - 2008-07-11 07:37:59.771238 -05:00
+    iteration_id: 
+    - 9
+    - 29
+
+  story_id: "152"
+  id: "362"
+  login: nicole
+  created_at: 2008-07-11 07:37:59
+audit_records_1216065571: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "103"
+  id: "172"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065952: 
+  updated_at: 2008-07-14 14:12:17
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:08:13 -05:00
+    - 2008-07-14 14:12:17.901187 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "330"
+  id: "553"
+  login: nicole
+  created_at: 2008-07-14 14:12:17
+audit_records_1216065905: 
+  updated_at: 2008-07-14 11:46:37
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 08:54:33 -05:00
+    - 2008-07-14 11:46:37.713041 -05:00
+    iteration_id: 
+    - 15
+    - 29
+
+  story_id: "319"
+  id: "506"
+  login: nicole
+  created_at: 2008-07-14 11:46:37
+audit_records_1216065715: 
+  updated_at: 2008-07-10 14:47:58
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "40"
+  id: "316"
+  login: nicole
+  created_at: 2008-07-10 14:47:58
+audit_records_1216065762: 
+  updated_at: 2008-07-11 07:38:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:47:53 -05:00
+    - 2008-07-11 07:38:14.296499 -05:00
+    iteration_id: 
+    - 9
+    - 29
+
+  story_id: "195"
+  id: "363"
+  login: nicole
+  created_at: 2008-07-11 07:38:14
+audit_records_1216065572: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "136"
+  id: "173"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065953: 
+  updated_at: 2008-07-14 14:12:42
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:08:26 -05:00
+    - 2008-07-14 14:12:42.420735 -05:00
+    iteration_id: 
+    - 21
+    - 27
+    swag: 
+    - 
+    - 
+
+  story_id: "332"
+  id: "554"
+  login: nicole
+  created_at: 2008-07-14 14:12:42
+audit_records_1216065906: 
+  updated_at: 2008-07-14 11:46:50
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 08:57:27 -05:00
+    - 2008-07-14 11:46:50.871197 -05:00
+    iteration_id: 
+    - 15
+    - 29
+
+  story_id: "322"
+  id: "507"
+  login: nicole
+  created_at: 2008-07-14 11:46:50
+audit_records_1216065716: 
+  updated_at: 2008-07-10 14:48:38
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:15:57 -05:00
+    - 2008-07-10 14:48:38.800095 -05:00
+    iteration_id: 
+    - 6
+    - 11
+
+  story_id: "117"
+  id: "317"
+  login: nicole
+  created_at: 2008-07-10 14:48:38
+audit_records_1216065526: 
+  updated_at: 2008-07-09 12:15:19
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:02:19 -05:00
+    - 2008-07-09 12:15:19.308077 -05:00
+    title: 
+    - Travis!
+    - Travis!2
+
+  story_id: "1"
+  id: "127"
+  login: mml
+  created_at: 2008-07-09 12:15:19
+audit_records_1216065763: 
+  updated_at: 2008-07-11 07:38:34
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:54:16 -05:00
+    - 2008-07-11 07:38:34.358343 -05:00
+    iteration_id: 
+    - 9
+    - 29
+
+  story_id: "275"
+  id: "364"
+  login: nicole
+  created_at: 2008-07-11 07:38:34
+audit_records_1216065573: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "152"
+  id: "174"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065954: 
+  updated_at: 2008-07-14 14:13:51
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:46:47 -05:00
+    - 2008-07-14 14:13:51.436913 -05:00
+    iteration_id: 
+    - 22
+    - 21
+
+  story_id: "154"
+  id: "555"
+  login: nicole
+  created_at: 2008-07-14 14:13:51
+audit_records_1216065907: 
+  updated_at: 2008-07-14 11:47:01
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 10:14:47 -05:00
+    - 2008-07-14 11:47:01.781074 -05:00
+    iteration_id: 
+    - 15
+    - 29
+
+  story_id: "325"
+  id: "508"
+  login: nicole
+  created_at: 2008-07-14 11:47:01
+audit_records_1216065717: 
+  updated_at: 2008-07-10 14:48:56
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:49:42 -05:00
+    - 2008-07-10 14:48:56.803570 -05:00
+    iteration_id: 
+    - 9
+    - 11
+
+  story_id: "234"
+  id: "318"
+  login: nicole
+  created_at: 2008-07-10 14:48:56
+audit_records_1216065527: 
+  updated_at: 2008-07-09 12:17:05
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 12:15:19 -05:00
+    - 2008-07-09 12:17:05.833829 -05:00
+    title: 
+    - Travis!2
+    - Travis!
+
+  story_id: "1"
+  id: "128"
+  login: mml
+  created_at: 2008-07-09 12:17:05
+audit_records_1216065764: 
+  updated_at: 2008-07-11 07:40:54
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:56:19 -05:00
+    - 2008-07-11 07:40:54.264892 -05:00
+    iteration_id: 
+    - 9
+    - 29
+
+  story_id: "299"
+  id: "365"
+  login: nicole
+  created_at: 2008-07-11 07:40:54
+audit_records_1216065574: 
+  updated_at: 2008-07-09 14:37:01
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "334"
+  id: "175"
+  login: mml
+  created_at: 2008-07-09 14:37:01
+audit_records_1216065955: 
+  updated_at: 2008-07-14 14:20:50
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 13:00:30 -05:00
+    - 2008-07-14 14:20:50.131432 -05:00
+    description: 
+    - |-
+      Subscribers can access and edit their global profile from ,net
+      
+      **Question for Brett:**
+      
+      For the current implementation, gd.net is only ever seen as embedded pages or widgets, presumably on a partners website.  To implement this story we will need to put a public face on gd.net itself.  Is this within scope of the deliverable for this summer?
+    - |
+      Subscribers can access and edit their global profile from ,net
+      
+      **Question for Brett:**
+      
+      For the current implementation, gd.net is only ever seen as embedded pages or widgets, presumably on a partners website.  To implement this story we will need to put a public face on gd.net itself.  Is this within scope of the deliverable for this summer?
+      
+      **Response**
+      This story is not on the list for this summer. It is my expectation that, for the near term, subscribers will edit their profiles on an account-by-account basis, similar to the way they handle it in the Network. Visit export.gov for an example of the network.
+      Thanks, Brett 
+    
+    swag: 
+    - 
+    - 
+
+  story_id: "281"
+  id: "556"
+  login: brett
+  created_at: 2008-07-14 14:20:50
+audit_records_1216065908: 
+  updated_at: 2008-07-14 11:47:12
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 10:20:16 -05:00
+    - 2008-07-14 11:47:12.488544 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "262"
+  id: "509"
+  login: tom
+  created_at: 2008-07-14 11:47:12
+audit_records_1216065718: 
+  updated_at: 2008-07-10 14:49:50
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:52:31 -05:00
+    - 2008-07-10 14:49:50.720725 -05:00
+    iteration_id: 
+    - 10
+    - 6
+
+  story_id: "11"
+  id: "319"
+  login: nicole
+  created_at: 2008-07-10 14:49:50
+audit_records_1216065528: 
+  updated_at: 2008-07-09 12:33:05
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 12:17:05 -05:00
+    - 2008-07-09 12:33:05.428250 -05:00
+    iteration_id: 
+    - 1
+    - 20
+
+  story_id: "1"
+  id: "129"
+  login: Paul
+  created_at: 2008-07-09 12:33:05
+audit_records_1216065765: 
+  updated_at: 2008-07-11 07:42:24
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:33:54 -05:00
+    - 2008-07-11 07:42:24.023402 -05:00
+    iteration_id: 
+    - 10
+    - 29
+
+  story_id: "47"
+  id: "366"
+  login: nicole
+  created_at: 2008-07-11 07:42:24
+audit_records_1216065575: 
+  updated_at: 2008-07-09 14:37:02
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "336"
+  id: "176"
+  login: mml
+  created_at: 2008-07-09 14:37:02
+audit_records_1216065956: 
+  updated_at: 2008-07-14 14:35:13
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "199"
+  id: "557"
+  login: ghgh
+  created_at: 2008-07-14 14:35:13
+audit_records_1216065909: 
+  updated_at: 2008-07-14 11:47:19
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:45:11 -05:00
+    - 2008-07-14 11:47:19.806662 -05:00
+    iteration_id: 
+    - 15
+    - 29
+
+  story_id: "349"
+  id: "510"
+  login: nicole
+  created_at: 2008-07-14 11:47:19
+audit_records_1216065719: 
+  updated_at: 2008-07-10 14:50:07
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:53:13 -05:00
+    - 2008-07-10 14:50:07.284774 -05:00
+    iteration_id: 
+    - 10
+    - 6
+
+  story_id: "14"
+  id: "320"
+  login: nicole
+  created_at: 2008-07-10 14:50:07
+audit_records_1216065529: 
+  updated_at: 2008-07-09 12:54:20
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 10:11:18 -05:00
+    - 2008-07-09 12:54:20.779531 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "59"
+  id: "130"
+  login: Brian
+  created_at: 2008-07-09 12:54:20
+audit_records_1216065766: 
+  updated_at: 2008-07-11 07:42:56
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 12:01:22 -05:00
+    - 2008-07-11 07:42:56.155381 -05:00
+    iteration_id: 
+    - 10
+    - 29
+
+  story_id: "57"
+  id: "367"
+  login: nicole
+  created_at: 2008-07-11 07:42:56
+audit_records_1216065576: 
+  updated_at: 2008-07-09 14:37:02
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "337"
+  id: "177"
+  login: mml
+  created_at: 2008-07-09 14:37:02
+audit_records_1216065957: 
+  updated_at: 2008-07-14 14:35:13
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 11:18:23 -05:00
+    - 2008-07-14 14:35:13.110042 -05:00
+    state: 
+    - in_qc
+    - passed
+
+  story_id: "199"
+  id: "558"
+  login: ghgh
+  created_at: 2008-07-14 14:35:13
+audit_records_1216065767: 
+  updated_at: 2008-07-11 07:43:49
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 11:46:49 -05:00
+    - 2008-07-11 07:43:49.076550 -05:00
+    iteration_id: 
+    - 10
+    - 29
+
+  story_id: "118"
+  id: "368"
+  login: nicole
+  created_at: 2008-07-11 07:43:49
+audit_records_1216065577: 
+  updated_at: 2008-07-09 14:37:02
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "344"
+  id: "178"
+  login: mml
+  created_at: 2008-07-09 14:37:02
+audit_records_1216065958: 
+  updated_at: 2008-07-14 14:35:13
+  auditable_type: 
+  diff: |
+    --- 
+    completed_at: 
+    - 
+    - 2008-07-14
+    updated_at: 
+    - 2008-07-14 14:35:13.110042 -05:00
+    - 2008-07-14 14:35:13.114619 -05:00
+
+  story_id: "199"
+  id: "559"
+  login: ghgh
+  created_at: 2008-07-14 14:35:13
+audit_records_1216065768: 
+  updated_at: 2008-07-11 07:44:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 12:36:16 -05:00
+    - 2008-07-11 07:44:02.714121 -05:00
+    iteration_id: 
+    - 10
+    - 29
+
+  story_id: "151"
+  id: "369"
+  login: nicole
+  created_at: 2008-07-11 07:44:02
+audit_records_1216065578: 
+  updated_at: 2008-07-09 14:37:02
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "380"
+  id: "179"
+  login: mml
+  created_at: 2008-07-09 14:37:02
+audit_records_1216065769: 
+  updated_at: 2008-07-11 07:44:18
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 08:53:42 -05:00
+    - 2008-07-11 07:44:18.845892 -05:00
+    iteration_id: 
+    - 10
+    - 11
+
+  story_id: "318"
+  id: "370"
+  login: nicole
+  created_at: 2008-07-11 07:44:18
+audit_records_1216065579: 
+  updated_at: 2008-07-09 14:37:02
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "381"
+  id: "180"
+  login: mml
+  created_at: 2008-07-09 14:37:02
+audit_records_1216065820: 
+  updated_at: 2008-07-11 08:00:59
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 08:17:32 -05:00
+    - 2008-07-11 08:00:59.554389 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "45"
+  id: "421"
+  login: nicole
+  created_at: 2008-07-11 08:00:59
+audit_records_1216065630: 
+  updated_at: 2008-07-10 08:11:42
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 10:02:36 -05:00
+    - 2008-07-10 08:11:42.473498 -05:00
+    iteration_id: 
+    - 8
+    - 9
+
+  story_id: "382"
+  id: "231"
+  login: nicole
+  created_at: 2008-07-10 08:11:42
+audit_records_1216065821: 
+  updated_at: 2008-07-11 08:01:12
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 08:28:27 -05:00
+    - 2008-07-11 08:01:12.201967 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "46"
+  id: "422"
+  login: nicole
+  created_at: 2008-07-11 08:01:12
+audit_records_1216065631: 
+  updated_at: 2008-07-10 08:12:03
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 11:44:40 -05:00
+    - 2008-07-10 08:12:03.242832 -05:00
+    iteration_id: 
+    - 8
+    - 9
+
+  story_id: "24"
+  id: "232"
+  login: nicole
+  created_at: 2008-07-10 08:12:03
+audit_records_1216065822: 
+  updated_at: 2008-07-11 08:01:28
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:55:45 -05:00
+    - 2008-07-11 08:01:28.857729 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "77"
+  id: "423"
+  login: nicole
+  created_at: 2008-07-11 08:01:28
+audit_records_1216065632: 
+  updated_at: 2008-07-10 08:12:27
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:28:15 -05:00
+    - 2008-07-10 08:12:27.512849 -05:00
+    iteration_id: 
+    - 8
+    - 9
+
+  story_id: "25"
+  id: "233"
+  login: nicole
+  created_at: 2008-07-10 08:12:27
+audit_records_1216065823: 
+  updated_at: 2008-07-11 08:01:46
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 12:36:59 -05:00
+    - 2008-07-11 08:01:46.742887 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "149"
+  id: "424"
+  login: nicole
+  created_at: 2008-07-11 08:01:46
+audit_records_1216065633: 
+  updated_at: 2008-07-10 08:12:40
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:28:29 -05:00
+    - 2008-07-10 08:12:40.118230 -05:00
+    iteration_id: 
+    - 8
+    - 9
+
+  story_id: "86"
+  id: "234"
+  login: nicole
+  created_at: 2008-07-10 08:12:40
+audit_records_1216065870: 
+  updated_at: 2008-07-14 10:08:08
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 10:07:06 -05:00
+    - 2008-07-14 10:08:08.132775 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "84"
+  id: "471"
+  login: tom
+  created_at: 2008-07-14 10:08:08
+audit_records_1216065680: 
+  updated_at: 2008-07-10 12:34:05
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:12:03 -05:00
+    - 2008-07-10 12:34:05.355448 -05:00
+    iteration_id: 
+    - 9
+    - 19
+
+  story_id: "24"
+  id: "281"
+  login: nicole
+  created_at: 2008-07-10 12:34:05
+audit_records_1216065824: 
+  updated_at: 2008-07-11 08:01:58
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:47:18 -05:00
+    - 2008-07-11 08:01:58.278220 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "190"
+  id: "425"
+  login: nicole
+  created_at: 2008-07-11 08:01:58
+audit_records_1216065634: 
+  updated_at: 2008-07-10 08:12:54
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:40:59 -05:00
+    - 2008-07-10 08:12:54.385186 -05:00
+    iteration_id: 
+    - 8
+    - 9
+
+  story_id: "242"
+  id: "235"
+  login: nicole
+  created_at: 2008-07-10 08:12:54
+audit_records_1216065871: 
+  updated_at: 2008-07-14 10:09:57
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 10:02:14 -05:00
+    - 2008-07-14 10:09:57.267230 -05:00
+    iteration_id: 
+    - 15
+    - 29
+
+  story_id: "378"
+  id: "472"
+  login: nicole
+  created_at: 2008-07-14 10:09:57
+audit_records_1216065681: 
+  updated_at: 2008-07-10 12:34:33
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 08:12:27 -05:00
+    - 2008-07-10 12:34:33.899579 -05:00
+    iteration_id: 
+    - 9
+    - 15
+
+  story_id: "25"
+  id: "282"
+  login: nicole
+  created_at: 2008-07-10 12:34:33
+audit_records_1216065825: 
+  updated_at: 2008-07-11 08:02:11
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:48:19 -05:00
+    - 2008-07-11 08:02:11.041648 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "191"
+  id: "426"
+  login: nicole
+  created_at: 2008-07-11 08:02:11
+audit_records_1216065635: 
+  updated_at: 2008-07-10 08:13:06
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:46:01 -05:00
+    - 2008-07-10 08:13:06.928708 -05:00
+    iteration_id: 
+    - 8
+    - 9
+
+  story_id: "347"
+  id: "236"
+  login: nicole
+  created_at: 2008-07-10 08:13:06
+audit_records_1216065872: 
+  updated_at: 2008-07-14 10:10:11
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-06-27 12:18:44 -05:00
+    - 2008-07-14 10:10:11.905576 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "81"
+  id: "473"
+  login: tom
+  created_at: 2008-07-14 10:10:11
+audit_records_1216065682: 
+  updated_at: 2008-07-10 12:35:00
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 08:32:29 -05:00
+    - 2008-07-10 12:34:59.998178 -05:00
+    iteration_id: 
+    - 9
+    - 19
+
+  story_id: "61"
+  id: "283"
+  login: nicole
+  created_at: 2008-07-10 12:35:00
+audit_records_1216065826: 
+  updated_at: 2008-07-11 08:02:23
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:55:43 -05:00
+    - 2008-07-11 08:02:23.760508 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "218"
+  id: "427"
+  login: nicole
+  created_at: 2008-07-11 08:02:23
+audit_records_1216065636: 
+  updated_at: 2008-07-10 08:13:20
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:46:38 -05:00
+    - 2008-07-10 08:13:19.993983 -05:00
+    iteration_id: 
+    - 8
+    - 9
+
+  story_id: "87"
+  id: "237"
+  login: nicole
+  created_at: 2008-07-10 08:13:20
+audit_records_1216065873: 
+  updated_at: 2008-07-14 10:12:22
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-01 10:57:50 -05:00
+    - 2008-07-14 10:12:22.581644 -05:00
+    state: 
+    - new
+    - in_progress
+
+  story_id: "12"
+  id: "474"
+  login: tom
+  created_at: 2008-07-14 10:12:22
+audit_records_1216065683: 
+  updated_at: 2008-07-10 12:35:38
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 11:47:35 -05:00
+    - 2008-07-10 12:35:38.043932 -05:00
+    iteration_id: 
+    - 16
+    - 9
+
+  story_id: "98"
+  id: "284"
+  login: nicole
+  created_at: 2008-07-10 12:35:38
+audit_records_1216065827: 
+  updated_at: 2008-07-11 08:02:34
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:58:01 -05:00
+    - 2008-07-11 08:02:34.052446 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "219"
+  id: "428"
+  login: nicole
+  created_at: 2008-07-11 08:02:34
+audit_records_1216065637: 
+  updated_at: 2008-07-10 08:13:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 14:06:02 -05:00
+    - 2008-07-10 08:13:31.953587 -05:00
+    iteration_id: 
+    - 8
+    - 9
+
+  story_id: "358"
+  id: "238"
+  login: nicole
+  created_at: 2008-07-10 08:13:31
+audit_records_1216065874: 
+  updated_at: 2008-07-14 10:12:27
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-14 10:12:22 -05:00
+    - 2008-07-14 10:12:27.188415 -05:00
+    state: 
+    - in_progress
+    - in_qc
+
+  story_id: "12"
+  id: "475"
+  login: tom
+  created_at: 2008-07-14 10:12:27
+audit_records_1216065684: 
+  updated_at: 2008-07-10 12:36:06
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 11:36:51 -05:00
+    - 2008-07-10 12:36:06.753901 -05:00
+    iteration_id: 
+    - 10
+    - 15
+
+  story_id: "124"
+  id: "285"
+  login: nicole
+  created_at: 2008-07-10 12:36:06
+audit_records_1216065828: 
+  updated_at: 2008-07-11 08:02:50
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:00:42 -05:00
+    - 2008-07-11 08:02:50.240261 -05:00
+    iteration_id: 
+    - 14
+    - 15
+
+  story_id: "220"
+  id: "429"
+  login: nicole
+  created_at: 2008-07-11 08:02:50
+audit_records_1216065638: 
+  updated_at: 2008-07-10 08:13:57
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 12:29:47 -05:00
+    - 2008-07-10 08:13:57.356566 -05:00
+    iteration_id: 
+    - 8
+    - 9
+
+  story_id: "60"
+  id: "239"
+  login: nicole
+  created_at: 2008-07-10 08:13:57
+audit_records_1216065875: 
+  updated_at: 2008-07-14 10:20:16
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-03 13:44:42 -05:00
+    - 2008-07-14 10:20:16.555063 -05:00
+    swag: 
+    - 
+    - 1.0
+
+  story_id: "262"
+  id: "476"
+  login: tom
+  created_at: 2008-07-14 10:20:16
+audit_records_1216065685: 
+  updated_at: 2008-07-10 12:36:36
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 16:01:18 -05:00
+    - 2008-07-10 12:36:36.845903 -05:00
+    iteration_id: 
+    - 10
+    - 16
+
+  story_id: "131"
+  id: "286"
+  login: nicole
+  created_at: 2008-07-10 12:36:36
+audit_records_1216065829: 
+  updated_at: 2008-07-11 08:03:00
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 15:00:38 -05:00
+    - 2008-07-11 08:03:00.662888 -05:00
+    iteration_id: 
+    - 14
+    - 16
+
+  story_id: "221"
+  id: "430"
+  login: nicole
+  created_at: 2008-07-11 08:03:00
+audit_records_1216065639: 
+  updated_at: 2008-07-10 08:14:45
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 14:43:01 -05:00
+    - 2008-07-10 08:14:45.933705 -05:00
+    iteration_id: 
+    - 8
+    - 7
+
+  story_id: "334"
+  id: "240"
+  login: nicole
+  created_at: 2008-07-10 08:14:45
+audit_records_1216065876: 
+  updated_at: 2008-07-14 10:34:49
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:36:36 -05:00
+    - 2008-07-14 10:34:49.318396 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "131"
+  id: "477"
+  login: nicole
+  created_at: 2008-07-14 10:34:49
+audit_records_1216065686: 
+  updated_at: 2008-07-10 12:38:56
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 11:36:07 -05:00
+    - 2008-07-10 12:38:56.421255 -05:00
+    iteration_id: 
+    - 10
+    - 16
+
+  story_id: "137"
+  id: "287"
+  login: nicole
+  created_at: 2008-07-10 12:38:56
+audit_records_1216065877: 
+  updated_at: 2008-07-14 10:35:58
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 07:47:25 -05:00
+    - 2008-07-14 10:35:58.564032 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "133"
+  id: "478"
+  login: nicole
+  created_at: 2008-07-14 10:35:58
+audit_records_1216065687: 
+  updated_at: 2008-07-10 12:39:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 11:32:49 -05:00
+    - 2008-07-10 12:39:31.076809 -05:00
+    iteration_id: 
+    - 15
+    - 19
+
+  story_id: "141"
+  id: "288"
+  login: nicole
+  created_at: 2008-07-10 12:39:31
+audit_records_1216065878: 
+  updated_at: 2008-07-14 10:36:15
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 12:38:56 -05:00
+    - 2008-07-14 10:36:15.568158 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "137"
+  id: "479"
+  login: nicole
+  created_at: 2008-07-14 10:36:15
+audit_records_1216065688: 
+  updated_at: 2008-07-10 12:40:02
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 07:50:40 -05:00
+    - 2008-07-10 12:40:02.542468 -05:00
+    iteration_id: 
+    - 9
+    - 19
+
+  story_id: "150"
+  id: "289"
+  login: nicole
+  created_at: 2008-07-10 12:40:02
+audit_records_1216065879: 
+  updated_at: 2008-07-14 10:38:00
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 12:00:33 -05:00
+    - 2008-07-14 10:38:00.600529 -05:00
+    iteration_id: 
+    - 16
+    - 29
+
+  story_id: "159"
+  id: "480"
+  login: nicole
+  created_at: 2008-07-14 10:38:00
+audit_records_1216065689: 
+  updated_at: 2008-07-10 12:40:40
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 07:48:14 -05:00
+    - 2008-07-10 12:40:40.288914 -05:00
+    iteration_id: 
+    - 9
+    - 19
+
+  story_id: "158"
+  id: "290"
+  login: nicole
+  created_at: 2008-07-10 12:40:40
+audit_records_1216065930: 
+  updated_at: 2008-07-14 13:43:47
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:56:15 -05:00
+    - 2008-07-14 13:43:47.556050 -05:00
+    iteration_id: 
+    - 23
+    - 22
+
+  story_id: "338"
+  id: "531"
+  login: nicole
+  created_at: 2008-07-14 13:43:47
+audit_records_1216065740: 
+  updated_at: 2008-07-10 15:31:17
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:35:24 -05:00
+    - 2008-07-10 15:31:17.117894 -05:00
+    iteration_id: 
+    - 16
+    - 13
+
+  story_id: "37"
+  id: "341"
+  login: nicole
+  created_at: 2008-07-10 15:31:17
+audit_records_1216065550: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "226"
+  id: "151"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065931: 
+  updated_at: 2008-07-14 13:44:00
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:56:04 -05:00
+    - 2008-07-14 13:44:00.672392 -05:00
+    iteration_id: 
+    - 23
+    - 22
+
+  story_id: "335"
+  id: "532"
+  login: nicole
+  created_at: 2008-07-14 13:44:00
+audit_records_1216065741: 
+  updated_at: 2008-07-10 15:31:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:42:36 -05:00
+    - 2008-07-10 15:31:31.613687 -05:00
+    iteration_id: 
+    - 16
+    - 13
+
+  story_id: "64"
+  id: "342"
+  login: nicole
+  created_at: 2008-07-10 15:31:31
+audit_records_1216065551: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "278"
+  id: "152"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065932: 
+  updated_at: 2008-07-14 13:44:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:55:53 -05:00
+    - 2008-07-14 13:44:14.655323 -05:00
+    iteration_id: 
+    - 23
+    - 21
+
+  story_id: "316"
+  id: "533"
+  login: nicole
+  created_at: 2008-07-14 13:44:14
+audit_records_1216065742: 
+  updated_at: 2008-07-10 15:31:44
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:43:48 -05:00
+    - 2008-07-10 15:31:44.175262 -05:00
+    iteration_id: 
+    - 16
+    - 13
+
+  story_id: "66"
+  id: "343"
+  login: nicole
+  created_at: 2008-07-10 15:31:44
+audit_records_1216065552: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "282"
+  id: "153"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065933: 
+  updated_at: 2008-07-14 13:44:29
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:55:41 -05:00
+    - 2008-07-14 13:44:29.349365 -05:00
+    iteration_id: 
+    - 23
+    - 22
+
+  story_id: "315"
+  id: "534"
+  login: nicole
+  created_at: 2008-07-14 13:44:29
+audit_records_1216065743: 
+  updated_at: 2008-07-10 15:31:57
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:42:55 -05:00
+    - 2008-07-10 15:31:57.137665 -05:00
+    iteration_id: 
+    - 15
+    - 13
+
+  story_id: "72"
+  id: "344"
+  login: nicole
+  created_at: 2008-07-10 15:31:57
+audit_records_1216065553: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "286"
+  id: "154"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065790: 
+  updated_at: 2008-07-11 07:52:18
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:24:10 -05:00
+    - 2008-07-11 07:52:18.686508 -05:00
+    iteration_id: 
+    - 11
+    - 22
+
+  story_id: "75"
+  id: "391"
+  login: nicole
+  created_at: 2008-07-11 07:52:18
+audit_records_1216065934: 
+  updated_at: 2008-07-14 13:44:45
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:55:28 -05:00
+    - 2008-07-14 13:44:45.289660 -05:00
+    iteration_id: 
+    - 23
+    - 22
+
+  story_id: "287"
+  id: "535"
+  login: nicole
+  created_at: 2008-07-14 13:44:45
+audit_records_1216065744: 
+  updated_at: 2008-07-10 15:32:12
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:43:32 -05:00
+    - 2008-07-10 15:32:12.432586 -05:00
+    iteration_id: 
+    - 15
+    - 13
+
+  story_id: "73"
+  id: "345"
+  login: nicole
+  created_at: 2008-07-10 15:32:12
+audit_records_1216065554: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "324"
+  id: "155"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065791: 
+  updated_at: 2008-07-11 07:52:31
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:24:23 -05:00
+    - 2008-07-11 07:52:31.404527 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "100"
+  id: "392"
+  login: nicole
+  created_at: 2008-07-11 07:52:31
+audit_records_1216065935: 
+  updated_at: 2008-07-14 13:44:58
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:54:48 -05:00
+    - 2008-07-14 13:44:58.152112 -05:00
+    iteration_id: 
+    - 23
+    - 22
+
+  story_id: "128"
+  id: "536"
+  login: nicole
+  created_at: 2008-07-14 13:44:58
+audit_records_1216065745: 
+  updated_at: 2008-07-10 15:33:00
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-07 11:59:17 -05:00
+    - 2008-07-10 15:33:00.070461 -05:00
+    iteration_id: 
+    - 16
+    - 13
+
+  story_id: "163"
+  id: "346"
+  login: nicole
+  created_at: 2008-07-10 15:33:00
+audit_records_1216065555: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "351"
+  id: "156"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065792: 
+  updated_at: 2008-07-11 07:52:48
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:24:37 -05:00
+    - 2008-07-11 07:52:48.236204 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "108"
+  id: "393"
+  login: nicole
+  created_at: 2008-07-11 07:52:48
+audit_records_1216065936: 
+  updated_at: 2008-07-14 13:45:10
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:54:59 -05:00
+    - 2008-07-14 13:45:10.819698 -05:00
+    iteration_id: 
+    - 23
+    - 21
+
+  story_id: "147"
+  id: "537"
+  login: nicole
+  created_at: 2008-07-14 13:45:10
+audit_records_1216065746: 
+  updated_at: 2008-07-10 15:34:01
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 11:44:08 -05:00
+    - 2008-07-10 15:34:01.311678 -05:00
+    iteration_id: 
+    - 15
+    - 14
+
+  story_id: "179"
+  id: "347"
+  login: nicole
+  created_at: 2008-07-10 15:34:01
+audit_records_1216065556: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "364"
+  id: "157"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065793: 
+  updated_at: 2008-07-11 07:53:03
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:24:52 -05:00
+    - 2008-07-11 07:53:03.294593 -05:00
+    iteration_id: 
+    - 11
+    - 22
+
+  story_id: "110"
+  id: "394"
+  login: nicole
+  created_at: 2008-07-11 07:53:03
+audit_records_1216065937: 
+  updated_at: 2008-07-14 13:45:25
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-11 07:55:16 -05:00
+    - 2008-07-14 13:45:25.388515 -05:00
+    iteration_id: 
+    - 23
+    - 22
+
+  story_id: "187"
+  id: "538"
+  login: nicole
+  created_at: 2008-07-14 13:45:25
+audit_records_1216065747: 
+  updated_at: 2008-07-10 15:34:21
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:18:09 -05:00
+    - 2008-07-10 15:34:21.519372 -05:00
+    iteration_id: 
+    - 15
+    - 14
+
+  story_id: "333"
+  id: "348"
+  login: nicole
+  created_at: 2008-07-10 15:34:21
+audit_records_1216065557: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "365"
+  id: "158"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065794: 
+  updated_at: 2008-07-11 07:53:18
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:25:07 -05:00
+    - 2008-07-11 07:53:18.159634 -05:00
+    iteration_id: 
+    - 11
+    - 22
+
+  story_id: "114"
+  id: "395"
+  login: nicole
+  created_at: 2008-07-11 07:53:18
+audit_records_1216065938: 
+  updated_at: 2008-07-14 13:55:14
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 12:31:26 -05:00
+    - 2008-07-14 13:55:14.059054 -05:00
+    iteration_id: 
+    - 19
+    - 24
+    swag: 
+    - 
+    - 
+
+  story_id: "360"
+  id: "539"
+  login: nicole
+  created_at: 2008-07-14 13:55:14
+audit_records_1216065748: 
+  updated_at: 2008-07-10 15:34:36
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-10 15:24:13 -05:00
+    - 2008-07-10 15:34:36.758472 -05:00
+    iteration_id: 
+    - 15
+    - 14
+
+  story_id: "365"
+  id: "349"
+  login: nicole
+  created_at: 2008-07-10 15:34:36
+audit_records_1216065558: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "368"
+  id: "159"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065795: 
+  updated_at: 2008-07-11 07:53:29
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:25:20 -05:00
+    - 2008-07-11 07:53:29.183384 -05:00
+    iteration_id: 
+    - 11
+    - 23
+
+  story_id: "119"
+  id: "396"
+  login: nicole
+  created_at: 2008-07-11 07:53:29
+audit_records_1216065939: 
+  updated_at: 2008-07-14 13:55:28
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 12:27:52 -05:00
+    - 2008-07-14 13:55:28.763528 -05:00
+    iteration_id: 
+    - 19
+    - 24
+    swag: 
+    - 
+    - 
+
+  story_id: "361"
+  id: "540"
+  login: nicole
+  created_at: 2008-07-14 13:55:28
+audit_records_1216065749: 
+  updated_at: 2008-07-10 15:34:58
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-09 09:58:37 -05:00
+    - 2008-07-10 15:34:58.083031 -05:00
+    iteration_id: 
+    - 16
+    - 14
+
+  story_id: "366"
+  id: "350"
+  login: nicole
+  created_at: 2008-07-10 15:34:58
+audit_records_1216065559: 
+  updated_at: 2008-07-09 14:35:37
+  auditable_type: 
+  diff: |+
+    --- {}
+    
+  story_id: "383"
+  id: "160"
+  login: mml
+  created_at: 2008-07-09 14:35:37
+audit_records_1216065796: 
+  updated_at: 2008-07-11 07:53:43
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:25:34 -05:00
+    - 2008-07-11 07:53:43.550626 -05:00
+    iteration_id: 
+    - 11
+    - 22
+
+  story_id: "120"
+  id: "397"
+  login: nicole
+  created_at: 2008-07-11 07:53:43
+audit_records_1216065797: 
+  updated_at: 2008-07-11 07:53:54
+  auditable_type: 
+  diff: |
+    --- 
+    updated_at: 
+    - 2008-07-08 13:25:49 -05:00
+    - 2008-07-11 07:53:54.701067 -05:00
+    iteration_id: 
+    - 11
+    - 22
+
+  story_id: "125"
+  id: "398"
+  login: nicole
+  created_at: 2008-07-11 07:53:54

@@ -1,14 +1,23 @@
 --- 
-tasks_1214945541: 
-  updated_at: 2008-07-01 11:05:57
-  title: Generate model
-  lock_version: "334"
-  id: "24"
-  description: model
-  login: mml
+tasks_1216065624: 
+  updated_at: 2008-07-11 10:45:28
+  title: can't change role
+  lock_version: "6"
+  id: "118"
+  description: make role ddlb unchangeable if this is your own account
+  login: Jim
   state: complete
-  created_at: 2008-06-18 14:15:06
-tasks_1214945562: 
+  created_at: 2008-07-10 08:56:09
+tasks_1216065603: 
+  updated_at: 2008-07-02 14:54:23
+  title: Generate password request on create
+  lock_version: "6"
+  id: "92"
+  description: Generate a password reset request on administrator create for the new administrator.
+  login: Brian
+  state: complete
+  created_at: 2008-07-02 14:54:18
+tasks_1216065568: 
   updated_at: 2008-06-24 13:54:25
   title: End Date calculation is wrong
   lock_version: "6"
@@ -17,46 +26,19 @@ tasks_1214945562:
   login: Paul
   state: complete
   created_at: 2008-06-24 08:34:19
-tasks_1214945583: 
-  updated_at: 2008-06-27 14:18:08
-  title: Develop It
+tasks_1216065590: 
+  updated_at: 2008-07-08 13:49:55
+  title: AccountModule
   lock_version: "6"
-  id: "75"
-  description: See story [ACOU-6](http://buildbox/travis/stories/6) for all tasks
+  id: "77"
+  description: |
+    - tie Modules to Accounts
+    - limit Modules dropdown on Permissions page to only show those Modules enabled for that user's account
+
   login: Brian
   state: complete
-  created_at: 2008-06-27 14:18:01
-tasks_1214945521: 
-  updated_at: 2008-06-18 10:16:06
-  title: Navigation issue with login
-  lock_version: "5"
-  id: "1"
-  description: |-
-    Login takes you to Stories.  I clicked "Iterations", was prompted to login, and then was taken to "Stories"
-    
-    This is very low priority
-  login: mml
-  state: in_progress
-  created_at: 2008-06-17 13:35:32
-tasks_1214945542: 
-  updated_at: 2008-06-18 15:41:29
-  title: Generate controller
-  lock_version: "9"
-  id: "25"
-  description: controller
-  login: Paul
-  state: complete
-  created_at: 2008-06-18 14:15:51
-tasks_1214945563: 
-  updated_at: 2008-06-24 11:36:02
-  title: Dummy Task 1
-  lock_version: "21"
-  id: "50"
-  description: just being used to move Stories through their lifecycle
-  login: ""
-  state: complete
-  created_at: 2008-06-24 11:08:46
-tasks_1214945584: 
+  created_at: 2008-07-01 11:47:26
+tasks_1216065589: 
   updated_at: 2008-06-30 11:27:02
   title: limit find based on category visibility
   lock_version: "0"
@@ -65,29 +47,50 @@ tasks_1214945584:
   login: 
   state: new
   created_at: 2008-06-30 11:27:02
-tasks_1214945522: 
-  updated_at: 2008-06-18 17:01:54
-  title: Adding tasks to stories does not persist the relationship
-  lock_version: "14"
-  id: "2"
+tasks_1216065625: 
+  updated_at: 2008-07-10 10:55:33
+  title: Add edit topic
+  lock_version: "6"
+  id: "119"
+  description: Add the ability to edit a topic
+  login: Brian
+  state: complete
+  created_at: 2008-07-10 10:55:10
+tasks_1216065604: 
+  updated_at: 2008-07-03 11:23:50
+  title: break up account and admin
+  lock_version: "8"
+  id: "93"
   description: |
-    From Story Edit screen, I select "Add New Task" and use the green popup dialog to create a new task.  
-    
-    The new task is created, but is not associated with the Story I was editing.
+    - break up Account list & Admin list (necessary because a user might have Admin CRUD but not Account CRUD)
+    - add home page
+    - read permission => whether or not the associated link is on the home page
 
+  login: Jim
+  state: complete
+  created_at: 2008-07-02 15:33:01
+tasks_1216065591: 
+  updated_at: 2008-07-08 13:49:33
+  title: enforce security
+  lock_version: "6"
+  id: "78"
+  description: |-
+    - you can only edit permissions for a user if logged_in_user.role >= target_user.role
+    - can't edit your own permissions
+    - requires role hierarchy to be in place
+  login: Jim
+  state: complete
+  created_at: 2008-07-01 11:50:17
+tasks_1216065547: 
+  updated_at: 2008-07-01 11:05:57
+  title: Generate model
+  lock_version: "334"
+  id: "24"
+  description: model
   login: mml
   state: complete
-  created_at: 2008-06-17 13:39:55
-tasks_1214945543: 
-  updated_at: 2008-06-18 15:16:47
-  title: Generate view
-  lock_version: "7"
-  id: "26"
-  description: view
-  login: Paul
-  state: complete
-  created_at: 2008-06-18 14:16:17
-tasks_1214945564: 
+  created_at: 2008-06-18 14:15:06
+tasks_1216065570: 
   updated_at: 2008-06-26 11:20:04
   title: rake
   lock_version: "12"
@@ -96,31 +99,25 @@ tasks_1214945564:
   login: tom
   state: complete
   created_at: 2008-06-24 11:12:49
-tasks_1214945585: 
-  updated_at: 2008-07-01 11:47:26
-  title: AccountModule
-  lock_version: "0"
-  id: "77"
-  description: |
-    - tie Modules to Accounts
-    - limit Modules dropdown on Permissions page to only show those Modules enabled for that user's account
-
-  login: 
-  state: new
-  created_at: 2008-07-01 11:47:26
-tasks_1214945523: 
-  updated_at: 2008-06-17 14:07:57
-  title: "\"New Task\" is annoying"
-  lock_version: "7"
-  id: "3"
-  description: |-
-    A Story has a task called "New Task".  It can not be edited.  Clicking it takes you to the Task list.
-    
-    Does not seem to serve much purpose
-  login: mml
+tasks_1216065626: 
+  updated_at: 2008-07-10 16:45:58
+  title: Layout form
+  lock_version: "6"
+  id: "121"
+  description: Attempt to layout the form better
+  login: Brian
   state: complete
-  created_at: 2008-06-17 13:41:10
-tasks_1214945544: 
+  created_at: 2008-07-10 13:10:37
+tasks_1216065605: 
+  updated_at: 2008-07-08 09:05:09
+  title: Disable password reset according to role
+  lock_version: "6"
+  id: "94"
+  description: Disable the password reset button for administrators whose role doesn't allow them access.
+  login: Brian
+  state: complete
+  created_at: 2008-07-03 10:49:48
+tasks_1216065550: 
   updated_at: 2008-06-18 16:22:41
   title: application landing screen and controller
   lock_version: "7"
@@ -129,7 +126,16 @@ tasks_1214945544:
   login: Paul
   state: complete
   created_at: 2008-06-18 14:16:59
-tasks_1214945565: 
+tasks_1216065548: 
+  updated_at: 2008-06-18 15:41:29
+  title: Generate controller
+  lock_version: "9"
+  id: "25"
+  description: controller
+  login: Paul
+  state: complete
+  created_at: 2008-06-18 14:15:51
+tasks_1216065571: 
   updated_at: 2008-06-24 11:17:04
   title: Assign existing task to story
   lock_version: "0"
@@ -143,19 +149,16 @@ tasks_1214945565:
   login: 
   state: new
   created_at: 2008-06-24 11:17:04
-tasks_1214945586: 
-  updated_at: 2008-07-01 11:50:17
-  title: enforce security
-  lock_version: "0"
-  id: "78"
-  description: |-
-    - you can only edit permissions for a user if logged_in_user.role >= target_user.role
-    - can't edit your own permissions
-    - requires role hierarchy to be in place
-  login: 
-  state: new
-  created_at: 2008-07-01 11:50:17
-tasks_1214945587: 
+tasks_1216065569: 
+  updated_at: 2008-06-24 11:36:02
+  title: Dummy Task 1
+  lock_version: "21"
+  id: "50"
+  description: just being used to move Stories through their lifecycle
+  login: ""
+  state: complete
+  created_at: 2008-06-24 11:08:46
+tasks_1216065592: 
   updated_at: 2008-07-01 11:54:20
   title: enforce security
   lock_version: "0"
@@ -167,7 +170,25 @@ tasks_1214945587:
   login: 
   state: new
   created_at: 2008-07-01 11:54:20
-tasks_1214945524: 
+tasks_1216065627: 
+  updated_at: 2008-07-11 10:05:28
+  title: Add topic visibility
+  lock_version: "6"
+  id: "122"
+  description: Add topic visibility
+  login: Brian
+  state: complete
+  created_at: 2008-07-11 08:59:38
+tasks_1216065606: 
+  updated_at: 2008-07-07 10:25:43
+  title: do it
+  lock_version: "6"
+  id: "95"
+  description: just a task
+  login: Paul
+  state: complete
+  created_at: 2008-07-07 10:25:34
+tasks_1216065530: 
   updated_at: 2008-06-17 14:51:29
   title: "'Create Task' from Task List navigation"
   lock_version: "7"
@@ -176,7 +197,20 @@ tasks_1214945524:
   login: mml
   state: complete
   created_at: 2008-06-17 13:46:00
-tasks_1214945545: 
+tasks_1216065528: 
+  updated_at: 2008-06-18 17:01:54
+  title: Adding tasks to stories does not persist the relationship
+  lock_version: "14"
+  id: "2"
+  description: |
+    From Story Edit screen, I select "Add New Task" and use the green popup dialog to create a new task.  
+    
+    The new task is created, but is not associated with the Story I was editing.
+
+  login: mml
+  state: complete
+  created_at: 2008-06-17 13:39:55
+tasks_1216065551: 
   updated_at: 2008-06-19 15:44:30
   title: Task state changes
   lock_version: "14"
@@ -188,7 +222,16 @@ tasks_1214945545:
   login: mml
   state: complete
   created_at: 2008-06-18 15:40:37
-tasks_1214945566: 
+tasks_1216065549: 
+  updated_at: 2008-06-18 15:16:47
+  title: Generate view
+  lock_version: "7"
+  id: "26"
+  description: view
+  login: Paul
+  state: complete
+  created_at: 2008-06-18 14:16:17
+tasks_1216065572: 
   updated_at: 2008-06-24 11:36:59
   title: Dummy 2 Task
   lock_version: "6"
@@ -197,7 +240,7 @@ tasks_1214945566:
   login: ""
   state: complete
   created_at: 2008-06-24 11:36:45
-tasks_1214945588: 
+tasks_1216065593: 
   updated_at: 2008-07-01 13:34:31
   title: create role hierarchy
   lock_version: "6"
@@ -210,7 +253,55 @@ tasks_1214945588:
   login: Jim
   state: complete
   created_at: 2008-07-01 11:55:45
-tasks_1214945525: 
+tasks_1216065630: 
+  updated_at: 2008-07-14 11:18:23
+  title: do it
+  lock_version: "7"
+  id: "125"
+  description: |
+    - add state column to list
+    - show all accounts in list, enabled or disabled
+    - change Delete link to say Disable
+    - change Delete link to Enable if state=disabled
+
+  login: Jim
+  state: complete
+  created_at: 2008-07-11 14:27:37
+tasks_1216065628: 
+  updated_at: 2008-07-11 14:36:37
+  title: Add model association
+  lock_version: "6"
+  id: "123"
+  description: Add a one-to-one association between Account and Administrator.  This association allows nil.
+  login: Brian
+  state: complete
+  created_at: 2008-07-11 10:07:02
+tasks_1216065607: 
+  updated_at: 2008-07-08 13:52:24
+  title: role filter
+  lock_version: "7"
+  id: "96"
+  description: filter role ddlb on create/edit user page to only show roles <= your own role
+  login: Jim
+  state: complete
+  created_at: 2008-07-07 15:09:37
+tasks_1216065594: 
+  updated_at: 2008-07-07 15:11:55
+  title: enforce security
+  lock_version: "9"
+  id: "81"
+  description: |-
+    - change Admin CRUD operations to only work if logged_in_user.role.level >= target_user.role.level
+    - disabling Read == remove from home page
+    - remove buttons/links from UI 
+    - add checks to controller methods
+    - see security grid for details
+    
+    sbserver / govdocs / 09 Product Management / GovDelivery / Requirements / Evolution
+  login: Jim
+  state: complete
+  created_at: 2008-07-01 11:56:52
+tasks_1216065531: 
   updated_at: 2008-06-17 15:13:39
   title: Search results - IE browser compatibility
   lock_version: "7"
@@ -219,7 +310,19 @@ tasks_1214945525:
   login: mml
   state: complete
   created_at: 2008-06-17 13:49:27
-tasks_1214945546: 
+tasks_1216065529: 
+  updated_at: 2008-06-17 14:07:57
+  title: "\"New Task\" is annoying"
+  lock_version: "7"
+  id: "3"
+  description: |-
+    A Story has a task called "New Task".  It can not be edited.  Clicking it takes you to the Task list.
+    
+    Does not seem to serve much purpose
+  login: mml
+  state: complete
+  created_at: 2008-06-17 13:41:10
+tasks_1216065552: 
   updated_at: 2008-06-20 10:00:00
   title: Scope partners by type and visibility
   lock_version: "7"
@@ -228,7 +331,7 @@ tasks_1214945546:
   login: tom
   state: complete
   created_at: 2008-06-18 15:43:40
-tasks_1214945567: 
+tasks_1216065573: 
   updated_at: 2008-06-25 09:17:20
   title: Associate administrator with account
   lock_version: "8"
@@ -237,23 +340,58 @@ tasks_1214945567:
   login: Brian
   state: complete
   created_at: 2008-06-24 13:33:49
-tasks_1214945589: 
-  updated_at: 2008-07-01 11:57:38
-  title: enforce security
-  lock_version: "1"
-  id: "81"
+tasks_1216065631: 
+  updated_at: 2008-07-14 10:04:53
+  title: Create javascript/css snippet to embed tag cloud from gd.net
+  lock_version: "6"
+  id: "126"
   description: |-
-    - change Admin CRUD operations to only work if logged_in_user.role.level >= target_user.role.level
-    - disabling Read == remove from list
-    - remove buttons/links from UI 
-    - add checks to controller methods
-    - see security grid for details
+    This is a simple snippet of html/javascript/css code that a partner can paste into their own page to show a tag cloud
     
-    sbserver / 09 Product Management / GovDelivery / Requirements / Evolution
-  login: 
-  state: new
-  created_at: 2008-07-01 11:56:52
-tasks_1214945526: 
+    The javascript will consist of a url that points to gd.net.  The url will have GET query params to determine how the cloud is created (partner code, include network partners option)
+  login: tom
+  state: complete
+  created_at: 2008-07-14 10:04:34
+tasks_1216065629: 
+  updated_at: 2008-07-11 14:36:42
+  title: Modify view
+  lock_version: "6"
+  id: "124"
+  description: Modify the account view to add this field.  This will need to be added to both the show and edit form.
+  login: Brian
+  state: complete
+  created_at: 2008-07-11 10:09:03
+tasks_1216065610: 
+  updated_at: 2008-07-09 12:54:20
+  title: Add Topic index view
+  lock_version: "7"
+  id: "101"
+  description: Add Topic index view and add to left navigation bar.
+  login: Brian
+  state: complete
+  created_at: 2008-07-08 10:02:16
+tasks_1216065608: 
+  updated_at: 2008-07-09 11:18:38
+  title: Create Topic object and migration
+  lock_version: "9"
+  id: "97"
+  description: Create the Topic business object and the corresponding migration.  A topic belongs to one account.  An Account has many topics.
+  login: Brian
+  state: complete
+  created_at: 2008-07-08 09:44:57
+tasks_1216065595: 
+  updated_at: 2008-07-02 15:34:15
+  title: enforce security
+  lock_version: "7"
+  id: "82"
+  description: |-
+    - see grid for details  (sbserver / 09 Product Management / GovDelivery / Requirements / Evolution)
+    - controller actions
+    - hide/show UI controls
+  login: Jim
+  state: complete
+  created_at: 2008-07-01 16:21:05
+tasks_1216065532: 
   updated_at: 2008-06-18 15:44:23
   title: Identify SQL for DB View
   lock_version: "7"
@@ -262,16 +400,16 @@ tasks_1214945526:
   login: tom
   state: complete
   created_at: 2008-06-17 13:58:35
-tasks_1214945547: 
-  updated_at: 2008-06-19 08:18:45
+tasks_1216065553: 
+  updated_at: 2008-07-03 13:21:24
   title: Task for testing
-  lock_version: "3"
+  lock_version: "6"
   id: "33"
   description: test
-  login: Paul
-  state: in_progress
+  login: 
+  state: new
   created_at: 2008-06-19 08:18:36
-tasks_1214945568: 
+tasks_1216065574: 
   updated_at: 2008-06-25 09:17:25
   title: Modify the session controller to redirect based on user role
   lock_version: "6"
@@ -283,7 +421,43 @@ tasks_1214945568:
   login: Brian
   state: complete
   created_at: 2008-06-24 13:38:30
-tasks_1214945527: 
+tasks_1216065632: 
+  updated_at: 2008-07-14 10:08:08
+  title: embded this in a partner's HTML page
+  lock_version: "3"
+  id: "127"
+  description: this needs to appear as a iframe linked from the embedded tag cloud widget
+  login: tom
+  state: in_progress
+  created_at: 2008-07-14 10:08:02
+tasks_1216065611: 
+  updated_at: 2008-07-09 11:18:32
+  title: Add Topic permissions
+  lock_version: "6"
+  id: "103"
+  description: Add Topic permissions.
+  login: Brian
+  state: complete
+  created_at: 2008-07-08 10:02:54
+tasks_1216065609: 
+  updated_at: 2008-07-09 11:18:19
+  title: Add new Topic controller
+  lock_version: "7"
+  id: "99"
+  description: Add new Topic controller
+  login: Brian
+  state: complete
+  created_at: 2008-07-08 10:01:37
+tasks_1216065596: 
+  updated_at: 2008-07-02 14:52:36
+  title: Remove enabled field
+  lock_version: "6"
+  id: "83"
+  description: Remove the enabled field from the administrator table
+  login: Brian
+  state: complete
+  created_at: 2008-07-02 14:46:46
+tasks_1216065533: 
   updated_at: 2008-06-18 14:41:44
   title: Saved searches
   lock_version: "6"
@@ -300,7 +474,7 @@ tasks_1214945527:
   login: mml
   state: complete
   created_at: 2008-06-17 14:03:09
-tasks_1214945548: 
+tasks_1216065554: 
   updated_at: 2008-06-19 15:46:46
   title: Task Search results should show 'Assigned to'
   lock_version: "6"
@@ -309,16 +483,7 @@ tasks_1214945548:
   login: mml
   state: complete
   created_at: 2008-06-19 08:21:16
-tasks_1214945570: 
-  updated_at: 2008-06-26 13:09:43
-  title: Should be able to create a new external admin when viewing an account
-  lock_version: "6"
-  id: "57"
-  description: This control should appear when looking at a specific account (AccountController#show)
-  login: Brian
-  state: complete
-  created_at: 2008-06-24 13:43:46
-tasks_1214945569: 
+tasks_1216065575: 
   updated_at: 2008-06-26 13:09:53
   title: Should be able to create a new internal admin without associating the user with an account
   lock_version: "6"
@@ -327,25 +492,34 @@ tasks_1214945569:
   login: Brian
   state: complete
   created_at: 2008-06-24 13:41:16
-tasks_1214945549: 
-  updated_at: 2008-06-19 13:17:48
-  title: Account Create
+tasks_1216065633: 
+  updated_at: 2008-07-14 10:10:11
+  title: implement document tags in govdelivery
+  lock_version: "3"
+  id: "128"
+  description: Ara is working on implementing tags in govdelivery
+  login: tom
+  state: in_progress
+  created_at: 2008-07-14 10:10:02
+tasks_1216065612: 
+  updated_at: 2008-07-09 11:18:06
+  title: Make Topic taggable
   lock_version: "7"
-  id: "35"
-  description: Add an account create page.
+  id: "105"
+  description: Make the Topic object taggable.  These tags will be referred to as keywords in the user interface.
   login: Brian
   state: complete
-  created_at: 2008-06-19 12:57:40
-tasks_1214945571: 
-  updated_at: 2008-06-27 13:54:16
-  title: Scope users by account
-  lock_version: "8"
-  id: "58"
-  description: /accounts/1/users = UsersController#index, etc...
+  created_at: 2008-07-08 10:28:17
+tasks_1216065597: 
+  updated_at: 2008-07-02 14:52:59
+  title: Generate random password
+  lock_version: "6"
+  id: "85"
+  description: When a new administrator is created, generate a random password.
   login: Brian
   state: complete
-  created_at: 2008-06-24 13:54:19
-tasks_1214945528: 
+  created_at: 2008-07-02 14:47:14
+tasks_1216065534: 
   updated_at: 2008-06-18 16:32:57
   title: SWAGGING feature
   lock_version: "7"
@@ -357,25 +531,43 @@ tasks_1214945528:
   login: mml
   state: complete
   created_at: 2008-06-17 14:05:28
-tasks_1214945550: 
-  updated_at: 2008-06-19 14:38:33
-  title: Account Validation
-  lock_version: "6"
-  id: "36"
-  description: Add validation to the account maintenance form
+tasks_1216065555: 
+  updated_at: 2008-06-19 13:17:48
+  title: Account Create
+  lock_version: "7"
+  id: "35"
+  description: Add an account create page.
   login: Brian
   state: complete
-  created_at: 2008-06-19 12:58:23
-tasks_1214945530: 
-  updated_at: 2008-06-17 14:24:29
-  title: Burn chart disappears
-  lock_version: "7"
-  id: "11"
-  description: The burn chart for the current iteration is no longer displaying.  I have not left the browser and there were changes to stories and tasks
-  login: mml
+  created_at: 2008-06-19 12:57:40
+tasks_1216065576: 
+  updated_at: 2008-06-26 13:09:43
+  title: Should be able to create a new external admin when viewing an account
+  lock_version: "6"
+  id: "57"
+  description: This control should appear when looking at a specific account (AccountController#show)
+  login: Brian
   state: complete
-  created_at: 2008-06-17 14:15:11
-tasks_1214945529: 
+  created_at: 2008-06-24 13:43:46
+tasks_1216065634: 
+  updated_at: 2008-07-14 10:12:27
+  title: limit results beased on partner and network inclusion choice
+  lock_version: "6"
+  id: "129"
+  description: this is done.  The show and tag_cloud actions accept query params to limit to a single partner or to a partner and it's netowrk.  Showing all partners is currently disabled.
+  login: tom
+  state: complete
+  created_at: 2008-07-14 10:12:17
+tasks_1216065598: 
+  updated_at: 2008-07-02 14:53:05
+  title: Create password request controller
+  lock_version: "6"
+  id: "86"
+  description: Create a new password request controller for handling incoming password change requests.
+  login: Brian
+  state: complete
+  created_at: 2008-07-02 14:47:49
+tasks_1216065535: 
   updated_at: 2008-06-17 14:48:25
   title: Story description too short
   lock_version: "7"
@@ -387,7 +579,43 @@ tasks_1214945529:
   login: mml
   state: complete
   created_at: 2008-06-17 14:09:20
-tasks_1214945551: 
+tasks_1216065556: 
+  updated_at: 2008-06-19 14:38:33
+  title: Account Validation
+  lock_version: "6"
+  id: "36"
+  description: Add validation to the account maintenance form
+  login: Brian
+  state: complete
+  created_at: 2008-06-19 12:58:23
+tasks_1216065577: 
+  updated_at: 2008-06-27 13:54:16
+  title: Scope users by account
+  lock_version: "8"
+  id: "58"
+  description: /accounts/1/users = UsersController#index, etc...
+  login: Brian
+  state: complete
+  created_at: 2008-06-24 13:54:19
+tasks_1216065613: 
+  updated_at: 2008-07-10 13:10:44
+  title: Add validation to Topic
+  lock_version: "6"
+  id: "106"
+  description: Add validation to Topic model.
+  login: Brian
+  state: complete
+  created_at: 2008-07-08 11:00:24
+tasks_1216065599: 
+  updated_at: 2008-07-02 14:53:12
+  title: Remove password fields
+  lock_version: "7"
+  id: "87"
+  description: Remove the password fields from the administrator form
+  login: Brian
+  state: complete
+  created_at: 2008-07-02 14:48:35
+tasks_1216065557: 
   updated_at: 2008-06-19 15:15:19
   title: Account Delete
   lock_version: "6"
@@ -396,7 +624,7 @@ tasks_1214945551:
   login: Brian
   state: complete
   created_at: 2008-06-19 12:58:43
-tasks_1214945572: 
+tasks_1216065578: 
   updated_at: 2008-06-27 13:54:11
   title: Validate that account on a user is nil when internal admin
   lock_version: "6"
@@ -405,7 +633,75 @@ tasks_1214945572:
   login: Brian
   state: complete
   created_at: 2008-06-24 14:29:26
-tasks_1214945531: 
+tasks_1216065635: 
+  updated_at: 2008-07-14 11:47:13
+  title: Determine URL for tag cloud
+  lock_version: "6"
+  id: "130"
+  description: |+
+    the URL (host, query params) will need to be created and given to a partner
+    
+    
+  login: tom
+  state: complete
+  created_at: 2008-07-14 10:22:18
+tasks_1216065614: 
+  updated_at: 2008-07-08 14:21:03
+  title: edit self
+  lock_version: "6"
+  id: "108"
+  description: need ability to edit my own basic info page, even if I don't have Update User permissions
+  login: Jim
+  state: complete
+  created_at: 2008-07-08 13:52:05
+tasks_1216065580: 
+  updated_at: 2008-06-30 11:45:16
+  title: Develop It
+  lock_version: "161"
+  id: "61"
+  description: See story [ACOU-6](http://buildbox/travis/stories/6) for all tasks
+  login: mml
+  state: complete
+  created_at: 2008-06-25 14:03:55
+tasks_1216065579: 
+  updated_at: 2008-06-25 09:30:46
+  title: Add ability to view account and administrators for internal admin
+  lock_version: "6"
+  id: "60"
+  description: Need the ability to access show view for account from internal admin account list.
+  login: Brian
+  state: complete
+  created_at: 2008-06-25 09:24:33
+tasks_1216065536: 
+  updated_at: 2008-06-17 14:24:29
+  title: Burn chart disappears
+  lock_version: "7"
+  id: "11"
+  description: The burn chart for the current iteration is no longer displaying.  I have not left the browser and there were changes to stories and tasks
+  login: mml
+  state: complete
+  created_at: 2008-06-17 14:15:11
+tasks_1216065636: 
+  updated_at: 2008-07-14 11:47:21
+  title: base CSS
+  lock_version: "6"
+  id: "131"
+  description: Create base CSS to give to partner for inclusion on their web pages
+  login: tom
+  state: complete
+  created_at: 2008-07-14 10:22:59
+tasks_1216065615: 
+  updated_at: 2008-07-08 17:04:41
+  title: move edit self link
+  lock_version: "6"
+  id: "109"
+  description: |-
+    - remove "Edit My Basic Info" link from dashboard
+    - make user name in footer link to edit self page
+  login: Jim
+  state: complete
+  created_at: 2008-07-08 16:18:53
+tasks_1216065537: 
   updated_at: 2008-06-18 14:51:41
   title: Story needs 'Area' field
   lock_version: "7"
@@ -419,61 +715,7 @@ tasks_1214945531:
   login: mml
   state: complete
   created_at: 2008-06-17 14:58:00
-tasks_1214945552: 
-  updated_at: 2008-06-19 13:34:31
-  title: Account Update
-  lock_version: "6"
-  id: "38"
-  description: Add links to the account list screen to access an account update page.
-  login: Brian
-  state: complete
-  created_at: 2008-06-19 12:59:28
-tasks_1214945573: 
-  updated_at: 2008-06-25 09:30:46
-  title: Add ability to view account and administrators for internal admin
-  lock_version: "6"
-  id: "60"
-  description: Need the ability to access show view for account from internal admin account list.
-  login: Brian
-  state: complete
-  created_at: 2008-06-25 09:24:33
-tasks_1214945532: 
-  updated_at: 2008-06-17 15:26:09
-  title: Story View screen should display SWAG
-  lock_version: "7"
-  id: "13"
-  description: Currently, if SWAG is nil, then it is not displayed.  Should display it as 'nil' as that is meaningful
-  login: mml
-  state: complete
-  created_at: 2008-06-17 15:02:45
-tasks_1214945553: 
-  updated_at: 2008-06-23 17:11:26
-  title: Account Audit Fields
-  lock_version: "6"
-  id: "39"
-  description: Add audit fields created_by and updated_by to account.
-  login: Brian
-  state: complete
-  created_at: 2008-06-19 13:35:17
-tasks_1214945574: 
-  updated_at: 2008-06-30 11:45:16
-  title: Develop It
-  lock_version: "161"
-  id: "61"
-  description: See story [ACOU-6](http://buildbox/travis/stories/6) for all tasks
-  login: mml
-  state: complete
-  created_at: 2008-06-25 14:03:55
-tasks_1214945533: 
-  updated_at: 2008-06-24 14:09:49
-  title: wiki markup
-  lock_version: "7"
-  id: "14"
-  description: use bluecloth/redcloth to display descriptions
-  login: Paul
-  state: complete
-  created_at: 2008-06-17 15:16:41
-tasks_1214945554: 
+tasks_1216065560: 
   updated_at: 2008-06-19 14:46:55
   title: Force login on back
   lock_version: "6"
@@ -482,7 +724,16 @@ tasks_1214945554:
   login: Brian
   state: complete
   created_at: 2008-06-19 13:43:53
-tasks_1214945575: 
+tasks_1216065558: 
+  updated_at: 2008-06-19 13:34:31
+  title: Account Update
+  lock_version: "6"
+  id: "38"
+  description: Add links to the account list screen to access an account update page.
+  login: Brian
+  state: complete
+  created_at: 2008-06-19 12:59:28
+tasks_1216065581: 
   updated_at: 2008-06-30 11:01:17
   title: password create page
   lock_version: "24"
@@ -499,7 +750,25 @@ tasks_1214945575:
   login: Jim
   state: complete
   created_at: 2008-06-26 11:05:25
-tasks_1214945534: 
+tasks_1216065637: 
+  updated_at: 2008-07-14 11:48:19
+  title: Rework logic to send mail to use new JMS based sending interface in Legend
+  lock_version: "3"
+  id: "132"
+  description: Rework the GDCore-based mail sending mechanism to use the new mechanism from Legend
+  login: tom
+  state: in_progress
+  created_at: 2008-07-14 11:39:51
+tasks_1216065616: 
+  updated_at: 2008-07-09 13:49:11
+  title: can't change login ID
+  lock_version: "6"
+  id: "110"
+  description: login ID (email) is read-only on Update
+  login: Jim
+  state: complete
+  created_at: 2008-07-08 16:19:59
+tasks_1216065540: 
   updated_at: 2008-06-18 14:43:09
   title: "Big word:  'Stories' on Story List"
   lock_version: "7"
@@ -511,7 +780,16 @@ tasks_1214945534:
   login: mml
   state: complete
   created_at: 2008-06-17 15:21:18
-tasks_1214945555: 
+tasks_1216065538: 
+  updated_at: 2008-06-17 15:26:09
+  title: Story View screen should display SWAG
+  lock_version: "7"
+  id: "13"
+  description: Currently, if SWAG is nil, then it is not displayed.  Should display it as 'nil' as that is meaningful
+  login: mml
+  state: complete
+  created_at: 2008-06-17 15:02:45
+tasks_1216065561: 
   updated_at: 2008-06-19 14:24:20
   title: Change Area to Nodule
   lock_version: "6"
@@ -520,7 +798,16 @@ tasks_1214945555:
   login: mml
   state: complete
   created_at: 2008-06-19 14:16:51
-tasks_1214945576: 
+tasks_1216065559: 
+  updated_at: 2008-06-23 17:11:26
+  title: Account Audit Fields
+  lock_version: "6"
+  id: "39"
+  description: Add audit fields created_by and updated_by to account.
+  login: Brian
+  state: complete
+  created_at: 2008-06-19 13:35:17
+tasks_1216065582: 
   updated_at: 2008-07-01 11:21:35
   title: reset password feature
   lock_version: "9"
@@ -531,7 +818,39 @@ tasks_1214945576:
   login: Jim
   state: complete
   created_at: 2008-06-26 11:11:48
-tasks_1214945535: 
+tasks_1216065640: 
+  updated_at: 2008-07-14 11:46:33
+  title: do visibility filtering
+  lock_version: "6"
+  id: "135"
+  description: done in iteration 2
+  login: tom
+  state: complete
+  created_at: 2008-07-14 11:46:27
+tasks_1216065638: 
+  updated_at: 2008-07-14 11:44:17
+  title: Implement logic to respect white/black lists as implemented in Legend
+  lock_version: "6"
+  id: "133"
+  description: |
+    this was done this spring
+    
+
+  login: tom
+  state: complete
+  created_at: 2008-07-14 11:44:07
+tasks_1216065617: 
+  updated_at: 2008-07-09 14:25:11
+  title: delete link
+  lock_version: "6"
+  id: "111"
+  description: |-
+    - remove delete link from your own row in Admin list
+    - business object already prevents deletion, so only UI change is required
+  login: Jim
+  state: complete
+  created_at: 2008-07-08 16:20:42
+tasks_1216065541: 
   updated_at: 2008-06-18 15:05:46
   title: pretty descriptions
   lock_version: "7"
@@ -540,7 +859,16 @@ tasks_1214945535:
   login: mml
   state: complete
   created_at: 2008-06-18 10:26:32
-tasks_1214945556: 
+tasks_1216065539: 
+  updated_at: 2008-06-24 14:09:49
+  title: wiki markup
+  lock_version: "7"
+  id: "14"
+  description: use bluecloth/redcloth to display descriptions
+  login: Paul
+  state: complete
+  created_at: 2008-06-17 15:16:41
+tasks_1216065562: 
   updated_at: 2008-06-19 15:42:34
   title: Create display mnemonic
   lock_version: "6"
@@ -549,7 +877,7 @@ tasks_1214945556:
   login: mml
   state: complete
   created_at: 2008-06-19 14:17:40
-tasks_1214945577: 
+tasks_1216065583: 
   updated_at: 2008-06-26 12:11:04
   title: create a method to load seed data
   lock_version: "6"
@@ -558,7 +886,34 @@ tasks_1214945577:
   login: tom
   state: complete
   created_at: 2008-06-26 11:19:55
-tasks_1214945536: 
+tasks_1216065639: 
+  updated_at: 2008-07-14 11:45:24
+  title: do visibility filtering
+  lock_version: "6"
+  id: "134"
+  description: done in iteration 2
+  login: tom
+  state: complete
+  created_at: 2008-07-14 11:45:14
+tasks_1216065620: 
+  updated_at: 2008-07-10 10:54:42
+  title: Add delete Topic
+  lock_version: "6"
+  id: "114"
+  description: Add delete Topic functionality
+  login: Brian
+  state: complete
+  created_at: 2008-07-09 13:03:03
+tasks_1216065618: 
+  updated_at: 2008-07-08 17:05:02
+  title: can't promote yourself
+  lock_version: "6"
+  id: "112"
+  description: remove permissions link from Update User if you're editing yourself (already done as part of another story)
+  login: Jim
+  state: complete
+  created_at: 2008-07-08 16:21:35
+tasks_1216065542: 
   updated_at: 2008-06-18 15:39:57
   title: Rename User -> Administrator
   lock_version: "7"
@@ -567,7 +922,7 @@ tasks_1214945536:
   login: Jim
   state: complete
   created_at: 2008-06-18 13:04:41
-tasks_1214945557: 
+tasks_1216065563: 
   updated_at: 2008-06-23 17:12:58
   title: Create Module
   lock_version: "13"
@@ -576,7 +931,7 @@ tasks_1214945557:
   login: mml
   state: complete
   created_at: 2008-06-20 12:40:13
-tasks_1214945578: 
+tasks_1216065584: 
   updated_at: 2008-06-26 14:05:39
   title: Rake task for 'auto_tag'
   lock_version: "15"
@@ -601,7 +956,34 @@ tasks_1214945578:
   login: tom
   state: complete
   created_at: 2008-06-26 13:56:25
-tasks_1214945537: 
+tasks_1216065621: 
+  updated_at: 2008-07-09 16:32:30
+  title: Design mailing  schema
+  lock_version: "7"
+  id: "115"
+  description: Create das schema
+  login: mml
+  state: complete
+  created_at: 2008-07-09 16:28:30
+tasks_1216065619: 
+  updated_at: 2008-07-10 10:55:50
+  title: Add create Topic
+  lock_version: "18"
+  id: "113"
+  description: Add create topic functionality
+  login: Brian
+  state: complete
+  created_at: 2008-07-09 13:02:42
+tasks_1216065600: 
+  updated_at: 2008-07-02 14:53:17
+  title: Add password reset request view
+  lock_version: "6"
+  id: "88"
+  description: Add password reset request index view
+  login: Brian
+  state: complete
+  created_at: 2008-07-02 14:50:52
+tasks_1216065543: 
   updated_at: 2008-06-23 13:07:33
   title: Roles & RolePermissions
   lock_version: "11"
@@ -618,7 +1000,7 @@ tasks_1214945537:
   login: Jim
   state: complete
   created_at: 2008-06-18 13:06:31
-tasks_1214945558: 
+tasks_1216065564: 
   updated_at: 2008-06-24 14:50:27
   title: Label columns in Search results
   lock_version: "6"
@@ -627,24 +1009,7 @@ tasks_1214945558:
   login: mml
   state: complete
   created_at: 2008-06-23 15:56:39
-tasks_1214945580: 
-  updated_at: 2008-06-27 13:18:08
-  title: email new password
-  lock_version: "4"
-  id: "71"
-  description: |
-    - email link to password create page when a new user is created
-    - email link to password create page when "I forgot my password" is clicked on login page
-    
-    options:
-    - use GDCore's AdminMailMachine & ludicrous?
-    - write directly to [new] mail tables?
-    - generate email & send directly to Postfix or StrongMail?
-
-  login: 
-  state: new
-  created_at: 2008-06-26 15:55:16
-tasks_1214945579: 
+tasks_1216065585: 
   updated_at: 2008-06-26 15:31:29
   title: Map "partner_attributes" created for Legend
   lock_version: "3"
@@ -653,7 +1018,25 @@ tasks_1214945579:
   login: tom
   state: in_progress
   created_at: 2008-06-26 15:31:23
-tasks_1214945538: 
+tasks_1216065622: 
+  updated_at: 2008-07-09 16:30:59
+  title: implement the models
+  lock_version: "0"
+  id: "116"
+  description: meh
+  login: 
+  state: new
+  created_at: 2008-07-09 16:30:59
+tasks_1216065601: 
+  updated_at: 2008-07-03 10:49:52
+  title: Add password reset button
+  lock_version: "6"
+  id: "89"
+  description: Add a password reset button to the administrator form.
+  login: Brian
+  state: complete
+  created_at: 2008-07-02 14:51:25
+tasks_1216065544: 
   updated_at: 2008-06-24 14:42:33
   title: Assign Role to Administrator
   lock_version: "9"
@@ -666,16 +1049,7 @@ tasks_1214945538:
   login: Jim
   state: complete
   created_at: 2008-06-18 13:11:20
-tasks_1214945560: 
-  updated_at: 2008-06-24 14:38:07
-  title: Change 'nodule' to 'feature'
-  lock_version: "6"
-  id: "47"
-  description: everywhere
-  login: mml
-  state: complete
-  created_at: 2008-06-23 15:58:16
-tasks_1214945559: 
+tasks_1216065565: 
   updated_at: 2008-06-24 14:10:05
   title: Display Story id (Display ID) on detail page
   lock_version: "6"
@@ -684,7 +1058,7 @@ tasks_1214945559:
   login: Paul
   state: complete
   created_at: 2008-06-23 15:57:50
-tasks_1214945581: 
+tasks_1216065586: 
   updated_at: 2008-06-30 11:01:45
   title: disabled administrators
   lock_version: "8"
@@ -696,7 +1070,40 @@ tasks_1214945581:
   login: Jim
   state: complete
   created_at: 2008-06-27 12:56:08
-tasks_1214945582: 
+tasks_1216065623: 
+  updated_at: 2008-07-09 16:32:04
+  title: Port ludicrous
+  lock_version: "0"
+  id: "117"
+  description: Port persistence layer of ludicrous to new schema
+  login: 
+  state: new
+  created_at: 2008-07-09 16:32:04
+tasks_1216065545: 
+  updated_at: 2008-06-19 14:39:24
+  title: Modules & Permissions
+  lock_version: "9"
+  id: "22"
+  description: |-
+    - create migrations for table definitions
+    - create fixtures for default data
+    - see spreadsheet for default data
+    - create & test model objects
+    - no maintenance UI
+    - assignment of Modules to Accounts will be done as a separate story (after initial Modules & Accounts stories are done)
+  login: Jim
+  state: complete
+  created_at: 2008-06-18 13:13:57
+tasks_1216065566: 
+  updated_at: 2008-06-24 14:38:07
+  title: Change 'nodule' to 'feature'
+  lock_version: "6"
+  id: "47"
+  description: everywhere
+  login: mml
+  state: complete
+  created_at: 2008-06-23 15:58:16
+tasks_1216065587: 
   updated_at: 2008-06-27 13:53:09
   title: Add ability to disable an account
   lock_version: "6"
@@ -705,7 +1112,16 @@ tasks_1214945582:
   login: Brian
   state: complete
   created_at: 2008-06-27 13:53:04
-tasks_1214945540: 
+tasks_1216065602: 
+  updated_at: 2008-07-02 16:28:26
+  title: Add "Forgot Password" link
+  lock_version: "7"
+  id: "90"
+  description: Add a "Forgot Password" link to the login screen.
+  login: Brian
+  state: complete
+  created_at: 2008-07-02 14:51:58
+tasks_1216065546: 
   updated_at: 2008-06-25 16:32:39
   title: Modify User Permissions
   lock_version: "7"
@@ -722,22 +1138,7 @@ tasks_1214945540:
   login: Jim
   state: complete
   created_at: 2008-06-18 13:44:35
-tasks_1214945539: 
-  updated_at: 2008-06-19 14:39:24
-  title: Modules & Permissions
-  lock_version: "9"
-  id: "22"
-  description: |-
-    - create migrations for table definitions
-    - create fixtures for default data
-    - see spreadsheet for default data
-    - create & test model objects
-    - no maintenance UI
-    - assignment of Modules to Accounts will be done as a separate story (after initial Modules & Accounts stories are done)
-  login: Jim
-  state: complete
-  created_at: 2008-06-18 13:13:57
-tasks_1214945561: 
+tasks_1216065567: 
   updated_at: 2008-06-24 13:33:09
   title: "Show assigned iteration for Story "
   lock_version: "6"
@@ -746,3 +1147,12 @@ tasks_1214945561:
   login: Paul
   state: complete
   created_at: 2008-06-23 15:58:46
+tasks_1216065588: 
+  updated_at: 2008-06-27 14:18:08
+  title: Develop It
+  lock_version: "6"
+  id: "75"
+  description: See story [ACOU-6](http://buildbox/travis/stories/6) for all tasks
+  login: Brian
+  state: complete
+  created_at: 2008-06-27 14:18:01

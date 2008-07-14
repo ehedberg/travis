@@ -1,6 +1,7 @@
 class AuditRecord < ActiveRecord::Base
-  validates_presence_of :diff, :auditable, :login
-  belongs_to :auditable, :polymorphic => true
+  belongs_to :story
+
+  validates_presence_of :diff, :story_id, :login
 
   def diff_to_hash
     YAML::load(StringIO.new(diff)) || {}

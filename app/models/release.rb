@@ -1,5 +1,5 @@
 class Release < ActiveRecord::Base
-  has_and_belongs_to_many :iterations, :order=>"start_date asc"
+  has_many :iterations, :order=>"start_date asc"
   validates_length_of :title, :within=>1..75
   has_many :stories, :through=>:iterations
   

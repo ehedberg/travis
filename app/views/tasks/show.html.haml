@@ -30,11 +30,3 @@
   =link_to("Edit", edit_task_path(@task))
   |
   =link_to("Delete", {:id=>@task.id}, :confirm=>"Are you sure?", :method=>"delete")
-  |
-  =link_to_function "Show History", nil, :update do |page|
-    -page.replace_html "history", :partial=>"stories/audit_record", :collection=>@task.audit_records
-    -page.insert_html :top,'history', '<tr><th>Login</th><th>Updated At</th><th>Diff</th></tr>'
-    -page.visual_effect :toggle_appear, 'history'
-    -page.visual_effect :highlight, 'history'
-%table#history{:style=>'display:none'}
-

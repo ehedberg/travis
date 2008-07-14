@@ -1,13 +1,13 @@
 one:
   login: fubar
-  auditable: one (Story)
+  story: one
   diff: "--- \n\
     :self: \n\
     - :nonexistent\n\
     - :existent\n"
 two:
   login: fubar
-  auditable: one (Task)
+  story: twoe
   diff: "--- \n\
     :self: \n\
     - :nonexistent\n\

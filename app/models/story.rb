@@ -1,7 +1,7 @@
 class Story < ActiveRecord::Base
   acts_as_taggable
   acts_as_state_machine :initial=>:new
-  has_many :audit_records, :as => :auditable
+  has_many :audit_records
 
   validates_uniqueness_of :mnemonic
   has_and_belongs_to_many :tasks , 

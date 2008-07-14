@@ -12,6 +12,6 @@
     %p
     %label
       Iterations
-      = f.collection_select :iteration_ids, Iteration.find(:all, :conditions=>'release_id is null'), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'release[iteration_ids][]'}
+      = f.collection_select :iteration_ids, Iteration.find(:all, :order=>'title asc'), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'release[iteration_ids][]', :size=>20}
     =submit_tag "Save", {:class=> "submit_button"}
     =button_to_function "Cancel", "location.href='#{releases_path}'", {:class=>'submit_button'}

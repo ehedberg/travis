@@ -18,4 +18,9 @@ next:
   end_date: <%= 21.days.from_now.to_date.to_s(:db) %>
   release: currel
   
+many_releases:
+  title: 'Iteration Many Releases'
+  start_date: <%= 7.days.from_now.to_date.to_s(:db) %>
+  end_date: <%= 21.days.from_now.to_date.to_s(:db) %>
+  release: currel
 

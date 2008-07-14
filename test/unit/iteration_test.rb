@@ -73,5 +73,11 @@ class IterationTest < ActiveSupport::TestCase
   def test_previous_iter_has_no_previous
       foo = iterations(:last)
       assert_nil foo.previous
-    end
+  end
+
+  def test_has_many_releases
+    i = iterations(:many_releases)
+    assert_equal 2, i.stories.length
+  end
+
 end

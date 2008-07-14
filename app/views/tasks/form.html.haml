@@ -10,7 +10,7 @@
       = f.text_field :title 
     %label
       Description
-      = f.text_area :description 
+      = f.text_area :description , :cols=>80
     %label
       Action
       =f.select :state, @task.available_events, {:include_blank=>true}

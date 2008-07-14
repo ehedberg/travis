@@ -1,16 +1,14 @@
 class Release < ActiveRecord::Base
   has_and_belongs_to_many :iterations, :order=>"start_date asc"
   validates_length_of :title, :within=>1..75
-  def stories
-    @foo||=iterations.inject([]){|x,y| x + y.stories}.uniq
-    @foo
-  end
+  has_many :stories, :finder_sql=>'select s.* from  releases join iterations_releases ir on (releases.id=ir.release_id) join iterations iter on (iter.id=ir.iteration_id) join stories s on(s.iteration_id=iter.id) where releases.id=#{id}'
   def swags_created_on(d)
-    stories.find_all{|x| x.created_at ==  d}
+      s = stories.find_all{|x| x.created_at.to_date==d.to_date}
+      s.map{|x| x.swag||0.0}
   end
   def stories_passed_on(d)
-    s=stories.find_all{|x|  x.current_state==:passed && x.completed_at.to_date==d.to_date}
-    s.map{|x| x.swag||0.0}
+      s = stories.select{|x| (x.current_state == :passed && x.created_at.to_date == d)}
+      s.map{|x| x.swag||0.0}
   end
   def total_points
     @tswag||=stories.map(&:swag).compact.sum
@@ -24,11 +22,11 @@ class Release < ActiveRecord::Base
   def story_count 
     iterations.map{|x|x.story_count}.sum
   end
-  
+
   def completed_story_count 
     iterations.map{|x|x.completed_story_count}.sum
   end
-  
+
   def start_date
     if has_iterations?
       iterations.first.start_date
@@ -43,9 +41,9 @@ class Release < ActiveRecord::Base
       "No end iteration"
     end
   end
-  
+
   def has_iterations?
     !iterations.empty?
   end
-  
+
 end

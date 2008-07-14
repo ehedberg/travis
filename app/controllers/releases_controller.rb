@@ -54,18 +54,20 @@ class ReleasesController < ApplicationController
     end
   end
   def chart
-    rel = Release.find(params[:id], :include=>[:iterations=>[:stories=>:tasks]])
+    rel = Release.find(params[:id], :include=>{:iterations=>:stories})
     total_points = rel.total_points
     chart = Ziya::Charts::Line.new(nil,  "release_chart")
     days = []
     points = []
     scope=[]
     iters = rel.iteration_ids.join(',')
+    logger.debug("HERE1 :#{iters.size} #{rel.total_days} days,  iters, #{rel.total_days.size} days")
     rel.total_days.times do |n| 
       d= (rel.start_date+n)
       days << d
       points << rel.stories_passed_on(d).sum if d <= Date.today
       scope << rel.swags_created_on(d).sum
+
     end
     point_totals  = []
     points.each{|x| point_totals<< (x+(point_totals.last||0.0))}
@@ -74,11 +76,13 @@ class ReleasesController < ApplicationController
     #add swags from stories defined outside the iteration (but included in this iteration) to element 0
     outside_scope = rel.total_points - scope.sum
     scope_totals = scope_totals.map{|x| x+outside_scope}
+    logger.debug("HERE")
 
     strdays= days.map{|x| x.to_s(:db)}
     chart.add( :axis_category_text,  strdays)
-    chart.add( :series, "Points complete", point_totals) unless point_totals.empty?
-    chart.add( :series, "Scope", scope_totals)
+    #chart.add( :series, "Points complete", point_totals) unless point_totals.empty?
+    #chart.add( :series, "Scope", scope_totals)
+    logger.debug("HERE2")
     respond_to do |fmt| 
       fmt.xml { render :xml => chart.to_xml } 
     end 

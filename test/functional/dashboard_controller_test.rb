@@ -10,7 +10,7 @@ class DashboardControllerTest < ActionController::TestCase
     i = assigns(:iteration)
     assert i.start_date <= Date.today
     assert i.end_date >= Date.today
-    assert_equal i, iterations(:current)
+    assert_equal i, iterations(:iter_current)
     assert assigns(:next_iteration)
     assert assigns(:prev_iteration)
   end

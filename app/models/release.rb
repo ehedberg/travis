@@ -1,14 +1,16 @@
 class Release < ActiveRecord::Base
   has_and_belongs_to_many :iterations, :order=>"start_date asc"
   validates_length_of :title, :within=>1..75
-  has_many :stories, :through=>:iterations
-  
+  def stories
+    @foo||=iterations.inject([]){|x,y| x + y.stories}.uniq
+    @foo
+  end
   def swags_created_on(d)
-    stories.find(:all, :conditions=>['stories.created_at = ?', d]).map{|x| x.swag ? x.swag : 0.0}
+    stories.find_all{|x| x.created_at ==  d}
   end
   def stories_passed_on(d)
-    s = stories.find(:all, :conditions=>['stories.state=\'passed\' and date(completed_at)=date(?)', d])
-    s.map{|x| x.swag ? x.swag : 0.0}
+    s=stories.find_all{|x|  x.current_state==:passed && x.completed_at.to_date==d.to_date}
+    s.map{|x| x.swag||0.0}
   end
   def total_points
     @tswag||=stories.map(&:swag).compact.sum

@@ -13,11 +13,11 @@ class ReleasesControllerTest < ActionController::TestCase
 
   def xtest_assoc_rel_rel
     assert_routing({:method=>:post, :path=>'/releases/1/do_assoc'}, :controller=>'releases', :action=>'do_assoc', :id=>1)
-    assert_not_nil releases(:currel).iterations.first
-    xhr :post, :do_assoc, :drop_r=>releases(:currel).id, :drag_r=>releases(:next).id, :iter=>releases(:currel).iterations.first
+    assert_not_nil releases(:rel_current).iterations.first
+    xhr :post, :do_assoc, :drop_r=>releases(:rel_current).id, :drag_r=>releases(:rel_next).id, :iter=>releases(:rel_current).iterations.first
     assert_response :success
-    assert_rjs_select "drag_release_#{releases(:currel).id}"
-    assert_rjs_select "drag_release_#{releases(:next).id}"
+    assert_rjs_select "drag_release_#{releases(:rel_current).id}"
+    assert_rjs_select "drag_release_#{releases(:rel_next).id}"
   end
   def test_routes
     do_default_routing_tests('releases')
@@ -38,7 +38,7 @@ class ReleasesControllerTest < ActionController::TestCase
   end
 
   def test_destroy
-    release = releases(:currel)
+    release = releases(:rel_current)
 
     delete :destroy, :id=>release.id
 
@@ -48,13 +48,13 @@ class ReleasesControllerTest < ActionController::TestCase
   end
  
   def test_show
-    get :show, :id=>releases(:next).id
+    get :show, :id=>releases(:rel_next).id
     assert assigns(:release)
-    assert_equal assigns(:release), releases(:next)
+    assert_equal assigns(:release), releases(:rel_next)
     assert_template "show"
     assert_select "a[href=?]", releases_path
-    assert_select "a[href=?]", edit_release_path(releases(:next).id)
-    assert_select "a[href=?][onclick*=confirm]", release_path(releases(:next))
+    assert_select "a[href=?]", edit_release_path(releases(:rel_next).id)
+    assert_select "a[href=?][onclick*=confirm]", release_path(releases(:rel_next))
   end
 
   def test_index
@@ -86,7 +86,7 @@ class ReleasesControllerTest < ActionController::TestCase
 
   def xtest_plan
     assert_routing '/releases/1/planner', :controller=>'releases', :action=>'planner', :id=>'1'
-    r = releases(:currel)
+    r = releases(:rel_current)
     get :planner, :id=>r.id
     assert_response :success
     assert_template 'planner'
@@ -116,18 +116,18 @@ class ReleasesControllerTest < ActionController::TestCase
   end
   
   def test_edit
-    get :edit,:id=>releases(:last).id
+    get :edit,:id=>releases(:rel_last).id
 
     assert assigns(:release)
 
     release = assigns(:release)
 
-    assert_equal releases(:last).id, release.id
+    assert_equal releases(:rel_last).id, release.id
   end
 
   def test_update
 
-    release = releases(:next)
+    release = releases(:rel_next)
 
     put :update, :id=>release.id, :release=>{"title"=>"Release New"}
 

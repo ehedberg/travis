@@ -1,11 +1,8 @@
 class Release < ActiveRecord::Base
-  has_many :iterations, :order=>"start_date asc"
+  has_and_belongs_to_many :iterations, :order=>"start_date asc"
   validates_length_of :title, :within=>1..75
   has_many :stories, :through=>:iterations
   
-  def self.current
-    Iteration.current.release
-  end
   def swags_created_on(d)
     stories.find(:all, :conditions=>['stories.created_at = ?', d]).map{|x| x.swag ? x.swag : 0.0}
   end

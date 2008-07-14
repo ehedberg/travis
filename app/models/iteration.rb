@@ -1,6 +1,6 @@
 class Iteration < ActiveRecord::Base
   has_many :stories
-  belongs_to :release
+  has_and_belongs_to_many :releases
 
   validates_length_of :title, :within=>1..200
   

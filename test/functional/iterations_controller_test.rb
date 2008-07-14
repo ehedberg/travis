@@ -22,31 +22,31 @@ class IterationsControllerTest < ActionController::TestCase
   end
   def test_requires_login_except_show_chart
     @request.session[:login]=nil
-    get :chart, :id=>iterations(:last).id
+    get :chart, :id=>iterations(:iter_last).id
     assert_response :success
   end
   def test_show_works_with_no_stories
     Story.destroy_all
     Task.destroy_all
-    iterations(:last).stories(&:destroy)
-    assert_equal 0, iterations(:last).stories.size 
+    iterations(:iter_last).stories(&:destroy)
+    assert_equal 0, iterations(:iter_last).stories.size 
     @request.session[:login]=nil
-    get :chart, :id=>iterations(:last).id
+    get :chart, :id=>iterations(:iter_last).id
     assert_response :success
   end
   def test_show_works_with_future_start
     Story.destroy_all
     Task.destroy_all
-    iterations(:last).start_date=100.week.from_now.to_date.to_s(:db)
-    iterations(:last).end_date=102.week.from_now.to_date.to_s(:db)
-    assert iterations(:last).save!
-    iterations(:last).stories(&:destroy)
-    iterations(:last).stories.create(:title=>'new story', :description=>'new story', :completed_at =>Date.today, :nodule=>'fubari')
-    iter=  Iteration.find(iterations(:last).id)
+    iterations(:iter_last).start_date=100.week.from_now.to_date.to_s(:db)
+    iterations(:iter_last).end_date=102.week.from_now.to_date.to_s(:db)
+    assert iterations(:iter_last).save!
+    iterations(:iter_last).stories(&:destroy)
+    iterations(:iter_last).stories.create(:title=>'new story', :description=>'new story', :completed_at =>Date.today, :nodule=>'fubari')
+    iter=  Iteration.find(iterations(:iter_last).id)
     assert_equal 1, iter.stories.size
     assert_equal :new, iter.stories.first.current_state
     @request.session[:login]=nil
-    get :chart, :id=>iterations(:last).id
+    get :chart, :id=>iterations(:iter_last).id
     assert_response :success
   end
   def test_requires_login
@@ -88,19 +88,19 @@ class IterationsControllerTest < ActionController::TestCase
   end
 
   def test_show
-    get :show, :id=>iterations(:next).id
+    get :show, :id=>iterations(:iter_next).id
     assert assigns(:iteration)
-    assert_equal assigns(:iteration), iterations(:next)
+    assert_equal assigns(:iteration), iterations(:iter_next)
     assert_template "show"
     assert_select "a[href=?]", iterations_path
-    assert_select "a[href=?]", edit_iteration_path(iterations(:next).id)
-    assert_select "a[href=?][onclick*=confirm]", iteration_path(iterations(:next))
+    assert_select "a[href=?]", edit_iteration_path(iterations(:iter_next).id)
+    assert_select "a[href=?][onclick*=confirm]", iteration_path(iterations(:iter_next))
   end
 
   def test_destroy
-    iteration= iterations(:current)
+    iteration= iterations(:iter_current)
 
-    delete :destroy, :id=>iterations(:current).id
+    delete :destroy, :id=>iterations(:iter_current).id
 
     assert !Iteration.exists?(iteration.id)
 
@@ -158,17 +158,17 @@ class IterationsControllerTest < ActionController::TestCase
   end
 
   def test_edit
-    get :edit,:id=>iterations(:last).id
+    get :edit,:id=>iterations(:iter_last).id
 
     assert assigns(:iteration)
 
     iteration = assigns(:iteration)
 
-    assert_equal iterations(:last).id, iteration.id
+    assert_equal iterations(:iter_last).id, iteration.id
   end
 
   def test_show_shows_stories
-    get :show, :id=>iterations(:last).id
+    get :show, :id=>iterations(:iter_last).id
     iteration = assigns(:iteration)
     assert iteration
     story_list = iteration.stories
@@ -189,7 +189,7 @@ class IterationsControllerTest < ActionController::TestCase
 
   def test_load_chart_route
     assert_routing "/iterations/1/chart", :controller=>"iterations",:action=>"chart", :id=>"1"
-    get :chart, :id=>iterations(:last).id
+    get :chart, :id=>iterations(:iter_last).id
     assert_response :success
   end
 
@@ -217,7 +217,7 @@ class IterationsControllerTest < ActionController::TestCase
 
   def test_update
 
-    iteration = iterations(:next)
+    iteration = iterations(:iter_next)
 
     put :update, :id=>iteration.id, :iteration=>{"start_date"=>"2008-05-19", "end_date"=>"2008-06-03", "title"=>"Iteration 1"}
 

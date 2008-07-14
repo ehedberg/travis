@@ -6,10 +6,6 @@ class ReleaseTest < ActiveSupport::TestCase
     assert s.respond_to?("iterations")
   end
   
-  def test_find_current
-    assert_equal releases(:currel), Release.current
-  end
-
   def test_find_all_releases
     release_list = Release.find(:all)
     assert_not_nil(release_list)
@@ -23,11 +19,11 @@ class ReleaseTest < ActiveSupport::TestCase
   end
   
   def test_iterations
-    r = Release.current
+    r = releases(:rel_next)
     iters = r.iterations
     assert_equal(2, iters.length)
-    assert_equal(iters.first, iterations(:current))
-    assert_equal(iters.last, iterations(:next))
+    assert_equal(iters.last.title, iterations(:iter_next).title)
+    assert_equal(iters.first.title, iterations(:iter_last).title)
   end
   
 end

@@ -8,22 +8,29 @@ class IterationTest < ActiveSupport::TestCase
     s = Iteration.new
     assert s.respond_to?("stories")
   end
+
+  def test_has_many_releases
+    t = iterations(:iter_next)
+    t.releases<<Release.new(:title=>'balaskddfj')
+    assert t.save
+    assert_equal 2, t.releases.size
+  end
   def test_find_current
-    assert_equal iterations(:current), Iteration.current
+    assert_equal iterations(:iter_current), Iteration.current
   end
 
   def test_velocity
-    assert_equal 2.3.to_s, iterations(:current).velocity.to_s
+    assert_equal 2.3.to_s, iterations(:iter_current).velocity.to_s
   end
   def test_story_count
-    assert_equal 3, iterations(:current).story_count
+    assert_equal 3, iterations(:iter_current).story_count
   end
   def test_completed_story_count
-    assert_equal 1.to_s, iterations(:current).completed_story_count.to_s
+    assert_equal 1.to_s, iterations(:iter_current).completed_story_count.to_s
   end
   def test_velocity_w_nil_swag
-    assert iterations(:current).stories.create(:title=>'nilswag')
-    assert_equal 2.3.to_s, iterations(:current).reload.velocity.to_s
+    assert iterations(:iter_current).stories.create(:title=>'nilswag')
+    assert_equal 2.3.to_s, iterations(:iter_current).reload.velocity.to_s
   end
 
   def test_find_all_iterations
@@ -49,29 +56,29 @@ class IterationTest < ActiveSupport::TestCase
 
   end
   def test_total_points
-    i = iterations(:current)
+    i = iterations(:iter_current)
     assert 2, i.stories.size
-    assert_equal 16.3, iterations(:current).total_points
+    assert_equal 16.3, iterations(:iter_current).total_points
   end
   def test_open_points
-    assert_equal 14, iterations(:current).open_points
+    assert_equal 14, iterations(:iter_current).open_points
   end
 
   def test_completed_points
-    assert_equal 2.3.to_s, iterations(:current).completed_points.to_s
+    assert_equal 2.3.to_s, iterations(:iter_current).completed_points.to_s
   end
 
   def test_iter_days
-    assert_equal 12, iterations(:current).total_days
+    assert_equal 12, iterations(:iter_current).total_days
   end
   
   def test_previous_iter
-    foo = iterations(:current)
-    assert_equal iterations(:last), foo.previous
+    foo = iterations(:iter_current)
+    assert_equal iterations(:iter_last), foo.previous
   end  
   
   def test_previous_iter_has_no_previous
-      foo = iterations(:last)
+      foo = iterations(:iter_last)
       assert_nil foo.previous
     end
 end

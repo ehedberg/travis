@@ -2,13 +2,15 @@ class Release < ActiveRecord::Base
   has_and_belongs_to_many :iterations, :order=>"start_date asc"
   validates_length_of :title, :within=>1..75
   has_many :stories, :finder_sql=>'select s.* from  releases join iterations_releases ir on (releases.id=ir.release_id) join iterations iter on (iter.id=ir.iteration_id) join stories s on(s.iteration_id=iter.id) where releases.id=#{id}'
+
   def swags_created_on(d)
-      s = stories.find_all{|x| x.created_at.to_date==d.to_date}
-      s.map{|x| x.swag||0.0}
+    @cstats=creation_stats unless @cstats
+    @cstats[d.to_s]||0.0
   end
+
   def stories_passed_on(d)
-      s = stories.select{|x| (x.current_state == :passed && x.created_at.to_date == d)}
-      s.map{|x| x.swag||0.0}
+      @cstats = creation_stats('s.state == \'passed\'') unless @cstats
+      @cstats[d.to_s]||0.0
   end
   def total_points
     @tswag||=stories.map(&:swag).compact.sum
@@ -44,6 +46,17 @@ class Release < ActiveRecord::Base
 
   def has_iterations?
     !iterations.empty?
+  end
+  private
+  def creation_stats(condition='')
+    q= "select sum(s.swag) as swags, date(s.created_at) as date from releases rel  
+    join iterations_releases ir on (rel.id=release_id) 
+    join iterations iter on (iter.id=ir.iteration_id) 
+    join stories s on (s.iteration_id=iter.id) 
+    where rel.id=%d and %s group by date"
+    r = Release.connection.execute(q%[id, condition])
+    Hash[*r.map{|x| [x['date'], x['swags'].to_f]}.flatten]
+
   end
 
 end

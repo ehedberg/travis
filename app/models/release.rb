@@ -9,8 +9,8 @@ class Release < ActiveRecord::Base
   end
 
   def stories_passed_on(d)
-      @cstats = creation_stats('and  s.state = \'passed\'') unless @cstats
-      @cstats[d.to_s]||0.0
+      @pstats = pstats() unless @pstats
+      @pstats[d.to_s]||0.0
   end
   def total_points
     @tswag||=stories.map(&:swag).compact.sum
@@ -48,13 +48,23 @@ class Release < ActiveRecord::Base
     !iterations.empty?
   end
   private
-  def creation_stats(condition='')
+  def creation_stats
     q= "select sum(s.swag) as swags, date(s.created_at) as date from releases rel  
     join iterations_releases ir on (rel.id=release_id) 
     join iterations iter on (iter.id=ir.iteration_id) 
     join stories s on (s.iteration_id=iter.id) 
-    where rel.id=%d  %s group by date"
-    r = Release.connection.select_all(q%[id, condition])
+    where rel.id=%d group by date"
+    r = Release.connection.select_all(q%[id])
+    Hash[*r.map{|x| [x['date'], x['swags'].to_f]}.flatten]
+
+  end
+  def pstats()
+    q= "select sum(s.swag) as swags, date(s.completed_at) as date from releases rel  
+    join iterations_releases ir on (rel.id=release_id) 
+    join iterations iter on (iter.id=ir.iteration_id) 
+    join stories s on (s.iteration_id=iter.id) 
+    where rel.id=%d  and s.state='passed' group by date"
+    r = Release.connection.select_all(q%[id])
     Hash[*r.map{|x| [x['date'], x['swags'].to_f]}.flatten]
 
   end

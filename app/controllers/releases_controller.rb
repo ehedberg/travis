@@ -53,6 +53,7 @@ class ReleasesController < ApplicationController
       render :template=>"releases/form"
     end
   end
+
   def chart
     rel = Release.find(params[:id], :include=>{:iterations=>:stories})
     total_points = rel.total_points

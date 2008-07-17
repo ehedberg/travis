@@ -9,7 +9,7 @@ class Release < ActiveRecord::Base
   end
 
   def stories_passed_on(d)
-      @cstats = creation_stats('s.state = \'passed\'') unless @cstats
+      @cstats = creation_stats('and  s.state = \'passed\'') unless @cstats
       @cstats[d.to_s]||0.0
   end
   def total_points
@@ -53,8 +53,8 @@ class Release < ActiveRecord::Base
     join iterations_releases ir on (rel.id=release_id) 
     join iterations iter on (iter.id=ir.iteration_id) 
     join stories s on (s.iteration_id=iter.id) 
-    where rel.id=%d and %s group by date"
-    r = Release.connection.select_values(q%[id, condition])
+    where rel.id=%d  %s group by date"
+    r = Release.connection.select_all(q%[id, condition])
     Hash[*r.map{|x| [x['date'], x['swags'].to_f]}.flatten]
 
   end

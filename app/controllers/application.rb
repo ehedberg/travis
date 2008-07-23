@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
       Session.current_login||=session[:login]
       return true
     else
-      flash[:back] = request.path
+      flash[:back] = "#{request.relative_url_root}#{request.path}"
       redirect_to new_session_path unless session[:login]
       return false
     end

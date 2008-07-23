@@ -20,3 +20,11 @@ config.action_controller.allow_forgery_protection    = false
 # The :test delivery method accumulates sent emails in the
 # ActionMailer::Base.deliveries array.
 config.action_mailer.delivery_method = :test
+
+IN_TM = !ENV['TM_DIRECTORY'].nil?
+ON_BUILDBOX = (ENV['HOSTNAME'] == 'buildbox.office.gdi')
+
+unless IN_TM || ON_BUILDBOX
+  config.gem 'redgreen'
+end
+config.gem 'mocha'

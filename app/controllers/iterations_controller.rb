@@ -58,7 +58,7 @@ class IterationsController < ApplicationController
       d= (iter.start_date+n)
       days << d
       points << iter.stories_passed_on(d).sum  if d <= Date.today 
-      scope << iter.swags_created_on(d).sum 
+      scope << iter.swags_created_on(d).sum
     end
     point_totals  = []
     points.each{|x| point_totals<< (x+(point_totals.last||0.0))}
@@ -66,7 +66,6 @@ class IterationsController < ApplicationController
     scope.each{|x| scope_totals << (x+(scope_totals.last||0.0))}
     #add swags from stories defined outside the iteration (but included in this iteration) to element 0
     outside_scope = iter.total_points - scope.sum
-
     scope_totals = scope_totals.map{|x| x+outside_scope}
 
     strdays= days.map{|x| x.to_s(:db)}

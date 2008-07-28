@@ -56,7 +56,7 @@ class Iteration < ActiveRecord::Base
     stories.find(:all, :conditions=>"state='passed'").map(&:swag).sum
   end
   def swags_created_on(d)
-    stories.find(:all, :conditions=>['stories.created_at = ?', d]).map{|x| x.swag ? x.swag : 0.0}
+    stories.find(:all, :conditions=>['date(stories.created_at) = date(?)', d]).map{|x| x.swag ? x.swag : 0.0}
   end
   def stories_passed_on(d)
     s = stories.find(:all, :conditions=>['stories.state=\'passed\' and date(completed_at)=date(?)', d])

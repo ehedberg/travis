@@ -79,7 +79,7 @@ class ReleasesController < ApplicationController
 
     strdays= days.map{|x| x.to_s(:db)}
     chart.add( :axis_category_text,  strdays)
-    chart.add( :series, "Points complete", point_totals) unless point_totals.empty?
+    chart.add( :series, "Points complete", point_totals.empty? ? [0] : point_totals)
     chart.add( :series, "Scope", scope_totals)
     respond_to do |fmt| 
       fmt.xml { render :xml => chart.to_xml } 

@@ -19,7 +19,7 @@
   %td.centered
     =story.state
   %td.centered
-    =story.tasks.first.login if story.tasks && story.tasks.size >= 1
+    =story.tasks.first.login if story.tasks && story.tasks.size >= 1 && (story.state == 'in_progress' || story.state == 'in_qc')
   %td.centered
     =story.nodule
   %td.centered

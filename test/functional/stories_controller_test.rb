@@ -142,14 +142,11 @@ class StoriesControllerTest < ActionController::TestCase
     assert_select "table[id=stories]" do
       stories.each do |s|
         assert_select "tr" do
-          assert_select "td" do
+          assert_select "td", :text=>"#{s.mnemonic}" do
             assert_select "a[href=?]", story_path(s.id)
           end
-          assert_select "td"
-          assert_select "td" do
+          assert_select "td:last-child" do
             assert_select "a[href=?]", story_path(s.id)
-          end
-          assert_select "td" do
             assert_select "a[href=?]", edit_story_path(s.id)
           end
         end
@@ -186,6 +183,7 @@ class StoriesControllerTest < ActionController::TestCase
     assert assigns(:story)
     assert_equal assigns(:story), stories(:one)
     assert_template "show"
+    assert_select "a[href=?]", iteration_path(stories(:one).iteration), :text=>"#{stories(:one).iteration.title}"
     assert_select "a[href=?]", stories_path
     assert_select "a[href=?]", edit_story_path(stories(:one).id)
     assert_select "a[href=?][onclick*=confirm]", story_path(stories(:one))

@@ -22,7 +22,7 @@
 %div
   %h2
     Assigned Iteration:
-    =h @story.iteration.title if @story.iteration
+    =link_to("#{h @story.iteration.title}", iteration_path(@story.iteration)) if @story.iteration
 %p
   Created
   =@story.created_at.to_s(:short)

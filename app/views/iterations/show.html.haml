@@ -32,14 +32,8 @@
 
 %table#stories
   %caption Stories
-  %th Id
-  %th Title
-  %th Swag
-  %th State
-  %th Nodule
-  %th Iteration
-  %th &nbsp;
-  =render :partial=>"stories/story", :collection=>@iteration.stories
+  =render :partial=>'stories/story_header'
+  =render :partial=>'stories/story', :collection=>@iteration.stories
 
 #sum
   =link_to("Show All", iterations_path)

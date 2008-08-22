@@ -19,6 +19,8 @@
   %td.centered
     =story.state
   %td.centered
+    =story.tasks.first.login if story.tasks && story.tasks.size >= 1
+  %td.centered
     =story.nodule
   %td.centered
     =story.iteration.title if story.iteration

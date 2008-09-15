@@ -55,7 +55,7 @@ function resetInterationSwag(controllerPath)
         for(var i=0; i < iteration.stories.length; i++) {
 			if(iteration.stories[i].state == "new")
 			{
-				iteration.stories[i].swag = 0.0;
+				iteration.stories[i].swag = "";
 			  	updateStory(iteration.stories[i], succcessfullCall, failedCall);
 			}
         }

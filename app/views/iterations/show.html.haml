@@ -41,6 +41,10 @@
   =link_to("Edit", edit_iteration_path(@iteration))
   |
   =link_to("Delete", { :id => @iteration.id }, :confirm => "Are you sure?", :method => :delete)
-
-%script
+  |
+  %input{:type=>"button", :value=>"Rest Swag", :id=>"resetSwagId"}
+  =observe('resetSwagId', "resetInterationSwag('#{iteration_path(@iteration)}')", "click")
+%script{:type=>'text/javascript'}
   new Control.Modal('addStoryLink', { opacity:0.6, fade:true, width:600, height:450});
+
+

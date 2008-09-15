@@ -8,6 +8,14 @@ class IterationsController < ApplicationController
 
   def show
     @iteration = Iteration.find(params[:id])
+    respond_to do |wants|
+      wants.html {
+        render :html => @iteration
+      }
+      wants.json {
+        render :json => @iteration.to_json(:include=>:stories);
+      }
+    end
   end
 
   def destroy

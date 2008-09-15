@@ -235,5 +235,13 @@ class IterationsControllerTest < ActionController::TestCase
 
     assert_redirected_to iterations_path
   end
+  
+  def test_show_json
+      get :show, :id=>iterations(:iter_next).id, :format=>"json"
+      assert assigns(:iteration)
+      assert_equal assigns(:iteration), iterations(:iter_next)
+      assert_response :success
+      
+  end
 
 end

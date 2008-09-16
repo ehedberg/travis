@@ -33,7 +33,11 @@ function updateStory(story, onSuccessCallback, onFailCallback) {
 	_tdebug(mainPostTmp.evaluate(postHash));
 	_tdebug(postHash.inspect())
 	
-	new Ajax.Request("/stories/"+story.id, {
+	var host = window.location.host;
+	var proto = window.location.protocol;
+	
+	_tdebug(host+proto);
+	new Ajax.Request(proto+"//"+host+"/stories/"+story.id, {
 			method:'Post',
 			parameters: mainPostTmp.evaluate(postHash),
 			onSuccess: onSuccessCallback,

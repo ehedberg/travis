@@ -42,7 +42,7 @@
   |
   =link_to("Delete", { :id => @iteration.id }, :confirm => "Are you sure?", :method => :delete)
   |
-  =button_to_function "Reset Swag", "resetInterationSwag('#{iteration_url(@iteration)}', '#{story_url()}')"
+  =button_to_function "Reset Swag", "resetInterationSwag('#{iteration_path(@iteration)}')"
 %script{:type=>'text/javascript'}
   new Control.Modal('addStoryLink', { opacity:0.6, fade:true, width:600, height:450});
 

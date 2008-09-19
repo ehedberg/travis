@@ -3,7 +3,7 @@
 
 var _TRAVIS_DEBUG = false; 
 
-function updateStory(story, onSuccessCallback, onFailCallback) {
+function updateStory(basePath, story, onSuccessCallback, onFailCallback) {
 	_tdebug("Update Story " + story.id);
 
 	var postHash = new Hash();
@@ -32,12 +32,10 @@ function updateStory(story, onSuccessCallback, onFailCallback) {
 	var mainPostTmp = new Template("_method=#{method}&action=#{action}&id=#{id}&controller=#{controller}&#{story}");//
 	_tdebug(mainPostTmp.evaluate(postHash));
 	_tdebug(postHash.inspect())
-	
-	var host = window.location.host;
-	var proto = window.location.protocol;
-	
-	_tdebug(host+proto);
-	new Ajax.Request(proto+"//"+host+"/stories/"+story.id, {
+
+
+	_tdebug(basePath+"stories/"+story.id);
+	new Ajax.Request(basePath+"stories/"+story.id, {
 			method:'Post',
 			parameters: mainPostTmp.evaluate(postHash),
 			onSuccess: onSuccessCallback,
@@ -60,12 +58,17 @@ function resetInterationSwag(controllerPath)
 			if(iteration.stories[i].state == "new")
 			{
 				iteration.stories[i].swag = "";
-			  	updateStory(iteration.stories[i], succcessfullCall, failedCall);
+			  	updateStory(getBasePath(controllerPath, "iterations"), iteration.stories[i], succcessfullCall, failedCall);
 			}
         }
       }
     });
   }
+}
+
+function getBasePath(path, key)
+{
+	return path.substring(0, path.indexOf(key));
 }
 
 function failedCall(response)

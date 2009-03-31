@@ -2,8 +2,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class StoriesControllerTest < ActionController::TestCase
   def setup
-    @request.session[:login]='fubar'
-    Session.current_login=@request.session[:login]
+    @request.session[:user_id]=1
      
   end
 
@@ -13,8 +12,7 @@ class StoriesControllerTest < ActionController::TestCase
   end
 
   def teardown
-    @request.session[:login]=nil
-    Session.current_login=@request.session[:login]
+    @request.session[:user_id]=nil
   end
 
   def test_routes
@@ -118,11 +116,11 @@ class StoriesControllerTest < ActionController::TestCase
   end
 
   def test_requires_login
-    @request.session[:login]=nil
+    @request.session[:user_id]=nil
     get :index
     assert_response :redirect
     assert_redirected_to new_session_path
-    @request.session[:login]='foo'
+    @request.session[:user_id]=1
     get :index
     assert_response :success
     assert_template 'index'

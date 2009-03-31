@@ -1,4 +1,5 @@
 class Story < ActiveRecord::Base
+  attr_accessor :creator
   acts_as_taggable
   acts_as_state_machine :initial=>:new
   has_many :audit_records
@@ -9,7 +10,7 @@ class Story < ActiveRecord::Base
     :after_add=>Proc.new{|s, t| s.task_changed! }, 
     :after_remove=>Proc.new{|s,t| s.task_changed!}
   
-  before_create { |record| record.audit_records.build(:diff=>{:self=>[:nonexistent, :existent]}.to_yaml, :login=>Session.current_login ) }
+  before_create { |record| record.audit_records.build(:diff=>{:self=>[:nonexistent, :existent]}.to_yaml, :login=>'some guy' ) }
   
   after_create :set_mnemonic
 
@@ -17,7 +18,7 @@ class Story < ActiveRecord::Base
     his = record.changes.dup
     his.delete(:updated_at)
     his.delete(:created_at)
-    r = record.audit_records.build(:diff=>his.to_yaml, :login=>Session.current_login ) 
+    r = record.audit_records.build(:diff=>his.to_yaml, :login=>'some guy' ) 
     raise "invalid audit record?" unless r.valid?
   }
 

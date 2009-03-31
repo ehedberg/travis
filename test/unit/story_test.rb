@@ -1,9 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class StoryTest < ActiveSupport::TestCase
-  def setup
-    Session.current_login='fubar'
-  end
   def test_story_taggable
     s= Story.find(:first)
     assert_equal [],s.tag_list

@@ -2,9 +2,6 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class AuditRecordTest < ActiveSupport::TestCase
   # Replace this with your real tests.
-  def setup
-    Session.current_login='fubar'
-  end
   def test_create
     a = AuditRecord.new :diff=>'test',:story=>stories(:one),:login=>'fubar'
     assert a.save

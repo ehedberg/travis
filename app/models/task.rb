@@ -5,7 +5,7 @@ class Task < ActiveRecord::Base
 
   state :new, :enter=> Proc.new{ |t| t.login = nil; t.task_changed!}
 
-  state :in_progress, :enter=> Proc.new{|t| t.login=Session.current_login; t.task_changed! }
+  state :in_progress, :enter=> Proc.new{|t| t.login='some guy'; t.task_changed! }
 
   state :complete, :enter=> Proc.new{|t|t.task_changed!}
 

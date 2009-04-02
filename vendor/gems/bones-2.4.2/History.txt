@@ -1,0 +1,206 @@
+== 2.4.2 / 2009-03-02
+
+* 2 bug fixes
+  - SMTP/TLS will not be used if openssl is not present
+  - fixed rdoc title generation
+
+== 2.4.1 / 2009-03-02
+
+* 1 minor enhancement
+  - jruby 1.2 compatability
+
+== 2.4.0 / 2009-02-01
+
+* 1 minor enhancement
+  - ruby 1.9 compatability
+* 1 bug fix
+  - directory creation error when freezing a repository
+
+== 2.3.1 / 2009-01-28
+
+* 1 bug fix
+  - glob patterns were not being handled correctly in the .bnsignore file
+
+== 2.3.0 / 2009-01-25
+
+* 1 minor enhancement
+  - removed the need for a Manifest.txt file
+
+== 2.2.0 / 2009-01-01
+
+* 4 minor enhancements
+  - projects can be instantiated from git or svn repositories
+  - added a task to generate a project gemspec for use on github [Sandro Turriate]
+  - Mr Bones erb translation is now applied to files with a
+    '.bns' extension instead of an '.erb' extension
+  - refactored the main bones application
+* 1 bugfix
+  - Mr Bones tasks are only added to the gemspec when a package
+    is being built
+
+== 2.1.1 / 2008-12-15
+
+* 1 minor enhancement
+  - added '.rdoc' to the list of file extensions for rdoc and
+    notes takss [Avdi Grimm]
+* 2 bug fixes
+  - default "from" field when e-mailing announcements
+  - fixed SMTP check_auth_args arity [Avdi Grimm]
+
+== 2.1.0 / 2008-10-15
+
+* 1 major enhancement
+  - tasks can be used from the bones gem without having to create a
+    "tasks" folder in each project you create
+* 2 minor enhancements
+  - revmoved SVN $Id$ turds
+  - Mr Bones is now included by default as a development dependency
+* 1 bug fix
+  - changed the namespacing for the facets ANSICode class
+
+== 2.0.3 / 2008-07-02
+
+* 1 bug fix
+  - Fixed the rubyforge tasks to be compatible with the
+    rubyforge 1.0.0 gem
+
+== 2.0.2 / 2008-06-02
+
+* 2 minor enhancements
+  - Added a gem cleanup rake task
+  - Tasks to support Git projects
+* 2 bug fixes
+  - Check for Rakefile when creating a new project
+  - Failed dependency resolution when not using fully qualified task names
+
+== 2.0.1 / 2008-04-15
+
+* 1 minor enchancement
+  - Now compatible with RubyGems versions earlier than 1.1.0
+    (should work back to 0.9.4)
+
+== 2.0.0 / 2008-04-07
+
+* 2 major enhancements
+  - Reworked the PROJ open struct to use nested open struct
+    objects
+  - Renamed a few of the .rake files to match the namespaces
+    they define
+* 4 minor enhancements
+  - Selectable project skeleton when creating a new project
+  - Added an empty 'prereqs' task to several of the namespaces
+      (can be used for running code before any of the
+       tasks in that namespace are invoked)
+  - Extra refinement on notes
+      rake notes TwP       #=> all notes for TwP
+      rake notes:todo TwP  #=> all todos for TwP
+  - Insalling a gem will no longer try to update the gem
+    sources from RubyForge
+* 1 bug fix
+  - On some systems, the quiet method was not reopening
+    stdout and stderr correctly
+
+== 1.3.5 / 2008-02-27
+
+* 2 minor enhancements
+  - Added a bones:debug task to inspect the PROJ open struct or
+    a single attribute of the PROJ open struct
+  - Small adjustments to the gem and spec tasks
+* 1 bug fix
+  - Project names can now contain dahes (my-proj)
+
+== 1.3.4 / 2008-02-20
+
+* 4 minor enhancements
+  - Added more RCov options and tasks to verify a coverage
+    threshold (RSpec only)
+  - Can specify exact dependency version requirement
+  - Added a command line option to specify the output directory for
+    a new project
+  - The history, readme, and manifest file names can be configured
+    in the Rakefile
+* 1 bug fix
+  - Now including the default rake/clean tasks
+
+== 1.3.3 / 2008-02-18
+
+* 4 minor enhancements
+  - The annotation tags to search for can be specified by the user
+    in the Rakefile
+  - Directory names can be substituted during skeleton creation
+  - Support for the GEM post_install_message
+  - Support to generate an announcement text file and send the
+    announcement via e-mail
+  - Added a manifest:assert task that can be used when building the
+    gem to assert that the manifest is up to date
+       task 'gem:package' => 'manifest:assert'
+* 1 bug fix
+  - Fixed a circular dependency in the gem creation tasks
+
+== 1.3.2 / 2008-02-05
+
+* 1 minor enhancement
+  - Added colorization to the manifest:check task
+
+== 1.3.1 / 2008-02-01
+
+* 4 minor enhancements
+  - Updated the "ensure_in_path" method to take more than one path
+  - Added an "in_directory" method for executing shell tasks in a
+    different directory
+  - Fleshed out a spec_helper and a better default project spec file
+  - By default the project changes, description, and summary will be
+    loaded from the History and README files
+* 3 bug fixes
+  - RSpec tasks were not including the user defined project libraries
+    such as "ext" or anything besides "lib"
+  - Tweaked the gem install/uninstall tasks to remove installed binaries
+    and to install platform specific gem versions
+  - Fixed a bug where the RDoc task was ignore the PROJ.rdoc_opts
+
+== 1.3.0 / 2008-01-04
+
+* 2 minor enhancements
+  - Added a few more methods to the default framework
+  - Added tasks to support tagging releases in SVN
+* 1 bug fix
+  - Fixed a nil value error for the remote rdoc directory
+    (patch supplied by Chris Shea)
+
+== 1.2.1 / 2008-01-02
+
+* 2 bug fixes
+  - With no arguments, the bones command was not showing the help message
+  - Freezing a second time was not updating all the skeleton tasks
+
+== 1.2.0 / 2007-12-31
+
+* 1 major enhancement
+  - Users can define their own skeletons to use (bones --freeze)
+* 1 minor enhancement
+  - Show a list of the files a user needs to change after project creation
+
+== 1.1.2 / 2007-12-31
+
+* 2 minor enhancements
+  - The pkg and doc directories are now excluded from the manifest
+  - Added method to hide tasks from the rake task listing
+* 1 bug fix
+  - Fixed typo in an abort message (thanks Bill Kleb)
+
+== 1.1.1 / 2007-12-29
+
+* 1 bug fix
+  - Fixed the bad interaction with RSpec gem
+
+== 1.1.0 / 2007-12-29
+
+* 3 minor enhancements
+  - Output message when files are created or updated
+  - Directory cleanup if project creation fails
+  - Pulled the rails source annotation extractor into Mr Bones
+
+== 1.0.0 / 2007-12-28
+
+* 1 major enhancement
+  - Birthday!

@@ -1,0 +1,169 @@
+--- !ruby/object:Gem::Specification 
+name: logging
+version: !ruby/object:Gem::Version 
+  version: 0.9.7
+platform: ruby
+authors: 
+- Tim Pease
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2009-03-17 00:00:00 -05:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: flexmock
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 0.8.2
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: lockfile
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 1.4.3
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: bones
+  type: :development
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 2.4.2
+    version: 
+description: Logging is a flexible logging library for use in Ruby programs based on the design of Java's log4j library. It features a hierarchical logging system, custom level names, multiple output destinations per log event, custom formatting, and more.
+email: tim.pease@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- History.txt
+- README.rdoc
+files: 
+- History.txt
+- README.rdoc
+- Rakefile
+- data/bad_logging_1.rb
+- data/bad_logging_2.rb
+- data/logging.rb
+- data/logging.yaml
+- data/simple_logging.rb
+- lib/logging.rb
+- lib/logging/appender.rb
+- lib/logging/appenders/buffering.rb
+- lib/logging/appenders/console.rb
+- lib/logging/appenders/email.rb
+- lib/logging/appenders/file.rb
+- lib/logging/appenders/growl.rb
+- lib/logging/appenders/io.rb
+- lib/logging/appenders/rolling_file.rb
+- lib/logging/appenders/string_io.rb
+- lib/logging/appenders/syslog.rb
+- lib/logging/config/configurator.rb
+- lib/logging/config/yaml_configurator.rb
+- lib/logging/layout.rb
+- lib/logging/layouts/basic.rb
+- lib/logging/layouts/pattern.rb
+- lib/logging/log_event.rb
+- lib/logging/logger.rb
+- lib/logging/repository.rb
+- lib/logging/root_logger.rb
+- lib/logging/stats.rb
+- lib/logging/utils.rb
+- logging.gemspec
+- tasks/ann.rake
+- tasks/bones.rake
+- tasks/gem.rake
+- tasks/git.rake
+- tasks/notes.rake
+- tasks/post_load.rake
+- tasks/rdoc.rake
+- tasks/rubyforge.rake
+- tasks/setup.rb
+- tasks/spec.rake
+- tasks/svn.rake
+- tasks/test.rake
+- test/appenders/test_buffered_io.rb
+- test/appenders/test_console.rb
+- test/appenders/test_email.rb
+- test/appenders/test_file.rb
+- test/appenders/test_growl.rb
+- test/appenders/test_io.rb
+- test/appenders/test_rolling_file.rb
+- test/appenders/test_syslog.rb
+- test/benchmark.rb
+- test/config/test_configurator.rb
+- test/config/test_yaml_configurator.rb
+- test/layouts/test_basic.rb
+- test/layouts/test_pattern.rb
+- test/setup.rb
+- test/test_appender.rb
+- test/test_layout.rb
+- test/test_log_event.rb
+- test/test_logger.rb
+- test/test_logging.rb
+- test/test_repository.rb
+- test/test_root_logger.rb
+- test/test_stats.rb
+- test/test_utils.rb
+has_rdoc: true
+homepage: http://logging.rubyforge.org/
+post_install_message: 
+rdoc_options: 
+- --main
+- README.rdoc
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: logging
+rubygems_version: 1.3.1
+signing_key: 
+specification_version: 2
+summary: A flexible and extendable logging library for Ruby
+test_files: 
+- test/appenders/test_buffered_io.rb
+- test/appenders/test_console.rb
+- test/appenders/test_email.rb
+- test/appenders/test_file.rb
+- test/appenders/test_growl.rb
+- test/appenders/test_io.rb
+- test/appenders/test_rolling_file.rb
+- test/appenders/test_syslog.rb
+- test/config/test_configurator.rb
+- test/config/test_yaml_configurator.rb
+- test/layouts/test_basic.rb
+- test/layouts/test_pattern.rb
+- test/test_appender.rb
+- test/test_layout.rb
+- test/test_log_event.rb
+- test/test_logger.rb
+- test/test_logging.rb
+- test/test_repository.rb
+- test/test_root_logger.rb
+- test/test_stats.rb
+- test/test_utils.rb

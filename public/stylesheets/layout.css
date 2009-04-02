@@ -55,6 +55,9 @@ clear: both;
 th.centered {
   text-align: center;
 }
+th.right {
+  text-align: right;
+}
 
 table {
 width: 100%;
@@ -72,6 +75,9 @@ td.rctl {
 
 td.centered {
   text-align: center;
+}
+td.right {
+  text-align: right;
 }
 
 th {

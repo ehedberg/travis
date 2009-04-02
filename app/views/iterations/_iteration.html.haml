@@ -6,6 +6,10 @@
     =iteration.start_date
   %td.centered
     =iteration.end_date
+  %td.right
+    =iteration.total_points
+  %td.right
+    =iteration.stories.unswagged.count
   %td.rctl
     =link_to("Show", iteration_path(iteration))
     =link_to("Edit", edit_iteration_path(iteration))

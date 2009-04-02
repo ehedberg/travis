@@ -17,4 +17,4 @@ production:
   adapter: mysql
   database: travis_prod
   user: root
-  password: standard
+  password: 

@@ -17,3 +17,4 @@ vendor/plugins/acts_as_solr/solr/logs/*
 vendor/plugins/acts_as_solr/solr/tmp/*
 *.DS_Store
 tmp/restart.txt
+debug.log

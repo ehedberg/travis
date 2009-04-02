@@ -1,5 +1,6 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
+require File.expand_path(File.dirname(__FILE__) + "/mocks/acts_as_solr.rb")
 require 'test_help'
 
 class Test::Unit::TestCase

@@ -47,7 +47,6 @@ class TaskTest < ActiveSupport::TestCase
   def test_valid_atttributes
     t = Task.new 
     assert(!t.save)
-    assert_equal "can't be blank", t.errors.on(:description)
     assert_equal "can't be blank", t.errors.on(:title)
   end
 

@@ -1,56 +1,82 @@
-require File.dirname(__FILE__)+'/../test_helper'
+require File.dirname(__FILE__) + '/../test_helper'
+require 'sessions_controller'
+
+# Re-raise errors caught by the controller.
+class SessionsController; def rescue_action(e) raise e end; end
 
 class SessionsControllerTest < ActionController::TestCase
+  # Be sure to include AuthenticatedTestHelper in test/test_helper.rb instead
+  # Then, you can remove it from this and the units test.
+  include AuthenticatedTestHelper
 
-  def test_routes
-    assert_routing "/login", :controller=>"sessions", :action=>"new"
-    assert_recognizes({:controller=>"sessions",:action=>"create"}, :path=>"/session", :method=>"post")
-    assert_recognizes({:controller=>"sessions",:action=>"destroy"}, :path=>"/session", :method=>"delete")
-  end
+  fixtures :users
 
-  def test_create
-    @request.session[:return_to]='blah'
-    User.expects(:authenticate).with('blah', 'foo').returns users(:quentin)
-    post :create, {:login=>'blah', :password=>'foo'} 
+  def test_should_login_and_redirect
+    post :create, :login => 'quentin', :password => 'monkey'
+    assert session[:user_id]
     assert_response :redirect
-    assert_redirected_to '/blah'
-    assert_equal users(:quentin).id, session[:user_id]
-  end
-  def test_redirects_default_no_flash
-    post :create, {:login=>'quentin', :password=>'monkey'}
-    assert_response :redirect
-    assert_redirected_to root_path
-  end
-  def test_flashback
-    @request.session[:return_to]='/iterations'
-    post :create, {:login=>'quentin', :password=>'monkey'}
-    assert_response :redirect
-    assert_redirected_to iterations_path
   end
 
-  def test_destroy
-    @request.session[:user_id]='blah'
-    delete :destroy
+  def test_should_fail_login_and_not_redirect
+    post :create, :login => 'quentin', :password => 'bad password'
+    assert_nil session[:user_id]
+    assert_response :success
+  end
+
+  def test_should_logout
+    login_as :quentin
+    get :destroy
     assert_nil session[:user_id]
     assert_response :redirect
-    assert_redirected_to root_path
   end
 
-  def test_new
-    get :new, :login=>'mml'
-    assert_response :success
-    assert_template 'new'
-
-    assert_select "form[action=?][method=post]", session_path do
-      assert_select "input[type=text][name=login]"
-      assert_select "input[type=submit]"
-    end
+  def test_should_remember_me
+    @request.cookies["auth_token"] = nil
+    post :create, :login => 'quentin', :password => 'monkey', :remember_me => "1"
+    assert_not_nil @response.cookies["auth_token"]
   end
 
-  def test_logout_button_footer
-    @request.session[:user_id]=1
+  def test_should_not_remember_me
+    @request.cookies["auth_token"] = nil
+    post :create, :login => 'quentin', :password => 'monkey', :remember_me => "0"
+    puts @response.cookies["auth_token"]
+    assert @response.cookies["auth_token"].blank?
+  end
+  
+  def test_should_delete_token_on_logout
+    login_as :quentin
+    get :destroy
+    assert @response.cookies["auth_token"].blank?
+  end
+
+  def test_should_login_with_cookie
+    users(:quentin).remember_me
+    @request.cookies["auth_token"] = cookie_for(:quentin)
     get :new
-    assert_select "a[href=?]", logout_path, "Logout"
+    assert @controller.send(:logged_in?)
   end
 
+  def test_should_fail_expired_cookie_login
+    users(:quentin).remember_me
+    users(:quentin).update_attribute :remember_token_expires_at, 5.minutes.ago
+    @request.cookies["auth_token"] = cookie_for(:quentin)
+    get :new
+    assert !@controller.send(:logged_in?)
+  end
+
+  def test_should_fail_cookie_login
+    users(:quentin).remember_me
+    @request.cookies["auth_token"] = auth_token('invalid_auth_token')
+    get :new
+    assert !@controller.send(:logged_in?)
+  end
+
+  protected
+    def auth_token(token)
+      CGI::Cookie.new('name' => 'auth_token', 'value' => token)
+    end
+    
+    def cookie_for(user)
+      auth_token users(user).remember_token
+    end
 end

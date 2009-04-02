@@ -1,3 +1,16 @@
+# == Schema Information
+# Schema version: 20090204043205
+#
+# Table name: iterations
+#
+#  id         :integer         not null, primary key
+#  title      :string(200)     not null
+#  start_date :date            not null
+#  end_date   :date            not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 iter_last:
   title: 'Iteration 1'
   start_date: <%= 21.days.ago.to_date.to_s(:db) %>

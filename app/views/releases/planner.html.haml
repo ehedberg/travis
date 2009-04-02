@@ -5,5 +5,5 @@
     hey!
   .title
     =h 'Free Iterations'
-  =render :partial=>'drag_iteration', :collection=>@iterations.select{|x| !x.release}
+  =render :partial=>'drag_iteration', :collection=>@iterations
 =drop_receiving_element 'iterations', :url=>releases_path

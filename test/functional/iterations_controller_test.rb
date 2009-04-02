@@ -228,7 +228,22 @@ class IterationsControllerTest < ActionController::TestCase
       assert assigns(:iteration)
       assert_equal assigns(:iteration), iterations(:iter_next)
       assert_response :success
-      
+  end
+  
+  def test_reset_swags
+    assert_routing({:path=>"/iterations/1/reset_swags", :method=>'put'}, {:controller=>"iterations", :action=>"reset_swags", :id=>"1"})
+    iter = iterations(:iter_current)
+    assert(iter.stories.count > 0)
+    iter.stories.each do |s|
+      assert_not_nil(s.swag)
+    end
+    put :reset_swags, :id=>iter.id
+    assert_response :redirect
+    assert_redirected_to(iteration_path(iter))
+    i2 = assigns(:iteration)
+    i2.stories.each do |s|
+      assert_nil(s.swag) if s.state != 'passed'
+    end
   end
 
 end

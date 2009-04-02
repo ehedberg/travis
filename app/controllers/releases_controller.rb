@@ -41,7 +41,9 @@ class ReleasesController < ApplicationController
     render :template=>"releases/form"
   end
 
-  def do_rel
+  def do_assoc
+    p "in do_assoc, params = #{params.inspect}"
+    render :template=>'releases/planner'
   end
 
   def update

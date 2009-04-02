@@ -82,6 +82,16 @@ class IterationTest < ActiveSupport::TestCase
       assert_nil foo.previous
   end
   
+  def test_next_iter
+    foo = iterations(:iter_current)
+    assert_equal iterations(:iter_next), foo.next
+  end  
+  
+  def test_previous_iter_has_no_previous
+      foo = iterations(:iter_empty)
+      assert_nil foo.next
+  end
+  
   def test_unswagged_count
     assert_equal(1, iterations(:iter_next).stories.unswagged.count)
     assert_equal(0, iterations(:iter_current).stories.unswagged.count)

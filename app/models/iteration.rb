@@ -82,6 +82,11 @@ class Iteration < ActiveRecord::Base
     return nil if index < 1
     iterations[index-1]
   end
-
   
+  def next
+    iterations = Iteration.find(:all, :order=>"start_date asc")
+    index = iterations.index(self)
+    return nil if index >= iterations.size
+    iterations[index+1]
+  end
 end

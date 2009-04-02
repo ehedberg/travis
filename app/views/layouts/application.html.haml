@@ -11,6 +11,12 @@
     #horiz-menu
       =render :partial=>"layouts/menu"
     #content
+      -if flash[:error]
+        #flash_error
+          =flash[:error]
+      -if flash[:notice]
+        #flash_notice
+          =flash[:notice]
       =yield
 #footer
   - if logged_in?

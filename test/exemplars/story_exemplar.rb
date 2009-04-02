@@ -4,6 +4,6 @@ class Story < ActiveRecord::Base
   
   def self.generate_title
     @last_title ||= "Generated title 000"
-    @last_title.succ
+    @last_title.succ!
   end
 end

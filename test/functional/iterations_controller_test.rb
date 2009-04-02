@@ -233,16 +233,28 @@ class IterationsControllerTest < ActionController::TestCase
   def test_reset_swags
     assert_routing({:path=>"/iterations/1/reset_swags", :method=>'put'}, {:controller=>"iterations", :action=>"reset_swags", :id=>"1"})
     iter = iterations(:iter_current)
-    assert(iter.stories.count > 0)
-    iter.stories.each do |s|
-      assert_not_nil(s.swag)
-    end
     put :reset_swags, :id=>iter.id
     assert_response :redirect
     assert_redirected_to(iteration_path(iter))
     i2 = assigns(:iteration)
     i2.stories.each do |s|
       assert_nil(s.swag) if s.state != 'passed'
+    end
+  end
+  
+  def test_promote_stories
+    assert_routing({:path=>"/iterations/1/promote_stories", :method=>'put'}, {:controller=>"iterations", :action=>"promote_stories", :id=>"1"})
+    iter = iterations(:iter_current)
+    passed_stories = iter.stories.select{|s| s.state != 'passed'}
+    put :promote_stories, :id=>iter.id
+    assert_response :redirect
+    assert_redirected_to(iteration_path(iter))
+    iter.reload.stories.each do |s|
+      assert_equal('passed', s.state)
+    end
+    passed_stories.each do |ps|
+      assert(!iter.stories.include?(ps), "#{ps.title} should have been moved!")
+      assert(iter.next.stories.include?(ps), "#{ps.title} should have been moved!")
     end
   end
 

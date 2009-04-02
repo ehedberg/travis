@@ -56,7 +56,7 @@ class Story < ActiveRecord::Base
   state :in_qc
   state :failed
 
-  
+  named_scope :unswagged, :conditions => ['swag IS NULL']
 
   event :fail do
     transitions :to=>:failed, :from=>:in_qc

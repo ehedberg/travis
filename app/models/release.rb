@@ -39,6 +39,10 @@ class Release < ActiveRecord::Base
   def completed_story_count 
     iterations.map{|x|x.completed_story_count}.sum
   end
+  
+  def unswagged_story_count
+    stories.select{|s| s.swag.nil?}.size
+  end
 
   def start_date
     if has_iterations?

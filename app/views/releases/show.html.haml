@@ -20,13 +20,14 @@
 %h2
   Completed Story Count
   =@release.completed_story_count
+%h2
+  Unswagged Story Count
+  =@release.unswagged_story_count
 =link_to "Plan Release" , planner_release_path(@release)
 
 %table#iterations
   %caption Iterations
-  %th Id
-  %th Title
-  %th &nbsp;
+  =render :partial=>'iterations/header'
   =render :partial=>"iterations/iteration", :collection=>@release.iterations
 
 #sum

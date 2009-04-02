@@ -21,6 +21,9 @@
   Open points
   =@iteration.open_points
 %h3
+  Unswagged stories:
+  =@iteration.stories.unswagged.count
+%h3
   ="Assigned to %s:"%pluralize(@iteration.releases.size, 'release')
   
   =@iteration.releases.map{|x| link_to(h(x.title), release_path(x))}.join(', ')

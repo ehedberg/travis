@@ -15,7 +15,7 @@ class SessionsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
     assert_template 'new'
-    assert_select "div[id=horiz-menu]", :count => 0 
+    assert_select "div[id=horiz-menu]", :count => 1
   end
   def test_should_login_and_redirect
     post :create, :login => 'quentin', :password => 'monkey'

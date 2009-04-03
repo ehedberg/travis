@@ -161,9 +161,7 @@ div.formError  {
   font-color: green;
   font-size: .8em;
 }
-div.fieldWithErrors {
-border: 2px dotted orange;
-}
+
 .drop_release {
   float: left;
   background: #80f080;

@@ -6,26 +6,29 @@
   %fieldset
     %legend
       Story Form
-    %label.first
-      Title
-      =f.text_field :title, :size=>92
-    %label 
-      Description
-      =f.text_area :description, :cols=>80
-      =link_to "Markup Syntax Help", "http://daringfireball.net/projects/markdown/syntax"
-    %label
-      Area
-      =f.text_field :nodule
-    %label
-      Tags
-      =f.text_field :tag_list
-    %label
-      Swag
-      =f.text_field :swag, :size=>2
-    %label
-      Iteration
-      =f.select :iteration_id, Iteration.find(:all).collect{|i| [i.title, i.id]}, {:include_blank=>true}
-
-    =submit_tag "Save", {:class=> "submit_button"}
-    =button_to_function "Cancel", "location.href='#{stories_path}'", {:class=>'submit_button'}
+    %p
+      = link_to "Markup Syntax Help", "http://daringfireball.net/projects/markdown/syntax", :target => "_blank"
+    %ol
+      %li
+        = f.label :title, "Title", :class => "required"
+        = f.text_field :title, :size=>92
+      %li
+        = f.label :description, "Description", :class => "required"
+        = f.text_area :description, :cols=>80
+        
+      %li
+        = f.label :nodule, "Area"
+        = f.text_field :nodule
+      %li
+        = f.label :tag_list, "Tags"
+        = f.text_field :tag_list
+      %li
+        = f.label :swag, "Swag"
+        = f.text_field :swag, :size=>2
+      %li
+        = f.label :iteration_id, "Iteration"
+        = f.select :iteration_id, Iteration.find(:all).collect{|i| [i.title, i.id]}, {:include_blank=>true}
+      %li 
+        =submit_tag "Save", {:class=> "submit_button"}
+        =button_to_function "Cancel", "location.href='#{stories_path}'", {:class=>'submit_button'}
 

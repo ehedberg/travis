@@ -5,17 +5,18 @@
   %fieldset
     %legend
       Task Form
-    %label
-      Title
-      = f.text_field :title, :size=>92
-    %label
-      Description
-      = f.text_area :description , :cols=>80
-    %label
-      Action
-      =f.select :state, @task.available_events, {:include_blank=>true}
-    %label
-      Stories
-      = f.collection_select :story_ids, Story.find(:all), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'task[story_ids][]'}
+    %ol
+      %li
+        = f.label :title, "Title", :class => "required"
+        = f.text_field :title, :size=>92
+      %li
+        = f.label :description, "Description"
+        = f.text_area :description , :cols=>80
+      %li
+        = f.label :state, "Action"
+        =f.select :state, @task.available_events, {:include_blank=>true}
+      %li
+        = f.label :story_ids, "Stories"
+        = f.collection_select :story_ids, Story.find(:all), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'task[story_ids][]'}
     = submit_tag "Save", {:class => 'submit_button'} 
     = button_to_function("Cancel", "location.href='#{tasks_path}'", {:class=>'submit_button'}) 

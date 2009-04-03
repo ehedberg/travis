@@ -9,13 +9,12 @@
     %div{:id=>"td_#{story.id}", :style=>'display:none'}
       =markdown(story.description)
   %td
-    %span{:id=>"swag_#{story.id}"}
+    %span{:id=>"swag_#{story.id}"}<
       -if story.swag
         =story.swag
       -else
         Unswagged
-
-    =in_place_editor "swag_#{story.id}", {:url=>update_swag_story_path(story)}
+    =in_place_editor "swag_#{story.id}", {:url=>update_swag_story_path(story), :cols=>10, :rows=>1, :on_complete=>"function() {window.location.reload();}", :cancel_control=>'button'}
   %td.centered
     =story.state
   %td.centered

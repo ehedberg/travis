@@ -1,20 +1,21 @@
 # == Schema Information
-# Schema version: 20090204043205
+# Schema version: 20090403173303
 #
 # Table name: stories
 #
-#  id           :integer         not null, primary key
-#  title        :string(200)     not null
-#  description  :text
-#  swag         :decimal(, )
-#  created_at   :datetime
-#  updated_at   :datetime
-#  iteration_id :integer
-#  state        :string(20)      default("new"), not null
-#  completed_at :date
-#  lock_version :integer         default(0)
-#  nodule       :string(200)
-#  mnemonic     :string(10)
+#  id              :integer         not null, primary key
+#  title           :string(200)     not null
+#  description     :text
+#  swag            :decimal(, )
+#  created_at      :datetime
+#  updated_at      :datetime
+#  iteration_id    :integer
+#  state           :string(20)      default("new"), not null
+#  completed_at    :date
+#  lock_version    :integer         default(0)
+#  nodule          :string(200)
+#  mnemonic        :string(10)
+#  cached_tag_list :string(255)
 #
 
 class Story < ActiveRecord::Base

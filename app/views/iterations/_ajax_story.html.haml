@@ -6,15 +6,15 @@
     .opform
       %fieldset
         =f.label :title, '', :class=>'first'
-        =f.text_field :title
+        =f.text_field :title, :size=>45
         =f.error_message_on(:title)
         =f.label :description
-        =f.text_area :description
+        =f.text_area :description, :rows=>15, :cols=>40
         =f.error_message_on(:description)
-        =f.label :nodule
+        =f.label :nodule, 'Module'
         =f.text_field :nodule
         =f.error_message_on(:nodule)
         =f.label :swag
-        =f.text_field :swag, :size=>2
+        =f.text_field :swag, :size=>6
         =f.error_message_on(:swag)
         =submit_tag "Save"

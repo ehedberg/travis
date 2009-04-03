@@ -75,6 +75,13 @@ class User < ActiveRecord::Base
     u && u.authenticated?(password) ? u : nil
   end
 
+  def self.current_user
+    Thread.current[:current_user]
+  end
+  def self.current_user=(value)
+    Thread.current[:current_user] = value
+  end
+
   def login=(value)
     write_attribute :login, (value ? value.downcase : nil)
   end

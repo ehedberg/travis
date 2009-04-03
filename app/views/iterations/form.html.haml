@@ -6,20 +6,20 @@
   %fieldset
     %legend
       Iteration
-    %label.first
-      Title
-      =f.text_field :title
-    %label 
-      Start Date 
-      %div.date_field
-        =f.calendar_date_select :start_date
-    %label
-      End Date
-      %div.date_field
-        =f.calendar_date_select :end_date
-    %label
-      Releases
-      = f.collection_select :release_ids, Release.find(:all, :order=>'title asc'), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'iteration[release_ids][]'}
-    %p
-    =submit_tag "Save", {:class=> "submit_button"}
-    =button_to_function "Cancel", "location.href='#{iterations_path}'", {:class=>'submit_button'}
+    %ol.form
+      %li
+        =f.label :title, "Title", :class => "required"
+        =f.text_field :title
+      %li
+        =f.label :start_date, "Start Date", :class => "required"
+        %div.date_field
+          =f.calendar_date_select :start_date
+      %li
+        =f.label :end_date, "End Date", :class => "required"
+        %div.date_field
+          =f.calendar_date_select :end_date
+      %li
+        =f.label :release_ids, "Releases", :class => "required"
+        = f.collection_select :release_ids, Release.find(:all, :order=>'title asc'), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'iteration[release_ids][]'}
+  =submit_tag "Save", {:class=> "submit_button"}
+  =button_to_function "Cancel", "location.href='#{iterations_path}'", {:class=>'submit_button'}

@@ -117,10 +117,13 @@ caption {
 margin: 10px;
 }
 .opform fieldset {
-background: #d0f0d0;
-            padding-left: 20px;
-            padding-bottom: 20px;
-            padding-top: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    background: #E6E6E6 none repeat scroll 0 0;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 #modal_overlay {  
   background-color:#000000;

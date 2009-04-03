@@ -1,7 +1,19 @@
 require File.dirname(__FILE__)+'/../test_helper'
 
 class DashboardControllerTest < ActionController::TestCase
-
+  def setup
+    @request.session[:user_id]=1
+  end
+  def test_requires_login
+    @request.session[:user_id]=nil
+    get :index
+    assert_response :redirect
+    assert_redirected_to new_session_path
+    @request.session[:user_id]=1
+    get :index
+    assert_response :success
+    assert_template 'index'
+  end
   def test_index
     get :index
     assert_response :success

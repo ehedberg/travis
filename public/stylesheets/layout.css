@@ -167,7 +167,9 @@ border: 2px dotted orange;
   font-weight: bold;
   font-size: 1.2em;
 }
-
+.margin_top_10 {
+	margin-top: 10px;
+}
 
 
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>acts_as_solr (ActsAsSolr::ActsMethods)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/acts_methods.rb, line 98</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">acts_as_solr</span>(<span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">solr_options</span>={})
+      
+      <span class="ruby-identifier">extend</span> <span class="ruby-constant">ClassMethods</span>
+      <span class="ruby-identifier">include</span> <span class="ruby-constant">InstanceMethods</span>
+      <span class="ruby-identifier">include</span> <span class="ruby-constant">CommonMethods</span>
+      <span class="ruby-identifier">include</span> <span class="ruby-constant">ParserMethods</span>
+      
+      <span class="ruby-identifier">cattr_accessor</span> <span class="ruby-identifier">:configuration</span>
+      <span class="ruby-identifier">cattr_accessor</span> <span class="ruby-identifier">:solr_configuration</span>
+      
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">configuration</span> = { 
+        <span class="ruby-identifier">:fields</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>,
+        <span class="ruby-identifier">:additional_fields</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>,
+        <span class="ruby-identifier">:exclude_fields</span> =<span class="ruby-operator">&gt;</span> [],
+        <span class="ruby-identifier">:auto_commit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>,
+        <span class="ruby-identifier">:include</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>,
+        <span class="ruby-identifier">:facets</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>,
+        <span class="ruby-identifier">:boost</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>,
+        <span class="ruby-identifier">:if</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;true&quot;</span>
+      }  
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">solr_configuration</span> = {
+        <span class="ruby-identifier">:type_field</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;type_t&quot;</span>,
+        <span class="ruby-identifier">:primary_key_field</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;pk_i&quot;</span>,
+        <span class="ruby-identifier">:default_boost</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1.0</span>
+      }
+      
+      <span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">options</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-identifier">solr_configuration</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">solr_options</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">solr_options</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">validate_index</span>(<span class="ruby-identifier">configuration</span>)
+      
+      <span class="ruby-identifier">configuration</span>[<span class="ruby-identifier">:solr_fields</span>] = []
+      
+      <span class="ruby-identifier">after_save</span>    <span class="ruby-identifier">:solr_save</span>
+      <span class="ruby-identifier">after_destroy</span> <span class="ruby-identifier">:solr_destroy</span>
+
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">configuration</span>[<span class="ruby-identifier">:fields</span>].<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">:each</span>)
+        <span class="ruby-identifier">process_fields</span>(<span class="ruby-identifier">configuration</span>[<span class="ruby-identifier">:fields</span>])
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">process_fields</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_sym</span> })
+        <span class="ruby-identifier">process_fields</span>(<span class="ruby-identifier">configuration</span>[<span class="ruby-identifier">:additional_fields</span>])
+      <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

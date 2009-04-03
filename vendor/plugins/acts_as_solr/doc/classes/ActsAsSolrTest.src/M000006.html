@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_find_with_dynamic_fields (ActsAsSolrTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File test/unit/acts_as_solr_test.rb, line 70</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_find_with_dynamic_fields</span>
+    <span class="ruby-identifier">date</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">'%b %d %Y'</span>)
+    [<span class="ruby-node">&quot;dynamite AND #{date}&quot;</span>, <span class="ruby-node">&quot;description:goofy AND #{date}&quot;</span>, <span class="ruby-node">&quot;goofy napoleon #{date}&quot;</span>, 
+      <span class="ruby-node">&quot;goofiness #{date}&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">term</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">records</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-identifier">term</span> 
+      <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">total</span>
+      <span class="ruby-identifier">assert_equal</span> ({<span class="ruby-value str">&quot;id&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value str">&quot;name&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Napoleon Dynamite&quot;</span>, 
+                     <span class="ruby-value str">&quot;description&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Cool movie about a goofy guy&quot;</span>}), <span class="ruby-identifier">records</span>.<span class="ruby-identifier">docs</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">attributes</span>
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

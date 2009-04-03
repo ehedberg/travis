@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>to_hash (Solr::Request::Dismax)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/solr/request/dismax.rb, line 27</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_hash</span>
+    <span class="ruby-identifier">hash</span> = <span class="ruby-keyword kw">super</span>
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">:tie</span>] = <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:tie_breaker</span>]
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">:mm</span>]  = <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:minimum_match</span>]
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">:qf</span>]  = <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:query_fields</span>]
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">:pf</span>]  = <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:phrase_fields</span>]
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">:ps</span>]  = <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:phrase_slop</span>]
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">:bq</span>]  = <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:boost_query</span>]
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">:bf</span>]  = <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:boost_functions</span>]
+    <span class="ruby-identifier">hash</span>[<span class="ruby-value str">&quot;q.alt&quot;</span>] = <span class="ruby-ivar">@alternate_query</span>
+    <span class="ruby-comment cmt"># FIXME: 2007-02-13 &lt;coda.hale@gmail.com&gt; --  This code is duplicated in</span>
+    <span class="ruby-comment cmt"># Solr::Request::Standard. It should be refactored into a single location.</span>
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">:sort</span>] = <span class="ruby-ivar">@sort_values</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">sort</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">key</span> = <span class="ruby-identifier">sort</span>.<span class="ruby-identifier">keys</span>[<span class="ruby-value">0</span>]
+      <span class="ruby-node">&quot;#{key.to_s} #{sort[key] == :descending ? 'desc' : 'asc'}&quot;</span>
+    <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@sort_values</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">hash</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

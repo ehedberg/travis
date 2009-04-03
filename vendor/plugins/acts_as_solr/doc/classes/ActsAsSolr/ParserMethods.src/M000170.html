@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>add_scores (ActsAsSolr::ParserMethods)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/parser_methods.rb, line 114</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_scores</span>(<span class="ruby-identifier">results</span>, <span class="ruby-identifier">solr_data</span>)
+      <span class="ruby-identifier">with_score</span> = []
+      <span class="ruby-identifier">solr_data</span>.<span class="ruby-identifier">docs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">with_score</span>.<span class="ruby-identifier">push</span>([<span class="ruby-identifier">doc</span>[<span class="ruby-value str">&quot;score&quot;</span>], 
+          <span class="ruby-identifier">results</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span> <span class="ruby-identifier">record_id</span>(<span class="ruby-identifier">record</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">doc</span>[<span class="ruby-node">&quot;#{solr_configuration[:primary_key_field]}&quot;</span>].<span class="ruby-identifier">to_s</span> }])
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">with_score</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">score</span>,<span class="ruby-identifier">object</span><span class="ruby-operator">|</span> 
+        <span class="ruby-keyword kw">class</span> <span class="ruby-operator">&lt;&lt;</span><span class="ruby-identifier">object</span>; <span class="ruby-identifier">attr_accessor</span> <span class="ruby-identifier">:solr_score</span>; <span class="ruby-keyword kw">end</span>
+        <span class="ruby-identifier">object</span>.<span class="ruby-identifier">solr_score</span> = <span class="ruby-identifier">score</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

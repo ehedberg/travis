@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_faceted_search_using_zero_and_sort (FacetedSearchTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File test/unit/faceted_search_test.rb, line 85</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_faceted_search_using_zero_and_sort</span>
+    <span class="ruby-identifier">records</span> = <span class="ruby-constant">Electronic</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-value str">&quot;memory&quot;</span>, <span class="ruby-identifier">:facets</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">:fields</span> =<span class="ruby-operator">&gt;</span>[<span class="ruby-identifier">:category</span>]}
+    <span class="ruby-identifier">assert_equal</span>({<span class="ruby-value str">&quot;category_facet&quot;</span>=<span class="ruby-operator">&gt;</span>{<span class="ruby-value str">&quot;Electronics&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1</span>, <span class="ruby-value str">&quot;Memory&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">2</span>, <span class="ruby-value str">&quot;Hard Drive&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1</span>}}, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">facets</span>[<span class="ruby-value str">'facet_fields'</span>])
+    
+    <span class="ruby-identifier">records</span> = <span class="ruby-constant">Electronic</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-value str">&quot;memory&quot;</span>, <span class="ruby-identifier">:facets</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">:sort</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>, <span class="ruby-identifier">:fields</span> =<span class="ruby-operator">&gt;</span>[<span class="ruby-identifier">:category</span>]}
+    <span class="ruby-identifier">assert_equal</span>({<span class="ruby-value str">&quot;category_facet&quot;</span>=<span class="ruby-operator">&gt;</span>{<span class="ruby-value str">&quot;Memory&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">2</span>, <span class="ruby-value str">&quot;Electronics&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1</span>, <span class="ruby-value str">&quot;Hard Drive&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1</span>}}, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">facets</span>[<span class="ruby-value str">'facet_fields'</span>])
+    
+    <span class="ruby-identifier">records</span> = <span class="ruby-constant">Electronic</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-value str">&quot;memory&quot;</span>, <span class="ruby-identifier">:facets</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">:fields</span> =<span class="ruby-operator">&gt;</span>[<span class="ruby-identifier">:manufacturer</span>]}
+    <span class="ruby-identifier">assert_equal</span>({<span class="ruby-value str">&quot;manufacturer_facet&quot;</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value str">&quot;Dell, Inc&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+                                          <span class="ruby-value str">&quot;Samsung Electronics Co. Ltd.&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, 
+                                          <span class="ruby-value str">&quot;Corsair Microsystems Inc.&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, 
+                                          <span class="ruby-value str">&quot;A-DATA Technology Inc.&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+                                          <span class="ruby-value str">&quot;Apple Computer Inc.&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>}}, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">facets</span>[<span class="ruby-value str">'facet_fields'</span>])
+  
+    <span class="ruby-identifier">records</span> = <span class="ruby-constant">Electronic</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-value str">&quot;memory&quot;</span>, <span class="ruby-identifier">:facets</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">:zeros</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>, <span class="ruby-identifier">:fields</span> =<span class="ruby-operator">&gt;</span>[<span class="ruby-identifier">:manufacturer</span>]}
+    <span class="ruby-identifier">assert_equal</span>({<span class="ruby-value str">&quot;manufacturer_facet&quot;</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value str">&quot;Samsung Electronics Co. Ltd.&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, 
+                                          <span class="ruby-value str">&quot;Corsair Microsystems Inc.&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, 
+                                          <span class="ruby-value str">&quot;A-DATA Technology Inc.&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+                                          <span class="ruby-value str">&quot;Apple Computer Inc.&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>}}, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">facets</span>[<span class="ruby-value str">'facet_fields'</span>])
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

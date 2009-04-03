@@ -352,4 +352,44 @@ class StoriesControllerTest < ActionController::TestCase
       assert_select "input[type=submit]"
     end
   end
+  
+  def test_index_search
+    desc = rand(1000000000000000000)
+    s = Story.generate!(:description => desc)
+    s2 = Story.generate!(:description => desc)
+    get :index, :q => desc.to_s
+    assert_response :success
+    assert_template "index"
+    assert assigns(:stories)
+    assert_equal 2, assigns(:stories).length
+    assert_equal s.id, assigns(:stories)[0].id
+  end
+  
+  def test_index_search_paginates_first_page
+    desc = rand(1000000000000000000)
+    30.times do
+      Story.generate!(:description => desc)
+    end
+    get :index, :q => desc.to_s
+    assert_response :success
+    assert_template "index"
+    assert assigns(:stories)
+    assert_equal Story.per_page, assigns(:stories).length
+  end
+  
+  def test_index_search_paginates_subsequent_page
+    desc = rand(1000000000000000000)
+    
+    # if per_page is 20, this will be 30
+    num_stories_to_gen = (Story.per_page * 2) - (Story.per_page / 2)
+    num_stories_to_gen.times do
+      Story.generate!(:description => desc)
+    end
+    get :index, :q => desc.to_s, :page => 2
+    assert_response :success
+    assert_template "index"
+    assert assigns(:stories)
+    assert_equal Story.per_page / 2, assigns(:stories).length
+  end
+  
 end

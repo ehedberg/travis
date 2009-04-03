@@ -94,5 +94,10 @@ class Story < ActiveRecord::Base
     sname = self.nodule.squeeze.gsub(/[^a-zA-Z]/,'')[0,4]
     self.update_attribute(:mnemonic,("%s-%d"%[sname,self.id]).upcase)
   end
+  
+  # used by will_paginate
+  def self.per_page
+    20
+  end
     
 end

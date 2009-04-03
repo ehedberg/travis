@@ -1,3 +1,4 @@
+#horiz-menu { position: relative; }
 #horiz-menu a.check:link {color: #ff0000}
 #horiz-menu a.check:visited {color: #0000ff}
 #horiz-menu a.check:hover {color: #ffcc00}
@@ -41,4 +42,10 @@
 	color: #FFF;
 	background: #FFF url("../images/current-bg-blue.gif") top left repeat-x;
 	padding: 5px 15px 0;
+}
+
+#horiz-menu #stories-search {
+	position: absolute;
+	top: 10px;
+	right: 10px;
 }

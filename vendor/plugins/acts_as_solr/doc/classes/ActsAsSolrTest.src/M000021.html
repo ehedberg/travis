@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_auto_commit_turned_off (ActsAsSolrTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File test/unit/acts_as_solr_test.rb, line 248</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_auto_commit_turned_off</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">0</span>, <span class="ruby-constant">Author</span>.<span class="ruby-identifier">count</span>
+    <span class="ruby-constant">Author</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Tom Clancy'</span>, <span class="ruby-identifier">:biography</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Writes novels of adventure and espionage'</span>)
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">1</span>, <span class="ruby-constant">Author</span>.<span class="ruby-identifier">count</span>
+    <span class="ruby-identifier">records</span> = <span class="ruby-constant">Author</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-value str">'tom clancy'</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">total</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

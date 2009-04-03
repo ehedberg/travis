@@ -2,10 +2,14 @@ class StoriesController < ApplicationController
   before_filter :login_required
   before_filter :load_parent 
   def index
-    unless @iteration
-      @stories=Story.paginate(:page=>params[:page], :order=>'created_at asc')
+    if(params[:q])
+      @stories = do_paginated_solr_search(params[:q], params[:page])
     else
-      @stories = @iteration.stories.paginate :page=>params[:page], :order=>'created_at asc'
+      unless @iteration
+        @stories=Story.paginate(:page=>params[:page], :order=>'created_at asc')
+      else
+        @stories = @iteration.stories.paginate :page=>params[:page], :order=>'created_at asc'
+      end
     end
   end
 
@@ -111,6 +115,21 @@ class StoriesController < ApplicationController
       @story = @iteration.stories.find(params[:id]) if params[:id]
     else
       @story = Story.find(params[:id]) if params[:id]
+    end
+  end
+  
+  def do_paginated_solr_search(query, page)
+    page = page.nil? ? 1 : page.to_i
+    offset = Story.per_page * (page - 1)
+    WillPaginate::Collection.create(page, Story.per_page) do |pager|
+      result = Story.find_by_solr(query, :offset => offset, :limit => Story.per_page, :order => "created_at asc").results
+      # inject the result array into the paginated collection:
+      pager.replace(result)
+
+      unless pager.total_entries
+        # the pager didn't manage to guess the total count, do it manually
+        pager.total_entries = Story.count_by_solr(query)
+      end
     end
   end
 end

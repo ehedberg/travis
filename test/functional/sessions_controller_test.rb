@@ -11,6 +11,12 @@ class SessionsControllerTest < ActionController::TestCase
 
   fixtures :users
 
+  def test_new_layout
+    get :new
+    assert_response :success
+    assert_template 'new'
+    assert_select "div[id=horiz-menu]", :count => 0 
+  end
   def test_should_login_and_redirect
     post :create, :login => 'quentin', :password => 'monkey'
     assert session[:user_id]

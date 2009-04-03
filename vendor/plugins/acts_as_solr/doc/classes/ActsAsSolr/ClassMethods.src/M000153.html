@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>rebuild_solr_index (ActsAsSolr::ClassMethods)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/class_methods.rb, line 128</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rebuild_solr_index</span>(<span class="ruby-identifier">batch_size</span>=<span class="ruby-value">0</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">finder</span>)
+      <span class="ruby-identifier">finder</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">ar</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ar</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>, <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge</span>({<span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">primary_key</span>})) }
+    
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">batch_size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+        <span class="ruby-identifier">items_processed</span> = <span class="ruby-value">0</span>
+        <span class="ruby-identifier">limit</span> = <span class="ruby-identifier">batch_size</span>
+        <span class="ruby-identifier">offset</span> = <span class="ruby-value">0</span>
+        <span class="ruby-keyword kw">begin</span>
+          <span class="ruby-identifier">items</span> = <span class="ruby-identifier">finder</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword kw">self</span>, {<span class="ruby-identifier">:limit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">limit</span>, <span class="ruby-identifier">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">offset</span>})
+          <span class="ruby-identifier">add_batch</span> = <span class="ruby-identifier">items</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">content</span><span class="ruby-operator">|</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">to_solr_doc</span> }
+    
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+            <span class="ruby-identifier">solr_add</span> <span class="ruby-identifier">add_batch</span>
+            <span class="ruby-identifier">solr_commit</span>
+          <span class="ruby-keyword kw">end</span>
+    
+          <span class="ruby-identifier">items_processed</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span>
+          <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;#{items_processed} items for #{self.name} have been batch added to index.&quot;</span>
+          <span class="ruby-identifier">offset</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span>
+        <span class="ruby-keyword kw">end</span> <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">items</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">items</span> = <span class="ruby-identifier">finder</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword kw">self</span>, {})
+        <span class="ruby-identifier">items</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">content</span><span class="ruby-operator">|</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">solr_save</span> }
+        <span class="ruby-identifier">items_processed</span> = <span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">solr_optimize</span>
+      <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-identifier">items_processed</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-node">&quot;Index for #{self.name} has been rebuilt&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;Nothing to index for #{self.name}&quot;</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_operator_search_option (ActsAsSolrTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File test/unit/acts_as_solr_test.rb, line 344</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_operator_search_option</span>
+    <span class="ruby-identifier">assert_nothing_raised</span> {
+      <span class="ruby-identifier">books</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-value str">&quot;office napoleon&quot;</span>, <span class="ruby-identifier">:operator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:or</span>
+      <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">books</span>.<span class="ruby-identifier">total</span>
+      
+      <span class="ruby-identifier">books</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-value str">&quot;office napoleon&quot;</span>, <span class="ruby-identifier">:operator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:and</span>
+      <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">books</span>.<span class="ruby-identifier">total</span>
+    }
+    
+    <span class="ruby-identifier">assert_raise</span> <span class="ruby-constant">RuntimeError</span> <span class="ruby-keyword kw">do</span>
+      <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-value str">&quot;office napoleon&quot;</span>, <span class="ruby-identifier">:operator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:bad</span>
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

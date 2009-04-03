@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>make_response (Solr::Response::Base)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/solr/response/base.rb, line 22</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">make_response</span>(<span class="ruby-identifier">request</span>, <span class="ruby-identifier">raw</span>)
+
+    <span class="ruby-comment cmt"># make sure response format seems sane</span>
+    <span class="ruby-keyword kw">unless</span> [<span class="ruby-identifier">:xml</span>, <span class="ruby-identifier">:ruby</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">request</span>.<span class="ruby-identifier">response_format</span>)
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Solr</span><span class="ruby-operator">::</span><span class="ruby-constant">Exception</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;unknown response format: #{request.response_format}&quot;</span> )
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt"># TODO: Factor out this case... perhaps the request object should provide the response class instead?  Or dynamically align by class name?</span>
+    <span class="ruby-comment cmt">#       Maybe the request itself could have the response handling features that get mixed in with a single general purpose response object?</span>
+    
+    <span class="ruby-keyword kw">begin</span>
+      <span class="ruby-identifier">klass</span> = <span class="ruby-identifier">eval</span>(<span class="ruby-identifier">request</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/Request/</span>,<span class="ruby-value str">'Response'</span>))
+    <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">NameError</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Solr</span><span class="ruby-operator">::</span><span class="ruby-constant">Exception</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;unknown request type: #{request.class}&quot;</span>)
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">raw</span>)
+    <span class="ruby-keyword kw">end</span>
+    
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

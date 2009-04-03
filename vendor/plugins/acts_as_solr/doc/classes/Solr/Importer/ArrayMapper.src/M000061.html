@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>map (Solr::Importer::ArrayMapper)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/solr/importer/array_mapper.rb, line 19</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map</span>(<span class="ruby-identifier">orig_data_array</span>)
+    <span class="ruby-identifier">mapped_data</span> = {}
+    <span class="ruby-identifier">orig_data_array</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">data</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">mapped_data</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-ivar">@mapping</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">map</span>(<span class="ruby-identifier">data</span>))
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-identifier">mapped_data</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

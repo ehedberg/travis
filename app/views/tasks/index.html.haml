@@ -4,7 +4,8 @@
 %h1 Tasks 
 =will_paginate @tasks
 =link_to("Create Task", new_task_path)
-=link_to "Search Tasks", search_tasks_path
+|
+=link_to "Advanced Task Search", search_tasks_path
 %table#tasks
   =render :partial=>'task_headers'
   =render :partial=>"task",:collection=>@tasks

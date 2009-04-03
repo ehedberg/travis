@@ -5,16 +5,22 @@
     =hidden_field_tag 'story[iteration_id]', @iteration.id
     .opform
       %fieldset
-        =f.label :title, '', :class=>'first'
-        =f.text_field :title, :size=>45
-        =f.error_message_on(:title)
-        =f.label :description
-        =f.text_area :description, :rows=>15, :cols=>40
-        =f.error_message_on(:description)
-        =f.label :nodule, 'Module'
-        =f.text_field :nodule
-        =f.error_message_on(:nodule)
-        =f.label :swag
-        =f.text_field :swag, :size=>6
-        =f.error_message_on(:swag)
-        =submit_tag "Save"
+        %ol.form
+          %li
+            =f.label :title, '', :class=>'first'
+            =f.text_field :title, :size=>45
+            =f.error_message_on(:title)
+          %li
+            =f.label :description
+            =f.text_area :description, :rows=>15, :cols=>40
+            =f.error_message_on(:description)
+          %li
+            =f.label :nodule, 'Module'
+            =f.text_field :nodule
+            =f.error_message_on(:nodule)
+          %li
+            =f.label :swag
+            =f.text_field :swag, :size=>6
+            =f.error_message_on(:swag)
+          %li
+            =submit_tag "Save"

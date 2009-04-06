@@ -1,6 +1,8 @@
 - form_tag session_path , :id=>'columnarForm' do
   %fieldset
-    %ul
+    %legend
+      Who are you?
+    %ol.form
       %li
         =label_tag 'login'
         =text_field_tag "login"
@@ -11,4 +13,3 @@
         =label_tag 'remember_me'
         =check_box_tag 'remember_me', '1', @remember_me
     =submit_tag "Login"
-

@@ -5,24 +5,41 @@
   =h(@release.title)
 = ziya_chart chart_release_path(@release), :size=>"700x300", :swf_path=>root_path+'charts' if Release.count > 0 and !@release.iterations.empty?
 
-%h2
-  Total days
-  =@release.total_days
-%h2
-  Total swag
-  =@release.total_points
-%h2
-  Remaining Scope
-  =@release.open_points
-%h2
-  Total Story Count
-  =@release.story_count
-%h2
-  Completed Story Count
-  =@release.completed_story_count
-%h2
-  Unswagged Story Count
-  =@release.unswagged_story_count
+%table
+  %tr
+    %th{:colspan=>2}
+      Overview
+  %tr
+    %td
+      Total days
+    %td
+      =@release.total_days
+  %tr
+    %td
+      Total swag
+    %td
+      =@release.total_points
+  %tr
+    %td
+      Remaining Scope
+    %td
+      =@release.open_points
+  %tr
+    %td
+      Total Story Count
+    %td
+      =@release.story_count
+  %tr
+    %td
+      Completed Story Count
+    %td
+      =@release.completed_story_count
+  %tr
+    %td
+      Unswagged Story Count
+    %td
+      =@release.unswagged_story_count
+  
 =link_to "Plan Release" , planner_release_path(@release)
 
 %table#iterations

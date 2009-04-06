@@ -41,6 +41,6 @@ class DashboardControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert assigns(:prediction)
-    assert_select "h3#prediction"
+    assert_select "td#prediction"
   end
 end

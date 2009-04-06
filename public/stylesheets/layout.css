@@ -193,7 +193,17 @@ div.formError  {
 .margin_top_10 {
 	margin-top: 10px;
 }
-
-
+#iterInfo {
+	width: 100%;
+}
+#iterInfo .overview {
+	float: left;
+	width: 300px;
+	margin-top: 15px;
+}
+#iterInfo #chart {
+	float: left ;
+	width: 68%;
+}
 
 

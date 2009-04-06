@@ -3,34 +3,48 @@
   element.className = 'current';
 
 #iterInfo
-  %h1
-    =link_to 'Current Iteration:', iteration_path(Iteration.current)
-    =@iteration.title
-  %h2
-    Current Velocity:
-    =@iteration.velocity
-  %h2
-    Last velocity
-    =@iteration.previous.velocity
-  %h2
-    Total Stories:
-    =@iteration.stories.count
-  %h3
-    Open Iteration points:
-    =@iteration.open_points
-  %h3
-    Completed points:
-    =@iteration.completed_points
-  %h3
-    Total points:
-    =@iteration.total_points
-  %h3#prediction
-    Predicted End Date:
-    =@prediction
-  =link_to "< Prev", iteration_path(@prev_iteration)
-  |
-  =link_to "Next >", iteration_path(@next_iteration)
-    
-
-#chart
-  = ziya_chart chart_iteration_path(@iteration), :size=>"800x400", :swf_path=>root_path+'charts'
+  .overview
+    %table
+      %tr
+        %th{:colspan=>2}
+          =link_to "Current Iteration: #{@iteration.title}", iteration_path(Iteration.current)
+      %tr
+        %td
+          Current Velocity:
+        %td
+          =@iteration.velocity
+      %tr
+        %td
+          Last velocity:
+        %td
+          =@iteration.previous.velocity
+      %tr
+        %td
+          Total Stories:
+        %td
+          =@iteration.stories.count
+      %tr
+        %td
+          Open Iteration points:
+        %td
+          =@iteration.open_points
+      %tr
+        %td
+          Completed points:
+        %td
+          =@iteration.completed_points
+      %tr
+        %td
+          Total points:
+        %td
+          =@iteration.total_points
+      %tr
+        %td#prediction
+          Predicted End Date:
+        %td
+          =@prediction
+    =link_to "< Prev", iteration_path(@prev_iteration)
+    |
+    =link_to "Next >", iteration_path(@next_iteration)
+  #chart
+    = ziya_chart chart_iteration_path(@iteration), :size=>"800x400", :swf_path=>root_path+'charts'

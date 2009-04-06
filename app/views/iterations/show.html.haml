@@ -1,44 +1,62 @@
 %script{:type=>'text/javascript'}
   var element = document.getElementById('menu_iteration');
   element.className = 'current';
-%h1
-  =h(@iteration.title)
-#chartright
-  = ziya_chart chart_iteration_path(@iteration), :size=>"700x300", :swf_path=>root_path+'charts' if Iteration.count > 0
-%h2
-  Start Date:
-  =h @iteration.start_date
-%h2
-  End Date:
-  =h @iteration.end_date
-%h3#sum
-  Total swag: 
-  =@iteration.total_points
-%h3
-  Earned Velocity:
-  =@iteration.completed_points
-%h3
-  Open points
-  =@iteration.open_points
-%h3
-  Unswagged stories:
-  =@iteration.stories.unswagged.count
-%h3
-  ="Assigned to %s:"%pluralize(@iteration.releases.size, 'release')
   
-  =@iteration.releases.map{|x| link_to(h(x.title), release_path(x))}.join(', ')
-
-=link_to "Add New Story", "#storyform", :id=>'addStoryLink'
-
-#storyform
-  =render :partial=>'iterations/ajax_story',:locals=>{:story=>Story.new(:title=>'New Story', :iteration_id=>@iteration_id)}
-
+#iterInfo
+  .overview
+    %table
+      %tr
+        %th{:colspan=>2}
+          =h(@iteration.title)
+   
+      %tr
+        %td
+          Start Date:
+        %td  
+          =h @iteration.start_date
+      %tr
+        %td
+          End Date:
+        %td  
+          =h @iteration.end_date
+      %tr
+        %td
+          Total swag: 
+        %td#sum
+          =@iteration.total_points
+      %tr
+        %td
+          Earned Velocity:
+        %td  
+          =@iteration.completed_points
+      %tr
+        %td
+          Open points
+        %td  
+          =@iteration.open_points
+      %tr
+        %td
+          Unswagged stories:
+        %td  
+          =@iteration.stories.unswagged.count
+      %tr
+        %td
+          ="Assigned to %s:"%pluralize(@iteration.releases.size, 'release')
+        %td  
+          =@iteration.releases.map{|x| link_to(h(x.title), release_path(x))}.join(', ')
+  #chart
+    = ziya_chart chart_iteration_path(@iteration), :size=>"700x300", :swf_path=>root_path+'charts' if Iteration.count > 0
+%br{:style=>"clear:both"}
 %table#stories
   %caption Stories
   =render :partial=>'stories/story_header'
   =render :partial=>'stories/story', :collection=>@iteration.stories
 
-#sum
+%div
+  #storyform
+    =render :partial=>'iterations/ajax_story',:locals=>{:story=>Story.new(:title=>'New Story', :iteration_id=>@iteration_id)}
+  =link_to "Add New Story", "#storyform", :id=>'addStoryLink'
+  |
   =link_to("Show All", iterations_path)
   |
   =link_to("Edit", edit_iteration_path(@iteration))

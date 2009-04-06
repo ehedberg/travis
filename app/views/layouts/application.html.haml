@@ -4,7 +4,7 @@
   %head
     %title
       Travis!
-    =stylesheet_link_tag('reset','horz_menu','type','forms', 'layout',  :cache => false)
+    =stylesheet_link_tag('reset','horz_menu','type','forms', 'layout',  :cache => true)
     =javascript_include_tag :defaults, "control.modal"
     =calendar_date_select_includes "blue" 
   %body  
@@ -13,4 +13,10 @@
     #content
       =yield
 #footer
-  = link_to "Logout", session_path, :method=>'delete'
+  - if logged_in?
+    = link_to "Logout", logout_path 
+  - else
+    = link_to "Login", login_path
+    = link_to "Create Account", signup_path
+
+

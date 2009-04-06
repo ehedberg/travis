@@ -69,24 +69,23 @@ class TaskTest < ActiveSupport::TestCase
   end
 
   def test_state_model
-    Session.current_login="xxx"
     t = Task.new :title=>"New Task Title", :description=>"New Task Description"
     assert(t.save)
     assert_equal "new", t.state
     assert_nil t.login
     t.start!
     assert_equal "in_progress", t.state
-    assert_equal "xxx", t.login
+    assert_equal "some guy", t.login
     t.stop!
     assert_equal "new", t.state
     assert_nil t.login
     t.start!
     t.finish!
     assert_equal "complete", t.state
-    assert_equal "xxx", t.login
+    assert_equal "some guy", t.login
     t.reopen!
     assert_equal "in_progress", t.state
-    assert_equal "xxx", t.login
+    assert_equal "some guy", t.login
   end
 
   def test_fanout

@@ -7,3 +7,5 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
 require 'tasks/rails'
+
+task :default=>['test:units', :'test:functionals', :spec]

@@ -2,23 +2,10 @@ require File.dirname(__FILE__)+'/../test_helper'
 
 class ReleasesControllerTest < ActionController::TestCase
   def setup
-    @request.session[:login]='fubar'
-    Session.current_login=@request.session[:login]
+    @request.session[:user_id]=1
   end
 
-  def teardown
-    @request.session[:login]=nil
-    Session.current_login=@request.session[:login]
-  end
 
-  def xtest_assoc_rel_rel
-    assert_routing({:method=>:post, :path=>'/releases/1/do_assoc'}, :controller=>'releases', :action=>'do_assoc', :id=>1)
-    assert_not_nil releases(:rel_current).iterations.first
-    xhr :post, :do_assoc, :drop_r=>releases(:rel_current).id, :drag_r=>releases(:rel_next).id, :iter=>releases(:rel_current).iterations.first
-    assert_response :success
-    assert_rjs_select "drag_release_#{releases(:rel_current).id}"
-    assert_rjs_select "drag_release_#{releases(:rel_next).id}"
-  end
   def test_routes
     do_default_routing_tests('releases')
   end
@@ -126,24 +113,20 @@ class ReleasesControllerTest < ActionController::TestCase
   end
 
   def test_update
-
     release = releases(:rel_next)
-
     put :update, :id=>release.id, :release=>{"title"=>"Release New"}
-
-    new_release = Release.find(release.id)
-
-    assert_equal "Release New", new_release.title
-
+    assert_response :redirect
     assert_redirected_to releases_path
+    new_release = Release.find(release.id)
+    assert_equal "Release New", new_release.title
   end
 
   def test_requires_login
-    @request.session[:login]=nil
+    @request.session[:user_id]=nil
     get :index
     assert_response :redirect
     assert_redirected_to new_session_path
-    @request.session[:login]='foo'
+    @request.session[:user_id]=1
     get :index
     assert_response :success
     assert_template 'index'

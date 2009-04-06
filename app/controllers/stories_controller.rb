@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_filter :requires_login
+  before_filter :login_required
   before_filter :load_parent 
   def index
     unless @iteration

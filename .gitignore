@@ -1,0 +1,13 @@
+log/*.log
+tmp/**/*
+doc/api
+doc/app
+db/*.sqlite3
+config/database.yml
+config/environment.yml
+config/javascript_test_autotest.yml
+db/schema.rb
+db/*.sqlite3-journal
+doc/coverage
+doc/guides
+*.war

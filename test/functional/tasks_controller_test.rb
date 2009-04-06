@@ -4,13 +4,7 @@ $:.reject! { |e| e.include? 'TextMate' }
 class TasksControllerTest < ActionController::TestCase
 
   def setup
-    @request.session[:login]='fubar'
-    Session.current_login=@request.session[:login]
-  end
-
-  def teardown
-    @request.session[:login]=nil
-    Session.current_login=@request.session[:login]
+    @request.session[:user_id]=1
   end
 
   def test_create_ajax
@@ -92,12 +86,14 @@ class TasksControllerTest < ActionController::TestCase
   end
 
 
-  def test_requires_login
-    @request.session[:login]=nil
+  def test_requires_login_with_nouserid
+    @request.session[:user_id]=nil
     get :index
     assert_response :redirect
     assert_redirected_to new_session_path
-    @request.session[:login]='foo'
+  end
+  def test_norequires_login_with_nouserid
+    @request.session[:user_id]=1
     get :index
     assert_response :success
     assert_template 'index'
@@ -261,7 +257,6 @@ class TasksControllerTest < ActionController::TestCase
     put :update, :id=>t.id, :task=>{"state"=>"start"}
     t = assigns(:task)
     assert_equal "in_progress", t.state
-    assert_equal Session.current_login, t.login 
 
     put :update, :id=>t.id, :task=>{"state"=>"stop"}
     t = assigns(:task)
@@ -272,7 +267,6 @@ class TasksControllerTest < ActionController::TestCase
     put :update, :id=>t.id, :task=>{"state"=>"finish"}
     t = assigns(:task)
     assert_equal "complete", t.state
-    assert_equal Session.current_login, t.login 
   end
 
   def test_relates_properly

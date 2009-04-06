@@ -5,7 +5,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.1.0' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.2.2' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -45,6 +45,7 @@ Rails::Initializer.run do |config|
   config.gem 'ziya'
   config.gem 'will_paginate'
   config.gem 'logging'
+  config.gem 'calendar_date_select'
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information
@@ -57,10 +58,15 @@ Rails::Initializer.run do |config|
   # config.active_record.schema_format = :sql
 
   # Activate observers that should always be running
-  # config.active_record.observers = :cacher, :garbage_collector
+  #config.active_record.observers = :cacher, :garbage_collector
+  config.active_record.observers = :user_observer
 
   # Make Active Record use UTC-base instead of local time
-  # config.active_record.default_timezone = :utc
+  config.active_record.default_timezone = 'Central Time (US & Canada)'
+#  config.time_zone = 'Central Time (US & Canada)'
+
 
 end
-  CalendarDateSelect.format = :hyphen_ampm
+CalendarDateSelect.format = :hyphen_ampm
+TRAVIS_DOMAIN='localhost:3000'
+TRAVIS_ADMIN_EMAIL='travis@example.com'

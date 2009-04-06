@@ -22,7 +22,6 @@ class Story < ActiveRecord::Base
   attr_accessor :creator
   acts_as_taggable
   acts_as_state_machine :initial=>:new
-  acts_as_solr :fields => [:title, :description], :include => :tasks
   has_many :audit_records
 
   validates_uniqueness_of :mnemonic
@@ -30,6 +29,8 @@ class Story < ActiveRecord::Base
     :before_add=>Proc.new{|s, t|  raise ActiveRecord::ActiveRecordError.new("Can't add a task to a passed story") if (s.current_state == :passed)}, 
     :after_add=>Proc.new{|s, t| s.task_changed! }, 
     :after_remove=>Proc.new{|s,t| s.task_changed!}
+
+  acts_as_solr
   
   before_create { |record| record.audit_records.build(:diff=>{:self=>[:nonexistent, :existent]}.to_yaml, :login=>'some guy' ) }
   

@@ -122,7 +122,7 @@ class StoriesController < ApplicationController
     page = page.nil? ? 1 : page.to_i
     offset = Story.per_page * (page - 1)
     WillPaginate::Collection.create(page, Story.per_page) do |pager|
-      result = Story.find_by_solr(query, :offset => offset, :limit => Story.per_page, :order => "created_at asc").results
+      result = Story.find_by_solr(query, :offset => offset, :limit => Story.per_page, :order => "stories.created_at asc").results
       # inject the result array into the paginated collection:
       pager.replace(result)
 

@@ -2,7 +2,6 @@ class IterationsController < ApplicationController
   helper Ziya::Helper
   before_filter :requires_login, :except=>:chart
   def index
-
     @iterations = Iteration.paginate(:page=>params[:page], :order=>'start_date  asc')
   end
 
@@ -103,5 +102,17 @@ class IterationsController < ApplicationController
       end
     end
     redirect_to iterations_path
+  end
+  
+  def reset_swags
+    @iteration = Iteration.find_by_id(params[:id])
+    if @iteration
+      Iteration.transaction do
+        @iteration.stories.each do |s|
+          s.update_attributes(:swag=>nil) if s.state != 'passed'
+        end
+      end
+      redirect_to iteration_path(@iteration) and return
+    end
   end
 end

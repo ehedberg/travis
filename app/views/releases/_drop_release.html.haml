@@ -3,4 +3,4 @@
     =h drop_release.title
   =render  :partial=>'drag_iteration',:collection=>drop_release.iterations
     
-  =drop_receiving_element "drop_release_#{drop_release.id}", :url=>do_rel_path(drop_release)
+  =drop_receiving_element "drop_release_#{drop_release.id}", :url=>do_assoc_release_path(drop_release)

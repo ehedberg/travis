@@ -45,7 +45,7 @@
   |
   =link_to("Delete", { :id => @iteration.id }, :confirm => "Are you sure?", :method => :delete)
   |
-  =button_to_function "Reset Swag", "resetInterationSwag('#{iteration_path(@iteration)}')"
+  =button_to("Reset Swag", reset_swags_iteration_path(@iteration), :method=>:put, :confirm=>'This will clear the swag on all unpassed stories in this iteration.  Are you sure?')
 %script{:type=>'text/javascript'}
   new Control.Modal('addStoryLink', { opacity:0.6, fade:true, width:600, height:450});
 

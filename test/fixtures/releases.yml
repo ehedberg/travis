@@ -1,3 +1,14 @@
+# == Schema Information
+# Schema version: 20090204043205
+#
+# Table name: releases
+#
+#  id         :integer         not null, primary key
+#  title      :string(200)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 rel_last:
   title: 'Release 1'
 

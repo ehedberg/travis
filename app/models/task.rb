@@ -1,3 +1,18 @@
+# == Schema Information
+# Schema version: 20090204043205
+#
+# Table name: tasks
+#
+#  id           :integer         not null, primary key
+#  title        :string(200)     not null
+#  description  :text            not null
+#  created_at   :datetime
+#  updated_at   :datetime
+#  state        :string(20)      default("new"), not null
+#  login        :string(50)
+#  lock_version :integer         default(0)
+#
+
 class Task < ActiveRecord::Base
   acts_as_state_machine :initial=>:new
 

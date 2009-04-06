@@ -1,3 +1,16 @@
+# == Schema Information
+# Schema version: 20090204043205
+#
+# Table name: iterations
+#
+#  id         :integer         not null, primary key
+#  title      :string(200)     not null
+#  start_date :date            not null
+#  end_date   :date            not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Iteration < ActiveRecord::Base
   has_many :stories
   has_and_belongs_to_many :releases

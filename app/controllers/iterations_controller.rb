@@ -115,4 +115,16 @@ class IterationsController < ApplicationController
       redirect_to iteration_path(@iteration) and return
     end
   end
+  
+  def promote_stories
+    @iteration = Iteration.find_by_id(params[:id])
+    if @iteration && @iteration.next
+      Iteration.transaction do
+        @iteration.stories.each do |s|
+          s.update_attributes(:iteration_id=>@iteration.next.id) if s.state != 'passed'
+        end
+      end
+      redirect_to iteration_path(@iteration) and return
+    end
+  end
 end

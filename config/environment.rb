@@ -41,11 +41,14 @@ Rails::Initializer.run do |config|
     :session_key => '_travis_0wnZ_j3w3r_s0ulz',
     :secret      => '0a627ed2386cb923be95cdd4611a9dad2ba86b7c7bdd4692a83d92ea7062817f2dec0d86e47162539c589ac5d9e397e7aa849ad71e1edbb2a18dcee3e5a1cc1c'
   }
-  config.gem 'haml'
-  config.gem 'ziya'
-  config.gem 'will_paginate'
-  config.gem 'logging'
-  config.gem 'calendar_date_select'
+  config.gem 'haml', :version => '>=2.0.8'
+  config.gem 'flexmock'
+  config.gem 'bones'
+  config.gem 'lockfile'
+  config.gem 'logging', :version => '>=0.9.7'
+  config.gem 'ziya', :version => '>=2.0.7'
+  config.gem 'mislav-will_paginate', :version => '>=2.3.8', :source => 'http://gems.github.com', :lib => 'will_paginate'
+  config.gem 'calendar_date_select', :version => '>=1.15'
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information

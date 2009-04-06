@@ -21,6 +21,7 @@ class Story < ActiveRecord::Base
   attr_accessor :creator
   acts_as_taggable
   acts_as_state_machine :initial=>:new
+  acts_as_solr :fields => [:title, :description], :include => :tasks
   has_many :audit_records
 
   validates_uniqueness_of :mnemonic

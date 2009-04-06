@@ -11,3 +11,8 @@ db/*.sqlite3-journal
 doc/coverage
 doc/guides
 *.war
+*.db
+vendor/plugins/acts_as_solr/solr/solr/data/**/*
+vendor/plugins/acts_as_solr/solr/logs/*
+vendor/plugins/acts_as_solr/solr/tmp/*
+*.DS_Store

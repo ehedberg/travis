@@ -1,8 +1,26 @@
+body {
+	padding: 10px;
+	background: url(../images/background.png) repeat;
+}
+body #wrap {
+	background: #FFF;
+	border: 2px solid #bbbbbb;
+}
 h3 {
   font-weight: bold;
   font-style: italic;
   color: #0092d6;
 }
+#header {
+	background: url(../images/travis-logo.gif) left center no-repeat;
+	height: 60px; 
+	width: 100%;
+}
+#header h1 {
+	position: relative;
+	margin-left: -1000px;
+}
+
 tr.current_iteration {
 background: #c0c0ff;
 border: 2px solid #00f;
@@ -47,11 +65,22 @@ margin:10px;
 
 
 #footer {
-  font-size: .7em;
-display: block;
-clear: both;
+  display: block;
+  clear: both;
+  margin: 0;
+  text-align: center;
+  height: 20px;
+  background: url(../images/footer-bg.jpg) repeat-x;
+  font-family: "Lucida Grande", Verdana, sans-serif;
+  color: #eee;
 }
-
+#footer a {
+	text-decoration: none;
+	color: #eee;
+}
+#footer a:hover {
+	text-decoration: underline;
+}
 th.centered {
   text-align: center;
 }
@@ -87,7 +116,7 @@ background: #ddd;
 td,th {
   border-right: 1px solid #ddd ;
   border-bottom: 1px solid  #ddd;
-  padding-left: 5px;
+  padding: 5px;
 }
 
 tr.even_task td {
@@ -140,14 +169,7 @@ border: 2px dotted orange;
   margin-top: 3em;
   width: 99%;
 }
-#iterations {
-  float: left;
-  width: 99%;
-  background: #c0c0c0;
-  border: 1px solid #808080;
-  margin-top: 1em;
-  position: relative;
-}
+
 
 
 .drag_iteration {

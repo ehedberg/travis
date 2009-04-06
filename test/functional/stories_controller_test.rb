@@ -31,14 +31,14 @@ class StoriesControllerTest < ActionController::TestCase
       assert_select "ul>li", 2
     end
   end
-
+  
   def test_create
-    post :create, "story"=>{"title"=>"New Title", "description"=>"de", "swag"=>"2", :nodule=>'rhubarb'}
-    assert assigns(:story)
-    story = assigns(:story)
+    post :create, "story"=>{"title"=>"New Title", "description"=>"de", "swag"=>"2", :nodule=>'rhubarb', :tag_list => 'foo, bar, baz'}
+    assert story = assigns(:story)
     assert_equal Story.find_by_description("de"), assigns(:story)
     assert_response :redirect
     assert_redirected_to story_path(assigns(:story))
+    assert_equal(['foo', 'bar', 'baz'], story.reload.tag_list)
   end
 
   def test_search_view
@@ -280,7 +280,33 @@ class StoriesControllerTest < ActionController::TestCase
     assert_select "div[id=errorExplanation][class=errorExplanation]"
 
   end
-
+  def test_update_with_tags
+    story = stories(:one)
+    assert_equal([], story.tag_list)
+    put :update, :id=>story.id, :story=> {:title=>"The title", :description=>"New Description", :swag=>"99.99", :tag_list => 'foo, bar, baz' }
+    assert_response :redirect
+    assert_redirected_to story_path(story)
+    assert_equal(['foo', 'bar', 'baz'], story.reload.tag_list)
+  end
+  
+  def test_update_modify_tags
+    story = stories(:one)
+    story.tag_list="foo, bar, baz"
+    assert_equal(['foo', 'bar', 'baz'], story.tag_list)
+    put :update, :id=>story.id, :story=> {:title=>"The title", :description=>"New Description", :swag=>"99.99", :tag_list => 'baz' }
+    assert_response :redirect
+    assert_redirected_to story_path(story)
+    assert_equal(['baz'], story.reload.tag_list)
+  end
+  def test_update_remove_tags
+    story = stories(:one)
+    story.tag_list="foo, bar, baz"
+    assert_equal(['foo', 'bar', 'baz'], story.tag_list)
+    put :update, :id=>story.id, :story=> {:title=>"The title", :description=>"New Description", :swag=>"99.99" }
+    assert_response :redirect
+    assert_redirected_to story_path(story)
+    assert_equal([], story.reload.tag_list)
+  end
   def test_edit
     get :edit,:id=>stories(:one).id
 

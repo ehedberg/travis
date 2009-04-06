@@ -28,3 +28,4 @@ unless IN_TM || ON_BUILDBOX
   config.gem 'redgreen'
 end
 config.gem 'mocha'
+config.gem 'nofxx-object_daddy', :version => '>=0.3.1', :lib => 'object_daddy', :source => 'http://gems.github.com'

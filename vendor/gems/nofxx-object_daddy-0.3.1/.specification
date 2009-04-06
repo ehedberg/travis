@@ -1,0 +1,72 @@
+--- !ruby/object:Gem::Specification 
+name: nofxx-object_daddy
+version: !ruby/object:Gem::Version 
+  version: 0.3.1
+platform: ruby
+authors: 
+- Rick Bradley
+- Yossef Mendelssohn
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2009-03-28 00:00:00 -05:00
+default_executable: 
+dependencies: []
+
+description: 
+email: 
+- blogicx@rickbradley.com
+- ymendel@pobox.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README.markdown
+files: 
+- README.markdown
+- VERSION.yml
+- Manifest.txt
+- install.rb
+- init.rb
+- lib/object_daddy.rb
+- rails/init.rb
+- spec/tmp
+- spec/spec_helper.rb
+- spec/install_spec.rb
+- spec/object_daddy_spec.rb
+- spec/spec.opts
+- spec/resources
+- spec/resources/config
+- spec/resources/config/database.yml
+- spec/resources/schema
+has_rdoc: true
+homepage: http://github.com/flogic/object_daddy
+post_install_message: 
+rdoc_options: 
+- --inline-source
+- --charset=UTF-8
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.1
+signing_key: 
+specification_version: 2
+summary: Object Daddy
+test_files: []
+

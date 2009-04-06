@@ -68,23 +68,24 @@ class TaskTest < ActiveSupport::TestCase
   end
 
   def test_state_model
+    User.current_user = users(:quentin)
     t = Task.new :title=>"New Task Title", :description=>"New Task Description"
     assert(t.save)
     assert_equal "new", t.state
     assert_nil t.login
     t.start!
     assert_equal "in_progress", t.state
-    assert_equal "some guy", t.login
+    assert_equal users(:quentin).login, t.login
     t.stop!
     assert_equal "new", t.state
     assert_nil t.login
     t.start!
     t.finish!
     assert_equal "complete", t.state
-    assert_equal "some guy", t.login
+    assert_equal users(:quentin).login, t.login
     t.reopen!
     assert_equal "in_progress", t.state
-    assert_equal "some guy", t.login
+    assert_equal users(:quentin).login, t.login
   end
 
   def test_fanout

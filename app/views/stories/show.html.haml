@@ -38,8 +38,9 @@
       =f.select :state, @story.available_events-[:task_changed]
       =submit_tag "save"
 =link_to "Add New Task", "#taskform", :id=>'tasklink'
+|
 #taskform
-  =render :partial=>'stories/ajax_task',:locals=>{:task=>Task.new(:title=>'New Task', :story_ids=>[@story.id])}
+  =render :partial=>'stories/ajax_task',:locals=>{:task=>Task.new(:title=>'New Task', :story_ids=>[@story.id])} 
 =link_to("Show All", stories_path)
 |
 =link_to("Edit", edit_story_path(@story))

@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
   helper Ziya::Helper
+  before_filter :requires_login
   def index
     t = Date.today
     @iteration = Iteration.current

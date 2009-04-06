@@ -7,11 +7,7 @@
 =link_to "Create Iteration" , new_iteration_path
 =will_paginate(@iterations)
 %table#iterations
-  %th Name
-  %th.centered Start
-  %th.centered End 
-  %th &nbsp;
-
+  =render :partial=>'header'
   =render :partial=>"iteration",:collection=>@iterations
 
 

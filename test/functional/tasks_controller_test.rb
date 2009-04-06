@@ -32,7 +32,6 @@ class TasksControllerTest < ActionController::TestCase
     assert !assigns(:task).valid?
     task = assigns(:task)
     assert_equal "can't be blank", assigns(:task).errors.on(:title)
-    assert_equal "can't be blank", assigns(:task).errors.on(:description)
   end
 
   def test_search_view

@@ -6,6 +6,10 @@
     =release.start_date
   %td.centered
     =release.end_date
+  %td.right
+    =release.total_points
+  %td.right
+    =release.unswagged_story_count
   %td.rctl
     =link_to("Show", release_path(release))
     =link_to("Edit", edit_release_path(release))

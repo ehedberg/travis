@@ -23,4 +23,8 @@ iter_next:
   title: 'Iteration 3'
   start_date: <%= 7.days.from_now.to_date.to_s(:db) %>
   end_date: <%= 21.days.from_now.to_date.to_s(:db) %>
+iter_empty:
+  title: 'This Iteration Has No Stories'
+  start_date: <%= 22.days.from_now.to_date.to_s(:db) %>
+  end_date: <%= 35.days.from_now.to_date.to_s(:db) %>
   

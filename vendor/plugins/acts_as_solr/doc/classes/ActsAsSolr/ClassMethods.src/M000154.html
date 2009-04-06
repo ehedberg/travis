@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>find_with_facet (ActsAsSolr::ClassMethods)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/deprecation.rb, line 17</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_with_facet</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">plog</span> <span class="ruby-value str">&quot;The method find_with_facet is deprecated. Use find_by_solr instead, passing the &quot;</span> <span class="ruby-operator">+</span>
+                       <span class="ruby-value str">&quot;arguments the same way you used to do with find_with_facet.&quot;</span>
+      <span class="ruby-identifier">find_by_solr</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_multi_solr_search_multiple_models (ActsAsSolrTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File test/unit/multi_solr_search_test.rb, line 24</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_multi_solr_search_multiple_models</span>
+    <span class="ruby-identifier">records</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">multi_solr_search</span> <span class="ruby-value str">&quot;Napoleon OR Tom OR Thriller&quot;</span>, <span class="ruby-identifier">:models</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Movie</span>, <span class="ruby-constant">Category</span>], <span class="ruby-identifier">:results_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:ids</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">total</span>
+    [{<span class="ruby-value str">&quot;id&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Category:1&quot;</span>}, {<span class="ruby-value str">&quot;id&quot;</span> =<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;Book:1&quot;</span>}, {<span class="ruby-value str">&quot;id&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;Movie:1&quot;</span>}, {<span class="ruby-value str">&quot;id&quot;</span> =<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;Book:3&quot;</span>}].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">result</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">assert</span> <span class="ruby-identifier">records</span>.<span class="ruby-identifier">docs</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">result</span>)
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

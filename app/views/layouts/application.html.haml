@@ -10,6 +10,8 @@
   %body  
     #horiz-menu
       =render :partial=>"layouts/menu"
+      #stories-search
+        =render :partial=>"shared/stories_search"
     #content
       -if flash[:error]
         #flash_error

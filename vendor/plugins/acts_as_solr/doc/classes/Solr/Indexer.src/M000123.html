@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (Solr::Indexer)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/solr/indexer.rb, line 17</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">data_source</span>, <span class="ruby-identifier">mapper_or_mapping</span>, <span class="ruby-identifier">options</span>={})
+    <span class="ruby-identifier">solr_url</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:solr_url</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-value str">&quot;SOLR_URL&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;http://localhost:8983/solr&quot;</span>
+    <span class="ruby-ivar">@solr</span> = <span class="ruby-constant">Solr</span><span class="ruby-operator">::</span><span class="ruby-constant">Connection</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">solr_url</span>, <span class="ruby-identifier">options</span>) <span class="ruby-comment cmt">#TODO - these options contain the solr_url and debug keys also, so tidy up what gets passed</span>
+
+    <span class="ruby-ivar">@data_source</span> = <span class="ruby-identifier">data_source</span>
+    <span class="ruby-ivar">@mapper</span> = <span class="ruby-identifier">mapper_or_mapping</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">Solr</span><span class="ruby-operator">::</span><span class="ruby-constant">Importer</span><span class="ruby-operator">::</span><span class="ruby-constant">Mapper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">mapper_or_mapping</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">mapper_or_mapping</span>
+
+    <span class="ruby-ivar">@buffer_docs</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:buffer_docs</span>]
+    <span class="ruby-ivar">@debug</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:debug</span>]
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

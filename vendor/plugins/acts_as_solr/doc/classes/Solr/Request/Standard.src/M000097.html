@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (Solr::Request::Standard)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/solr/request/standard.rb, line 18</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">params</span>)
+    <span class="ruby-keyword kw">super</span>(<span class="ruby-value str">'standard'</span>)
+    
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid parameters: #{(params.keys - VALID_PARAMS).join(',')}&quot;</span> <span class="ruby-keyword kw">unless</span> 
+      (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">keys</span> <span class="ruby-operator">-</span> <span class="ruby-constant">VALID_PARAMS</span>).<span class="ruby-identifier">empty?</span>
+    
+    <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;:query parameter required&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:query</span>]
+    
+    <span class="ruby-ivar">@params</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">dup</span>
+    
+    <span class="ruby-comment cmt"># Validate operator</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:operator</span>]
+      <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Only :and/:or operators allowed&quot;</span> <span class="ruby-keyword kw">unless</span> 
+        [<span class="ruby-identifier">:and</span>, <span class="ruby-identifier">:or</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:operator</span>])
+        
+      <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:operator</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:operator</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">upcase</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt"># Validate start, rows can be transformed to ints</span>
+    <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:start</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:start</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:start</span>]
+    <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:rows</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:rows</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:rows</span>]
+    
+    <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">:field_list</span>] <span class="ruby-operator">||=</span> [<span class="ruby-value str">&quot;*&quot;</span>,<span class="ruby-value str">&quot;score&quot;</span>]
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

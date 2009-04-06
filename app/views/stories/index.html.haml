@@ -8,8 +8,14 @@
     = h @iteration.title
 =will_paginate(@stories)
 =link_to "Create Story" , new_story_path
-=link_to "Search Stories" , search_stories_path
+|
+=link_to "Advanced Story Search" , search_stories_path
 
+-if params[:q]
+  %h2{:class => "margin_top_10"}
+    ="Search Results for \"#{params[:q]}\""
 %table#stories
   =render :partial=>'story_header'
   =render :partial=>"story",:collection=>@stories
+
+=render :partial=>'shared/stories_search'

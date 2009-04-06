@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>test_returns_no_matches (ActsAsSolrTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File test/unit/acts_as_solr_test.rb, line 216</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_returns_no_matches</span>
+    <span class="ruby-identifier">records</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-value str">'rubyist'</span>
+    <span class="ruby-identifier">assert_equal</span> [], <span class="ruby-identifier">records</span>.<span class="ruby-identifier">docs</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">total</span>
+    
+    <span class="ruby-identifier">records</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find_id_by_solr</span> <span class="ruby-value str">'rubyist'</span>
+    <span class="ruby-identifier">assert_equal</span> [], <span class="ruby-identifier">records</span>.<span class="ruby-identifier">docs</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">total</span>
+    
+    <span class="ruby-identifier">records</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find_by_solr</span> <span class="ruby-value str">'rubyist'</span>, <span class="ruby-identifier">:facets</span> =<span class="ruby-operator">&gt;</span> {}
+    <span class="ruby-identifier">assert_equal</span> [], <span class="ruby-identifier">records</span>.<span class="ruby-identifier">docs</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">total</span>
+    <span class="ruby-identifier">assert_equal</span>({<span class="ruby-value str">&quot;facet_fields&quot;</span>=<span class="ruby-operator">&gt;</span>[]}, <span class="ruby-identifier">records</span>.<span class="ruby-identifier">facets</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

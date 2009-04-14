@@ -32,3 +32,4 @@
         =submit_tag "Save", {:class=> "submit_button"}
         =button_to_function "Cancel", "location.href='#{@story != nil && @story.id != nil ? story_path(@story.id) : stories_path}'", {:class=>'submit_button'}
 
+

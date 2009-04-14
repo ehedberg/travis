@@ -9,8 +9,8 @@
     =calendar_date_select_includes "blue" 
   %body 
     #wrap
-      #header
-        %h1 Travis!
+      %a.header{:href=>"#{Iteration.current != nil ? iteration_path(Iteration.current) : iterations_path}"}
+        =image_tag('travis-logo.gif', :alt=>'Kick Me to the Current Iteration, Travis!')
       #horiz-menu
         =render :partial=>"layouts/menu"
         #stories-search

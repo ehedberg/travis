@@ -30,5 +30,5 @@
         = f.select :iteration_id, Iteration.find(:all).collect{|i| [i.title, i.id]}, {:include_blank=>true}
       %li 
         =submit_tag "Save", {:class=> "submit_button"}
-        =button_to_function "Cancel", "location.href='#{stories_path}'", {:class=>'submit_button'}
+        =button_to_function "Cancel", "location.href='#{@story != nil && @story.id != nil ? story_path(@story.id) : stories_path}'", {:class=>'submit_button'}
 

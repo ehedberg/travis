@@ -11,7 +11,7 @@ class IterationTest < ActiveSupport::TestCase
 
   def test_has_many_releases
     t = iterations(:iter_next)
-    t.releases<<Release.new(:title=>'balaskddfj')
+    t.releases << Release.new(:title=>'balaskddfj')
     assert t.save
     assert_equal 2, t.releases.size
   end
@@ -23,7 +23,7 @@ class IterationTest < ActiveSupport::TestCase
     assert_equal 2.3.to_s, iterations(:iter_current).velocity.to_s
   end
   def test_story_count
-    assert_equal 3, iterations(:iter_current).story_count
+    assert_equal 4, iterations(:iter_current).story_count
   end
   def test_completed_story_count
     assert_equal 1.to_s, iterations(:iter_current).completed_story_count.to_s
@@ -58,14 +58,18 @@ class IterationTest < ActiveSupport::TestCase
   def test_total_points
     i = iterations(:iter_current)
     assert 2, i.stories.size
-    assert_equal 16.3, iterations(:iter_current).total_points
+    assert_equal 25.3, iterations(:iter_current).total_points
   end
   def test_open_points
-    assert_equal 14, iterations(:iter_current).open_points
+    assert_equal 23, iterations(:iter_current).open_points
   end
 
   def test_completed_points
     assert_equal 2.3.to_s, iterations(:iter_current).completed_points.to_s
+  end
+
+  def test_points_in_qc
+    assert_equal 9.0, iterations(:iter_current).points_in_qc
   end
 
   def test_iter_days

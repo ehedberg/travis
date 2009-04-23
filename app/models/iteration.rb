@@ -52,6 +52,10 @@ class Iteration < ActiveRecord::Base
   def open_points
     @openp||=stories.find(:all, :conditions=>['state!=?','passed']).map{|x| x.swag ? x.swag : 0.0}.sum
   end
+
+  def points_in_qc
+    stories.sum('swag', :conditions => {:state => 'in_qc'})
+  end
   def total_days
     (end_date - start_date).numerator
   end

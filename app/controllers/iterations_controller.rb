@@ -64,8 +64,8 @@ class IterationsController < ApplicationController
     iter.total_days.times do |n| 
       d= (iter.start_date+n)
       days << d
-      points << iter.stories_passed_on(d).sum  if d <= Date.today 
-      scope << iter.swags_created_on(d).sum
+      points << iter.stories_passed_on(d)  if d <= Date.today 
+      scope << iter.swags_created_on(d)
     end
     point_totals  = []
     points.each{|x| point_totals<< (x+(point_totals.last||0.0))}

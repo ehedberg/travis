@@ -18,10 +18,9 @@ class Iteration < ActiveRecord::Base
   validates_length_of :title, :within=>1..200
   
   def calculate_end_date
-    unpassed_points = Story.find(:all, :conditions=>"state != 'passed'", :select=>'swag').map{|x| x.swag.to_f}.sum
-    prev_iter = self.previous
-    if prev_iter.velocity !=0
-      return self.start_date + ((unpassed_points/prev_iter.velocity)*self.total_days)
+    unpassed_points = Story.sum(:swag, :conditions=>"state != 'passed'")
+    if previous && previous.velocity !=0
+      return start_date + ((unpassed_points/previous.velocity)*total_days)
     else
       "~(never - 1)"
     end
@@ -43,14 +42,14 @@ class Iteration < ActiveRecord::Base
   end
 
   def total_points
-    @totalp||=stories.find(:all).map{|x| x.swag ? x.swag : 0.0}.sum
+    stories.sum('swag')
   end
 
   def completed_points
-    @completedp||=stories.find(:all, :conditions=>['state=?','passed']).map{|x| x.swag ? x.swag : 0.0}.sum
+    stories.sum('swag', :conditions=>['state=?','passed'])
   end
   def open_points
-    @openp||=stories.find(:all, :conditions=>['state!=?','passed']).map{|x| x.swag ? x.swag : 0.0}.sum
+    stories.sum('swag', :conditions=>['state!=?','passed'])
   end
 
   def points_in_qc
@@ -63,34 +62,27 @@ class Iteration < ActiveRecord::Base
     stories.length
   end
   def completed_story_count
-    @compls||=stories.find(:all, :conditions=>['state=?','passed']).size
+    @compls||=stories.count(:conditions=>['state=?','passed'])
   end
   def self.current
     t=Date.today
     Iteration.find(:first, :conditions=>["start_date<=? and end_date>=?", t, t])
   end
   def velocity
-    stories.find(:all, :conditions=>"state='passed'").map(&:swag).sum
+    stories.sum('swag', :conditions=>"state='passed'")
   end
   def swags_created_on(d)
-    stories.find(:all, :conditions=>['date(stories.created_at) = date(?)', d]).map{|x| x.swag ? x.swag : 0.0}
+    stories.sum('swag', :conditions=>['date(stories.created_at) = date(?)', d])
   end
   def stories_passed_on(d)
-    s = stories.find(:all, :conditions=>['stories.state=\'passed\' and date(completed_at)=date(?)', d])
-    s.map{|x| x.swag ? x.swag : 0.0}
+    stories.sum('swag', :conditions=>['stories.state=\'passed\' and date(completed_at)=date(?)', d])
   end
   
   def previous
-    iterations = Iteration.find(:all, :order=>"start_date asc")
-    index = iterations.index(self)
-    return nil if index < 1
-    iterations[index-1]
+    @previous ||= Iteration.find :first, :conditions => ['start_date < ?', start_date], :order => 'start_date desc'
   end
   
   def next
-    iterations = Iteration.find(:all, :order=>"start_date asc")
-    index = iterations.index(self)
-    return nil if index >= iterations.size
-    iterations[index+1]
+    @previous ||= Iteration.find :first, :conditions => ['start_date > ?', end_date], :order => 'start_date asc'
   end
 end

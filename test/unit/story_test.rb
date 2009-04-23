@@ -398,6 +398,7 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   def test_audit_record_on_create
+    User.current_user = users(:quentin)
     s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     assert s.save
     assert !s.audit_records.empty?
@@ -410,5 +411,8 @@ class StoryTest < ActiveSupport::TestCase
     assert s.save
     assert_equal 3, s.audit_records.size
     assert_match /\ntitle: \n- Title\n- fubar_change\n/, s.audit_records.last.diff
+    s.audit_records.each do |ar|
+      assert_equal(User.current_user.login, ar.login)
+    end
   end
 end

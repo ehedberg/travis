@@ -32,7 +32,8 @@ class Story < ActiveRecord::Base
 
   acts_as_solr
   
-  before_create { |record| record.audit_records.build(:diff=>{:self=>[:nonexistent, :existent]}.to_yaml, :login=>'some guy' ) }
+  before_create { |record| record.audit_records.build(:diff=>{:self=>[:nonexistent, :existent]}.to_yaml, 
+                                                              :login=>(User.current_user ? User.current_user.login : 'some guy')) }
   
   after_create :set_mnemonic
 
@@ -40,7 +41,7 @@ class Story < ActiveRecord::Base
     his = record.changes.dup
     his.delete(:updated_at)
     his.delete(:created_at)
-    r = record.audit_records.build(:diff=>his.to_yaml, :login=>'some guy' ) 
+    r = record.audit_records.build(:diff=>his.to_yaml, :login=>(User.current_user ? User.current_user.login : 'some guy')) 
     raise "invalid audit record?" unless r.valid?
   }
 

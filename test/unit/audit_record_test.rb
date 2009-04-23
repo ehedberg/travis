@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class AuditRecordTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
+
   def test_create
     a = AuditRecord.new :diff=>'test',:story=>stories(:one),:login=>'fubar'
     assert a.save
@@ -21,6 +21,7 @@ class AuditRecordTest < ActiveSupport::TestCase
 
   end
   def test_history_hash
+    User.current_user = users(:quentin)
     s = Story.new(:nodule=>'fubar', :title=>'bleh', :description=>'meh')
     assert s.save!
     assert s.audit_records.first.diff_to_hash.kind_of?(Hash)

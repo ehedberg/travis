@@ -16,6 +16,7 @@ class TaskTest < ActiveSupport::TestCase
     rescue ActiveRecord::StaleObjectError=>x
     end
   end
+  
   def test_find_all_tasks
     task_list = Task.find(:all)
     assert_not_nil(task_list)

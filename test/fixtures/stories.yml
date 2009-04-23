@@ -75,7 +75,14 @@ open:
   iteration: iter_current
   mnemonic: THIS-7
   nodule: foo
-
+in_qc:
+  title: this is in qc
+  description: in qc
+  state: in_qc
+  swag: 9.0
+  iteration: iter_current
+  mnemonic: THIS-8
+  nodule: foo
 failed:
   title: 'this is failed'
   description: 'desc'

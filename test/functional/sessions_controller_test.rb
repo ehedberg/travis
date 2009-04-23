@@ -34,6 +34,7 @@ class SessionsControllerTest < ActionController::TestCase
     get :destroy
     assert_nil session[:user_id]
     assert_response :redirect
+    assert_redirected_to login_path
   end
 
   def test_should_remember_me

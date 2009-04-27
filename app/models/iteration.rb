@@ -20,7 +20,7 @@ class Iteration < ActiveRecord::Base
   def calculate_end_date
     unpassed_points = Story.sum(:swag, :conditions=>"state != 'passed'")
     if previous && previous.velocity !=0
-      return start_date + ((unpassed_points/previous.velocity)*total_days)
+      return start_date + ((unpassed_points/previous.velocity)*total_days).to_i
     else
       "~(never - 1)"
     end
@@ -87,6 +87,6 @@ class Iteration < ActiveRecord::Base
   end
   
   def next
-    @previous ||= Iteration.find :first, :conditions => ['start_date > ?', end_date], :order => 'start_date asc'
+    @next ||= Iteration.find :first, :conditions => ['start_date > ?', end_date], :order => 'start_date asc'
   end
 end

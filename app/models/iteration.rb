@@ -55,10 +55,13 @@ class Iteration < ActiveRecord::Base
   def points_in_qc
     stories.sum('swag', :conditions => {:state => 'in_qc'})
   end
-
-  def points_in_qc
-    stories.sum('swag', :conditions => {:state => 'in_qc'})
+  def new_points
+    stories.sum('swag', :conditions => {:state => 'new'})
   end
+  def in_progress_points
+    stories.sum('swag', :conditions => {:state => 'in_progress'})
+  end
+
   def total_days
     (end_date - start_date).numerator
   end

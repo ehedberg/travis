@@ -88,26 +88,8 @@ class UsersControllerTest < ActionController::TestCase
     assert_equal(User.count, users.length)
 
     assert_select "table[id=users]" do
-      users.each do |u|
-        assert_select "tr" do
-          assert_select "td" do
-            assert_select "a[href=?]", password_reset_user_path(u.id)
-          end
-        end
-      end
+      assert_select "tr", :count => users.length 
     end
-  end
-
-  def test_password_reset
-    @request.session[:user_id]=users(:quentin).id
-    get :password_reset, :id=>users(:quentin).id
-    assert_redirected_to users_path
-    assert_equal("Password reset message sent to #{users(:quentin).email}", flash[:notice])
-  end
-  
-  def test_password_reset_not_logged_in
-    get :password_reset, :id=>users(:quentin).id
-    assert_redirected_to new_session_path
   end
   
   def test_index_not_logged_in

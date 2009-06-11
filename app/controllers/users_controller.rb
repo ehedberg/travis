@@ -9,10 +9,6 @@ class UsersController < ApplicationController
     @users = User.find(:all)
   end
   
-  def password_reset
-    flash[:notice] = "Password reset message sent to #{@user.email}"
-    redirect_to users_path
-  end
   def new
     @user = User.new
   end

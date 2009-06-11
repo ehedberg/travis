@@ -71,5 +71,5 @@ Rails::Initializer.run do |config|
 
 end
 CalendarDateSelect.format = :hyphen_ampm
-TRAVIS_DOMAIN='localhost:3000'
+TRAVIS_DOMAIN='travis.local'
 TRAVIS_ADMIN_EMAIL='travis@example.com'

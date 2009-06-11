@@ -1,0 +1,8 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_users');
+  element.className = 'current';
+%h1
+  Users
+%table#users
+  =render :partial=>'header'
+  =render :partial=>"user",:collection=>@users

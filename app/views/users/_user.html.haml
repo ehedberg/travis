@@ -1,0 +1,11 @@
+%tr[user, cycle('odd', 'even')]
+  %td
+    =user.login
+  %td
+    =user.name
+  %td
+    =user.email
+  %td
+    =user.activated_at.to_s(:long) unless user.activated_at.nil?
+  %td
+    =link_to("Reset Password", password_reset_user_path(user))

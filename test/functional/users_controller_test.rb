@@ -50,8 +50,6 @@ class UsersControllerTest < ActionController::TestCase
     end
   end
   
-
-  
   def test_should_sign_up_user_with_activation_code
     create_user
     assigns(:user).reload
@@ -80,6 +78,25 @@ class UsersControllerTest < ActionController::TestCase
     # well played, sir
   end
 
+  def test_index
+    @request.session[:user_id]=users(:quentin).id
+    get :index
+    assert_response :success
+    assert_template "index"
+    assert users = assigns(:users)
+    assert stories.kind_of?(Array)
+    assert_equal(User.count, users.length)
+
+    assert_select "table[id=users]" do
+      assert_select "tr", :count => users.length 
+    end
+  end
+  
+  def test_index_not_logged_in
+    get :index
+    assert_redirected_to new_session_path
+  end
+  
   protected
     def create_user(options = {})
       post :create, :user => { :login => 'quire', :email => 'quire@example.com',

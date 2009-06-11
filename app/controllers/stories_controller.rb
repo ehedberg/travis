@@ -1,6 +1,6 @@
 class StoriesController < ApplicationController
   before_filter :login_required
-  before_filter :load_parent 
+  before_filter :load_parent
   def index
     if(params[:q])
       @stories = do_paginated_solr_search(params[:q], params[:page])

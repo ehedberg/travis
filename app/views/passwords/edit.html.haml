@@ -1,0 +1,12 @@
+- form_tag password_path(:id => params[:id]), :method => :put, :id=>'columnarForm' do
+  %fieldset
+    %legend
+      ="Enter a new password for #{@user.email}"
+    %ol.form
+      %li
+        =label_tag 'password'
+        =password_field_tag "password"
+      %li
+        =label_tag 'password_confirmation'
+        =password_field_tag 'password_confirmation', nil
+    =submit_tag "Reset Your Password"

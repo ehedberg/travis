@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
+  before_filter :login_required, :except=>[:new, :create, :activate]
+  before_filter :load_user, :except=>[:new, :create, :activate]
+
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
   
-
-  # render new.rhtml
+  def index
+    @users = User.find(:all)
+  end
+  
   def new
     @user = User.new
   end
@@ -36,5 +41,10 @@ class UsersController < ApplicationController
       flash[:error]  = "We couldn't find a user with that activation code -- check your email? Or maybe you've already activated -- try signing in."
       redirect_back_or_default(login_path)
     end
+  end
+
+  private
+  def load_user
+    @user = User.find(params[:id]) if params[:id]
   end
 end

@@ -1,0 +1,11 @@
+%h2
+  Forgot Password
+-form_tag password_path , :id=>'columnarForm' do
+  %fieldset
+    %legend
+      Enter the email address used to create your account
+    %ol.form
+      %li
+        =label_tag 'email'
+        =text_field_tag "email"
+  =submit_tag "Reset Password"

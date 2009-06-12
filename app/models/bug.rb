@@ -75,6 +75,6 @@ class Bug < ActiveRecord::Base
   end
   
   def self.per_page
-    1
+    20
   end
 end

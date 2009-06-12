@@ -1,0 +1,22 @@
+%tr[bug, cycle('even', 'odd')]
+  %td=link_to(h(bug.mnemonic), bug_path(bug))
+  %td
+    =link_to_function h(bug.title), nil, :update do |page|
+      -page.visual_effect :toggle_slide, "td_#{bug.id}"
+      -page.visual_effect :highlight, "td_#{bug.id}", :duration=>3
+    %div{:id=>"td_#{bug.id}", :style=>'display:none'}
+      =markdown(bug.description)
+  %td
+    %span{:id=>"swag_#{bug.id}"}<
+      -if bug.swag
+        =bug.swag
+      -else
+        Unswagged
+    =in_place_editor "swag_#{bug.id}", {:url=>update_swag_bug_path(bug), :cols=>10, :rows=>1, :on_complete=>"function() {window.location.reload();}", :cancel_control=>'button'}
+  %td.centered=bug.severity_text
+  %td.centered=bug.priority_text
+  %td.centered=bug.state.titleize
+  %td.centered=h(bug.login)
+  %td.rctl
+    =link_to("Show", bug_path(bug))
+    =link_to("Edit", edit_bug_path(bug))

@@ -3,7 +3,10 @@ class BugsController < ApplicationController
   before_filter :find_bug, :except=>[:index, :new, :create]
 
   def index
-    @bugs = Bug.paginate :page=>params[:page]
+    @bugs = Bug.paginate(:page=>params[:page], 
+      :select=>'*, (case when severity is null then 999 else severity end) as severitysort, ' + 
+                 ' (case when priority is null then 999 else priority end) as prioritysort', 
+      :order=>'severitysort, prioritysort')
   end
   
   def new

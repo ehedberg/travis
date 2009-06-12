@@ -47,36 +47,22 @@ class Bug < ActiveRecord::Base
     transitions :to=>:passed, :from=>:in_qc
   end
   
+  def Bug.severities
+    {'Show Stopper'=>1, 'Annoying'=>2, 'Work-Around Exists'=>3, 'Aesthetic'=>4}
+  end
+
   def severity_text
-    case self.severity
-    when 1 
-      'Show Stopper'
-    when 2 
-      'Annoying'
-    when 3 
-      'Work-Around Exists'
-    when 4 
-      'Aesthetic'
-    else
-      'Unknown'
-    end
+    Bug.severities.index(self.severity) # || 'Unknown'
+  end
+
+  def Bug.priorities
+    {'Critical'=>1, 'High'=>2, 'Medium'=>3, 'Low'=>4}
   end
 
   def priority_text
-    case self.priority
-    when 1 
-      'Critical'
-    when 2 
-      'High'
-    when 3 
-      'Medium'
-    when 4 
-      'Low'
-    else
-      'Unknown'
-    end
+    Bug.priorities.index(self.priority) # || 'Unknown'
   end
-
+  
   private 
   def set_mnemonic
     self.update_attribute(:mnemonic, ("BUG-%d"%[self.id]))

@@ -9,14 +9,20 @@
   Tags:
   =h(@bug.tags.join(', '))
 %h2
+  Severity:
+  =h(@bug.severity_text)
+%h2
+  Priority:
+  =h(@bug.priority_text)
+%h2
   Swag: 
   -if @bug.swag
-    =h @bug.swag
+    =h(@bug.swag)
   -else
     Unswagged.
 %h2
   State:
-  =h @bug.state.titleize
+  =h(@bug.state.titleize)
 #storydesc
   =auto_link(markdown(@bug.description))
 %h2

@@ -26,10 +26,10 @@
         = f.text_field :swag, :size=>5
       %li
         = f.label :severity, "Severity"
-        = f.select :severity, {'Show Stopper'=>1, 'Annoying'=>2, 'Work-Around Exists'=>3, 'Aesthetic'=>4}, {:include_blank=>true}, {:class=>"long"}
+        = f.select :severity, Bug.severities.sort_by{|k,v| v}, {:include_blank=>true}, {:class=>"long"}
       %li
-        = f.label :severity, "Priority"
-        = f.select :severity, {'Critical'=>1, 'High'=>2, 'Medium'=>3, 'Low'=>4}, {:include_blank=>true}, {:class=>"long"}
+        = f.label :priority, "Priority"
+        = f.select :priority, Bug.priorities.sort_by{|k,v| v}, {:include_blank=>true}, {:class=>"long"}
       %li
         = f.label :iteration_id, "Iteration"
         = f.select :iteration_id, Iteration.find(:all).collect{|i| [i.title, i.id]}, {:include_blank=>true}

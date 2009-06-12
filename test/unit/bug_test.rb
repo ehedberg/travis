@@ -113,8 +113,6 @@ class BugTest < ActiveSupport::TestCase
     assert_equal('Work-Around Exists', b.severity_text)
     b.severity=4
     assert_equal('Aesthetic', b.severity_text)
-    b.severity=5
-    assert_equal('Unknown', b.severity_text)
   end
 
   def test_priority_text
@@ -127,8 +125,11 @@ class BugTest < ActiveSupport::TestCase
     assert_equal('Medium', b.priority_text)
     b.priority=4
     assert_equal('Low', b.priority_text)
-    b.priority=5
-    assert_equal('Unknown', b.priority_text)
+  end
+  
+  def test_priority
+    b = Bug.create!(:title=>"lskfjsdlfkj", :priority=>1)
+    assert_equal(1, b.reload.priority)
   end
 
   def test_mnemonic

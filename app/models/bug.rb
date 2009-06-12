@@ -1,6 +1,7 @@
 class Bug < ActiveRecord::Base
   acts_as_state_machine :initial=>:new
   acts_as_taggable
+  acts_as_solr
 
   has_many :audit_records, :as=>:auditable
   belongs_to :iteration

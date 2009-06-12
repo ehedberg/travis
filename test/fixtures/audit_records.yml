@@ -14,14 +14,14 @@
 
 one:
   login: fubar
-  story: one
+  auditable: one (Story)
   diff: "--- \n\
     :self: \n\
     - :nonexistent\n\
     - :existent\n"
 two:
   login: fubar
-  story: twoe
+  auditable: twoe (Story)
   diff: "--- \n\
     :self: \n\
     - :nonexistent\n\

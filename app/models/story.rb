@@ -22,7 +22,7 @@ class Story < ActiveRecord::Base
   attr_accessor :creator
   acts_as_taggable
   acts_as_state_machine :initial=>:new
-  has_many :audit_records
+  has_many :audit_records, :as=>:auditable
 
   validates_uniqueness_of :mnemonic
   has_and_belongs_to_many :tasks , 
@@ -37,13 +37,7 @@ class Story < ActiveRecord::Base
   
   after_create :set_mnemonic
 
-  before_update { |record| 
-    his = record.changes.dup
-    his.delete(:updated_at)
-    his.delete(:created_at)
-    r = record.audit_records.build(:diff=>his.to_yaml, :login=>(User.current_user ? User.current_user.login : 'some guy')) 
-    raise "invalid audit record?" unless r.valid?
-  }
+  before_update { |record| AuditRecord.build_it(record) }
 
   belongs_to :iteration
 

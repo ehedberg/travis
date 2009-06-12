@@ -49,3 +49,10 @@
 =link_to("Edit", edit_bug_path(@bug))
 |
 =link_to("Delete", { :id => @bug.id }, :confirm => "Are you sure?", :method => :delete)
+|
+=link_to_function "Show History", nil, :update do |page|
+  -page.replace_html "history", :partial=>"shared/audit_record", :collection=>@bug.audit_records
+  -page.insert_html :top,'history', '<tr><th>Login</th><th>Updated At</th><th>Diff</th></tr>'
+  -page.visual_effect :toggle_appear, 'history'
+  -page.visual_effect :highlight, 'history'
+%table#history{:style=>'display:none'}

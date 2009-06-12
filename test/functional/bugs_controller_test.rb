@@ -112,4 +112,14 @@ class BugsControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal "2.1", @response.body
   end
+
+  def test_show_history_link
+    assert_routing "/bugs/1/history", {:action=>"history", :controller=>"bugs", :id=>"1"}
+    get :show, :id=>bugs(:one).id
+    assert assigns(:bug)
+    assert_not_nil assigns(:bug).audit_records
+    assert_equal assigns(:bug), bugs(:one)
+    assert_template "show"
+    assert_select "a[href=#]"
+  end
 end

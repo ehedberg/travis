@@ -1,0 +1,6 @@
+%h2{:class => "margin_top_10"} Bugs
+=will_paginate @bugs
+%table#bugs
+  =render :partial=>'bugs/bug_headers'
+  =render_search_results('bugs/bug', @bugs)
+=render :partial=>'shared/bugs_search'

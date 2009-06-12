@@ -94,7 +94,7 @@ class Story < ActiveRecord::Base
   
   # used by will_paginate
   def self.per_page
-    20
+    2
   end
     
 end

@@ -36,13 +36,13 @@
         %td In Progress:
         %td=@iteration.in_progress_points
       %tr
-        %td New Points:
-        %td=@iteration.new_points
+        %td Points Ready for Development:
+        %td=@iteration.ready_points
       %tr
         %td
-          Unswagged stories:
+          Unswagged Items:
         %td  
-          =@iteration.stories.unswagged.count
+          =@iteration.stories.unswagged.count + @iteration.bugs.unswagged.count
       %tr
         %td
           ="Assigned to %s:"%pluralize(@iteration.releases.size, 'release')
@@ -54,7 +54,11 @@
 %table#stories
   %caption Stories
   =render :partial=>'stories/story_header'
-  =render :partial=>'stories/story', :collection=>@iteration.stories
+  =render_search_results('stories/story', @iteration.stories)
+%table#bugs
+  %caption Bugs
+  =render :partial=>'bugs/bug_headers'
+  =render_search_results('bugs/bug', @iteration.bugs)
 
 %div
   #storyform

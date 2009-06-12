@@ -1,0 +1,51 @@
+%script{:type=>'text/javascript'}
+  var element = document.getElementById('menu_bug');
+  element.className = 'current';
+%h1
+  Bug: 
+  =h(@bug.title)
+  ="(%s)"%h(@bug.mnemonic)
+%h2
+  Tags:
+  =h(@bug.tags.join(', '))
+%h2
+  Severity:
+  =h(@bug.severity_text)
+%h2
+  Priority:
+  =h(@bug.priority_text)
+%h2
+  Swag: 
+  -if @bug.swag
+    =h(@bug.swag)
+  -else
+    Unswagged.
+%h2
+  State:
+  =h(@bug.state.titleize)
+#storydesc
+  =auto_link(markdown(@bug.description))
+%h2
+  Assigned To:
+  =h @bug.login
+%div
+  %h2
+    Assigned Iteration:
+    =link_to("#{h @bug.iteration.title}", iteration_path(@bug.iteration)) if @bug.iteration
+%p
+  Created
+  =@bug.created_at.to_s(:short)
+  %br/
+  Modified
+  =@bug.updated_at.to_s(:short)
+-if  ((@bug.available_events).size > 0)
+  #stateform
+    -form_for @bug do |f|
+      =f.label :state
+      =f.select :state, @bug.available_events
+      =submit_tag "Save"
+=link_to("Show All", bugs_path)
+|
+=link_to("Edit", edit_bug_path(@bug))
+|
+=link_to("Delete", { :id => @bug.id }, :confirm => "Are you sure?", :method => :delete)

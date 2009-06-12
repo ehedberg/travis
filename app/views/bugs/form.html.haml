@@ -1,11 +1,11 @@
 %script{:type=>'text/javascript'}
-  var element = document.getElementById('menu_story');
+  var element = document.getElementById('menu_bug');
   element.className = 'current';
-=error_messages_for "story"
-- form_for @story, :html=>{:id=>'columnarForm'} do |f|
+=error_messages_for "bug"
+- form_for @bug, :html=>{:id=>'columnarForm'} do |f|
   %fieldset
     %legend
-      Story Form
+      Bug Form
     %p
       = link_to "Markup Syntax Help", "http://daringfireball.net/projects/markdown/syntax", :target => "_blank"
     %ol
@@ -15,10 +15,9 @@
       %li
         = f.label :description, "Description", :class => "required"
         = f.text_area :description, :cols=>80
-        
       %li
-        = f.label :nodule, "Area"
-        = f.text_field :nodule
+        = f.label :reported_by, "Reported By"
+        = f.text_field :reported_by
       %li
         = f.label :tag_list, "Tags"
         = f.text_field :tag_list
@@ -26,10 +25,19 @@
         = f.label :swag, "Swag"
         = f.text_field :swag, :size=>5
       %li
+        = f.label :severity, "Severity"
+        = f.select :severity, Bug.severities.sort_by{|k,v| v}, {:include_blank=>true}, {:class=>"long"}
+      %li
+        = f.label :priority, "Priority"
+        = f.select :priority, Bug.priorities.sort_by{|k,v| v}, {:include_blank=>true}, {:class=>"long"}
+      %li
         = f.label :iteration_id, "Iteration"
         = f.select :iteration_id, Iteration.find(:all).collect{|i| [i.title, i.id]}, {:include_blank=>true}
+      %li
+        = f.label :state, "Action"
+        = f.select :state, @bug.available_events, {:include_blank=>true}
       %li 
         =submit_tag "Save", {:class=> "submit_button"}
-        =button_to_function "Cancel", "location.href='#{@story != nil && @story.id != nil ? story_path(@story.id) : stories_path}'", {:class=>'submit_button'}
+        =button_to_function "Cancel", "location.href='#{@bug != nil && @bug.id != nil ? bug_path(@bug.id) : bugs_path}'", {:class=>'submit_button'}
 
 

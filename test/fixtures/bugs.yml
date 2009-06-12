@@ -1,0 +1,18 @@
+one:
+  mnemonic: BUG-666
+  title: 'Incorrect Web Version - Should be 2.1'
+  description:  'Where the hell is my server-side blink???  WTF???'
+  swag: 372.5
+  state: waiting_for_fix
+  severity: 2
+  priority: 1
+  reported_by: 'Steve Jobs'
+  iteration: iter_current
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

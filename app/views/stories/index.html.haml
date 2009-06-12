@@ -16,6 +16,6 @@
     ="Search Results for \"#{params[:q]}\""
 %table#stories
   =render :partial=>'story_header'
-  =render :partial=>"story",:collection=>@stories
+  =render_search_results('story', @stories)
 
 =render :partial=>'shared/stories_search'

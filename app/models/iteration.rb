@@ -13,6 +13,7 @@
 
 class Iteration < ActiveRecord::Base
   has_many :stories
+  has_many :bugs    # well...not really...i mean cmon, we dont suck that bad...
   has_and_belongs_to_many :releases
 
   validates_length_of :title, :within=>1..200
@@ -42,47 +43,58 @@ class Iteration < ActiveRecord::Base
   end
 
   def total_points
-    stories.sum('swag')
+    (stories.sum('swag') + bugs.sum('swag')).to_f
   end
 
   def completed_points
-    stories.sum('swag', :conditions=>['state=?','passed'])
+    (stories.sum('swag', :conditions=>['state=?','passed']) + bugs.sum('swag', :conditions=>['state=?','passed'])).to_f
   end
+
   def open_points
-    stories.sum('swag', :conditions=>['state!=?','passed'])
+    (stories.sum('swag', :conditions=>['state!=?','passed']) + bugs.sum('swag', :conditions=>['state!=?','passed'])).to_f
   end
 
   def points_in_qc
-    stories.sum('swag', :conditions => {:state => 'in_qc'})
+    (stories.sum('swag', :conditions => {:state => 'in_qc'}) + bugs.sum('swag', :conditions => {:state => 'in_qc'})).to_f
   end
-  def new_points
-    stories.sum('swag', :conditions => {:state => 'new'})
+
+  def ready_points
+    (stories.sum('swag', :conditions => {:state => 'new'}) + bugs.sum('swag', :conditions => {:state => 'waiting_for_fix'})).to_f
   end
+
   def in_progress_points
-    stories.sum('swag', :conditions => {:state => 'in_progress'})
+    (stories.sum('swag', :conditions => {:state => 'in_progress'}) + bugs.sum('swag', :conditions => {:state => 'in_progress'})).to_f
   end
 
   def total_days
     (end_date - start_date).numerator
   end
-  def story_count
-    stories.length
+
+  def story_bug_count
+    stories.length + bugs.length
   end
-  def completed_story_count
-    @compls||=stories.count(:conditions=>['state=?','passed'])
+
+  def completed_story_bug_count
+    stories.count(:conditions=>['state=?','passed']) + bugs.count(:conditions=>['state=?','passed'])
   end
+
   def self.current
     t=Date.today
     Iteration.find(:first, :conditions=>["start_date<=? and end_date>=?", t, t])
   end
+
   def velocity
-    stories.sum('swag', :conditions=>"state='passed'")
+    completed_points
   end
+
   def swags_created_on(d)
-    stories.sum('swag', :conditions=>['date(stories.created_at) = date(?)', d])
+    (stories.sum('swag', :conditions=>['date(stories.created_at) = date(?)', d]) + 
+      bugs.sum('swag', :conditions=>['date(bugs.created_at) = date(?)', d])).to_f
   end
-  def stories_passed_on(d)
-    stories.sum('swag', :conditions=>['stories.state=\'passed\' and date(completed_at)=date(?)', d])
+
+  def stories_bugs_passed_on(d)
+    (stories.sum('swag', :conditions=>['stories.state=\'passed\' and date(completed_at)=date(?)', d]) + 
+      bugs.sum('swag', :conditions=>['bugs.state=\'passed\' and date(completed_at)=date(?)', d])).to_f
   end
   
   def previous

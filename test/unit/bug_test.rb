@@ -42,43 +42,43 @@ class BugTest < ActiveSupport::TestCase
     assert(b.available_events.include?(:approve))
     assert_equal(2, b.available_events.size)
     b.hold!
-    assert_equal('held', b.state)
+    assert_equal('held', b.reload.state)
     assert_nil(b.login)
     b.approve!
-    assert_equal('waiting_for_fix', b.state)
+    assert_equal('waiting_for_fix', b.reload.state)
     assert_nil(b.login)
     assert(b.available_events.include?(:hold))
     assert(b.available_events.include?(:start))
     assert_equal(2, b.available_events.size)
     b.start!
-    assert_equal("in_progress", b.state)
+    assert_equal("in_progress", b.reload.state)
     assert_equal(users(:quentin).login, b.login)
     assert(b.available_events.include?(:stop))
     assert(b.available_events.include?(:finish))
     assert_equal(2, b.available_events.size)
     b.stop!
-    assert_equal("waiting_for_fix", b.state)
+    assert_equal("waiting_for_fix", b.reload.state)
     assert_nil(b.login)
     b.start!
     b.finish!
-    assert_equal("in_qc", b.state)
+    assert_equal("in_qc", b.reload.state)
     assert_equal(users(:quentin).login, b.login)
     assert(b.available_events.include?(:fail))
     assert(b.available_events.include?(:pass))
     assert_equal(2, b.available_events.size)
     b.fail!
-    assert_equal("in_progress", b.state)
+    assert_equal("in_progress", b.reload.state)
     assert_equal(users(:quentin).login, b.login)
     b.finish!
     b.pass!
-    assert_equal('passed', b.state)
+    assert_equal('passed', b.reload.state)
     assert_nil(b.login)
 
     b2 = Bug.create(:title=>"Another New Bug Title", :description=>"Another New Bug Description")
     b2.approve!
-    assert_equal('waiting_for_fix', b2.state)
+    assert_equal('waiting_for_fix', b2.reload.state)
     b2.hold!
-    assert_equal('held', b2.state)
+    assert_equal('held', b2.reload.state)
   end
 
   def test_optimistic_locks

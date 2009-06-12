@@ -18,10 +18,10 @@ class Bug < ActiveRecord::Base
 
   state :new
   state :held
-  state :waiting_for_fix, :enter=>Proc.new{|b| b.login = nil}
-  state :in_progress, :enter=>Proc.new{|t| t.login = (User.current_user ? User.current_user.login : 'some guy') }
+  state :waiting_for_fix, :enter=>Proc.new{|b| b.login = nil; b.save!}
+  state :in_progress, :enter=>Proc.new{|b| b.login = (User.current_user ? User.current_user.login : 'some guy'); b.save!}
   state :in_qc
-  state :passed, :enter=>Proc.new{|b| b.login = nil}
+  state :passed, :enter=>Proc.new{|b| b.login = nil; b.save!}
 
   event :hold do
     transitions :to=>:held, :from=>:new

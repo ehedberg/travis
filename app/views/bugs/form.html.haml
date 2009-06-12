@@ -17,10 +17,13 @@
         = f.text_area :description, :cols=>80
       %li
         = f.label :reported_by, "Reported By"
-        = f.text_field :reported_by, :size=>92
+        = f.text_field :reported_by
+      %li
+        = f.label :tag_list, "Tags"
+        = f.text_field :tag_list
       %li
         = f.label :swag, "Swag"
-        = f.text_field :swag, :size=>2
+        = f.text_field :swag, :size=>5
       %li
         = f.label :severity, "Severity"
         = f.select :severity, {'Show Stopper'=>1, 'Annoying'=>2, 'Work-Around Exists'=>3, 'Aesthetic'=>4}, {:include_blank=>true}, {:class=>"long"}
@@ -32,7 +35,7 @@
         = f.select :iteration_id, Iteration.find(:all).collect{|i| [i.title, i.id]}, {:include_blank=>true}
       %li
         = f.label :state, "Action"
-        = f.select :state, @bug.available_events.collect{|ae| ae.to_s.titleize}, {:include_blank=>true}
+        = f.select :state, @bug.available_events, {:include_blank=>true}
       %li 
         =submit_tag "Save", {:class=> "submit_button"}
         =button_to_function "Cancel", "location.href='#{@bug != nil && @bug.id != nil ? bug_path(@bug.id) : bugs_path}'", {:class=>'submit_button'}

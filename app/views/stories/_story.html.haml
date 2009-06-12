@@ -24,7 +24,7 @@
   %td.centered
     = link_to(h(story.iteration.title), iteration_path(story.iteration)) if story.iteration
   %td
-    =truncate(story.tag_list.join(','))
+    =truncate(story.tag_list.join(', '))
   %td.rctl
     =link_to("Show", story_path(story))
     =link_to("Edit", edit_story_path(story))

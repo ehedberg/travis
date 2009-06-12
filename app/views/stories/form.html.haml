@@ -24,7 +24,7 @@
         = f.text_field :tag_list
       %li
         = f.label :swag, "Swag"
-        = f.text_field :swag, :size=>2
+        = f.text_field :swag, :size=>5
       %li
         = f.label :iteration_id, "Iteration"
         = f.select :iteration_id, Iteration.find(:all).collect{|i| [i.title, i.id]}, {:include_blank=>true}

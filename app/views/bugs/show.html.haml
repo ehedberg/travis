@@ -6,6 +6,9 @@
   =h(@bug.title)
   ="(%s)"%h(@bug.mnemonic)
 %h2
+  Tags:
+  =h(@bug.tags.join(', '))
+%h2
   Swag: 
   -if @bug.swag
     =h @bug.swag
@@ -16,6 +19,9 @@
   =h @bug.state.titleize
 #storydesc
   =auto_link(markdown(@bug.description))
+%h2
+  Assigned To:
+  =h @bug.login
 %div
   %h2
     Assigned Iteration:

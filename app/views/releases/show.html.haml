@@ -26,19 +26,19 @@
       =@release.open_points
   %tr
     %td
-      Total Story Count
+      Total Story + Bug Count
     %td
-      =@release.story_count
+      =@release.story_bug_count
   %tr
     %td
-      Completed Story Count
+      Completed Story + Bug Count
     %td
-      =@release.completed_story_count
+      =@release.completed_story_bug_count
   %tr
     %td
-      Unswagged Story Count
+      Unswagged Story + Bug Count
     %td
-      =@release.unswagged_story_count
+      =@release.unswagged_story_bug_count
   
 =link_to "Plan Release" , planner_release_path(@release)
 

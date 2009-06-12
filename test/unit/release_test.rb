@@ -26,9 +26,9 @@ class ReleaseTest < ActiveSupport::TestCase
     assert_equal(iters.first.title, iterations(:iter_last).title)
   end
   
-  def test_unswagged_stories
-    assert_equal(0, releases(:rel_last).unswagged_story_count)
-    assert_equal(0, releases(:rel_current).unswagged_story_count)
-    assert_equal(1, releases(:rel_next).unswagged_story_count)
+  def test_unswagged_stories_plus_bugs
+    assert_equal(0, releases(:rel_last).unswagged_story_bug_count)
+    assert_equal(0, releases(:rel_current).unswagged_story_bug_count)
+    assert_equal(3, releases(:rel_next).unswagged_story_bug_count)
   end
 end

@@ -2,6 +2,7 @@ class Bug < ActiveRecord::Base
   acts_as_state_machine :initial=>:new
   acts_as_taggable
 
+  has_many :audit_records, :as=>:auditable
   belongs_to :iteration
 
   attr_protected :state, :login
@@ -12,7 +13,11 @@ class Bug < ActiveRecord::Base
   validates_numericality_of :severity, :greater_than_or_equal_to=>1, :allow_nil=>true, :less_than_or_equal_to=>4
   validates_numericality_of :priority, :greater_than_or_equal_to=>1, :allow_nil=>true, :less_than_or_equal_to=>4
 
+  before_create { |record| record.audit_records.build(:diff=>{:self=>[:nonexistent, :existent]}.to_yaml, 
+                                                              :login=>(User.current_user ? User.current_user.login : 'some guy')) }
   after_create :set_mnemonic
+
+  before_update { |record| AuditRecord.build_it(record) }
 
   named_scope :unswagged, :conditions => ['swag IS NULL']
 

@@ -139,4 +139,21 @@ class BugTest < ActiveSupport::TestCase
     assert b.save
     assert_equal b.mnemonic, Bug.find(b.id).mnemonic
   end
+
+  def test_audit_record_on_update
+    User.current_user = users(:quentin)
+    b = Bug.new(:title=>"Title", :description=>"The description", :swag=>23)
+    assert b.save
+    assert !b.audit_records.empty?
+    r = b.audit_records.first
+    b2 = Bug.find(b.id)
+    assert_equal r, b2.audit_records.first
+    b.title="fubar_change"
+    assert b.save
+    assert_equal 3, b.audit_records.size
+    assert_match /\ntitle: \n- Title\n- fubar_change\n/, b.audit_records.last.diff
+    b.audit_records.each do |ar|
+      assert_equal(User.current_user.login, ar.login)
+    end
+  end
 end

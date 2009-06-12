@@ -17,6 +17,7 @@
   %td.centered=bug.priority_text
   %td.centered=bug.state.titleize
   %td.centered=h(bug.login)
+  %td.centered=link_to(h(bug.iteration.title), iteration_path(bug.iteration)) if bug.iteration
   %td.rctl
     =link_to("Show", bug_path(bug))
     =link_to("Edit", edit_bug_path(bug))

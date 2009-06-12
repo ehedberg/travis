@@ -7,7 +7,7 @@ one:
   severity: 2
   priority: 1
   reported_by: 'Steve Jobs'
-  iteration: iter_next
+  iteration: iter_current
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 

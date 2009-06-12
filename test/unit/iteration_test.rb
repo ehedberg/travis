@@ -4,9 +4,11 @@ class IterationTest < ActiveSupport::TestCase
   def test_fixtures
     Iteration.find(:all).each {|x| assert x.valid?}
   end
-  def test_story_relation
+
+  def test_relations
     s = Iteration.new
     assert s.respond_to?("stories")
+    assert s.respond_to?('bugs')
   end
 
   def test_has_many_releases
@@ -22,11 +24,11 @@ class IterationTest < ActiveSupport::TestCase
   def test_velocity
     assert_equal 2.3.to_s, iterations(:iter_current).velocity.to_s
   end
-  def test_story_count
-    assert_equal 4, iterations(:iter_current).story_count
+  def test_story_bug_count
+    assert_equal 5, iterations(:iter_current).story_bug_count
   end
   def test_completed_story_count
-    assert_equal 1.to_s, iterations(:iter_current).completed_story_count.to_s
+    assert_equal 1.to_s, iterations(:iter_current).completed_story_bug_count.to_s
   end
   def test_velocity_w_nil_swag
     assert iterations(:iter_current).stories.create(:title=>'nilswag')
@@ -58,10 +60,11 @@ class IterationTest < ActiveSupport::TestCase
   def test_total_points
     i = iterations(:iter_current)
     assert 2, i.stories.size
-    assert_equal 25.3, iterations(:iter_current).total_points
+    assert 1, i.bugs.size
+    assert_equal 397.8, iterations(:iter_current).total_points
   end
   def test_open_points
-    assert_equal 23, iterations(:iter_current).open_points
+    assert_equal 395.5, iterations(:iter_current).open_points
   end
 
   def test_completed_points

@@ -14,6 +14,8 @@ class Bug < ActiveRecord::Base
 
   after_create :set_mnemonic
 
+  named_scope :unswagged, :conditions => ['swag IS NULL']
+
   state :new
   state :held
   state :waiting_for_fix, :enter=>Proc.new{|b| b.login = nil}

@@ -8,4 +8,4 @@
 =link_to "Advanced Bug Search", search_bugs_path
 %table#bugs
   =render :partial=>'bug_headers'
-  =render :partial=>"bug",:collection=>@bugs
+  =render_search_results('bug', @bugs)

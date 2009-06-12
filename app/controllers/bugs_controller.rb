@@ -27,7 +27,7 @@ class BugsController < ApplicationController
   def update
     action = params[:bug].delete(:state)
     if @bug.update_attributes(params[:bug])
-      @bug.send("#{action}!".to_sym) if action
+      @bug.send("#{action}!".to_sym) if !action.blank?
       redirect_to bug_path(@bug)
     else
       render :template=>"bugs/form"

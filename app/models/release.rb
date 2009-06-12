@@ -12,7 +12,8 @@
 class Release < ActiveRecord::Base
   has_and_belongs_to_many :iterations, :order=>"start_date asc"
   validates_length_of :title, :within=>1..75
-  has_many :stories, :finder_sql=>'select s.* from  releases join iterations_releases ir on (releases.id=ir.release_id) join iterations iter on (iter.id=ir.iteration_id) join stories s on(s.iteration_id=iter.id) where releases.id=#{id}'
+  has_many :stories, :finder_sql=>'select s.* from releases join iterations_releases ir on (releases.id=ir.release_id) join iterations iter on (iter.id=ir.iteration_id) join stories s on(s.iteration_id=iter.id) where releases.id=#{id}'
+  has_many :bugs, :finder_sql=>'select b.* from releases join iterations_releases ir on (releases.id=ir.release_id) join iterations iter on (iter.id=ir.iteration_id) join bugs b on(b.iteration_id=iter.id) where releases.id=#{id}'
 
   def swags_created_on(d)
     @cstats=creation_stats unless @cstats
@@ -32,16 +33,16 @@ class Release < ActiveRecord::Base
   def open_points
     iterations.map{|x|x.open_points}.sum
   end
-  def story_count 
-    iterations.map{|x|x.story_count}.sum
+  def story_bug_count 
+    iterations.map{|x|x.story_bug_count}.sum
   end
 
-  def completed_story_count 
-    iterations.map{|x|x.completed_story_count}.sum
+  def completed_story_bug_count 
+    iterations.map{|x|x.completed_story_bug_count}.sum
   end
   
-  def unswagged_story_count
-    stories.select{|s| s.swag.nil?}.size
+  def unswagged_story_bug_count
+    stories.unswagged.count + bugs.unswagged.count
   end
 
   def start_date

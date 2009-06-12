@@ -9,7 +9,9 @@
   %td.right
     =iteration.total_points
   %td.right
-    =iteration.stories.unswagged.count
+    ="#{iteration.stories.count} (#{iteration.stories.unswagged.count})"
+  %td.right
+    ="#{iteration.bugs.count} (#{iteration.bugs.unswagged.count})"
   %td.rctl
     =link_to("Show", iteration_path(iteration))
     =link_to("Edit", edit_iteration_path(iteration))

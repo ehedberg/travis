@@ -53,6 +53,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :saved_searches
   map.resources :tasks, :collection=>{:search=>:get, :do_search=>:post}
   map.resources :bugs, :collection=>{:search=>:get, :do_search=>:post}, :member=>{:update_swag=>:post, :history=>:get}
+  map.resources :unified_search
   map.resource :session
   map.resources :iterations, :member=>{:chart=>:get, :reset_swags=>:put, :promote_stories=>:put}, :collection=>{:generate=>:post}, :new=>{:new_generate=>:get} do |r|
     r.resources :stories

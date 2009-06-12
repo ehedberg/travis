@@ -108,16 +108,7 @@ class StoriesController < ApplicationController
     Story.delete(@story.id)
     redirect_to(stories_path)
   end
-  private
-  def load_parent
-    if params[:iteration_id]
-      @iteration = Iteration.find(params[:iteration_id]) if params[:iteration_id]
-      @story = @iteration.stories.find(params[:id]) if params[:id]
-    else
-      @story = Story.find(params[:id]) if params[:id]
-    end
-  end
-  
+
   def do_paginated_solr_search(query, page)
     page = page.nil? ? 1 : page.to_i
     offset = Story.per_page * (page - 1)
@@ -130,6 +121,16 @@ class StoriesController < ApplicationController
         # the pager didn't manage to guess the total count, do it manually
         pager.total_entries = Story.count_by_solr(query)
       end
+    end
+  end
+
+  private
+  def load_parent
+    if params[:iteration_id]
+      @iteration = Iteration.find(params[:iteration_id]) if params[:iteration_id]
+      @story = @iteration.stories.find(params[:id]) if params[:id]
+    else
+      @story = Story.find(params[:id]) if params[:id]
     end
   end
 end

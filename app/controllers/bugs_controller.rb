@@ -56,11 +56,6 @@ class BugsController < ApplicationController
     render :text=>b.reload.swag
   end
 
-  private
-  def find_bug
-    @bug = Bug.find(params[:id])
-  end
-
   def do_paginated_solr_search(query, page)
     page = page.nil? ? 1 : page.to_i
     offset = Bug.per_page * (page - 1)
@@ -74,5 +69,10 @@ class BugsController < ApplicationController
         pager.total_entries = Bug.count_by_solr(query)
       end
     end
+  end
+
+  private
+  def find_bug
+    @bug = Bug.find(params[:id])
   end
 end

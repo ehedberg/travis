@@ -1,0 +1,3 @@
+%label
+  =check_box_tag 'release[iteration_ids][]', iteration.id, @release.iteration_ids.include?(iteration.id)
+  =iteration.title

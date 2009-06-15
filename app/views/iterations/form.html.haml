@@ -20,6 +20,7 @@
           =f.calendar_date_select :end_date
       %li
         =f.label :release_ids, "Releases", :class => "required"
-        = f.collection_select :release_ids, Release.find(:all, :order=>'title asc'), :id, :title, {}, {:multiple=>true, :size=>5, :name=>'iteration[release_ids][]'}
+        .multiple_select
+          =render :partial=>"release",:collection=>@releases
   =submit_tag "Save", {:class=> "submit_button"}
   =button_to_function "Cancel", "location.href='#{iterations_path}'", {:class=>'submit_button'}

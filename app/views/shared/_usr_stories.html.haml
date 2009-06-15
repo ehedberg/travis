@@ -1,0 +1,6 @@
+%h2{:class => "margin_top_10"} Stories
+=will_paginate @stories
+%table#stories
+  =render :partial=>'stories/story_header'
+  =render_search_results('stories/story', @stories)
+=render :partial=>'shared/stories_search'

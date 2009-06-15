@@ -3,10 +3,14 @@ class BugsController < ApplicationController
   before_filter :find_bug, :except=>[:index, :new, :create]
 
   def index
-    @bugs = Bug.paginate(:page=>params[:page], 
-      :select=>'*, (case when severity is null then 999 else severity end) as severitysort, ' + 
-                 ' (case when priority is null then 999 else priority end) as prioritysort', 
-      :order=>'severitysort, prioritysort')
+    if(params[:q])
+      @bugs = do_paginated_solr_search(params[:q], params[:page])
+    else
+      @bugs = Bug.paginate(:page=>params[:page], 
+        :select=>'*, (case when severity is null then 999 else severity end) as severitysort, ' + 
+                   ' (case when priority is null then 999 else priority end) as prioritysort', 
+        :order=>'severitysort, prioritysort')
+    end
   end
   
   def new
@@ -52,9 +56,23 @@ class BugsController < ApplicationController
     render :text=>b.reload.swag
   end
 
+  def do_paginated_solr_search(query, page)
+    page = page.nil? ? 1 : page.to_i
+    offset = Bug.per_page * (page - 1)
+    WillPaginate::Collection.create(page, Bug.per_page) do |pager|
+      result = Bug.find_by_solr(query, :offset => offset, :limit => Bug.per_page, :order => "bugs.severity asc, bugs.priority asc").results
+      # inject the result array into the paginated collection:
+      pager.replace(result)
+
+      unless pager.total_entries
+        # the pager didn't manage to guess the total count, do it manually
+        pager.total_entries = Bug.count_by_solr(query)
+      end
+    end
+  end
+
   private
   def find_bug
     @bug = Bug.find(params[:id])
   end
-
 end

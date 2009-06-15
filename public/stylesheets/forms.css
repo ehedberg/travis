@@ -10,8 +10,31 @@ form ol li {
 }
 form ol li label {
 	float: left;
-	display: block;
+	display: inline;
 	width: 20%;
+	font-weight: bold;
+}
+
+.multiple_select {
+    border: 2px solid rgb(153, 153, 153);
+    background: rgb(238, 238, 238) none repeat scroll 0% 0%;
+    overflow: auto;
+    height: 100px; 
+    width: 500px;
+    -moz-background-clip:
+    -moz-initial; 
+    -moz-background-origin: 
+    -moz-initial; 
+    -moz-background-inline-policy: 
+    -moz-initial; 
+    color: rgb(0, 0, 0); 
+    margin-bottom: 1.5em;
+}
+form ol li div label {
+	float: left;
+	display: inline;
+	width: 100%;
+	margin: 0;
 	font-weight: bold;
 }
 form .fieldWithErrors input, form .fieldWithErrors textarea, form .fieldWithErrors select {

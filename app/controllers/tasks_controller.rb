@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_filter :login_required
+  before_filter :find_stories, :only => [:new, :edit] 
   def index
     @tasks=Task.paginate :page=>params[:page], :order=>'created_at asc'
   end
@@ -9,6 +10,7 @@ class TasksController < ApplicationController
   end
 
   def new
+    find_stories
     @task = Task.new
     render :template=>"tasks/form"
   end
@@ -40,6 +42,7 @@ class TasksController < ApplicationController
           Story.find(params[:story_id]).tasks << @task if params[:story_id]
           redirect_to tasks_path
         else
+          find_stories
           render :template=>'tasks/form'
         end
       }
@@ -62,19 +65,24 @@ class TasksController < ApplicationController
   end
 
   def edit
+    find_stories
     @task = Task.find(params[:id])
     render :template=>"tasks/form"
   end
 
   def update
     @task = Task.find(params[:id])
-    @task.update_attributes(params[:task])
-    if !params[:task][:state].empty?
-      action = params[:task][:state]
-      @task.send action+"!"
-      @task.save
+    if @task.update_attributes(params[:task])
+      if !params[:task][:state].empty?
+        action = params[:task][:state]
+        @task.send action+"!"
+        @task.save
+      end
+      redirect_to task_path(@task)
+    else
+      find_stories
+      render :template=>"tasks/form"
     end
-    redirect_to task_path(@task)
   end
 
   def destroy
@@ -83,6 +91,8 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-
-
+private
+  def find_stories
+    @stories = Story.find(:all, :conditions=>['state!=?','passed'], :order=>'mnemonic asc')
+  end
 end

@@ -19,37 +19,37 @@ class IterationsController < ApplicationController
 
   def destroy
     Iteration.delete(params[:id])
-
     redirect_to(iterations_path)
   end
 
   def edit
+    find_releases
     @iteration=Iteration.find(params[:id])
     render :template=>"iterations/form"
   end
 
   def new
+    find_releases
     @iteration = Iteration.new
-
     render :template=>"iterations/form"
   end
 
   def update
     @iteration= Iteration.find(params[:id])
-
     if @iteration.update_attributes(params[:iteration])
       redirect_to(iterations_path)
     else
+      find_releases
       render :template=>"iterations/form"
     end
   end
 
   def create
     @iteration=Iteration.new(params[:iteration])
-
     if @iteration.save
       redirect_to(iterations_path)
     else
+      find_releases
       render :template=>"iterations/form"
     end
   end
@@ -126,5 +126,9 @@ class IterationsController < ApplicationController
       end
       redirect_to iteration_path(@iteration) and return
     end
+  end
+private
+  def find_releases
+    @releases = Release.find(:all, :order=>'title asc')
   end
 end

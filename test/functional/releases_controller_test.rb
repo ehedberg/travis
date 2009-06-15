@@ -95,8 +95,16 @@ class ReleasesControllerTest < ActionController::TestCase
     assert_template "form"
     assert assigns(:release)
     assert assigns(:release).new_record?
+    assert iterations = assigns(:iterations)
     assert_select "form[action=?][method=post]", releases_path do
       assert_select "input[type=text]"
+      assert_select "div[class=multiple_select]" do
+        iterations.each do |iteration|
+          assert_select "label" do
+            assert_select "input[type=checkbox][value=?]", iteration.id
+          end
+        end
+      end
       assert_select "input[type=submit]"
       assert_select "input[type=button][value=Cancel][onclick*=location]"
     end
@@ -104,11 +112,9 @@ class ReleasesControllerTest < ActionController::TestCase
   
   def test_edit
     get :edit,:id=>releases(:rel_last).id
-
     assert assigns(:release)
-
+    assert assigns(:iterations)
     release = assigns(:release)
-
     assert_equal releases(:rel_last).id, release.id
   end
 
@@ -131,7 +137,4 @@ class ReleasesControllerTest < ActionController::TestCase
     assert_response :success
     assert_template 'index'
   end
-
-
-
 end

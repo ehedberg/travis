@@ -96,32 +96,20 @@ class IterationsControllerTest < ActionController::TestCase
 
   def test_create
     post :create, "iteration"=>{"title"=>"New Iteration", "start_date"=>"2008-06-07", "end_date"=>"2008-06-21"}
-
     assert assigns(:iteration)
-
     iteration = assigns(:iteration)
-
     assert_equal Iteration.find_by_title("New Iteration"), assigns(:iteration)
-
     assert_response :redirect
-
     assert_redirected_to iterations_path
   end
 
   def test_create_invalid_title_not_found
-
     post :create, "iteration"=>{"start_date"=>"2008-06-07", "end_date"=>"2008-06-21"}
-
     assert_response :success
-
     assert_template "form"
-
     assert assigns(:iteration)
-
     story = assigns(:iteration)
-
     assert_equal story.errors.on(:title), "is too short (minimum is 1 characters)"
-
     assert_select "div[id=errorExplanation][class=errorExplanation]"
   end
 
@@ -129,6 +117,7 @@ class IterationsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
     assert_template "form"
+    assert assigns(:releases)
     assert assigns(:iteration)
     assert assigns(:iteration).new_record?
     assert_select "form[action=?][method=post]", iterations_path do
@@ -148,13 +137,20 @@ class IterationsControllerTest < ActionController::TestCase
     iter = iterations(:iter_last)
     get :edit,:id=>iter.id
     assert assigns(:iteration)
+    assert releases = assigns(:releases)
     assert_equal iter, assigns(:iteration)
     assert_template 'form'
     assert_select "form[action=?]", iteration_path(iter) do
       assert_select "input[type=text][id=iteration_title]"
       assert_select "input[type=text][id=iteration_start_date]"
       assert_select "input[type=text][id=iteration_end_date]"
-      assert_select "select[id=iteration_release_ids]"
+      assert_select "div[class=multiple_select]" do
+        releases.each do |release|
+          assert_select "label" do
+            assert_select "input[type=checkbox][value=?]", release.id
+          end
+        end
+      end
       assert_select "input[type=submit]"
     end
 

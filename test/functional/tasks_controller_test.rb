@@ -140,6 +140,7 @@ class TasksControllerTest < ActionController::TestCase
 
   def test_new
     get :new
+    assert assigns(:stories)
     assert assigns(:task)
     assert assigns(:task).new_record?
     assert_template "form"
@@ -164,11 +165,10 @@ class TasksControllerTest < ActionController::TestCase
 
   def test_edit
     get :edit, :id=>tasks(:one).id
-    t = assigns(:task)
-    assert t
+    assert story_list = assigns(:stories)
+    assert t = assigns(:task)
     assert_equal t, tasks(:one)
     assert_template "form"
-    story_list = Story.find(:all)
     assert_select "form[action=?][method=post]", task_path(t.id) do
       assert_select "input[id=task_title][type=text]"
       assert_select "textarea[id=task_description]"
@@ -177,9 +177,11 @@ class TasksControllerTest < ActionController::TestCase
           assert_select "option[value=?]", st
         end
       end
-      assert_select "select[multiple=multiple][size=5]" do
-        story_list.each do |s|
-          assert_select "option[value=?]", s.id, :text=>s.title
+      assert_select "div[class=multiple_select]" do
+        story_list.each do |story|
+          assert_select "label" do
+            assert_select "input[type=checkbox][value=?]", story.id
+          end
         end
       end
       assert_select "input[type=submit][class=submit_button]"

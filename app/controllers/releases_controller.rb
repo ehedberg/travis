@@ -1,7 +1,6 @@
 class ReleasesController < ApplicationController
   helper Ziya::Helper
   before_filter :requires_login
-  
   def index
     @releases = Release.paginate(:page=>params[:page], :order=>'created_at asc')
   end
@@ -16,13 +15,13 @@ class ReleasesController < ApplicationController
     if @release.save
       redirect_to(releases_path)
     else
+      find_iterations
       render :template=>"releases/form"
     end
   end
 
   def destroy
     Release.delete(params[:id])
-
     redirect_to(releases_path)
   end
 
@@ -32,11 +31,12 @@ class ReleasesController < ApplicationController
 
   def new
     @release = Release.new
-
+    find_iterations
     render :template=>"releases/form"
   end
 
   def edit
+    find_iterations
     @release=Release.find(params[:id])
     render :template=>"releases/form"
   end
@@ -52,6 +52,7 @@ class ReleasesController < ApplicationController
     if @release.update_attributes(params[:release])
       redirect_to(releases_path)
     else
+      find_iterations
       render :template=>"releases/form"
     end
   end
@@ -88,4 +89,8 @@ class ReleasesController < ApplicationController
     end 
   end
 
+private
+  def find_iterations
+    @iterations = Iteration.find(:all, :order=>'start_date asc')
+  end
 end

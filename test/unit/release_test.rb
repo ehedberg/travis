@@ -32,3 +32,15 @@ class ReleaseTest < ActiveSupport::TestCase
     assert_equal(3, releases(:rel_next).unswagged_story_bug_count)
   end
 end
+
+# == Schema Information
+# Schema version: 20090612194131
+#
+# Table name: releases
+#
+#  id         :integer         not null, primary key
+#  title      :string(200)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+

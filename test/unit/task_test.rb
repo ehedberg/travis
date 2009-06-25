@@ -104,3 +104,19 @@ class TaskTest < ActiveSupport::TestCase
   end
 
 end
+
+# == Schema Information
+# Schema version: 20090612194131
+#
+# Table name: tasks
+#
+#  id           :integer         not null, primary key
+#  title        :string(200)     not null
+#  description  :text            not null
+#  created_at   :datetime
+#  updated_at   :datetime
+#  state        :string(20)      default("new"), not null
+#  login        :string(50)
+#  lock_version :integer         default(0)
+#
+

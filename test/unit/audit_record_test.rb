@@ -41,3 +41,18 @@ class AuditRecordTest < ActiveSupport::TestCase
 
 
 end
+
+# == Schema Information
+# Schema version: 20090612194131
+#
+# Table name: audit_records
+#
+#  id             :integer         not null, primary key
+#  login          :string(50)
+#  auditable_id   :integer         not null
+#  diff           :text            not null
+#  created_at     :datetime
+#  updated_at     :datetime
+#  auditable_type :string(50)
+#
+

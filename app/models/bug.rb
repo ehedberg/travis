@@ -1,7 +1,7 @@
 class Bug < ActiveRecord::Base
   acts_as_state_machine :initial=>:new
   acts_as_taggable
-  acts_as_solr
+  acts_as_solr :fields => [:title, :description]
 
   has_many :audit_records, :as=>:auditable
   belongs_to :iteration
@@ -78,3 +78,26 @@ class Bug < ActiveRecord::Base
     20
   end
 end
+
+# == Schema Information
+# Schema version: 20090612194131
+#
+# Table name: bugs
+#
+#  id           :integer         not null, primary key
+#  title        :string(200)
+#  description  :text
+#  reported_by  :string(200)
+#  login        :string(50)
+#  state        :string(20)      default("new"), not null
+#  swag         :decimal(4, 2)
+#  severity     :integer
+#  priority     :integer
+#  mnemonic     :string(10)
+#  completed_at :date
+#  iteration_id :integer
+#  lock_version :integer         default(0), not null
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+

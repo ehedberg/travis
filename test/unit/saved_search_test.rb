@@ -41,3 +41,17 @@ class SavedSearchTest < ActiveSupport::TestCase
   end
 
 end
+
+# == Schema Information
+# Schema version: 20090612194131
+#
+# Table name: saved_searches
+#
+#  id         :integer         not null, primary key
+#  query      :string(200)     not null
+#  name       :string(50)      not null
+#  query_type :string(10)      not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+

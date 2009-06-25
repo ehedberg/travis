@@ -30,7 +30,7 @@ require File.dirname(__FILE__) + '/instance_methods'
 require File.dirname(__FILE__) + '/common_methods'
 require File.dirname(__FILE__) + '/deprecation'
 require File.dirname(__FILE__) + '/search_results'
-
+require File.dirname(__FILE__) + '/lazy_document'
 module ActsAsSolr
   
   class Post    

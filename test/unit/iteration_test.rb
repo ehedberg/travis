@@ -105,3 +105,17 @@ class IterationTest < ActiveSupport::TestCase
     assert_equal(0, iterations(:iter_empty).stories.unswagged.count)
   end
 end
+
+# == Schema Information
+# Schema version: 20090612194131
+#
+# Table name: iterations
+#
+#  id         :integer         not null, primary key
+#  title      :string(200)     not null
+#  start_date :date            not null
+#  end_date   :date            not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+

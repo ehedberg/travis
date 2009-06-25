@@ -30,7 +30,7 @@ class Story < ActiveRecord::Base
     :after_add=>Proc.new{|s, t| s.task_changed! }, 
     :after_remove=>Proc.new{|s,t| s.task_changed!}
 
-  acts_as_solr
+  acts_as_solr :fields => [:title, :description, :cached_tag_list]
   
   before_create { |record| record.audit_records.build(:diff=>{:self=>[:nonexistent, :existent]}.to_yaml, 
                                                               :login=>(User.current_user ? User.current_user.login : 'some guy')) }

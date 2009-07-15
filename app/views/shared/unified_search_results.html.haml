@@ -1,6 +1,55 @@
 %h1 
   ="Search Results for \"#{params[:q]}\""
 
-=render :partial=>'shared/usr_stories'
-
+.unified_search_result
+  .unified_summary
+    %h2{:class => "margin_top_10"} Stories Search Summary 
+    %table
+      %tr
+        %td
+        %th Count
+        %th Swag
+      %tr
+        %th Total
+        %td 
+          ="#{@all_story_results.length}"
+        %td 
+          ="#{@stories_swag}"
+          
+      %tr
+        %th Passed
+        %td
+          ="#{@passed_stories_count}"
+        %td 
+          ="#{@passed_stories_swag}"
+          
+      %tr
+        %th In QC
+        %td
+          ="#{@qc_stories_count}"
+        %td 
+          ="#{@qc_stories_swag}"
+          
+      %tr
+        %th In Development
+        %td
+          ="#{@dev_stories_count}"
+        %td 
+          ="#{@dev_stories_swag}"
+      
+      %tr
+        %th New
+        %td
+          ="#{@new_stories_count}"
+        %td 
+          ="#{@new_stories_swag}"
+          
+      %tr
+        %th Unswagged
+        %td
+          ="#{@unswagged_count}"
+        %td -
+  .unified_detail
+    =render :partial=>'shared/usr_stories'
+  %br.clear
 =render :partial=>'shared/usr_bugs'

@@ -90,3 +90,11 @@ class Test::Unit::TestCase
     assert_routing "/#{resource}/1/edit", :controller=>resource,:action=>"edit", :id=>"1"
   end
 end
+
+
+# Turn off Solr during tests
+class ActsAsSolr::Post
+  def self.execute(request)
+    true
+  end
+end

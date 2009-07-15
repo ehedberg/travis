@@ -63,7 +63,17 @@ background:
 margin:10px;
 }
 
-
+#content .unified_detail, #content .unified_summary {
+	float: left;
+	display: block;
+	margin: 10px;
+}
+#content .unified_summary {
+	width: 20%;
+}
+#content .unified_detail {
+	width: 75%;
+}
 #footer {
   display: block;
   clear: both;
@@ -204,6 +214,9 @@ div.formError  {
 #iterInfo #chart {
 	float: left ;
 	width: 68%;
+}
+.clear {
+	clear: both;
 }
 
 

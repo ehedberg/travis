@@ -21,7 +21,8 @@ class ReleasesController < ApplicationController
   end
 
   def destroy
-    Release.delete(params[:id])
+    @release = Release.find params[:id]
+    @release.destroy
     redirect_to(releases_path)
   end
 

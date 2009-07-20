@@ -45,7 +45,7 @@ class BugsController < ApplicationController
   end
 
   def destroy
-    Bug.delete(@bug.id)
+    @bug.destroy
     redirect_to(bugs_path)
   end
   

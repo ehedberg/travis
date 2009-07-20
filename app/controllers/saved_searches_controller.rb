@@ -16,7 +16,7 @@ class SavedSearchesController < ApplicationController
   end
   def destroy
     ss = SavedSearch.find(params[:id])
-    SavedSearch.destroy(ss.id)
+    ss.destroy
     render :update do |page|
       page.visual_effect :toggle_slide, "saved_search_#{params[:id]}"
     end

@@ -18,7 +18,8 @@ class IterationsController < ApplicationController
   end
 
   def destroy
-    Iteration.delete(params[:id])
+    @iteration = Iteration.find(params[:id])
+    @iteration.destroy
     redirect_to(iterations_path)
   end
 

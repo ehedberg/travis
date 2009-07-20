@@ -105,7 +105,7 @@ class StoriesController < ApplicationController
   end
 
   def destroy
-    Story.delete(@story.id)
+    @story.destroy
     redirect_to(stories_path)
   end
 

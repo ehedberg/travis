@@ -51,7 +51,7 @@
   #chart
     = ziya_chart chart_iteration_path(@iteration), :size=>"700x300", :swf_path=>root_path+'charts' if Iteration.count > 0
 %br{:style=>"clear:both"}
-%table#stories
+%table#stories.sortable
   %caption Stories
   =render :partial=>'stories/story_header'
   =render_search_results('stories/story', @iteration.stories)
@@ -74,5 +74,4 @@
   =button_to("Promote Stories", promote_stories_iteration_path(@iteration), :method=>:put, :confirm=>'This will promote all unpassed stories to the next iteration.  Are you sure?')
 %script{:type=>'text/javascript'}
   new Control.Modal('addStoryLink', { opacity:0.6, fade:true, width:600, height:450});
-
 

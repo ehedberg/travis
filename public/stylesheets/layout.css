@@ -7,9 +7,9 @@ body #wrap {
 	border: 2px solid #bbbbbb;
 }
 h3 {
-  font-weight: bold;
-  font-style: italic;
-  color: #0092d6;
+	font-weight: bold;
+	font-style: italic;
+	color: #0092d6;
 }
 #header {
 	background: url(../images/travis-logo.gif) left center no-repeat;
@@ -22,45 +22,45 @@ h3 {
 }
 
 tr.current_iteration {
-background: #c0c0ff;
-border: 2px solid #00f;
+	background: #c0c0ff;
+	border: 2px solid #00f;
 }
 #storydesc ul {
-  list-style-type: circle;
+	list-style-type: circle;
 }
 span.afterv {
-  color: orange;
+	color: orange;
 }
 span.beforev {
-  color: green;
+	color: green;
 }
 span.attr {
-  color: blue;
+	color: blue;
 }
 #storydesc ol {
-  list-style-type: decimal;
+	list-style-type: decimal;
 }
 #storydesc ol  li {
-display: list-item;
-         list-style-position: inside;
-         margin-left: 4em;
+	display: list-item;
+	list-style-position: inside;
+	margin-left: 4em;
 }
 #rightchart {
-float: right;
+	float: right;
 }
 #chart {
-float: right;
+	float: right;
 }
 #iterInfo {
-float: left;
+	float: left;
 }
 
 #storyerror {
-background:
+	background:
 }
 
 #content{
-margin:10px;
+	margin:10px;
 }
 
 #content .unified_detail, #content .unified_summary {
@@ -75,14 +75,14 @@ margin:10px;
 	width: 75%;
 }
 #footer {
-  display: block;
-  clear: both;
-  margin: 0;
-  text-align: center;
-  height: 20px;
-  background: url(../images/footer-bg.jpg) repeat-x;
-  font-family: "Lucida Grande", Verdana, sans-serif;
-  color: #eee;
+	display: block;
+	clear: both;
+	margin: 0;
+	text-align: center;
+	height: 20px;
+	background: url(../images/footer-bg.jpg) repeat-x;
+	font-family: "Lucida Grande", Verdana, sans-serif;
+	color: #eee;
 }
 #footer a {
 	text-decoration: none;
@@ -92,113 +92,110 @@ margin:10px;
 	text-decoration: underline;
 }
 th.centered {
-  text-align: center;
+	text-align: center;
 }
 th.right {
-  text-align: right;
+	text-align: right;
 }
 
 table {
-width: 100%;
-       margin-top: 10px;
-       text-align: left;
-       border-top: 1px solid #ddd ;
-       border-left: 1px solid  #ddd;
+	width: 100%;
+	margin-top: 10px;
+	text-align: left;
+	border-top: 1px solid #ddd ;
+	border-left: 1px solid  #ddd;
 }
-
+table.sortable tr th {
+	cursor: pointer;
+	border: 2px outset #eee;
+}
 td.rctl {
-  text-align: right;
-  border-right: 1px solid #ddd ;
-  border-bottom: 1px solid  #ddd;
+	text-align: right;
+	border-right: 1px solid #ddd ;
+	border-bottom: 1px solid  #ddd;
 }
 
 td.centered {
-  text-align: center;
+	text-align: center;
 }
 td.right {
-  text-align: right;
+	text-align: right;
 }
 
 th {
-background: #ddd;
+	background: #ddd;
 }
 
 td,th {
-  border-right: 1px solid #ddd ;
-  border-bottom: 1px solid  #ddd;
-  padding: 5px;
+	border-right: 1px solid #ddd ;
+	border-bottom: 1px solid  #ddd;
+	padding: 5px;
 }
 
-tr.even_task td {
-background: #eee;
-}
-tr.even_story {
-background: #eee;
-}
-tr.even_iteration {
-background: #eee;
+tr.even_story, tr.even_iteration, tr.even_task td {
+	background: #eee;
 }
 a.expando {
-  font-weight: bold;
-  text-decoration: none;
-color:green;
+	font-weight: bold;
+	text-decoration: none;
+	color:green;
 }
 a:hover.expando {
-background:yellow;
-  }
+	background:yellow;
+}
 a:visited.expando {
-color:green;
-  }
+	color:green;
+}
 caption {
-  caption-side: top;
-  font-weight: bold;
-  font-size: 2em;
-margin: 10px;
+	caption-side: top;
+	font-weight: bold;
+	font-size: 2em;
+	margin: 10px;
 }
 .opform fieldset {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -khtml-border-radius: 5px;
-    background: #E6E6E6 none repeat scroll 0 0;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	background: #E6E6E6 none repeat scroll 0 0;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 #modal_overlay {  
-  background-color:#000000;
+	background-color:#000000;
 }  
 div.formError  {
-  font-color: green;
-  font-size: .8em;
+	font-color: green;
+	font-size: .8em;
 }
 
 .drop_release {
-  float: left;
-  background: #80f080;
-  padding: 3em;
-  border: 1px solid #808080;
-  margin-top: 3em;
-  width: 99%;
+	float: left;
+	background: #80f080;
+	padding: 3em;
+	border: 1px solid #808080;
+	margin-top: 3em;
+	width: 99%;
 }
 
 
 
 .drag_iteration {
-  text-align: center;
-  position: relative;
-  padding: 1em;
-  clear:none;
-  width: 20em;
-  background: #8080ff;
-  border: 2px solid #808080;
-  margin: 10px;
-  float: left;
-  height: 2em;
-  z-index: 100;
+	text-align: center;
+	position: relative;
+	padding: 1em;
+	clear:none;
+	width: 20em;
+	background: #8080ff;
+	border: 2px solid #808080;
+	margin: 10px;
+	float: left;
+	height: 2em;
+	z-index: 100;
 }
 .title {
-  font-weight: bold;
-  font-size: 1.2em;
+	font-weight: bold;
+	font-size: 1.2em;
 }
 .margin_top_10 {
 	margin-top: 10px;

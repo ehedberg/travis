@@ -8,6 +8,16 @@ one:
   priority: 1
   reported_by: 'Steve Jobs'
   iteration: iter_current
+two:
+  mnemonic: BUG-333
+  title: 'Electric Bug-aloo'
+  description:  'Ive got your server-side blink right here Jobs...'
+  swag: 22
+  state: passed
+  severity: 3
+  priority: 2
+  reported_by: 'Bill Gates'
+  iteration: iter_current
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 

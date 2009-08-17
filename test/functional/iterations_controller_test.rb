@@ -238,19 +238,27 @@ class IterationsControllerTest < ActionController::TestCase
     end
   end
   
-  def test_promote_stories
-    assert_routing({:path=>"/iterations/1/promote_stories", :method=>'put'}, {:controller=>"iterations", :action=>"promote_stories", :id=>"1"})
+  def test_promote_stories_and_bugs
+    assert_routing({:path=>"/iterations/1/promote", :method=>'put'}, {:controller=>"iterations", :action=>"promote", :id=>"1"})
     iter = iterations(:iter_current)
     passed_stories = iter.stories.select{|s| s.state != 'passed'}
-    put :promote_stories, :id=>iter.id
+    passed_bugs = iter.bugs.select{|b| b.state != 'passed'}
+    put :promote, :id=>iter.id
     assert_response :redirect
     assert_redirected_to(iteration_path(iter))
     iter.reload.stories.each do |s|
       assert_equal('passed', s.state)
     end
+    iter.bugs.each do |b|
+      assert_equal('passed', b.state)
+    end
     passed_stories.each do |ps|
       assert(!iter.stories.include?(ps), "#{ps.title} should have been moved!")
       assert(iter.next.stories.include?(ps), "#{ps.title} should have been moved!")
+    end
+    passed_bugs.each do |pb|
+      assert(!iter.bugs.include?(pb), "#{pb.title} should have been moved!")
+      assert(iter.next.bugs.include?(pb), "#{pb.title} should have been moved!")
     end
   end
 

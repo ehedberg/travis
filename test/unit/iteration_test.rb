@@ -22,17 +22,17 @@ class IterationTest < ActiveSupport::TestCase
   end
 
   def test_velocity
-    assert_equal 2.3.to_s, iterations(:iter_current).velocity.to_s
+    assert_equal 24.3.to_s, iterations(:iter_current).velocity.to_s
   end
   def test_story_bug_count
-    assert_equal 5, iterations(:iter_current).story_bug_count
+    assert_equal 6, iterations(:iter_current).story_bug_count
   end
-  def test_completed_story_count
-    assert_equal 1.to_s, iterations(:iter_current).completed_story_bug_count.to_s
+  def test_completed_story_bug_count
+    assert_equal 2.to_s, iterations(:iter_current).completed_story_bug_count.to_s
   end
   def test_velocity_w_nil_swag
     assert iterations(:iter_current).stories.create(:title=>'nilswag')
-    assert_equal 2.3.to_s, iterations(:iter_current).reload.velocity.to_s
+    assert_equal 24.3.to_s, iterations(:iter_current).reload.velocity.to_s
   end
 
   def test_find_all_iterations
@@ -61,14 +61,14 @@ class IterationTest < ActiveSupport::TestCase
     i = iterations(:iter_current)
     assert 2, i.stories.size
     assert 1, i.bugs.size
-    assert_equal 397.8, iterations(:iter_current).total_points
+    assert_equal 419.8, iterations(:iter_current).total_points
   end
   def test_open_points
     assert_equal 395.5, iterations(:iter_current).open_points
   end
 
   def test_completed_points
-    assert_equal 2.3.to_s, iterations(:iter_current).completed_points.to_s
+    assert_equal 24.3.to_s, iterations(:iter_current).completed_points.to_s
   end
 
   def test_points_in_qc

@@ -71,7 +71,7 @@
   |
   =link_to("Delete", { :id => @iteration.id }, :confirm => "Are you sure?", :method => :delete)
   =button_to("Reset Swag", reset_swags_iteration_path(@iteration), :method=>:put, :confirm=>'This will clear the swag on all unpassed stories in this iteration.  Are you sure?')
-  =button_to("Promote Stories", promote_stories_iteration_path(@iteration), :method=>:put, :confirm=>'This will promote all unpassed stories to the next iteration.  Are you sure?')
+  =button_to("Promote Stories and Bugs", promote_iteration_path(@iteration), :method=>:put, :confirm=>'This will promote all unpassed stories and bugs to the next iteration.  Are you sure?')
 %script{:type=>'text/javascript'}
   new Control.Modal('addStoryLink', { opacity:0.6, fade:true, width:600, height:450});
 

@@ -43,8 +43,6 @@
           Predicted End Date:
         %td
           =@prediction
-    =link_to "< Prev", iteration_path(@prev_iteration)
-    |
-    =link_to "Next >", iteration_path(@next_iteration)
+    =prev_next_links(@iteration)
   #chart
     = ziya_chart chart_iteration_path(@iteration), :size=>"800x400", :swf_path=>root_path+'charts'

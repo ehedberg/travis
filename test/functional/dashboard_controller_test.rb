@@ -23,8 +23,8 @@ class DashboardControllerTest < ActionController::TestCase
     assert i.start_date <= Date.today
     assert i.end_date >= Date.today
     assert_equal i, iterations(:iter_current)
-    assert assigns(:next_iteration)
-    assert assigns(:prev_iteration)
+    assert_select 'a[id=?][href=?]', 'prev_iter', iteration_path(i.previous)
+    assert_select 'a[id=?][href=?]', 'next_iter', iteration_path(i.next)
   end
   def test_routin
     assert_routing("/", :controller=>'dashboard', :action=>'index')

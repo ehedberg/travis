@@ -47,10 +47,11 @@
         %td
           ="Assigned to %s:"%pluralize(@iteration.releases.size, 'release')
         %td  
-          =@iteration.releases.map{|x| link_to(h(x.title), release_path(x))}.join(', ')
+          =@iteration.releases.map{|x| link_to(h(x.title), release_path(x))}.join(', ')       
   #chart
     = ziya_chart chart_iteration_path(@iteration), :size=>"700x300", :swf_path=>root_path+'charts' if Iteration.count > 0
 %br{:style=>"clear:both"}
+=prev_next_links(@iteration)    
 %table#stories.sortable
   %caption Stories
   =render :partial=>'stories/story_header'

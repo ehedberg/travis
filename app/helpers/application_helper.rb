@@ -14,4 +14,12 @@ module ApplicationHelper
       render :partial=>partial, :collection=>collection, :locals=>locals
     end
   end
+  
+  def prev_next_links(current_iteration) 
+    prev_iter=current_iteration.previous
+    next_iter=current_iteration.next
+    prev_link=prev_iter ? link_to(h("< #{prev_iter.title}"), iteration_path(prev_iter), :id=>'prev_iter') : nil
+    next_link=next_iter ? link_to(h("#{next_iter.title} >"), iteration_path(next_iter), :id=>'next_iter'): nil
+    return [prev_link, next_link].compact.join(' | ')
+  end
 end

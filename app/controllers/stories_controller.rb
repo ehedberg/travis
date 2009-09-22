@@ -28,6 +28,13 @@ class StoriesController < ApplicationController
     s.save!
     render :text=>s.reload.swag
   end
+  
+  def update_tags
+    s = @story
+    s.tag_list=params[:value]
+    s.save!
+    render :text=>s.reload.tags.join(', ')
+  end
 
   def do_search
     unless params[:tagsearch]

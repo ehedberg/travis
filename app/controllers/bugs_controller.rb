@@ -55,6 +55,12 @@ class BugsController < ApplicationController
     b.save!
     render :text=>b.reload.swag
   end
+  
+  def update_tags
+    @bug.tag_list=params[:value]
+    @bug.save!
+    render :text=>@bug.reload.tags.join(', ')
+  end
 
   def do_paginated_solr_search(query, page)
     page = page.nil? ? 1 : page.to_i

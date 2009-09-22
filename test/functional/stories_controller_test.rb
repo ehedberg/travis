@@ -158,8 +158,14 @@ class StoriesControllerTest < ActionController::TestCase
     xhr :post, :update_swag, "id"=>stories(:one).id, "value"=>"2.0\n            ", "controller"=>"stories", "editorId"=>"swag_1"
     assert_response :success
     assert_equal "2.0", @response.body
-
   end
+  
+  def test_update_tags
+    xhr :post, :update_tags, "id"=>stories(:one).id, "value"=>"your mom", "controller"=>"stories", "editorId"=>"swag_1"
+    assert_response :success
+    assert_equal 'your mom', @response.body
+  end
+  
   def test_new
     get :new
     assert_response :success

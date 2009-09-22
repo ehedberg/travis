@@ -1,0 +1,7 @@
+-if thing.tag_list.empty?
+  %span{:id=>"tags_ext_#{thing.id}"}
+    %em none
+%span{:id=>"tags_#{thing.id}"}<
+  -unless thing.tag_list.empty?
+    =truncate(thing.tag_list.join(', '))
+=in_place_editor "tags_#{thing.id}", {:external_control => "tags_ext_#{thing.id}", :url=>url, :cols=>30, :rows=>1, :on_complete=>"function(){if(el=$('#{"tags_ext_#{thing.id}"}')) el.hide();}", :cancel_control=>'button'}

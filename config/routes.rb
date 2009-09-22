@@ -49,10 +49,10 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   #map.connect ':controller/:action/:id'
   #map.connect ':controller/:action/:id.:format'
-  map.resources :stories, :collection=>{:search=>:get, :do_search=>:post, :mass_tag=>:post}, :member=>{:update_swag=>:post, :history=>:get}
+  map.resources :stories, :collection=>{:search=>:get, :do_search=>:post, :mass_tag=>:post}, :member=>{:update_tags=>:post, :update_swag=>:post, :history=>:get}
   map.resources :saved_searches
   map.resources :tasks, :collection=>{:search=>:get, :do_search=>:post}
-  map.resources :bugs, :collection=>{:search=>:get, :do_search=>:post}, :member=>{:update_swag=>:post, :history=>:get}
+  map.resources :bugs, :collection=>{:search=>:get, :do_search=>:post}, :member=>{:update_tags=>:post, :update_swag=>:post, :history=>:get}
   map.resources :unified_search
   map.resource :session
   map.resources :iterations, :member=>{:chart=>:get, :reset_swags=>:put, :promote=>:put}, :collection=>{:generate=>:post}, :new=>{:new_generate=>:get} do |r|

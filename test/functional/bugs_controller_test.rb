@@ -112,6 +112,12 @@ class BugsControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal "2.1", @response.body
   end
+  
+  def test_update_tags
+    xhr :post, :update_tags, "id"=>bugs(:one).id, "value"=>"your mom", "controller"=>"bugs", "editorId"=>"swag_1"
+    assert_response :success
+    assert_equal 'your mom', @response.body
+  end
 
   def test_show_history_link
     assert_routing "/bugs/1/history", {:action=>"history", :controller=>"bugs", :id=>"1"}

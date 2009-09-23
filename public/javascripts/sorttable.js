@@ -158,6 +158,7 @@ sorttable = {
 	        }
 	        
 	        delete row_array;
+                sorttable.restyle(this.sorttable_tbody);
 	      });
 	    }
     }
@@ -169,7 +170,7 @@ sorttable = {
     for (var i=0; i<table.tBodies[0].rows.length; i++) {
       text = sorttable.getInnerText(table.tBodies[0].rows[i].cells[column]);
       if (text != '') {
-        if (text.match(/^-?[£$¤]?[\d,.]+%?$/)) {
+        if (text.match(/^-?[ï¿½$ï¿½]?[\d,.]+%?$/)) {
           return sorttable.sort_numeric;
         }
         // check for a date: dd/mm/yyyy or dd/mm/yy 
@@ -238,6 +239,14 @@ sorttable = {
         default:
           return '';
       }
+    }
+  },
+  restyle: function(tbody){
+    for (var i=0; i<tbody.rows.length; i++) {
+        if(i%2==1)
+            tbody.rows[i].className='even_story';
+        else
+            tbody.rows[i].className='odd_story';
     }
   },
   

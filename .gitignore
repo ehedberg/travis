@@ -10,6 +10,7 @@ doc/app
 config/database.yml
 config/environment.yml
 config/javascript_test_autotest.yml
+config/deploy.rb
 doc/coverage
 doc/guides
 vendor/plugins/acts_as_solr/solr/solr/data/**/*

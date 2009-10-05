@@ -11,6 +11,9 @@ h3 {
 	font-style: italic;
 	color: #0092d6;
 }
+li {
+  margin-left: 15px;
+}
 #header {
 	background: url(../images/travis-logo.gif) left center no-repeat;
 	height: 60px; 

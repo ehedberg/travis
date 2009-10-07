@@ -88,10 +88,19 @@ class Story < ActiveRecord::Base
   end
   
   def assignee
-    tasks.map(&:login).join(', ')
+    if self.pending?
+      tasks.select{|t| t.state=='in_progress'}.map(&:login).sort.join(', ') 
+    else
+      ''
+    end
+  end
+  
+  def pending?
+    ['in_progress','in_qc'].include?(state)
   end
   
   private 
+  
   def set_mnemonic
     sname = self.nodule.squeeze.gsub(/[^a-zA-Z]/,'')[0,4]
     self.update_attribute(:mnemonic,("%s-%d"%[sname,self.id]).upcase)

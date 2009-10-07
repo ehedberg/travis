@@ -86,6 +86,11 @@ class Story < ActiveRecord::Base
   def all_complete?
     !has_incomplete?
   end
+  
+  def assignee
+    tasks.map(&:login).join(', ')
+  end
+  
   private 
   def set_mnemonic
     sname = self.nodule.squeeze.gsub(/[^a-zA-Z]/,'')[0,4]

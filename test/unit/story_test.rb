@@ -357,6 +357,15 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :in_progress, s.current_state
 
   end
+  
+  def test_assignee
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
+    s.save!
+    t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description", :login=>'billy')
+    assert_equal('billy', s.assignee)
+    t2=s.tasks.create(:title=>"Another Title2", :description=>"Another Task Description", :login=>'billysmom')
+    assert_equal('billy, billysmom', s.assignee)
+  end
 
   def test_failed_to_in_progress
     s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')

@@ -88,11 +88,15 @@ class Story < ActiveRecord::Base
   end
   
   def assignee
-    if self.pending?
-      tasks.select{|t| t.state=='in_progress'}.map(&:login).sort.join(', ') 
+    t=if :in_progress == self.current_state
+      tasks.select{|t| t.state=='in_progress'}
+    elsif :in_qc == self.current_state      
+      tasks
     else
-      ''
+      []
     end
+    puts t.inspect
+    t.map(&:login).uniq.sort.join(', ') 
   end
   
   def pending?

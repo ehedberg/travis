@@ -361,9 +361,12 @@ class StoryTest < ActiveSupport::TestCase
     s = Story.create(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     
     t=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description", :login=>'billy')
+    t3=s.tasks.create(:title=>"Another Title", :description=>"Another Task Description", :login=>'billy')
     assert_equal('', s.assignee)
     
     t.start!
+    t3.start!
+    
     assert s.reload
     assert_equal(:in_progress, s.current_state)
     assert_equal('billy', s.assignee)
@@ -372,8 +375,14 @@ class StoryTest < ActiveSupport::TestCase
     assert s.reload    
     assert_equal('billy, billysmom', s.assignee)
     t.finish!
+    t3.finish!
     assert s.reload
     assert_equal('billysmom', s.assignee)
+    
+    t2.finish!
+    assert s.reload
+    assert_equal(:in_qc, s.current_state)
+    assert_equal('billy, billysmom', s.assignee)    
   end
 
   def test_failed_to_in_progress

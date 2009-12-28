@@ -7,32 +7,36 @@ set :application, "travis"
 set :repository,  "https://svn.office.gdi/development/travis/trunk/"
 set :deploy_to, "/var/apps/#{application}"
 set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"
+set :user, "evodeploy"
+set :use_sudo, false
+
 default_run_options[:pty] = true
 
 role :app, "buildbox.office.gdi"
 role :web, "buildbox.office.gdi"
 role :db,  "buildbox.office.gdi", :primary => true
 
+
 after 'deploy:update_code', 'deploy:symlink_configs', 'solr:reindex'
 namespace :deploy do
   desc "Symlink shared configs and folders on each release."
   task :symlink_configs do
-    sudo "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    sudo "ln -nfs #{shared_path}/config/solr.yml #{release_path}/config/solr.yml"
-    sudo "rm -rf #{release_path}/solr"
-    sudo "ln -nfs #{shared_path}/solr #{release_path}/solr"
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/solr.yml #{release_path}/config/solr.yml"
+    run "rm -rf #{release_path}/solr"
+    run "ln -nfs #{shared_path}/solr #{release_path}/solr"
   end
 end
 
 namespace :solr do
   desc "stops solr"
   task :stop do
-    sudo "sh -c 'cd #{current_path} && rake solr:stop RAILS_ENV=production'"
+    run "cd #{current_path} && rake solr:stop RAILS_ENV=production"
   end
   
   desc "starts solr"
   task :start do
-    sudo "sh -c 'cd #{current_path} && rake solr:start RAILS_ENV=production'"
+    run "cd #{current_path} && rake solr:start RAILS_ENV=production"
   end
 
   desc "reindexes solr"

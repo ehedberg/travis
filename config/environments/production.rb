@@ -18,3 +18,4 @@ config.action_controller.perform_caching             = false
 
 # Disable delivery errors, bad email addresses will be ignored
 config.action_mailer.raise_delivery_errors = false
+config.action_mailer.deliver_method = :sendmail

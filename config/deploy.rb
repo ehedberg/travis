@@ -17,7 +17,9 @@ role :web, "buildbox.office.gdi"
 role :db,  "buildbox.office.gdi", :primary => true
 
 
-after 'deploy:update_code', 'deploy:symlink_configs', 'solr:reindex'
+after 'deploy:update_code', 'deploy:symlink_configs'
+after 'deploy:symlink', 'solr:restart'
+
 namespace :deploy do
   desc "Symlink shared configs and folders on each release."
   task :symlink_configs do

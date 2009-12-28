@@ -8,7 +8,7 @@
 -if params[:q]
   %h2{:class => "margin_top_10"}
     ="Search Results for \"#{params[:q]}\""
-%table#bugs
+%table#bugs.sortable
   =render :partial=>'bug_headers'
   =render_search_results('bug', @bugs)
 

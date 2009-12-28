@@ -56,7 +56,7 @@
   %caption Stories
   =render :partial=>'stories/story_header'
   =render_search_results('stories/story', @iteration.stories)
-%table#bugs
+%table#bugs.sortable
   %caption Bugs
   =render :partial=>'bugs/bug_headers'
   =render_search_results('bugs/bug', @iteration.bugs)

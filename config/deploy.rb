@@ -4,12 +4,13 @@ set :application, "travis"
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
 # set :scm, :subversion
-set :repository,  "https://svn.office.gdi/development/travis/trunk/"
+set :scm, :git
+set :repository, "http://github.com/ehedberg/travis.git"
 set :deploy_to, "/var/apps/#{application}"
 set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"
 set :user, "evodeploy"
 set :use_sudo, false
-
+set :deploy_via, :remote_cache
 default_run_options[:pty] = true
 
 role :app, "buildbox.office.gdi"

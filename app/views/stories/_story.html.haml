@@ -24,7 +24,9 @@
   %td.centered
     = link_to(h(story.iteration.title), iteration_path(story.iteration)) if story.iteration
   %td
-    =render :partial=>'shared/taggable', :locals=>{:thing=>story, :url=>update_tags_story_path(story)}  
+    =render :partial=>'shared/taggable', :locals=>{:thing=>story, :url=>update_tags_story_path(story)}
+  %td.centered
+    =salesforce_link(story, 'list')
   %td.rctl
     =link_to("Show", story_path(story))
     =link_to("Edit", edit_story_path(story))

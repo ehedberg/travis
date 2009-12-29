@@ -13,6 +13,9 @@ class Bug < ActiveRecord::Base
   validates_numericality_of :swag, :greater_than_or_equal_to=>0, :allow_nil=>true, :less_than=>10000
   validates_numericality_of :severity, :greater_than_or_equal_to=>1, :allow_nil=>true, :less_than_or_equal_to=>4
   validates_numericality_of :priority, :greater_than_or_equal_to=>1, :allow_nil=>true, :less_than_or_equal_to=>4
+  validates_url_format_of :salesforce_url, :allow_nil => true, :allow_blank => true
+  validates_length_of :salesforce_url, :within=>1..100, :allow_nil => true, :allow_blank => true
+  validates_numericality_of :salesforce_ticket_nbr, :allow_nil=>true
 
   before_create { |record| record.audit_records.build(:diff=>{:self=>[:nonexistent, :existent]}.to_yaml, 
                                                               :login=>(User.current_user ? User.current_user.login : 'some guy')) }

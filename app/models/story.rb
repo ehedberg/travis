@@ -48,6 +48,10 @@ class Story < ActiveRecord::Base
   validates_presence_of :nodule
   validates_length_of :title, :within=>4..200
 
+  validates_url_format_of :salesforce_url, :allow_nil => true, :allow_blank => true
+  validates_length_of :salesforce_url, :within=>1..100, :allow_nil => true, :allow_blank => true
+  validates_numericality_of :salesforce_ticket_nbr, :allow_nil=>true
+
   state :new
   state :passed, :enter=>Proc.new{|s| s.update_attribute(:completed_at,   Date.today)}
   state :in_progress

@@ -20,6 +20,7 @@
   %td.centered=link_to(h(bug.iteration.title), iteration_path(bug.iteration)) if bug.iteration
   %td.centered
     =render :partial=>'shared/taggable', :locals=>{:thing=>bug, :url=>update_tags_bug_path(bug)}
+  %td.centered=salesforce_link(bug, 'list')
   %td.rctl
     =link_to("Show", bug_path(bug))
     =link_to("Edit", edit_bug_path(bug))

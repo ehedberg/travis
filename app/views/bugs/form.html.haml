@@ -22,6 +22,12 @@
         = f.label :tag_list, "Tags"
         = f.text_field :tag_list
       %li
+        = f.label :salesforce_ticket_nbr, "Salesforce Ticket"
+        = f.text_field :salesforce_ticket_nbr, :size=>10
+      %li
+        = f.label :salesforce_url, "Salesforce Url"
+        = f.text_field :salesforce_url, :size=>50
+      %li
         = f.label :swag, "Swag"
         = f.text_field :swag, :size=>5
       %li

@@ -26,7 +26,8 @@ one:
   mnemonic: List-1
   nodule: foo
   tasks: one 
-
+  salesforce_ticket_nbr: 7913
+  salesforce_url: "https://ssl.salesforce.com/50000000002GL3D"
 two:
   title: 'Create/Edit Story'
   description: 'Description'

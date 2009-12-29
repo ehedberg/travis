@@ -146,6 +146,12 @@ class StoryTest < ActiveSupport::TestCase
     assert_valid(:description, nil)
     assert_invalid(:title, "is too short (minimum is 4 characters)", "")
     assert_invalid(:title, "is too long (maximum is 200 characters)", ('a'*198) + "rgh")
+    assert_valid(:salesforce_url, nil, '', 'http://www.google.com')
+    assert_invalid(:salesforce_url, "does not appear to be valid", 'not_a_url')
+    assert_invalid(:salesforce_url, "does not appear to be valid", 27)
+    assert_invalid(:salesforce_url, "is too long (maximum is 100 characters)", 'http://www.google.com/' + ('a'*98))
+    assert_valid(:salesforce_ticket_nbr, nil, 27)
+    assert_invalid(:salesforce_ticket_nbr, "is not a number", "foo")
   end
 
   def test_unique_title

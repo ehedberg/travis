@@ -20,6 +20,12 @@ class BugTest < ActiveSupport::TestCase
     assert_invalid(:priority, "is not a number", "hey there")
     assert_invalid(:priority, "must be greater than or equal to 1", 0)
     assert_invalid(:priority, "must be less than or equal to 4", 5)
+    assert_valid(:salesforce_url, nil, '', 'http://www.google.com')
+    assert_invalid(:salesforce_url, "does not appear to be valid", 'not_a_url')
+    assert_invalid(:salesforce_url, "does not appear to be valid", 27)
+    assert_invalid(:salesforce_url, "is too long (maximum is 100 characters)", 'http://www.google.com/' + ('a'*98))
+    assert_valid(:salesforce_ticket_nbr, nil, 27)
+    assert_invalid(:salesforce_ticket_nbr, "is not a number", "foo")
   end
   
   def test_iteration_relation

@@ -22,4 +22,20 @@ module ApplicationHelper
     next_link=next_iter ? link_to(h("#{next_iter.title} >"), iteration_path(next_iter), :id=>'next_iter'): nil
     return [prev_link, next_link].compact.join(' | ')
   end
+
+  def salesforce_link(sf_object, view='show')
+    label = close_label = ""
+    if view == 'show'
+      label = "<h2>Salesforce Ticket:"
+      close_label = "</h2>"
+    end
+    if !sf_object.salesforce_url.blank? && !sf_object.salesforce_ticket_nbr.blank?
+      "#{label} <a href='#{sf_object.salesforce_url}', target='_travis_sf'>#{sf_object.salesforce_ticket_nbr}</a>#{close_label}"
+    elsif !sf_object.salesforce_url.blank?
+      "#{label} <a href='#{sf_object.salesforce_url}', target='_travis_sf'>#{sf_object.salesforce_url}</a>#{close_label}"
+    elsif !sf_object.salesforce_ticket_nbr.blank?
+      "#{label} #{sf_object.salesforce_ticket_nbr}#{close_label}"
+    end
+  end
+
 end

@@ -28,6 +28,8 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/solr.yml #{release_path}/config/solr.yml"
     run "rm -rf #{release_path}/solr"
     run "ln -nfs #{shared_path}/solr #{release_path}/solr"
+    run "ln -nfs #{shared_path}/config/environment.rb #{release_path}/config/environment.rb"
+    run "ln -nfs #{shared_path}/config/environments/production.rb #{release_path}/config/environments/production.rb"
   end
 end
 

@@ -5,6 +5,7 @@ set :application, "travis"
 # your SCM below:
 # set :scm, :subversion
 set :scm, :git
+set :scm_verbose, :true
 set :repository, "http://github.com/ehedberg/travis.git"
 set :deploy_to, "/var/apps/#{application}"
 set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"

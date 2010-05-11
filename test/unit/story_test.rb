@@ -197,6 +197,45 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal :new, t.current_state
     assert_equal :new,  s.current_state
   end
+  
+  def test_delete_last_incomplete_task_moves_to_qc
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
+    assert s.save
+    assert_equal :new, s.current_state
+    t = s.tasks.create(:title=>'foo', :description=>'bar')
+    t2 = s.tasks.create(:title=>'fubar', :description=>'bar')
+    assert !t.new_record?
+    assert !t2.new_record?
+
+    t2.start!
+    t2.finish!
+    assert_equal :complete, t2.current_state
+    assert_equal :in_progress, s.reload.current_state
+    
+    t.destroy
+    assert_equal :complete, t2.reload.current_state
+    assert_equal :in_qc, s.reload.current_state
+  end
+
+  def test_delete_last_in_process_task_moves_to_new
+    s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
+    assert s.save
+    assert_equal :new, s.current_state
+    t = s.tasks.create(:title=>'foo', :description=>'bar')
+    t2 = s.tasks.create(:title=>'fubar', :description=>'bar')
+    assert !t.new_record?
+    assert !t2.new_record?
+
+    t2.start!
+    assert_equal :in_progress, t2.reload.current_state
+    assert_equal :new, t.reload.current_state
+    assert_equal :in_progress, s.reload.current_state
+    
+    t2.destroy
+    assert_equal :new, t.reload.current_state
+    assert_equal :new, s.reload.current_state
+  end
+
   def test_some_Tasks_stopped_doesnt_transit_to_new
     s = Story.new(:title=>"Title", :description=>"The description", :swag=>23, :nodule=>'nodule')
     assert s.save

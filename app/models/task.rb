@@ -47,5 +47,9 @@ class Task < ActiveRecord::Base
   def task_changed!
     stories.each(&:task_changed!)
   end
+  
+  def before_destroy
+    stories.each{|s| s.tasks.delete(self)}
+  end
 
 end

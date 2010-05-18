@@ -19,16 +19,20 @@ one:
   title: "Task Title 1"
   description: "Task Description 1"
   state: new
-
 two:
   title: "Task Title 2"
   description: "Task Description 2"
   state: in_progress
 completed:
   title: "done"
-  state: "completed"
+  state: completed
   description: "completed task"
 also_completed:
   title: "done"
-  state: "completed"
+  state: completed
   description: "completed task"
+orphan:
+  title: "sigh"
+  state: new
+  description: "nobody wants to work on me"
+  

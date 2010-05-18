@@ -57,7 +57,7 @@ class TasksControllerTest < ActionController::TestCase
     assert_response :success
     assert assigns(:tasks)
     ts = assigns(:tasks)
-    assert_equal 1, ts.size
+    assert_equal 2, ts.size
     assert_equal ts.first, tasks(:one)
     assert_select_rjs  'results'
     assert_select_rjs :replace_html, "saveform" do
@@ -200,11 +200,19 @@ class TasksControllerTest < ActionController::TestCase
     assert_not_nil Task.find_by_title("updated title")
   end
 
-  def test_delete
+  def test_delete_task_not_in_story
+    assert_difference 'Task.count', -1 do
+      delete :destroy, :id=>tasks(:orphan).id
+      assert_response :redirect
+      assert_redirected_to tasks_path
+    end
+  end
+
+  def test_delete_task_in_story
     assert_difference 'Task.count', -1 do
       delete :destroy, :id=>tasks(:one).id
       assert_response :redirect
-      assert_redirected_to tasks_path
+      assert_redirected_to story_path(stories(:two))
     end
   end
 
@@ -214,10 +222,10 @@ class TasksControllerTest < ActionController::TestCase
     task_list = assigns(:tasks)
     assert_select "table[id=tasks]" do
       task_list.each do |t|
-        assert_select "tr" do
-          assert_select "td" do
-            assert_select "a[href=?]", story_path(t.stories.first.id)
-          end
+        if t.stories && t.stories.size > 0
+          assert_select "tr > td > a[href=?]", story_path(t.stories.first.id)
+        else
+          assert_select "tr > td", :text=>"Unassigned"
         end
       end
     end

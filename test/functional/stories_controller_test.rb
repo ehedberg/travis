@@ -323,14 +323,19 @@ class StoriesControllerTest < ActionController::TestCase
     assert_equal stories(:one).id, story.id
   end
 
-  def test_destroy
-    story = stories(:one)
-
-    delete :destroy, :id=>stories(:one).id
-
+  def test_destroy_story_not_in_iteration
+    story = stories(:two)
+    delete :destroy, :id=>stories(:two).id
     assert !Story.exists?(story.id)
-
     assert_redirected_to stories_path
+  end
+
+  def test_destroy_story_in_iteration
+    story = stories(:one)
+    assert_equal(iterations(:iter_last), story.iteration)
+    delete :destroy, :id=>stories(:one).id
+    assert !Story.exists?(story.id)
+    assert_redirected_to iteration_path(iterations(:iter_last))
   end
 
   def test_edit_view

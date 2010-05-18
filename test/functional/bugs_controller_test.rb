@@ -100,11 +100,19 @@ class BugsControllerTest < ActionController::TestCase
     assert_select "a[href=?][onclick*=confirm]", bug_path(bugs(:one))
   end
 
-  def test_destroy
-    bug = bugs(:one)
-    delete :destroy, :id=>bug.id
+  def test_destroy_bug_not_in_iteration
+    bug = bugs(:three)
+    delete :destroy, :id=>bugs(:three).id
     assert !Bug.exists?(bug.id)
     assert_redirected_to bugs_path
+  end
+
+  def test_destroy_bug_in_iteration
+    bug = bugs(:one)
+    assert_equal(iterations(:iter_current), bug.iteration)
+    delete :destroy, :id=>bugs(:one).id
+    assert !Bug.exists?(bug.id)
+    assert_redirected_to iteration_path(iterations(:iter_current))
   end
 
   def test_update_swag

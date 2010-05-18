@@ -22,6 +22,18 @@ two:
   iteration: iter_current
   salesforce_ticket_nbr: 123
   salesforce_url:
+three:
+  mnemonic: BUG-000
+  title: 'Buggy Buggy Buggy'
+  description:  'OMG BUG WTF BBQ!!!1one!!1one!'
+  swag: 
+  state: new
+  severity: 1
+  priority: 1
+  reported_by: 'Bens Mom'
+  iteration: 
+  salesforce_ticket_nbr: 
+  salesforce_url:
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 

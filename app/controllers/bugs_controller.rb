@@ -45,10 +45,11 @@ class BugsController < ApplicationController
   end
 
   def destroy
+    iter = @bug.iteration
     @bug.destroy
-    redirect_to(bugs_path)
+    iter ? redirect_to(iteration_path(iter)) : redirect_to(bugs_path)
   end
-  
+
   def update_swag
     b = @bug
     b.swag = params[:value].to_f

@@ -112,8 +112,9 @@ class StoriesController < ApplicationController
   end
 
   def destroy
+    iter = @story.iteration
     @story.destroy
-    redirect_to(stories_path)
+    iter ? redirect_to(iteration_path(iter)) : redirect_to(stories_path)
   end
 
   def do_paginated_solr_search(query, page)

@@ -32,7 +32,7 @@
         = f.text_field :swag, :size=>5
       %li
         = f.label :iteration_id, "Iteration"
-        = f.select :iteration_id, Iteration.find(:all).collect{|i| [i.title, i.id]}, {:include_blank=>true}
+        = f.select :iteration_id, Iteration.find(:all).sort{|a,b| a.start_date<=>b.start_date}.collect{|i| [i.title, i.id]}, {:include_blank=>true}
       %li 
         =submit_tag "Save", {:class=> "submit_button"}
         =button_to_function "Cancel", "location.href='#{@story != nil && @story.id != nil ? story_path(@story.id) : stories_path}'", {:class=>'submit_button'}

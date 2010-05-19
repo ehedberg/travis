@@ -1,27 +1,30 @@
 %h1
-  Search
-
+  Search Tasks
 %p
   Use sql where clauses to search for tasks (but skip the 'where' part):
   %pre
     state = 'new' and name like '%some junk%'
   This will be passed directly to a :conditions clause
   on Task.find(:all) (so be careful)
-%p
+%h4{:style=>'padding-top:1em'}
   Available parameters: 
-  %pre
-    =Task.columns.map(&:name).join(', ')
+%pre
+  =Task.columns.map(&:name).join(', ')
+%h4
+  Valid states: 
+%pre
+  =Task.states.collect{|s| s.to_s}.join(', ')
+%h4
+  Search:
 %ul#savedSearches
   = render :partial=>'shared/saved_search', :collection=>@saved_searches
-
 -form_remote_tag :url=>do_search_tasks_path, :id=>'columnarForm', :method=>'post'  do
-  %label 
-    Search Expression
+  %label{:style=>'font-weight:bold'} Search Expression
   =text_field_tag 'expr', 'state=\'new\''
   =submit_tag 'Search'
+%br/
 
 #summary
 
 %table#results
-
 #saveform

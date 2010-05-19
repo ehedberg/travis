@@ -31,12 +31,17 @@ class SavedSearchTest < ActiveSupport::TestCase
     assert_equal "has already been taken", b.errors.on(:query)
     b = SavedSearch.new(:query=>'foo', :name=>'bars', :query_type=>'Story')
     assert b.save
-
-
   end
+
   def test_find_task_searches
     SavedSearch.for_tasks.each do |x|
       assert_equal x.query_type, 'Task'
+    end
+  end
+
+  def test_find_bug_searches
+    SavedSearch.for_bugs.each do |x|
+      assert_equal x.query_type, 'Bug'
     end
   end
 

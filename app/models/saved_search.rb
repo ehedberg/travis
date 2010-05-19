@@ -19,4 +19,5 @@ class SavedSearch < ActiveRecord::Base
 
   named_scope :for_stories, :conditions=>['query_type=?','Story']
   named_scope :for_tasks, :conditions=>['query_type=?','Task']
+  named_scope :for_bugs, :conditions=>['query_type=?','Bug']
 end

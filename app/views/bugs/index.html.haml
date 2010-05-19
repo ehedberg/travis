@@ -4,6 +4,8 @@
 %h1 Bugs
 =will_paginate @bugs
 =link_to("Create Bug", new_bug_path)
+|
+=link_to "Advanced Bug Search" , search_bugs_path
 
 -if params[:q]
   %h2{:class => "margin_top_10"}

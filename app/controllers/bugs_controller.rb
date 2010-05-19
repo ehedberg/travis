@@ -1,6 +1,6 @@
 class BugsController < ApplicationController
   before_filter :login_required
-  before_filter :find_bug, :except=>[:index, :new, :create]
+  before_filter :find_bug
 
   def index
     if(params[:q])
@@ -29,6 +29,44 @@ class BugsController < ApplicationController
 
   def edit
     render :template=>"bugs/form"
+  end
+
+  def search
+    @saved_searches = SavedSearch.for_bugs
+  end
+
+  def do_search
+    unless params[:tagsearch]
+      @bugs = Bug.find(:all, :conditions=>params[:expr], :include=>:iteration)
+      @saved_search = SavedSearch.new(:query=>params[:expr], :query_type=>'Bug')
+    else
+      @bugs = Bug.find_tagged_with(params[:expr])
+      @saved_search = SavedSearch.new(:query=>params[:expr], :query_type=>'Bug')
+    end
+    render :update do |page|
+      unless @bugs.empty?
+        page.replace_html 'results', :partial=>'bugs/bug_headers'
+        page.insert_html :bottom,  'results', :partial=>'bugs/bug', :collection=>@bugs
+        page.replace_html  'summary', "<p>#{@bugs.size} bugs</p>"
+        page.replace_html 'saveform', :partial=>'shared/save_search_form'
+        page.replace_html 'masstagform', :partial=>'bugs/masstagform', :object=>@bugs.map(&:id).join(',')
+      else
+        page.replace_html 'results', '<p>No results found</p>'
+      end
+    end
+  end
+
+  def mass_tag
+    ids = params[:ids].split(',')
+    b = Bug.find(ids)
+    tags = params[:tags].split(',')
+    b.each do |x|
+      x.tag_list.add tags
+      x.save!
+    end
+    render :update do |page|
+      page.visual_effect :toggle_appear, 'masstagform'
+    end
   end
 
   def update
@@ -80,6 +118,6 @@ class BugsController < ApplicationController
 
   private
   def find_bug
-    @bug = Bug.find(params[:id])
+    @bug = Bug.find(params[:id]) if params[:id]
   end
 end

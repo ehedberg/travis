@@ -1,26 +1,27 @@
 %h1
-  Search Stories
+  Search Bugs
 %p
-  Use sql where clauses to search for stories (but skip the 'where' part):
+  Use sql where clauses to search for bugs (but skip the 'where' part):
   %pre
     state = 'new' and name like '%some junk%' 
   This will be passed directly to a :conditions clause
-  on Story.find(:all) (so be careful)
+  on Bug.find(:all) (so be careful)
+
 %h4{:style=>'padding-top:1em'}
   Available parameters: 
 %pre
-  =Story.columns.map(&:name).join(', ')
+  =Bug.columns.map(&:name).join(', ')
 %h4
   Valid states: 
 %pre
-  =Story.states.collect{|s| s.to_s}.join(', ')
+  =Bug.states.collect{|s| s.to_s}.join(', ')
 %h4
   Search:
 %ul#savedSearches
   = render :partial=>'shared/saved_search', :collection=>@saved_searches
--form_remote_tag :url=>do_search_stories_path, :html=>{:id=>'columnarForm'}  do
+-form_remote_tag :url=>do_search_bugs_path, :html=>{:id=>'columnarForm'}  do
   %label{:style=>'font-weight:bold'} Search Expression
-  =text_field_tag 'expr', 'state=\'new\''
+  =text_field_tag 'expr', 'state in (\'new\', \'waiting_for_fix\')'
   %label{:style=>'display:inline'} Tag search?
   =check_box_tag "tagsearch" , 1, false, :style=>'display:inline'
   =submit_tag 'Search'

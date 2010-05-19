@@ -136,4 +136,79 @@ class BugsControllerTest < ActionController::TestCase
     assert_template "show"
     assert_select "a[href=#]"
   end
+
+  def test_search_view
+    assert_routing({:path=>"/bugs/search", :method=>'get'}, :controller=>'bugs', :action=>'search')
+    get :search
+    assert_response :success
+    assert_template 'search'
+    assert assigns(:saved_searches)
+    assigns(:saved_searches).each do |x|
+      assert_equal x.query_type, 'Bug'
+    end
+    assert_select "ul#savedSearches" do 
+        assert_select "li", SavedSearch.for_bugs.size  do
+          assert_select "a[href=#]"
+      end
+    end
+  end
+
+  def test_do_tag_search
+    s = bugs(:one)
+    s.tag_list.add('abc')
+    s.save!
+
+    assert_routing({:path=>"/bugs/do_search",:method=>'post'}, :controller=>'bugs', :action=>'do_search')
+    xhr :post, :do_search, "tagsearch"=>"1", "expr"=>"abc"
+
+    assert_response :success
+    assert assigns(:bugs)
+    ts = assigns(:bugs)
+    assert_equal 1, ts.size
+    assert_equal 'abc', ts.first.tag_list.first
+    assert_select_rjs  'results'
+    assert_select_rjs :replace_html, "saveform" do
+      assert_select "form[action=?]", saved_searches_path do
+        assert_select 'input[type=hidden][id=saved_search_query]'
+        assert_select 'input[type=hidden][id=saved_search_query_type]'
+        assert_select 'input[type=text][id=saved_search_name]'
+        assert_select "input[type=submit]"
+      end
+    end
+  end
+
+  def test_do_search
+    xhr :post, :do_search, :expr=>"state in ('new', 'waiting_for_fix')"
+    assert_response :success
+    assert assigns(:bugs)
+    ts = assigns(:bugs)
+    ts.each do |t|
+      assert(t.current_state == :new || t.current_state == :waiting_for_fix)
+    end
+    assert_equal 2, ts.size
+    assert_select_rjs  'results'
+    assert_select_rjs :replace_html, "saveform" do
+      assert_select "form[action=?]", saved_searches_path do
+        assert_select 'input[type=hidden][id=saved_search_query]'
+        assert_select 'input[type=hidden][id=saved_search_query_type]'
+        assert_select 'input[type=text][id=saved_search_name]'
+        assert_select "input[type=submit]"
+      end
+    end
+  end
+
+  def test_mass_tag
+    b1 = bugs(:one)
+    b2 = bugs(:two)
+    b2.tag_list.add("foo")
+    b2.save!
+    assert_routing({:method=>'post', :path=>'/bugs/mass_tag'}, :controller=>'bugs', :action=>'mass_tag')
+    post :mass_tag, :ids=>[b2.id, b1.id], :tags=>'some, dumb, tag'
+    assert_response :success
+    b1.reload
+    b2.reload
+    assert_equal %w(some dumb tag), b1.tag_list
+    assert_equal %w(foo some dumb tag), b2.tag_list
+  end
+
 end

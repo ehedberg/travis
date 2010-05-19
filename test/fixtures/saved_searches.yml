@@ -26,3 +26,7 @@ story_1:
   name: 'some story search'
   query: "state = 'in_progress'"
   query_type: 'Story'
+bug_1:
+  name: 'open bug search'
+  query: "state in ('waiting_for_fix', 'new')"
+  query_type: 'Bug'

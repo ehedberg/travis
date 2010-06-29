@@ -8,16 +8,17 @@
       Iteration
     %ol.form
       %li
+      %li
         =f.label :title, "Title", :class => "required"
         =f.text_field :title
       %li
         =f.label :start_date, "Start Date", :class => "required"
         %div.date_field
-          =f.calendar_date_select :start_date
+          =calendar_date_select_tag "iteration[start_date]", @iteration.start_date, {:size=>30}
       %li
         =f.label :end_date, "End Date", :class => "required"
         %div.date_field
-          =f.calendar_date_select :end_date
+          =calendar_date_select_tag "iteration[end_date]", @iteration.end_date, {:size=>30}
       %li
         =f.label :release_ids, "Releases", :class => "required"
         .multiple_select

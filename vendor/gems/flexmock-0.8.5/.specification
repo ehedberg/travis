@@ -1,6 +1,11 @@
 --- !ruby/object:Gem::Specification 
 name: flexmock
 version: !ruby/object:Gem::Version 
+  hash: 53
+  segments: 
+  - 0
+  - 8
+  - 5
   version: 0.8.5
 platform: ruby
 authors: 
@@ -115,6 +120,7 @@ files:
 - doc/releases/flexmock-0.8.5.rdoc
 has_rdoc: true
 homepage: http://flexmock.rubyforge.org
+licenses: 
 post_install_message: 
 rdoc_options: 
 - --title
@@ -128,18 +134,24 @@ required_ruby_version: !ruby/object:Gem::Requirement
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
       version: "0"
   version: 
 required_rubygems_version: !ruby/object:Gem::Requirement 
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
       version: "0"
   version: 
 requirements: []
 
 rubyforge_project: 
-rubygems_version: 1.3.1
+rubygems_version: 1.3.7
 signing_key: 
 specification_version: 2
 summary: Simple and Flexible Mock Objects for Testing

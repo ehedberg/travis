@@ -7,8 +7,8 @@ module TasksHelper
     else 
       stories = task.stories - exclude
       str = link_to_function(truncate(stories.map(&:title).join(', ')), "$('task_stories_#{task.id}').toggle()", :class=>'expando')
-      str << stories_listing(task, (task.stories-exclude))
-      str
+      str2 = stories_listing(task, (task.stories-exclude))
+      "#{str} #{str2}"
     end
   end
 

@@ -1,6 +1,11 @@
 --- !ruby/object:Gem::Specification 
 name: nofxx-object_daddy
 version: !ruby/object:Gem::Version 
+  hash: 17
+  segments: 
+  - 0
+  - 3
+  - 1
   version: 0.3.1
 platform: ruby
 authors: 
@@ -43,6 +48,7 @@ files:
 - spec/resources/schema
 has_rdoc: true
 homepage: http://github.com/flogic/object_daddy
+licenses: 
 post_install_message: 
 rdoc_options: 
 - --inline-source
@@ -53,18 +59,24 @@ required_ruby_version: !ruby/object:Gem::Requirement
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
       version: "0"
   version: 
 required_rubygems_version: !ruby/object:Gem::Requirement 
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
       version: "0"
   version: 
 requirements: []
 
 rubyforge_project: 
-rubygems_version: 1.3.1
+rubygems_version: 1.3.7
 signing_key: 
 specification_version: 2
 summary: Object Daddy

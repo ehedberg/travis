@@ -1,8 +1,9 @@
 class ReleasesController < ApplicationController
-  helper Ziya::Helper
+  helper Ziya::HtmlHelpers::Charts
+  helper Ziya::YamlHelpers::Charts
   before_filter :requires_login
   def index
-    @releases = Release.paginate(:page=>params[:page], :order=>'created_at asc')
+    @releases = Release.paginate(:page=>params[:page], :include=>[:iterations], :order=>'iterations.start_date')
   end
 
   def planner

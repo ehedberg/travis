@@ -58,7 +58,7 @@ class TasksControllerTest < ActionController::TestCase
     assert assigns(:tasks)
     ts = assigns(:tasks)
     assert_equal 2, ts.size
-    assert_equal ts.first, tasks(:one)
+    ts.each{|t| assert_equal('new', t.state)}
     assert_select_rjs  'results'
     assert_select_rjs :replace_html, "saveform" do
       assert_select "form[action=?]", saved_searches_path do

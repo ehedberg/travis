@@ -5,7 +5,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.2.2' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -38,7 +38,7 @@ Rails::Initializer.run do |config|
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
-    :session_key => '_travis_0wnZ_j3w3r_s0ulz',
+    :key => '_travis_0wnZ_j3w3r_s0ulz',
     :secret      => '0a627ed2386cb923be95cdd4611a9dad2ba86b7c7bdd4692a83d92ea7062817f2dec0d86e47162539c589ac5d9e397e7aa849ad71e1edbb2a18dcee3e5a1cc1c'
   }
   config.gem 'haml', :version => '>=2.0.8'
@@ -47,9 +47,9 @@ Rails::Initializer.run do |config|
   config.gem 'bones'
   config.gem 'lockfile'
   config.gem 'logging', :version => '>=0.9.7'
-  config.gem 'ziya', :version => '>=2.0.7'
+  config.gem 'ziya', :version => '>=2.1.7'
   config.gem 'mislav-will_paginate', :version => '>=2.3.8', :source => 'http://gems.github.com', :lib => 'will_paginate'
-  config.gem 'calendar_date_select', :version => '>=1.15'
+  config.gem 'calendar_date_select', :version => '>=1.16.1'
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information

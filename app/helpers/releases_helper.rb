@@ -7,8 +7,8 @@ module ReleasesHelper
     else 
       iterations = release.iterations - exclude
       str = link_to_function(truncate(iterations.map(&:title).join(', ')), "$('iteration_releases_#{release.id}').toggle()", :class=>'expando')
-      str << iterations_listing(release, (release.iterations-exclude))
-      str
+      str2 = iterations_listing(release, (release.iterations-exclude))
+      "#{str} #{str2}"
     end
   end
 

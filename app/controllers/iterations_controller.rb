@@ -1,5 +1,6 @@
 class IterationsController < ApplicationController
-  helper Ziya::Helper
+  helper Ziya::HtmlHelpers::Charts
+  helper Ziya::YamlHelpers::Charts
   before_filter :requires_login, :except=>:chart
   def index
     @iterations = Iteration.paginate(:page=>params[:page], :order=>'start_date  asc')
@@ -9,7 +10,7 @@ class IterationsController < ApplicationController
     @iteration = Iteration.find(params[:id])
     respond_to do |wants|
       wants.html {
-        render :html => @iteration
+        @iteration
       }
       wants.json {
         render :json => @iteration.to_json(:include=>:stories);

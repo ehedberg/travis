@@ -1,6 +1,11 @@
 --- !ruby/object:Gem::Specification 
 name: bones
 version: !ruby/object:Gem::Version 
+  hash: 27
+  segments: 
+  - 2
+  - 4
+  - 2
   version: 2.4.2
 platform: ruby
 authors: 
@@ -14,14 +19,20 @@ default_executable: bones
 dependencies: 
 - !ruby/object:Gem::Dependency 
   name: rake
-  type: :runtime
-  version_requirement: 
-  version_requirements: !ruby/object:Gem::Requirement 
+  requirement: &id001 !ruby/object:Gem::Requirement 
     requirements: 
     - - ">="
       - !ruby/object:Gem::Version 
+        hash: 57
+        segments: 
+        - 0
+        - 8
+        - 3
         version: 0.8.3
     version: 
+  type: :runtime
+  version_requirement: 
+  version_requirements: *id001
 description: Mr Bones is a handy tool that builds a skeleton for your new Ruby projects. The skeleton contains some starter code and a collection of rake tasks to ease the management and deployment of your source code. Mr Bones is not viral -- all the code your project needs is included in the skeleton (no gem dependency required).
 email: tim.pease@gmail.com
 executables: 
@@ -106,6 +117,7 @@ files:
 - tasks/test.rake
 has_rdoc: true
 homepage: http://codeforpeople.rubyforge.org/bones
+licenses: 
 post_install_message: |
   --------------------------
    Keep rattlin' dem bones!
@@ -120,18 +132,24 @@ required_ruby_version: !ruby/object:Gem::Requirement
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
       version: "0"
   version: 
 required_rubygems_version: !ruby/object:Gem::Requirement 
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
       version: "0"
   version: 
 requirements: []
 
 rubyforge_project: codeforpeople
-rubygems_version: 1.3.1
+rubygems_version: 1.3.7
 signing_key: 
 specification_version: 2
 summary: Mr Bones is a handy tool that builds a skeleton for your new Ruby projects

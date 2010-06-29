@@ -1,6 +1,11 @@
 --- !ruby/object:Gem::Specification 
 name: ziya
 version: !ruby/object:Gem::Version 
+  hash: 1
+  segments: 
+  - 2
+  - 0
+  - 7
   version: 2.0.7
 platform: ruby
 authors: 
@@ -14,14 +19,20 @@ default_executable: ziyafy
 dependencies: 
 - !ruby/object:Gem::Dependency 
   name: logging
-  type: :runtime
-  version_requirement: 
-  version_requirements: !ruby/object:Gem::Requirement 
+  requirement: &id001 !ruby/object:Gem::Requirement 
     requirements: 
     - - ">="
       - !ruby/object:Gem::Version 
+        hash: 59
+        segments: 
+        - 0
+        - 9
+        - 0
         version: 0.9.0
     version: 
+  type: :runtime
+  version_requirement: 
+  version_requirements: *id001
 description: Easily add charting to your rails/merb applications
 email: fernand@liquidrail.com
 executables: 
@@ -224,6 +235,7 @@ files:
 - tasks/test.rake
 has_rdoc: true
 homepage: http://ziya.rubyforge.org
+licenses: 
 post_install_message: 
 rdoc_options: 
 - --main
@@ -234,18 +246,24 @@ required_ruby_version: !ruby/object:Gem::Requirement
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
       version: "0"
   version: 
 required_rubygems_version: !ruby/object:Gem::Requirement 
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
       version: "0"
   version: 
 requirements: []
 
 rubyforge_project: ziya
-rubygems_version: 1.3.1
+rubygems_version: 1.3.7
 signing_key: 
 specification_version: 2
 summary: Easily add charting to your rails/merb applications

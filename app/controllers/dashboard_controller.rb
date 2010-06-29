@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
-  helper Ziya::Helper
+  helper Ziya::HtmlHelpers::Charts
+  helper Ziya::YamlHelpers::Charts
   before_filter :requires_login
   def index
     t = Date.today

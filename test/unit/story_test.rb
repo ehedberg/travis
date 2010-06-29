@@ -14,12 +14,7 @@ class StoryTest < ActiveSupport::TestCase
     assert_equal 'ABCD-'+s.id.to_s, s.mnemonic
     assert s.save
     assert_equal s.mnemonic, Story.find(s.id).mnemonic
-    s2 = Story.create(:nodule=>'ab -cd?.%   d', :title=>'balh2')
-    assert s2.save!
-    s2.mnemonic=s.mnemonic
-    assert !s2.save
-    assert_not_nil s2.errors.on(:mnemonic)
-    s2 = Story.create(:title=>'nomn')
+    assert s.mnemonic.include?(s.id.to_s)
   end
   def test_state_changed_on_task_remove
     s = Story.create(:title=>'fubar', :description=>'basz', :nodule=>'nodule')

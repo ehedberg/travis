@@ -142,8 +142,8 @@ class IterationsControllerTest < ActionController::TestCase
     assert_template 'form'
     assert_select "form[action=?]", iteration_path(iter) do
       assert_select "input[type=text][id=iteration_title]"
-      assert_select "input[type=text][id=iteration_start_date]"
-      assert_select "input[type=text][id=iteration_end_date]"
+      assert_select "input[type=text][id*=start_date]"
+      assert_select "input[type=text][id*=end_date]"
       assert_select "div[class=multiple_select]" do
         releases.each do |release|
           assert_select "label" do

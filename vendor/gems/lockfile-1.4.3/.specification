@@ -1,6 +1,11 @@
 --- !ruby/object:Gem::Specification 
 name: lockfile
 version: !ruby/object:Gem::Version 
+  hash: 1
+  segments: 
+  - 1
+  - 4
+  - 3
   version: 1.4.3
 platform: ruby
 authors: 
@@ -43,6 +48,7 @@ files:
 - doc/rlock.help
 has_rdoc: true
 homepage: http://codeforpeople.com/lib/ruby/lockfile/
+licenses: 
 post_install_message: 
 rdoc_options: []
 
@@ -52,18 +58,26 @@ required_ruby_version: !ruby/object:Gem::Requirement
   requirements: 
   - - ">"
     - !ruby/object:Gem::Version 
+      hash: 31
+      segments: 
+      - 0
+      - 0
+      - 0
       version: 0.0.0
   version: 
 required_rubygems_version: !ruby/object:Gem::Requirement 
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
       version: "0"
   version: 
 requirements: []
 
 rubyforge_project: 
-rubygems_version: 1.3.1
+rubygems_version: 1.3.7
 signing_key: 
 specification_version: 1
 summary: lockfile

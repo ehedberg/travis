@@ -1,6 +1,12 @@
 --- !ruby/object:Gem::Specification 
 name: redgreen
 version: !ruby/object:Gem::Version 
+  hash: 27
+  prerelease: false
+  segments: 
+  - 1
+  - 2
+  - 2
   version: 1.2.2
 platform: ruby
 authors: 
@@ -29,29 +35,39 @@ files:
 - lib/redgreen.rb
 - lib/redgreen/autotest.rb
 - test/test_fake.rb
-has_rdoc: false
+has_rdoc: true
 homepage: http://errtheblog.com/post/15, http://on-ruby.blogspot.com/
+licenses: []
+
 post_install_message: 
 rdoc_options: []
 
 require_paths: 
 - lib
 required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
   requirements: 
   - - ">"
     - !ruby/object:Gem::Version 
+      hash: 31
+      segments: 
+      - 0
+      - 0
+      - 0
       version: 0.0.0
-  version: 
 required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
       version: "0"
-  version: 
 requirements: []
 
 rubyforge_project: 
-rubygems_version: 1.3.1
+rubygems_version: 1.3.7
 signing_key: 
 specification_version: 1
 summary: redgreen is an expanded version of Pat Eyler's RedGreen

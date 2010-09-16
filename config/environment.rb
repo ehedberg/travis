@@ -50,6 +50,7 @@ Rails::Initializer.run do |config|
   config.gem 'ziya', :version => '>=2.1.7'
   config.gem 'mislav-will_paginate', :version => '>=2.3.8', :source => 'http://gems.github.com', :lib => 'will_paginate'
   config.gem 'calendar_date_select', :version => '>=1.16.1'
+  config.gem 'fastercsv'
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information

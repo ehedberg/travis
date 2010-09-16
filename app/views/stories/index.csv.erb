@@ -1,0 +1,6 @@
+<%= FasterCSV.generate do |csv|
+  csv << Story.csv_headers
+  @stories.each do |story|
+    csv << story.to_csv
+  end
+end %>

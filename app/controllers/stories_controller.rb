@@ -11,8 +11,24 @@ class StoriesController < ApplicationController
         @stories = @iteration.stories.paginate :page=>params[:page], :order=>'created_at asc'
       end
     end
+    respond_to do |wants|
+      wants.html
+      wants.csv do
+        if request.env['HTTP_USER_AGENT'] =~ /msie/i
+          headers['Pragma'] = 'public'
+          headers['Content-type'] = 'text/plain'
+          headers['Cache-Control'] = 'no-cache, must-revalidate, post-check=0, pre-check=0'
+          headers['Content-Disposition'] = "attachment; filename=\"#{csv_name}\""
+          headers['Expires'] = '0'
+        else
+          headers["Content-Type"] ||= 'text/csv'
+          headers["Content-Disposition"] = "attachment; filename=\"#{csv_name}\""
+        end
+        render :layout => false
+      end
+    end
   end
-
+  
 
   def edit
     render :template=>"stories/form"
@@ -139,6 +155,14 @@ class StoriesController < ApplicationController
       @story = @iteration.stories.find(params[:id]) if params[:id]
     else
       @story = Story.find(params[:id]) if params[:id]
+    end
+  end
+
+  def csv_name
+    if @iteration
+      "stories-#{@iteration.id}-#{Time.now.strftime("%Y%m%d")}.csv"
+    else
+      "stories-#{Time.now.strftime("%Y%m%d")}.csv"
     end
   end
 end

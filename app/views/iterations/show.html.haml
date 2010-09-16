@@ -71,6 +71,8 @@
   =link_to("Edit", edit_iteration_path(@iteration))
   |
   =link_to("Delete", { :id => @iteration.id }, :confirm => "Are you sure?", :method => :delete)
+  |
+  =link_to("Export CSV", iteration_stories_path(@iteration, :format => :csv))
   =button_to("Reset Swag", reset_swags_iteration_path(@iteration), :method=>:put, :confirm=>'This will clear the swag on all unpassed stories in this iteration.  Are you sure?')
   =button_to("Promote Stories and Bugs", promote_iteration_path(@iteration), :method=>:put, :confirm=>'This will promote all unpassed stories and bugs to the next iteration.  Are you sure?')
 %script{:type=>'text/javascript'}

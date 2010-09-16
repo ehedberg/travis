@@ -105,6 +105,13 @@ class Story < ActiveRecord::Base
     ['in_progress','in_qc'].include?(state)
   end
   
+  def to_csv
+    [id, title, description, nodule, salesforce_ticket_nbr, cached_tag_list, updated_at]
+  end
+  
+  def self.csv_headers
+    ["ID", "Title", "Description", "Module", "SF Ticket", "Tags", "Last Updated"]
+  end
   private 
   
   def set_mnemonic
